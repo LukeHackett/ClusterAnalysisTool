@@ -9,13 +9,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		LocalTestRun.testrunconfig = LocalTestRun.testrunconfig
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUITest", "GUITest\GUITest.csproj", "{4908A79E-0C51-4322-9786-3E7EB3EFCB2D}"
-	ProjectSection(ProjectDependencies) = postProject
-		{D1A1C25C-4BB8-488A-B639-0C47E50DB904} = {D1A1C25C-4BB8-488A-B639-0C47E50DB904}
-	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{41BB2D44-1DF4-4D7C-B75C-6677570853CA}"
-EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = ClusterAnalysisTool.vsmdi
