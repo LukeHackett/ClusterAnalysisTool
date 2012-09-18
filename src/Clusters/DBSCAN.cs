@@ -105,14 +105,15 @@ namespace Cluster
           // Decrement the Cluster ID by 1 to make use of index 0 of the final list
           int index = c.ClusterId - 1;
           
-          // Setup the Cluster if it doesn't already exist          
-          if (Clusters.Count <= index)
-          {
-            Clusters.Insert(index, new CoordinateCollection());
-          }
+          // Setup the Cluster if it doesn't already exist (any any previous to this)
+          InitaliseClusters(index);
+          
           Clusters[index].Add(c);
         }
       }
+      
+      // Remove any unrequired (empty) clusters
+      CleanClusters();
     }
     
     #endregion
@@ -197,6 +198,35 @@ namespace Cluster
         neighbours.Remove(currentNeighbour);
       }
       return true;   
+    }
+    
+    /// <summary>
+    /// This function will initalise the cluster list to index number of locations.
+    /// </summary>
+    /// <param name="index">the number of elements to initalise</param>
+    private void InitaliseClusters(int index)
+    {
+      int increment = (index - Clusters.Count) + 1;
+      for (int i = 0; i < increment; i++)
+      { 
+        Clusters.Add(new CoordinateCollection());
+      }
+    }
+    
+    /// <summary>
+    /// This method will remove any elements from the Clusters list, if any elements are found to be
+    /// empty. This will prevent any empty placemarks within a KML file if saved to KML.
+    /// </summary>
+    private void CleanClusters()
+    {
+      for (int i = 0; i < Clusters.Count; i++)
+      {
+        if (Clusters[i].Count == 0)
+        {
+          Clusters.RemoveAt(i);
+          i--;
+        }
+      }
     }
     
     #endregion

@@ -85,8 +85,8 @@ namespace Cluster
     /// <returns>a formatted string.</returns>
     public override String ToString()
     {
-      String latString = Latitude.ToString("+#;-#;0");
-      String lonString = Longitude.ToString("+#;-#;0");
+      String latString = Latitude.ToString("N8");
+      String lonString = Longitude.ToString("N8");
       
       return String.Format("{0}, {1}", latString, lonString);
     }
