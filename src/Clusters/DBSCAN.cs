@@ -82,6 +82,7 @@ namespace Cluster
       // Setup the final data stores
       Clusters = new List<CoordinateCollection>();
       Noise = new CoordinateCollection();
+      Noise.Name = "Noisy Clusters";
 
       // Place each coordinate into a cluster or deduce it as noise
       int clusterId = 1;
@@ -135,7 +136,7 @@ namespace Cluster
       foreach (Coordinate neighbour in Coordinates)
       {
         // Calculate the distance of the two coordinates
-        double distance = Distance.DistanceSquared(c, neighbour);
+        double distance = Distance.haversine(c, neighbour);
         // Class as a neighbour if it falls in the 'catchment area'
         if (eps >= distance)
         {
@@ -157,6 +158,10 @@ namespace Cluster
     {
       // Get the all of C's neighbours.
       CoordinateCollection neighbours = GetRegion(c);
+      
+      // Remove itself from the neighbours
+      neighbours.Remove(c);
+      
       // Check to see if there is a core point (based on the minimum number of points per cluster)
       if (neighbours.Count < MinPoints)
       {
@@ -167,7 +172,6 @@ namespace Cluster
       
       // Assume that all points are reachable from C
       neighbours.UpdateAllClusterID(clusterId);
-      neighbours.Remove(c);
       
       // Explore all the neighbours
       while(neighbours.Count > 0)
@@ -209,7 +213,7 @@ namespace Cluster
       int increment = (index - Clusters.Count) + 1;
       for (int i = 0; i < increment; i++)
       { 
-        Clusters.Add(new CoordinateCollection());
+        Clusters.Insert(Clusters.Count, new CoordinateCollection());
       }
     }
     

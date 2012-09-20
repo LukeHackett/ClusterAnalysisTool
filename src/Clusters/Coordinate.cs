@@ -35,10 +35,20 @@ namespace Cluster
     public bool Noise { get; set; }
     
     /// <summary>
-    /// Wheter or not this coordinate has bee classified (or visited).
+    /// Whether or not this coordinate has bee classified (or visited).
     /// </summary>
     public bool Classified { get; set; }
-  
+    
+    /// <summary>
+    /// Status of all possible calls
+    /// </summary>
+    public enum CallType { drop = -1, fail = 0, success = 1 };
+    
+    /// <summary>
+    /// Status of the call
+    /// </summary>
+    public CallType CallStatus { get; set; }
+    
     #endregion
     
     #region Constructors

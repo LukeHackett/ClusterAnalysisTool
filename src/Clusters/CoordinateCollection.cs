@@ -17,7 +17,17 @@ namespace Cluster
     /// <summary>
     /// The central coordinate of the Collection
     /// </summary>
-    public Coordinate Centroid { get; set; }
+    public Coordinate Centroid { get; private set; }
+    
+    /// <summary>
+    /// The name of this collection of coordinates
+    /// </summary>
+    public String Name { get; set; }
+    
+    /// <summary>
+    /// A longer description of the coordinates in this collection
+    /// </summary>
+    public String Description { get; set; }
     
     #endregion
     
