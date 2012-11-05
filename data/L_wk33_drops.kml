@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <Folder id="Fusiontables">
+      <name>Fusiontables folder</name>
+      <Style id="BasicStyle">
+        <BalloonStyle>
+          <text>$[description]</text>
+        </BalloonStyle>
+        <IconStyle>
+          <color>FFFFFFFF</color>
+          <scale>1.1</scale>
+          <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction" />
+          <Icon>
+            <href>http://maps.google.com/mapfiles/kml/paddle/red-blank_maps.png</href>
+          </Icon>
+        </IconStyle>
+      </Style>
+      <Placemark>
+        <styleUrl>#BasicStyle</styleUrl>
+        <description><![CDATA[<div class="googft-info-window" style="font-family:sans-serif">
+<b>51.3107599, -0.3792575:</b> 51.4331197, -0.1631956
+</div>]]></description>
+        <Point>
+          <coordinates>-0.1631956,51.4331197,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <styleUrl>#BasicStyle</styleUrl>
+        <description><![CDATA[<div class="googft-info-window" style="font-family:sans-serif">
+<b>51.3107599, -0.3792575:</b> 51.4122247, -0.1236241
+</div>]]></description>
+        <Point>
+          <coordinates>-0.1236241,51.4122247,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <styleUrl>#BasicStyle</styleUrl>
+        <description><![CDATA[<div class="googft-info-window" style="font-family:sans-serif">
+<b>51.3107599, -0.3792575:</b> 51.4303573, -0.1371609
+</div>]]></description>
+        <Point>
+          <coordinates>-0.1371609,51.4303573,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <styleUrl>#BasicStyle</styleUrl>
+        <description><![CDATA[<div class="googft-info-window" style="font-family:sans-serif">
+<b>51.3107599, -0.3792575:</b> 51.4313773, -0.1490243
+</div>]]></description>
+        <Point>
+          <coordinates>-0.1490243,51.4313773,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <styleUrl>#BasicStyle</styleUrl>
+        <description><![CDATA[<div class="googft-info-window" style="font-family:sans-serif">
+<b>51.3107599, -0.3792575:</b> 51.4303856, -0.1373660
+</div>]]></description>
+        <Point>
+          <coordinates>-0.137366,51.4303856,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <styleUrl>#BasicStyle</styleUrl>
+        <description><![CDATA[<div class="googft-info-window" style="font-family:sans-serif">
+<b>51.3107599, -0.3792575:</b> 51.4306013, -0.1395432
+</div>]]></description>
+        <Point>
+          <coordinates>-0.1395432,51.4306013,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <styleUrl>#BasicStyle</styleUrl>
+        <description><![CDATA[<div class="googft-info-window" style="font-family:sans-serif">
+<b>51.3107599, -0.3792575:</b> 51.3305545, -0.1860342
+</div>]]></description>
+        <Point>
+          <coordinates>-0.1860342,51.3305545,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <styleUrl>#BasicStyle</styleUrl>
+        <description><![CDATA[<div class="googft-info-window" style="font-family:sans-serif">
+<b>51.3107599, -0.3792575:</b> 51.3361343, -0.1167252
+</div>]]></description>
+        <Point>
+          <coordinates>-0.1167252,51.3361343,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <styleUrl>#BasicStyle</styleUrl>
+        <description><![CDATA[<div class="googft-info-window" style="font-family:sans-serif">
+<b>51.3107599, -0.3792575:</b> 51.4362205, -0.5360094
+</div>]]></description>
+        <Point>
+          <coordinates>-0.5360094,51.4362205,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <styleUrl>#BasicStyle</styleUrl>
+        <description><![CDATA[<div class="googft-info-window" style="font-family:sans-serif">
+<b>51.3107599, -0.3792575:</b> 51.4328318, -0.1663971
+</div>]]></description>
+        <Point>
+          <coordinates>-0.1663971,51.4328318,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <styleUrl>#BasicStyle</styleUrl>
+        <description><![CDATA[<div class="googft-info-window" style="font-family:sans-serif">
+<b>51.3107599, -0.3792575:</b> 51.3096586, -0.3833194
+</div>]]></description>
+        <Point>
+          <coordinates>-0.3833194,51.3096586,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <styleUrl>#BasicStyle</styleUrl>
+        <description><![CDATA[<div class="googft-info-window" style="font-family:sans-serif">
+<b>51.3107599, -0.3792575:</b> 51.3538597, -0.2454507
+</div>]]></description>
+        <Point>
+          <coordinates>-0.2454507,51.3538597,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <styleUrl>#BasicStyle</styleUrl>
+        <description><![CDATA[<div class="googft-info-window" style="font-family:sans-serif">
+<b>51.3107599, -0.3792575:</b> 51.4274284, -0.1684697
+</div>]]></description>
+        <Point>
+          <coordinates>-0.1684697,51.4274284,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <styleUrl>#BasicStyle</styleUrl>
+        <description><![CDATA[<div class="googft-info-window" style="font-family:sans-serif">
+<b>51.3107599, -0.3792575:</b> 51.4350996, -0.1608860
+</div>]]></description>
+        <Point>
+          <coordinates>-0.160886,51.4350996,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <styleUrl>#BasicStyle</styleUrl>
+        <description><![CDATA[<div class="googft-info-window" style="font-family:sans-serif">
+<b>51.3107599, -0.3792575:</b> 51.3079980, -0.3885545
+</div>]]></description>
+        <Point>
+          <coordinates>-0.3885545,51.307998,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <styleUrl>#BasicStyle</styleUrl>
+        <description><![CDATA[<div class="googft-info-window" style="font-family:sans-serif">
+<b>51.3107599, -0.3792575:</b> 51.3660532, -0.2333180
+</div>]]></description>
+        <Point>
+          <coordinates>-0.233318,51.3660532,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <styleUrl>#BasicStyle</styleUrl>
+        <description><![CDATA[<div class="googft-info-window" style="font-family:sans-serif">
+<b>51.3107599, -0.3792575:</b> 51.3796215, -0.2186459
+</div>]]></description>
+        <Point>
+          <coordinates>-0.2186459,51.3796215,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <styleUrl>#BasicStyle</styleUrl>
+        <description><![CDATA[<div class="googft-info-window" style="font-family:sans-serif">
+<b>51.3107599, -0.3792575:</b> 51.4349184, -0.1611086
+</div>]]></description>
+        <Point>
+          <coordinates>-0.1611086,51.4349184,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <styleUrl>#BasicStyle</styleUrl>
+        <description><![CDATA[<div class="googft-info-window" style="font-family:sans-serif">
+<b>51.3107599, -0.3792575:</b> 51.4472350, -0.1712235
+</div>]]></description>
+        <Point>
+          <coordinates>-0.1712235,51.447235,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <styleUrl>#BasicStyle</styleUrl>
+        <description><![CDATA[<div class="googft-info-window" style="font-family:sans-serif">
+<b>51.3107599, -0.3792575:</b> 51.4313542, -0.1646906
+</div>]]></description>
+        <Point>
+          <coordinates>-0.1646906,51.4313542,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <styleUrl>#BasicStyle</styleUrl>
+        <description><![CDATA[<div class="googft-info-window" style="font-family:sans-serif">
+<b>51.3107599, -0.3792575:</b> 51.4314465, -0.1645208
+</div>]]></description>
+        <Point>
+          <coordinates>-0.1645208,51.4314465,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <styleUrl>#BasicStyle</styleUrl>
+        <description><![CDATA[<div class="googft-info-window" style="font-family:sans-serif">
+<b>51.3107599, -0.3792575:</b> 51.4433042, -0.1674822
+</div>]]></description>
+        <Point>
+          <coordinates>-0.1674822,51.4433042,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <styleUrl>#BasicStyle</styleUrl>
+        <description><![CDATA[<div class="googft-info-window" style="font-family:sans-serif">
+<b>51.3107599, -0.3792575:</b> 51.4793316, -0.1947550
+</div>]]></description>
+        <Point>
+          <coordinates>-0.194755,51.4793316,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <styleUrl>#BasicStyle</styleUrl>
+        <description><![CDATA[<div class="googft-info-window" style="font-family:sans-serif">
+<b>51.3107599, -0.3792575:</b> 51.4905589, -0.2066425
+</div>]]></description>
+        <Point>
+          <coordinates>-0.2066425,51.4905589,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <styleUrl>#BasicStyle</styleUrl>
+        <description><![CDATA[<div class="googft-info-window" style="font-family:sans-serif">
+<b>51.3107599, -0.3792575:</b> 51.4500859, -0.5227345
+</div>]]></description>
+        <Point>
+          <coordinates>-0.5227345,51.4500859,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <styleUrl>#BasicStyle</styleUrl>
+        <description><![CDATA[<div class="googft-info-window" style="font-family:sans-serif">
+<b>51.3107599, -0.3792575:</b> 51.4162945, -0.5398504
+</div>]]></description>
+        <Point>
+          <coordinates>-0.5398504,51.4162945,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <styleUrl>#BasicStyle</styleUrl>
+        <description><![CDATA[<div class="googft-info-window" style="font-family:sans-serif">
+<b>51.3107599, -0.3792575:</b> 51.3565301, -0.4936570
+</div>]]></description>
+        <Point>
+          <coordinates>-0.493657,51.3565301,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <styleUrl>#BasicStyle</styleUrl>
+        <description><![CDATA[<div class="googft-info-window" style="font-family:sans-serif">
+<b>51.3107599, -0.3792575:</b> 51.4406783, -0.1702625
+</div>]]></description>
+        <Point>
+          <coordinates>-0.1702625,51.4406783,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <styleUrl>#BasicStyle</styleUrl>
+        <description><![CDATA[<div class="googft-info-window" style="font-family:sans-serif">
+<b>51.3107599, -0.3792575:</b> 51.4419374, -0.1713007
+</div>]]></description>
+        <Point>
+          <coordinates>-0.1713007,51.4419374,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <styleUrl>#BasicStyle</styleUrl>
+        <description><![CDATA[<div class="googft-info-window" style="font-family:sans-serif">
+<b>51.3107599, -0.3792575:</b> 51.4318065, -0.1766675
+</div>]]></description>
+        <Point>
+          <coordinates>-0.1766675,51.4318065,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <styleUrl>#BasicStyle</styleUrl>
+        <description><![CDATA[<div class="googft-info-window" style="font-family:sans-serif">
+<b>51.3107599, -0.3792575:</b> 51.4286503, -0.1643254
+</div>]]></description>
+        <Point>
+          <coordinates>-0.1643254,51.4286503,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <styleUrl>#BasicStyle</styleUrl>
+        <description><![CDATA[<div class="googft-info-window" style="font-family:sans-serif">
+<b>51.3107599, -0.3792575:</b> 51.4385500, -0.1679659
+</div>]]></description>
+        <Point>
+          <coordinates>-0.1679659,51.43855,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <styleUrl>#BasicStyle</styleUrl>
+        <description><![CDATA[<div class="googft-info-window" style="font-family:sans-serif">
+<b>51.3107599, -0.3792575:</b> 51.4396926, -0.1692714
+</div>]]></description>
+        <Point>
+          <coordinates>-0.1692714,51.4396926,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <styleUrl>#BasicStyle</styleUrl>
+        <description><![CDATA[<div class="googft-info-window" style="font-family:sans-serif">
+<b>51.3107599, -0.3792575:</b> 51.3653603, -0.2340139
+</div>]]></description>
+        <Point>
+          <coordinates>-0.2340139,51.3653603,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <styleUrl>#BasicStyle</styleUrl>
+        <description><![CDATA[<div class="googft-info-window" style="font-family:sans-serif">
+<b>51.3107599, -0.3792575:</b> 51.3914754, -0.2036565
+</div>]]></description>
+        <Point>
+          <coordinates>-0.2036565,51.3914754,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <styleUrl>#BasicStyle</styleUrl>
+        <description><![CDATA[<div class="googft-info-window" style="font-family:sans-serif">
+<b>51.3107599, -0.3792575:</b> 51.4355207, -0.1599247
+</div>]]></description>
+        <Point>
+          <coordinates>-0.1599247,51.4355207,0</coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>
