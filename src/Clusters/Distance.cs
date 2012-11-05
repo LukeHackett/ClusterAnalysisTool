@@ -10,7 +10,9 @@ namespace Cluster
   /// Formulae" originally developed by Chris Veness. 
   /// All the methods found within this class take coorindates as parameters to minimise the 
   /// additional mathematical work that might have been required.
-  /// Source: http://www.movable-type.co.uk/scripts/latlong.html
+  /// 
+  /// References used: 
+  /// http://www.movable-type.co.uk/scripts/latlong.html
   /// </summary>
   public static class Distance
   {

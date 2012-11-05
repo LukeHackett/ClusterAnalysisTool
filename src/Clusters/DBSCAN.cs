@@ -15,7 +15,7 @@ namespace Cluster
   ///  4. Make each group of connected core points into a separate cluster.
   ///  5. Assign each border point to one of the clusters of its associated core points.
   /// 
-  /// Source:
+  /// References used:
   /// http://www.c-sharpcorner.com/uploadfile/b942f9/implementing-the-dbscan-algorithm-using-C-Sharp/
   /// </summary>
   public class DBSCAN

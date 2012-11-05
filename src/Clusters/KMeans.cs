@@ -20,7 +20,8 @@ namespace Cluster
   ///   4: Recompute the centroid of each cluster.
   ///   5: until Centroids do not change.
   ///   
-  /// Source: http://codeding.com/?article=14
+  /// References used: 
+  /// http://codeding.com/?article=14
   /// </summary>
   public class KMeans
   {
