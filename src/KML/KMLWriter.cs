@@ -158,24 +158,19 @@ namespace KML
         {
           Kml.WriteStartElement("Style");
           String styleId = style[0];
-          styleId += (i == 0) ? "_hide" : "_show";
+          styleId += (i == 0) ? "-hide" : "-show";
           Kml.WriteAttributeString("id", styleId);
 
           // Label Style
-          String scale = (i == 0) ? "0.0" : "1.0"; 
+          String scale = (i == 0) ? "0.0" : "1.2"; 
           Kml.WriteStartElement("LabelStyle");
           Kml.WriteElementString("scale", scale);
-          Kml.WriteEndElement();
-
-          // Ballon Style
-          Kml.WriteStartElement("BalloonStyle");
-          Kml.WriteElementString("text", style[1]);
           Kml.WriteEndElement();
 
           // IconStyle
           Kml.WriteStartElement("IconStyle");
           Kml.WriteElementString("color", "FFFFFFFF");
-          Kml.WriteElementString("scale", "1.0");
+          Kml.WriteElementString("scale", "1.2");
           Kml.WriteStartElement("Icon");
           Kml.WriteElementString("href", IconBaseUrl + style[2]);
           Kml.WriteEndElement();
@@ -194,13 +189,13 @@ namespace KML
         // Create the "Hide Pair"
         Kml.WriteStartElement("Pair");
         Kml.WriteElementString("key", "normal");
-        Kml.WriteElementString("styleUrl", String.Format("#{0}_hide", style[0]));
+        Kml.WriteElementString("styleUrl", String.Format("#{0}-hide", style[0]));
         Kml.WriteEndElement();
 
         // Create the "Show Pair"
         Kml.WriteStartElement("Pair");
         Kml.WriteElementString("key", "highlight");
-        Kml.WriteElementString("styleUrl", String.Format("#{0}_show", style[0]));
+        Kml.WriteElementString("styleUrl", String.Format("#{0}-show", style[0]));
         Kml.WriteEndElement();
 
         // End Style
@@ -261,20 +256,51 @@ namespace KML
     /// <summary>
     /// This method will create a html string that can be used as a hover description.
     /// </summary>
-    /// <param name="c">Coordinate</param>
+    /// <param name="evt">The event to have a description created for</param>
     /// <returns>A well formed html string description</returns>
     private static String CreateCooridnateDescription(Event evt)
     {
-      return String.Format("<div class=\"googft-info-window\">" + 
-                              "<b>Cordinate:</b> {0} <br>" +
-                              "<b>Latitude:</b> {1} <br>" +
-                              "<b>Longitude:</b> {2} <br>" +
-                            "</div>", 
-                            evt.Coordinate.ToString(), 
-                            evt.Coordinate.Latitude, 
-                            evt.Coordinate.Longitude);
+      return String.Format("<div class=\"googft-info-window\" style=\"width:250px\">" + 
+                              "<table>" + 
+                                "<tr>" +
+                                  "<td><b>Coordinate: </b></td>" +
+                                  "<td>{0}</td>" +
+                                "</tr>" +
+                                "<tr>" +
+                                  "<td><b>Device: </b></td>" +
+                                  "<td>{1}</td>" +
+                                "<tr>" +
+                                "<tr>" +
+                                  "<td><b>PIN: </b></td>" +
+                                  "<td>{2}</td>" +
+                                "<tr>" +
+                                "<tr>" +
+                                  "<td><b>Start RAT: </b></td>" +
+                                  "<td>{3}</td>" +
+                                "<tr>" +
+                                "<tr>" +
+                                  "<td><b>End RAT: </b></td>" +
+                                  "<td>{4}</td>" +
+                                "<tr>" +
+                                "<tr>" +
+                                  "<td><b>Start Mix-Band: </b></td>" +
+                                  "<td>{5}</td>" +
+                                "<tr>" +
+                                "<tr>" +
+                                  "<td><b>End Mix-Band: </b></td>" +
+                                  "<td>{6}</td>" +
+                                "<tr>" +
+                              "</table>" +
+                            "</div>",
+                             evt.Coordinate.ToString(), 
+                             evt.Device, 
+                             evt.Pin,
+                             evt.StartRat, 
+                             evt.EndRat, 
+                             evt.StartMixBand,
+                             evt.EndMixBand);
     }
-    
+
     #endregion
   }
 }
