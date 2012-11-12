@@ -1,84 +1,124 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
   <Document>
-    <Folder id="Fusiontables">
-      <name>Fusiontables folder</name>
-      <Style id="BasicStyle">
-        <BalloonStyle>
-          <text>$[description]</text>
-        </BalloonStyle>
-        <IconStyle>
-          <color>FFFFFFFF</color>
-          <scale>1.1</scale>
-          <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction" />
-          <Icon>
-            <href>http://maps.google.com/mapfiles/kml/paddle/red-blank_maps.png</href>
-          </Icon>
-        </IconStyle>
-      </Style>
-      <Placemark>
-        <styleUrl>#BasicStyle</styleUrl>
-        <description><![CDATA[<div class="googft-info-window" style="font-family:sans-serif">
-<b>51.370413, -0.619353:</b> 51.484481, -0.499703
-</div>]]></description>
-        <Point>
-          <coordinates>-0.499703,51.484481,0</coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <styleUrl>#BasicStyle</styleUrl>
-        <description><![CDATA[<div class="googft-info-window" style="font-family:sans-serif">
-<b>51.370413, -0.619353:</b> 51.47988, -0.198472
-</div>]]></description>
-        <Point>
-          <coordinates>-0.198472,51.47988,0</coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <styleUrl>#BasicStyle</styleUrl>
-        <description><![CDATA[<div class="googft-info-window" style="font-family:sans-serif">
-<b>51.370413, -0.619353:</b> 51.330773, -0.270266
-</div>]]></description>
-        <Point>
-          <coordinates>-0.270266,51.330773,0</coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <styleUrl>#BasicStyle</styleUrl>
-        <description><![CDATA[<div class="googft-info-window" style="font-family:sans-serif">
-<b>51.370413, -0.619353:</b> 51.330812, -0.270362
-</div>]]></description>
-        <Point>
-          <coordinates>-0.270362,51.330812,0</coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <styleUrl>#BasicStyle</styleUrl>
-        <description><![CDATA[<div class="googft-info-window" style="font-family:sans-serif">
-<b>51.370413, -0.619353:</b> 51.557609, -0.464911
-</div>]]></description>
-        <Point>
-          <coordinates>-0.464911,51.557609,0</coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <styleUrl>#BasicStyle</styleUrl>
-        <description><![CDATA[<div class="googft-info-window" style="font-family:sans-serif">
-<b>51.370413, -0.619353:</b> 51.395725, -0.20075
-</div>]]></description>
-        <Point>
-          <coordinates>-0.20075,51.395725,0</coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <styleUrl>#BasicStyle</styleUrl>
-        <description><![CDATA[<div class="googft-info-window" style="font-family:sans-serif">
-<b>51.370413, -0.619353:</b> 51.46882, -0.507505
-</div>]]></description>
-        <Point>
-          <coordinates>-0.507505,51.46882,0</coordinates>
-        </Point>
-      </Placemark>
-    </Folder>
+    <!-- Start Basic Style -->
+    <name>Week 35 Drops (T)</name>
+    <Style id="BasicStyle">
+      <IconStyle>
+        <color>FFFFFFFF</color>
+        <scale>1.2</scale>
+        <Icon>
+          <href>http://google.com/mapfiles/ms/micons/red.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <!-- End Basic Style -->
+    <!-- Start Placemarks -->
+    <Placemark>
+      <styleUrl>#BasicStyle</styleUrl>
+      <Point>
+        <coordinates>-0.499703,51.484481,0</coordinates>
+      </Point>
+      <ExtendedData>
+        <SimpleData name="device">Value</SimpleData>
+        <SimpleData name="pin">Value</SimpleData>
+        <SimpleData name="type">drop</SimpleData>
+        <SimpleData name="start_rat">Value</SimpleData>
+        <SimpleData name="end_rat">Value</SimpleData>
+        <SimpleData name="start_mix_band">Value</SimpleData>
+        <SimpleData name="end_mix_band">Value</SimpleData>
+      </ExtendedData>
+    </Placemark>
+    <Placemark>
+      <styleUrl>#BasicStyle</styleUrl>
+      <Point>
+        <coordinates>-0.198472,51.47988,0</coordinates>
+      </Point>
+      <ExtendedData>
+        <SimpleData name="device">Value</SimpleData>
+        <SimpleData name="pin">Value</SimpleData>
+        <SimpleData name="type">drop</SimpleData>
+        <SimpleData name="start_rat">Value</SimpleData>
+        <SimpleData name="end_rat">Value</SimpleData>
+        <SimpleData name="start_mix_band">Value</SimpleData>
+        <SimpleData name="end_mix_band">Value</SimpleData>
+      </ExtendedData>
+    </Placemark>
+    <Placemark>
+      <styleUrl>#BasicStyle</styleUrl>
+      <Point>
+        <coordinates>-0.270266,51.330773,0</coordinates>
+      </Point>
+      <ExtendedData>
+        <SimpleData name="device">Value</SimpleData>
+        <SimpleData name="pin">Value</SimpleData>
+        <SimpleData name="type">drop</SimpleData>
+        <SimpleData name="start_rat">Value</SimpleData>
+        <SimpleData name="end_rat">Value</SimpleData>
+        <SimpleData name="start_mix_band">Value</SimpleData>
+        <SimpleData name="end_mix_band">Value</SimpleData>
+      </ExtendedData>
+    </Placemark>
+    <Placemark>
+      <styleUrl>#BasicStyle</styleUrl>
+      <Point>
+        <coordinates>-0.270362,51.330812,0</coordinates>
+      </Point>
+      <ExtendedData>
+        <SimpleData name="device">Value</SimpleData>
+        <SimpleData name="pin">Value</SimpleData>
+        <SimpleData name="type">drop</SimpleData>
+        <SimpleData name="start_rat">Value</SimpleData>
+        <SimpleData name="end_rat">Value</SimpleData>
+        <SimpleData name="start_mix_band">Value</SimpleData>
+        <SimpleData name="end_mix_band">Value</SimpleData>
+      </ExtendedData>
+    </Placemark>
+    <Placemark>
+      <styleUrl>#BasicStyle</styleUrl>
+      <Point>
+        <coordinates>-0.464911,51.557609,0</coordinates>
+      </Point>
+      <ExtendedData>
+        <SimpleData name="device">Value</SimpleData>
+        <SimpleData name="pin">Value</SimpleData>
+        <SimpleData name="type">drop</SimpleData>
+        <SimpleData name="start_rat">Value</SimpleData>
+        <SimpleData name="end_rat">Value</SimpleData>
+        <SimpleData name="start_mix_band">Value</SimpleData>
+        <SimpleData name="end_mix_band">Value</SimpleData>
+      </ExtendedData>
+    </Placemark>
+    <Placemark>
+      <styleUrl>#BasicStyle</styleUrl>
+      <Point>
+        <coordinates>-0.20075,51.395725,0</coordinates>
+      </Point>
+      <ExtendedData>
+        <SimpleData name="device">Value</SimpleData>
+        <SimpleData name="pin">Value</SimpleData>
+        <SimpleData name="type">drop</SimpleData>
+        <SimpleData name="start_rat">Value</SimpleData>
+        <SimpleData name="end_rat">Value</SimpleData>
+        <SimpleData name="start_mix_band">Value</SimpleData>
+        <SimpleData name="end_mix_band">Value</SimpleData>
+      </ExtendedData>
+    </Placemark>
+    <Placemark>
+      <styleUrl>#BasicStyle</styleUrl>
+      <Point>
+        <coordinates>-0.507505,51.46882,0</coordinates>
+      </Point>
+      <ExtendedData>
+        <SimpleData name="device">Value</SimpleData>
+        <SimpleData name="pin">Value</SimpleData>
+        <SimpleData name="type">drop</SimpleData>
+        <SimpleData name="start_rat">Value</SimpleData>
+        <SimpleData name="end_rat">Value</SimpleData>
+        <SimpleData name="start_mix_band">Value</SimpleData>
+        <SimpleData name="end_mix_band">Value</SimpleData>
+      </ExtendedData>
+    </Placemark>
+    <!-- End Placemarks -->
   </Document>
 </kml>

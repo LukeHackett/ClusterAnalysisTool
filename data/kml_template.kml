@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <!-- Start Basic Style -->
+    <name>DOCUMENT NAME</name>
+    <Style id="BasicStyle">
+      <IconStyle>
+        <color>FFFFFFFF</color>
+        <scale>1.2</scale>
+        <Icon>
+          <href>http://google.com/mapfiles/ms/micons/red.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <!-- End Basic Style -->
+    <!-- Start Placemarks -->
+    <Placemark>
+      <styleUrl>#BasicStyle</styleUrl>
+      <Point>
+        <coordinates>-0.2341408,51.3653237,0</coordinates>
+      </Point>
+      <ExtendedData>
+        <SimpleData name="device">Value</SimpleData>
+        <SimpleData name="pin">Value</SimpleData>
+        <SimpleData name="type">Value</SimpleData>
+        <SimpleData name="start_rat">Value</SimpleData>
+        <SimpleData name="end_rat">Value</SimpleData>
+        <SimpleData name="start_mix_band">Value</SimpleData>
+        <SimpleData name="end_mix_band">Value</SimpleData>
+      </ExtendedData>
+    </Placemark>
+    <!-- End Placemarks -->
+  </Document>
+</kml>
