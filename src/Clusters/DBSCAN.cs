@@ -29,6 +29,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using CallEvent;
 
 namespace Cluster
 {
@@ -52,17 +53,17 @@ namespace Cluster
     /// <summary>
     /// List of original coordinates
     /// </summary>
-    public CoordinateCollection Coordinates { get; private set; }
+    public EventCollection Calls { get; private set; }
 
     /// <summary>
     /// List of clustered coordinates
     /// </summary>
-    public List<CoordinateCollection> Clusters { get; private set; }
+    public List<EventCollection> Clusters { get; private set; }
 
     /// <summary>
     /// List of noisy clusters
     /// </summary>
-    public CoordinateCollection Noise { get; private set; }
+    public EventCollection Noise { get; private set; }
 
     /// <summary>
     /// The Epsilon Value
@@ -84,9 +85,9 @@ namespace Cluster
     /// <param name="coordinates">A Collection of coordinates</param>
     /// <param name="eps">The epsilon value</param>
     /// <param name="min">The minimum number of coordinates per cluster</param>
-    public DBSCAN(CoordinateCollection coordinates, double eps, int min)
+    public DBSCAN(EventCollection calls, double eps, int min)
     {
-      Coordinates = coordinates;
+      Calls = calls;
       Epsilon = eps;
       MinPoints = min;
     }
@@ -107,36 +108,37 @@ namespace Cluster
     public void Analyse()
     {
       // Setup the final data stores
-      Clusters = new List<CoordinateCollection>();
-      Noise = new CoordinateCollection();
+      Clusters = new List<EventCollection>();
+      Noise = new EventCollection();
       Noise.Name = "Noisy Clusters";
 
       // Place each coordinate into a cluster or deduce it as noise
       int clusterId = 1;
-      foreach (Coordinate c in Coordinates)
+      foreach (Event evt in Calls)
       {
-        if (!c.Classified && ExpandCluster(c, clusterId))
+        
+        if (!evt.Classified && ExpandCluster(evt, clusterId))
         {
           clusterId++;
         }
       }
       
       // Group all of the coordinates as either Noise or as part of it's respected cluster
-      foreach (Coordinate c in Coordinates)
+      foreach (Event evt in Calls)
       {
-        if (c.Noise)
+        if (evt.Noise)
         {
-          Noise.Add(c);
+          Noise.Add(evt);
         }
-        else if (c.Classified)
+        else if (evt.Classified)
         {
           // Decrement the Cluster ID by 1 to make use of index 0 of the final list
-          int index = c.ClusterId - 1;
+          int index = evt.ClusterId - 1;
           
           // Setup the Cluster if it doesn't already exist (any any previous to this)
           InitaliseClusters(index);
-          
-          Clusters[index].Add(c);
+
+          Clusters[index].Add(evt);
         }
       }
       
@@ -153,17 +155,17 @@ namespace Cluster
     /// </summary>
     /// <param name="c">The centroid coordinate</param>
     /// <returns>A list of neighbouring coordinates</returns>
-    private CoordinateCollection GetRegion(Coordinate c)
+    private EventCollection GetRegion(Event evt)
     {
       // Collection of neighbouring coordinates
-      CoordinateCollection neighbours = new CoordinateCollection();
+      EventCollection neighbours = new EventCollection();
       // Square the Epsilon (radius) to get the diameter of the neighbourhood
       double eps = Epsilon * Epsilon;
       // Loop over all coordinates
-      foreach (Coordinate neighbour in Coordinates)
+      foreach (Event neighbour in Calls)
       {
         // Calculate the distance of the two coordinates
-        double distance = Distance.haversine(c, neighbour);
+        double distance = Distance.haversine(evt.Coordinate, neighbour.Coordinate);
         // Class as a neighbour if it falls in the 'catchment area'
         if (eps >= distance)
         {
@@ -181,19 +183,19 @@ namespace Cluster
     /// <param name="c">The coordinate to expand</param>
     /// <param name="clusterId">The current cluster ID</param>
     /// <returns>whether or not a new cluster has been defined or not</returns>
-    private bool ExpandCluster(Coordinate c, int clusterId)
+    private bool ExpandCluster(Event evt, int clusterId)
     {
       // Get the all of C's neighbours.
-      CoordinateCollection neighbours = GetRegion(c);
+      EventCollection neighbours = GetRegion(evt);
       
       // Remove itself from the neighbours
-      neighbours.Remove(c);
+      neighbours.Remove(evt);
       
       // Check to see if there is a core point (based on the minimum number of points per cluster)
       if (neighbours.Count < MinPoints)
       {
-        c.Classified = true;
-        c.Noise = true;
+        evt.Classified = true;
+        evt.Noise = true;
         return false;
       }
       
@@ -204,14 +206,14 @@ namespace Cluster
       while(neighbours.Count > 0)
       {
         // Get C's neighbour
-        Coordinate currentNeighbour = neighbours[0];
+        Event currentNeighbour = neighbours[0];
         // Get all the neighbours of the original neighbour
-        CoordinateCollection neighbouringNeighbours = GetRegion(currentNeighbour);
+        EventCollection neighbouringNeighbours = GetRegion(currentNeighbour);
         
         if (neighbouringNeighbours.Count >= MinPoints)
         {
           // Check to see if 
-          foreach (Coordinate resultP in neighbouringNeighbours)
+          foreach (Event resultP in neighbouringNeighbours)
           {
             if (!resultP.Classified || resultP.Noise)
             {
@@ -240,7 +242,7 @@ namespace Cluster
       int increment = (index - Clusters.Count) + 1;
       for (int i = 0; i < increment; i++)
       { 
-        Clusters.Insert(Clusters.Count, new CoordinateCollection());
+        Clusters.Insert(Clusters.Count, new EventCollection());
       }
     }
     

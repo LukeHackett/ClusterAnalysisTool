@@ -30,12 +30,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Cluster
+namespace CallEvent
 { 
   /// <summary>
   /// This class represents a Coordinate. 
-  /// Each coordinate can be identified by it's Longitude and Latitude value, which are set when the 
-  /// coordinate object is instantiated.
+  /// Each coordinate can be identified by it's Longitude and Latitude value, 
+  /// which are set when the coordinate object is instantiated.
   /// </summary>
   public class Coordinate
   {
@@ -51,31 +51,6 @@ namespace Cluster
     /// </summary>
     public double Longitude { get; set; }
         
-    /// <summary>
-    /// The cluster that this coordinate belongs to.
-    /// </summary>
-    public int ClusterId { get; set; }
-    
-    /// <summary>
-    /// Whether or not this coordinate is classed as noise.
-    /// </summary>
-    public bool Noise { get; set; }
-    
-    /// <summary>
-    /// Whether or not this coordinate has been classified (or visited).
-    /// </summary>
-    public bool Classified { get; set; }
-    
-    /// <summary>
-    /// Status of all possible calls
-    /// </summary>
-    public enum CallType { drop = -1, fail = 0, success = 1 };
-    
-    /// <summary>
-    /// Status of the call
-    /// </summary>
-    public CallType CallStatus { get; set; }
-    
     #endregion
     
     #region Constructors
@@ -89,9 +64,6 @@ namespace Cluster
     { 
       Longitude = Long;
       Latitude = Lat;
-      ClusterId = -1;
-      Noise = false;
-      Classified = false;
     }
     
     #endregion
@@ -129,8 +101,9 @@ namespace Cluster
     }
 
     /// <summary>
-    /// This method will compare the Cluster ID, Latitude and Longitude values of the passed 
-    /// coordinate object to the values held within this coordinate object.
+    /// This method will compare the Cluster ID, Latitude and Longitude values 
+    /// of the passed coordinate object to the values held within this coordinate 
+    /// object.
     /// </summary>
     /// <param name="obj">The coordinate object to compare.</param>
     /// <returns>whether or not the object is equal to this.</returns>
@@ -141,16 +114,15 @@ namespace Cluster
         // Cast the object to a coordinate object
         Coordinate coordinate = (Coordinate) obj;
         // Deep Comparison
-        return ClusterId == coordinate.ClusterId &&
-                 Latitude == coordinate.Latitude &&
-                   Longitude == coordinate.Longitude;
+        return Latitude == coordinate.Latitude && 
+                Longitude == coordinate.Longitude;
       }
       return false;
     }
     
     /// <summary>
-    /// This method will return whether or not this coordinate is between the lower and upper 
-    /// coordinates.
+    /// This method will return whether or not this coordinate is between the 
+    /// lower and upper coordinates.
     /// </summary>
     /// <param name="c1">Lower coordinate.</param>
     /// <param name="c2">Upper coordinate.</param>

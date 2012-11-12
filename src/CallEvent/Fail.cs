@@ -30,22 +30,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace CallAnalysis
+namespace CallEvent
 {
-  public class Fail : CallLog
+  public class Fail : Event
   {
 
-    #region constructor
-    
-    /// <summary>
-    /// Default Constructor
-    /// </summary>
-    public Fail()
-      : base()
-    {
-
-    }
-
-    #endregion
   }
 }

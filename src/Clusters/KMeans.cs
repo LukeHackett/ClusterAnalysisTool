@@ -29,16 +29,18 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using CallEvent;
 
 namespace Cluster
 {
   /// <summary>
-  /// This K-Means class provides an interface to allow for a simple clustering of a collection of 
-  /// coordinates. The class will estimate a K value (number of clusters desired), if a K value was 
-  /// not initially supplied however this is an estimate, and suppling a K value is recommended. 
-  /// Each of the coordinates will be assigned to a cluster, based upon the distance from the centre 
-  /// of the cluster (centroid) to the given coordinate. The pseudo K-Means algorithm is shown below 
-  /// for reference purposes:
+  /// This K-Means class provides an interface to allow for a simple clustering 
+  /// of a collection of events. The class will estimate a K value (number of 
+  /// clusters desired), if a K value ia unknown however this is an estimate, 
+  /// and suppling a K value is recommended. 
+  /// Each of the coordinates will be assigned to a cluster, based upon the 
+  /// distance from the centre of the cluster (centroid) to the given coordinate. 
+  /// The pseudo K-Means algorithm is shown below for reference purposes:
   ///  
   /// Basic K-means algorithm:
   ///   1. Select K points as initial centroids.
@@ -55,14 +57,14 @@ namespace Cluster
     #region Properties
     
     /// <summary>
-    /// List of original Coordinates
+    /// Collection of original Coordinates
     /// </summary>
-    public CoordinateCollection Coordinates { get; private set; }
+    public EventCollection Coordinates { get; private set; }
         
     /// <summary>
     /// List of clustered Coordinates
     /// </summary>
-    public List<CoordinateCollection> Clusters { get; private set; }
+    public List<EventCollection> Clusters { get; private set; }
         
     /// <summary>
     /// The number of Clusters to be used (K Value)
@@ -76,10 +78,10 @@ namespace Cluster
     /// <summary>
     /// Primary Constructor
     /// </summary>
-    /// <param name="data"></param>
-    public KMeans(CoordinateCollection coordinates)
+    /// <param name="events">The events to be clustered</param>
+    public KMeans(EventCollection events)
     {
-      Coordinates = coordinates;
+      Coordinates = events;
       K = CalcKValue();
     }
     
@@ -87,11 +89,11 @@ namespace Cluster
     /// <summary>
     /// Secondary Constructor
     /// </summary>
-    /// <param name="data"></param>
-    /// <param name="k"></param>
-    public KMeans(CoordinateCollection coordinates, int k)
+    /// <param name="events">The events to be clustered</param>
+    /// <param name="k">The number of clusters</param>
+    public KMeans(EventCollection events, int k)
     {
-      Coordinates = coordinates;
+      Coordinates = events;
       K = (k > 0) ? k : CalcKValue();
     }
     
@@ -100,42 +102,49 @@ namespace Cluster
     #region Public Methods
     
     /// <summary>
-    /// This method is the main entry point for initialising the K-Means algorithm. The results of 
-    /// the analysis are put into the Clusters List found as a member variable within this class.
-    /// The method will continue running until there have been no changes. A change is defined as at 
-    /// least one coordinate moving from one cluster to another.
+    /// This method is the main entry point for initialising the K-Means algorithm.
+    /// The results of the analysis are put into the Clusters List found as a 
+    /// member variable within this class.
+    /// The method will continue running until there have been no detected 
+    /// changes. A change is defined as at least one event moving from one cluster
+    /// to another.
     /// </summary>
     public void Analyse()
     {
       // Divide the Coordinates in K Clusters
       Clusters = Coordinates.Split(K);
+
       // Number of changes made within a pass
       int changes = 0;
+
       // Continuously recompute, until no changes were made.
       do
       {
         // Reset the number of changes made
         changes = 0;
+
         // Loop over all Clusters
-        foreach (CoordinateCollection cluster in Clusters)
+        foreach (EventCollection cluster in Clusters)
         {
           // Loop over each Coordinate
           for (int i = 0; i < cluster.Count; i++)
           {
-            // Grab the coordinate
-            Coordinate coordinate = cluster[i];
+            // Grab the event
+            Event evt = cluster[i];
             
             // Find the nearest cluster's index
-            int nearest = FindNearestCluster(Clusters, coordinate);
+            int nearest = FindNearestCluster(Clusters, evt);
             
             // Check to see if the point has moved and is not empty
             if (nearest != Clusters.IndexOf(cluster) && cluster.Count > 1)
             {
-              // Remove the coordinate from the current location
-              cluster.Remove(coordinate);
-              // Insert previously removed coordinate into the correct cluster
-              coordinate.ClusterId = nearest;
-              Clusters[nearest].Add(coordinate);
+              // Remove the event from the current location
+              cluster.Remove(evt);
+
+              // Insert previously removed event into the correct cluster
+              evt.ClusterId = nearest;
+              Clusters[nearest].Add(evt);
+
               // A change has happened
               changes++;
             }
@@ -150,17 +159,19 @@ namespace Cluster
     #region Private Methods
 
     /// <summary>
-    /// This method will find a given coordinate's closest cluster. The distance between the 
-    /// coordinate and the cluster's centroid is calculated using the haversine formula.
+    /// This method will find a given event's closest cluster. The distance between 
+    /// the coordinate and the cluster's centroid is calculated using the haversine 
+    /// formula.
     /// </summary>
     /// <see cref="Distance.haversine"/>
     /// <param name="clusters">a list of clusters</param>
-    /// <param name="coordinate">the pivot coordinate</param>
+    /// <param name="evt">the pivot event</param>
     /// <returns>index location of the cluster</returns>
-    private int FindNearestCluster(List<CoordinateCollection> clusters, Coordinate coordinate)
+    private int FindNearestCluster(List<EventCollection> clusters, Event evt)
     {
       // The minimum distance to a coordinate
       double minimumDistance = Double.MaxValue;
+
       // The index of the nearest cluster
       int clusterIndex = -1;
       
@@ -168,7 +179,7 @@ namespace Cluster
       for (int k = 0; k < clusters.Count; k++)
       {
         // Calculate the distance
-        double distance = Distance.haversine(coordinate, clusters[k].Centroid);
+        double distance = Distance.haversine(evt.Coordinate, clusters[k].Centroid);
         
         // Compare the two distance values
         if (minimumDistance > distance)
@@ -182,7 +193,8 @@ namespace Cluster
     }
         
     /// <summary>
-    /// This method will calculate the K value based upon the number of objects within the data set.
+    /// This method will calculate the K value based upon the number of objects 
+    /// within the data set.
     /// </summary>
     /// <returns>The K value</returns>
     private int CalcKValue()

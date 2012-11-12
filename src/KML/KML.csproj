@@ -55,9 +55,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CallAnalysis\CallAnalysis.csproj">
-      <Project>{7EB88811-EA95-41B5-8BB5-D382BF0F2580}</Project>
-      <Name>CallAnalysis</Name>
+    <ProjectReference Include="..\CallEvent\CallEvent.csproj">
+      <Project>{4CA78312-768F-4915-99E7-312E67A79B61}</Project>
+      <Name>CallEvent</Name>
     </ProjectReference>
     <ProjectReference Include="..\Clusters\Cluster.csproj">
       <Project>{D1A1C25C-4BB8-488A-B639-0C47E50DB904}</Project>

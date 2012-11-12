@@ -25,26 +25,29 @@
 /// ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE 
 /// POSSIBILITY OF SUCH DAMAGE.
 
-using Cluster;
-using CallAnalysis;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Xml;
+using Cluster;
+using CallEvent;
 
 namespace KML
 {
   /// <summary>
-  /// A simple static KML reader class.
+  /// A simple KML reader class.
   /// </summary>
   public class KMLReader
   {
+    #region Properties
+
     /// <summary>
-    /// 
+    /// The XMLTextReader instance to read a given XML file
     /// </summary>
     private XmlTextReader reader;
 
+    #endregion
 
     #region Constructors
 
@@ -63,12 +66,13 @@ namespace KML
     #region Public Methods
 
     /// <summary>
-    /// 
+    /// This method will return an event collection of events from the given KML 
+    /// file in the constructor of this object.
     /// </summary>
-    /// <returns></returns>
-    public CallCollection GetCallLogs()
+    /// <returns>A collection of events</returns>
+    public EventCollection GetCallLogs()
     {
-      CallCollection calls = new CallCollection();
+      EventCollection calls = new EventCollection();
       while (reader.Read())
       {
         // Get the Coordinate
@@ -88,7 +92,7 @@ namespace KML
         String end_mix_band = GetSimpleData("end_mix_band");
 
         // Create a new Call Log Object
-        CallLog callLog = null;
+        Event callLog = null;
 
         // Force the call log to be a type
         switch (type)
@@ -130,47 +134,17 @@ namespace KML
 
     #endregion
 
-
-
-    #region Public Static Methods
+    #region Private Methods
 
     /// <summary>
-    /// This method will read a given KML file, and pull all the <coordinate> values from the file. 
-    /// These values will be stored and returned within one CoordinateCollection object (a list of 
-    /// coordinates).
+    /// This method will read a coordinates xml tag, and convert it into a 
+    /// Coordinate object. If there are no xml tags with coordinates then the 
+    /// method will return null.
     /// </summary>
-    /// <returns>A list of cooridnates as a CoordinateCollection</returns>
-    public CoordinateCollection GetCoordinates()
-    {   
-      // New collection to store the coordinates in
-      CoordinateCollection coordinates = new CoordinateCollection(); 
-
-      // Loop over all coordinate elements
-      while (reader.Read())
-      {
-        if(reader.Name == "coordinates" && reader.NodeType == XmlNodeType.Element)
-        {
-          // Read the coordinate value
-          reader.Read();
-
-          // Strip and Split into each Lat/Long/Elevation
-          String[] values = reader.Value.Replace("\r\n", "").Split(',');
-
-          // Create a new Coordinate Object
-          double lat = Double.Parse(values[0]);
-          double lon = Double.Parse(values[1]);
-          Coordinate c = new Coordinate(lat, lon);
-
-          // Add to the coordinates list
-          coordinates.Add(c);
-        }
-      }
-      return coordinates;
-    }
-   
-
+    /// <returns>A coordinate object</returns>
     private Coordinate ReadCoordinate()
     {
+      // The final coordinate object.
       Coordinate coordinate = null;
 
       while (reader.Read())
@@ -196,9 +170,15 @@ namespace KML
       return coordinate;
     }
 
-    
+    /// <summary>
+    /// This method will return the value that is associated with the given name
+    /// of a SimpleData element.
+    /// </summary>
+    /// <param name="attribute">the name of the simple data element</param>
+    /// <returns>the string value found with that SimpleData element</returns>
     private String GetSimpleData(String attribute)
     {
+      // The final value
       String value = null;
 
       while (reader.Read())
@@ -209,6 +189,7 @@ namespace KML
           reader.MoveToAttribute(attribute);
           reader.Read();
 
+          // Grab the value
           value = reader.Value;
 
           // Break from the loop as the value has been read
@@ -218,8 +199,6 @@ namespace KML
 
       return value;
     }
-
-
 
     #endregion
   }

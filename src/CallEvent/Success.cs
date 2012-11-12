@@ -30,22 +30,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace CallAnalysis
+namespace CallEvent
 {
-  public class Drop : CallLog
+  public class Success : Event
   {
-    #region Constructors
 
-    /// <summary>
-    /// Default Constructor
-    /// </summary>
-    public Drop()
-      : base()
-    {
-
-    }
-
-    #endregion
 
   }
 }

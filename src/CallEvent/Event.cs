@@ -30,18 +30,67 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace CallAnalysis
+namespace CallEvent
 {
-  public class Success : CallLog
+  public abstract class Event
   {
-
-    #region constructor
+    #region Properties
 
     /// <summary>
-    /// Default Constructor
+    /// The device name.
     /// </summary>
-    public Success()
-      : base()
+    public String Device { get; set; }
+    
+    /// <summary>
+    /// The device PIN.
+    /// </summary>
+    public String Pin { get; set; }
+    
+    /// <summary>
+    /// The start RAT of the device.
+    /// </summary>
+    public String StartRat { get; set; }
+    
+    /// <summary>
+    /// The end RAT of the device.
+    /// </summary>
+    public String EndRat { get; set; }
+    
+    /// <summary>
+    /// The start frequency band of the device.
+    /// </summary>
+    public String StartMixBand { get; set; }
+    
+    /// <summary>
+    /// The end frequency band of the device.
+    /// </summary>
+    public String EndMixBand { get; set; }
+
+    /// <summary>
+    /// Latitude Value (North-South Position) of the event.
+    /// </summary>
+    public Coordinate Coordinate { get; set; }
+
+    /// <summary>
+    /// The cluster that this event belongs to.
+    /// </summary>
+    public int ClusterId { get; set; }
+
+    /// <summary>
+    /// Whether or not this event is classed as noise.
+    /// </summary>
+    public bool Noise { get; set; }
+
+    /// <summary>
+    /// Whether or not this event has been classified (or visited).
+    /// </summary>
+    public bool Classified { get; set; }
+
+    #endregion
+
+    #region Public Methods
+
+    public Event()
     {
 
     }
