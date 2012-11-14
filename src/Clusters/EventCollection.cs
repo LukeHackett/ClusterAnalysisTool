@@ -30,7 +30,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace CallEvent
+namespace Cluster
 {
   public class EventCollection : List<Event>
   {
@@ -95,12 +95,12 @@ namespace CallEvent
       base.Add(evt);
       UpdateAllCentroids();
     }
-
+    
     /// <summary>
     /// Adds a collection events to the end of this event collection.
     /// </summary>
     /// <param name="collection">a collection of events to be added</param>
-    public new void AddRange(EventCollection collection)
+    public void AddRange(EventCollection collection)
     {
       foreach (Event evt in collection)
       {

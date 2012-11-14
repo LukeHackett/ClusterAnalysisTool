@@ -50,18 +50,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Coordinate.cs" />
     <Compile Include="DBSCAN.cs" />
     <Compile Include="Distance.cs" />
+    <Compile Include="Drop.cs" />
+    <Compile Include="Event.cs" />
+    <Compile Include="EventCollection.cs" />
+    <Compile Include="Fail.cs" />
     <Compile Include="KMeans.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CallEvent\CallEvent.csproj">
-      <Project>{4CA78312-768F-4915-99E7-312E67A79B61}</Project>
-      <Name>CallEvent</Name>
-    </ProjectReference>
+    <Compile Include="Success.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
