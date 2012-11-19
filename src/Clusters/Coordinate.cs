@@ -50,7 +50,7 @@ namespace Cluster
     /// Longitude Value (East-West Position).
     /// </summary>
     public double Longitude { get; set; }
-        
+
     #endregion
     
     #region Constructors

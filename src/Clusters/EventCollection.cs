@@ -47,24 +47,9 @@ namespace Cluster
     public String Description { get; set; }
 
     /// <summary>
-    /// The central coordinate of all types of calls
+    /// The centroid of this cluster
     /// </summary>
-    public Coordinate Centroid { get; private set; }
-
-    /// <summary>
-    /// The central coordinate of the dropped calls
-    /// </summary>
-    public Coordinate DropCentroid { get; private set; }
-
-    /// <summary>
-    /// The central coordinate of the failed calls
-    /// </summary>
-    public Coordinate FailCentroid { get; private set; }
-
-    /// <summary>
-    /// The central coordinate of the successful calls
-    /// </summary>
-    public Coordinate SuccessCentroid { get; private set; }
+    public Centroid Centroid { get; private set; }
 
     #endregion
 
@@ -76,10 +61,7 @@ namespace Cluster
     public EventCollection()
       : base()
     {
-      Centroid = new Coordinate(0, 0);
-      DropCentroid = new Coordinate(0, 0);
-      FailCentroid = new Coordinate(0, 0);
-      SuccessCentroid = new Coordinate(0, 0);
+      Centroid = new Centroid(0, 0);
     }
 
     #endregion
@@ -93,7 +75,7 @@ namespace Cluster
     public new void Add(Event evt)
     {
       base.Add(evt);
-      UpdateAllCentroids();
+      UpdateCentroid();
     }
     
     /// <summary>
@@ -106,7 +88,7 @@ namespace Cluster
       {
         Add(evt);
       }
-      UpdateAllCentroids();
+      UpdateCentroid();
     }
 
     /// <summary>
@@ -116,7 +98,7 @@ namespace Cluster
     public new void Remove(Event evt)
     {
       base.Remove(evt);
-      UpdateAllCentroids();
+      UpdateCentroid();
     }
 
     /// <summary>
@@ -126,85 +108,7 @@ namespace Cluster
     public new void RemoveAt(int index)
     {
       base.RemoveAt(index);
-      UpdateAllCentroids();
-    }
-
-    /// <summary>
-    /// This method will calculate the Centroid of all the dropped calls within 
-    /// this set. The average values are obtained by calculating the mean 
-    /// Latitude and Longitude of every dropped call.
-    /// </summary>
-    public void UpdateDropCentroid() 
-    {
-      // Create LINQ statements to sup up all the drop Latitude values
-      var latitudes = ( from call in this
-                          where call is Drop
-                          select call.Coordinate.Latitude );
-
-      // Create LINQ statements to sup up all the drop Longitude values
-      var longitudes = ( from call in this
-                           where call is Drop
-                           select call.Coordinate.Longitude );
-
-      // Calculate the average Latitude value
-      double latitude = latitudes.Sum() / latitudes.Count();
-      DropCentroid.Latitude = Double.IsNaN(latitude) ? 0 : latitude;
-
-      // Calculate the average Longitude value
-      double longitude = longitudes.Sum() / longitudes.Count();
-      DropCentroid.Longitude = Double.IsNaN(longitude) ? 0 : longitude;
-    }
-
-    /// <summary>
-    /// This method will calculate the Centroid of all the failed calls within 
-    /// this set. The average values are obtained by calculating the mean 
-    /// Latitude and Longitude of every failed call.
-    /// </summary>
-    public void UpdateFailCentroid()
-    {
-      // Create LINQ statements to sup up all the drop Latitude values
-      var latitudes = (from call in this
-                      where call is Fail
-                      select call.Coordinate.Latitude);
-
-      // Create LINQ statements to sup up all the drop Longitude values
-      var longitudes = (from call in this
-                       where call is Fail
-                       select call.Coordinate.Longitude);
-
-      // Calculate the average Latitude value
-      double latitude = latitudes.Sum() / latitudes.Count();
-      FailCentroid.Latitude = Double.IsNaN(latitude) ? 0 : latitude;
-
-      // Calculate the average Longitude value
-      double longitude = longitudes.Sum() / longitudes.Count();
-      FailCentroid.Longitude = Double.IsNaN(longitude) ? 0 : longitude;
-    }
-
-    /// <summary>
-    /// This method will calculate the Centroid of all the successful calls 
-    /// within this set. The average values are obtained by calculating the mean 
-    /// Latitude and Longitude of every successful call.
-    /// </summary>
-    public void UpdateSuccessCentroid()
-    {
-      // Create LINQ statements to sup up all the drop Latitude values
-      var latitudes = (from call in this
-                      where call is Success
-                      select call.Coordinate.Latitude);
-
-      // Create LINQ statements to sup up all the drop Longitude values
-      var longitudes = (from call in this
-                       where call is Success
-                       select call.Coordinate.Longitude);
-
-      // Calculate the average Latitude value
-      double latitude = latitudes.Sum() / latitudes.Count();
-      SuccessCentroid.Latitude = Double.IsNaN(latitude) ? 0 : latitude;
-
-      // Calculate the average Longitude value
-      double longitude = longitudes.Sum() / longitudes.Count();
-      SuccessCentroid.Longitude = Double.IsNaN(longitude) ? 0 : longitude;
+      UpdateCentroid();
     }
 
     /// <summary>
@@ -229,20 +133,6 @@ namespace Cluster
       // Calculate the average Longitude value
       double longitude = longitudes.Sum() / longitudes.Count();
       Centroid.Longitude = Double.IsNaN(longitude) ? 0 : longitude;
-    }
-
-    /// <summary>
-    /// This method will calculate the Centroid of all types of calls (drops, 
-    /// fails and successful) indivudally, and then will calculate the average 
-    /// of those. The average values are obtained by calculating the mean 
-    /// Latitude and Longitude of every failed call.
-    /// </summary>
-    public void UpdateAllCentroids()
-    {
-      UpdateDropCentroid();
-      UpdateFailCentroid();
-      UpdateSuccessCentroid();
-      UpdateCentroid();
     }
 
     /// <summary>
@@ -297,8 +187,10 @@ namespace Cluster
       {
         EventCollection cluster = new EventCollection();
         cluster.AddRange(list);
-        // Update all the centroids
-        cluster.UpdateAllCentroids();
+
+        // Update the centroid
+        cluster.UpdateCentroid();
+
         // Add this list to the outer list
         clusters.Add(cluster);
       }
@@ -319,7 +211,7 @@ namespace Cluster
       }
 
       // Update all the centroids
-      UpdateAllCentroids();
+      UpdateCentroid();
     }
 
     #endregion    

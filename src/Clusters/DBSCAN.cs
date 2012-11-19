@@ -33,14 +33,16 @@ using System.Text;
 namespace Cluster
 {
   /// <summary>
-  /// This DBSCAN class provides an interface to allow for clustering of a collection of coordinates. 
+  /// This DBSCAN class provides an interface to allow for clustering of a 
+  /// collection of events. 
   ///
   /// Basic DBSCAN algorithm:
   ///  1. Label all points as core or noise points.
   ///  2. Eliminate noise points.
   ///  3. Put an edge between all core points that are within Eps of each other.
   ///  4. Make each group of connected core points into a separate cluster.
-  ///  5. Assign each border point to one of the clusters of its associated core points.
+  ///  5. Assign each border point to one of the clusters of its associated core 
+  ///     points.
   /// 
   /// References used:
   /// http://www.c-sharpcorner.com/uploadfile/b942f9/implementing-the-dbscan-algorithm-using-C-Sharp/
@@ -175,23 +177,28 @@ namespace Cluster
     }
 
     /// <summary>
-    /// This function will expand each of the given coordinate neighbours, and all of their 
-    /// neighbours. This will decide which coordinates are within the given coordinate's EPS, and 
-    /// therefore whether or not the neighbours belong to the new cluster.
+    /// This function will expand each of the given coordinate neighbours, and 
+    /// all of their neighbours. This will decide which coordinates are within 
+    /// the given coordinate's EPS, and therefore whether or not the neighbours 
+    /// belong to the new cluster.
     /// </summary>
     /// <param name="c">The coordinate to expand</param>
     /// <param name="clusterId">The current cluster ID</param>
     /// <returns>whether or not a new cluster has been defined or not</returns>
     private bool ExpandCluster(Event evt, int clusterId)
     {
-      // Get the all of C's neighbours.
+      // Get the all of evt's neighbours.
       EventCollection neighbours = GetRegion(evt);
+      neighbours.Centroid.Radius = Epsilon;
       
       // Remove itself from the neighbours
       neighbours.Remove(evt);
-      
+
+      // Decrement the MinPoints by one so that we take 
+      int minimumPoints = MinPoints - 1;
+
       // Check to see if there is a core point (based on the minimum number of points per cluster)
-      if (neighbours.Count < MinPoints)
+      if (neighbours.Count < minimumPoints)
       {
         evt.Classified = true;
         evt.Noise = true;
@@ -208,8 +215,8 @@ namespace Cluster
         Event currentNeighbour = neighbours[0];
         // Get all the neighbours of the original neighbour
         EventCollection neighbouringNeighbours = GetRegion(currentNeighbour);
-        
-        if (neighbouringNeighbours.Count >= MinPoints)
+
+        if (neighbouringNeighbours.Count >= minimumPoints)
         {
           // Check to see if 
           foreach (Event resultP in neighbouringNeighbours)
@@ -240,7 +247,7 @@ namespace Cluster
     {
       int increment = (index - Clusters.Count) + 1;
       for (int i = 0; i < increment; i++)
-      { 
+      {
         Clusters.Insert(Clusters.Count, new EventCollection());
       }
     }

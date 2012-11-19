@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Centroid.cs" />
     <Compile Include="Coordinate.cs" />
     <Compile Include="DBSCAN.cs" />
     <Compile Include="Distance.cs" />
