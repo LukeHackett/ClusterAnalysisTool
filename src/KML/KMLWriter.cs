@@ -31,6 +31,7 @@ using System.Linq;
 using System.Text;
 using System.Xml;
 using Cluster;
+using System.IO;
 
 namespace KML
 {
@@ -73,6 +74,8 @@ namespace KML
                                     new String[]{"drop-noise", "Call Drop (Noise)", "red-dot.png"}, 
                                     new String[]{"fail-noise", "Call Setup Failure (Noise)", "yellow-dot.png"}, 
                                     new String[]{"success-noise", "Successful Failure (Noise)", "green-dot.png"},
+
+                                    new String[]{"centroid", "Centroid", "blue.png"}
                                   };
     }
     
@@ -117,19 +120,19 @@ namespace KML
       
       // Define the Document & Style Sheets
       Kml.WriteStartElement("Document");
-      Kml.WriteElementString("name", "DOCUMENT NAME");
+      Kml.WriteElementString("name", Path.GetFileName(file));
       GenerateStyles();
       
       // Write the Clusters to the KML file
-      foreach (EventCollection cluster in clusters)
+      for (int i = 0; i < clusters.Count; i++)
       {
-        WriteCluster(cluster);
+        WriteClusterCollection(clusters[i], "Cluster " + i);
       }
       
       //Write the Noise to the KML file
       if(noise.Count > 0)
       {
-        WriteCluster(noise);
+        WriteClusterCollection(noise);
       }
 
       // End Document
@@ -210,50 +213,94 @@ namespace KML
     /// pointer should be used to show the point upon the map.
     /// </summary>
     /// <param name="cluster">A Collection of events</param>
-    private static void WriteCluster(EventCollection cluster)
+    private static void WriteClusterCollection(EventCollection cluster, String name = null)
     {
+      // Get the name of the cluster if over written via the parameter
+      name = (name == null) ? cluster.Name : name;
+
       // Create a new Folder
       Kml.WriteStartElement("Folder");
-      Kml.WriteElementString("name", cluster.Name);
+      Kml.WriteElementString("name", name);
       Kml.WriteElementString("description", cluster.Description);
       
+      // Create a placemark for the centroid cluster
+      WriteCentroid(cluster.Centroid);
+
       // Create a new Placemark for each Coordinate
-      int i = 0;
       foreach(Event evt in cluster)
       {
-        // Getn the event name based upon the class name
-        String eventName = evt.GetType().Name;
-
-        // Create a new Placemark
-        Kml.WriteStartElement("Placemark");
-        Kml.WriteElementString("name", String.Format("{0} {1}", eventName, i));
-        
-        // Create a fancy description
-        String description = CreateCooridnateDescription(evt);
-        Kml.WriteStartElement("description");
-        Kml.WriteCData(description);
-        Kml.WriteEndElement();
-        
-        // Set the Style
-        String style = "#" + eventName.ToLower();
-        style += (evt.Noise) ? "-noise" : "";
-        Kml.WriteElementString("styleUrl", style);
-        
-        // Create a new Point
-        Kml.WriteStartElement("Point");
-        Kml.WriteElementString("coordinates", evt.Coordinate.ToString());
-        Kml.WriteEndElement();
-        
-        // Finish the Placemark
-        Kml.WriteEndElement();        
-        i++;
+        WriteCluster(evt);
       }
+
       // Finish the Folder
       Kml.WriteEndElement();
     }
-    
+
     /// <summary>
-    /// This method will create a html string that can be used as a hover description.
+    /// 
+    /// </summary>
+    /// <param name="cluster"></param>
+    private static void WriteCluster(Event cluster)
+    {
+      // Get the event name based upon the class name
+      String eventName = cluster.GetType().Name;
+
+      // Create a new Placemark
+      Kml.WriteStartElement("Placemark");
+      Kml.WriteElementString("name", eventName);
+
+      // Create a fancy description
+      String description = CreateCooridnateDescription(cluster);
+      Kml.WriteStartElement("description");
+      Kml.WriteCData(description);
+      Kml.WriteEndElement();
+
+      // Set the Style
+      String style = "#" + eventName.ToLower();
+      style += (cluster.Noise) ? "-noise" : "";
+      Kml.WriteElementString("styleUrl", style);
+
+      // Create a new Point
+      Kml.WriteStartElement("Point");
+      Kml.WriteElementString("coordinates", cluster.Coordinate.ToString());
+      Kml.WriteEndElement();
+
+      // Finish the Placemark
+      Kml.WriteEndElement();   
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="coordinate"></param>
+    private static void WriteCentroid(Centroid centroid)
+    {
+      // Create a new Placemark
+      Kml.WriteStartElement("Placemark");
+      Kml.WriteElementString("name", "Centroid");
+
+      // Set the Style
+      Kml.WriteElementString("styleUrl", "centroid");
+
+      // Create a fancy description
+      String description = CreateCooridnateDescription(centroid);
+      Kml.WriteStartElement("description");
+      Kml.WriteCData(description);
+      Kml.WriteEndElement();
+
+      // Create a new Point
+      Kml.WriteStartElement("Point");
+      Kml.WriteElementString("coordinates", centroid.ToString());
+      Kml.WriteEndElement();
+
+      // Finish the Placemark
+      Kml.WriteEndElement();  
+    }
+
+
+    /// <summary>
+    /// This method will create a html string that can be used as a hover 
+    /// description.
     /// </summary>
     /// <param name="evt">The event to have a description created for</param>
     /// <returns>A well formed html string description</returns>
@@ -298,6 +345,32 @@ namespace KML
                              evt.EndRat, 
                              evt.StartMixBand,
                              evt.EndMixBand);
+    }
+
+    /// <summary>
+    /// This method will create a html string that can be used as a hover 
+    /// description. This method takes a straight Coordinate object, and should 
+    /// be used when wanting to output the centroid
+    /// </summary>
+    /// <param name="c">The coordinate to have a description created for</param>
+    /// <param name="centroid">Whether or not the coordinate is the centroid</param>
+    /// <returns>A well formed html string description</returns>
+    private static String CreateCooridnateDescription(Centroid centroid)
+    {
+      return String.Format("<div class=\"googft-info-window\" style=\"width:250px\">" +
+                              "<table>" +
+                                "<tr>" +
+                                  "<td><b>Coordinate: </b></td>" +
+                                  "<td>{0}</td>" +
+                                "</tr>" +
+                                "<tr>" +
+                                  "<td><b>Radius: </b></td>" +
+                                  "<td>{1}</td>" +
+                                "</tr>" +
+                              "</table>" +
+                            "</div>",
+                             centroid.ToString(),
+                             centroid.Radius);
     }
 
     #endregion

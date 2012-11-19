@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
   <Document>
-    <name>DOCUMENT NAME</name>
-    <Style id="drop">
-      <BalloonStyle>
-        <text>Call Drop</text>
-      </BalloonStyle>
+    <name>dbscan_L_wk35_drops.kml</name>
+    <Style id="drop-hide">
+      <LabelStyle>
+        <scale>0.0</scale>
+      </LabelStyle>
       <IconStyle>
         <color>FFFFFFFF</color>
         <scale>1.2</scale>
@@ -14,10 +14,32 @@
         </Icon>
       </IconStyle>
     </Style>
-    <Style id="fail">
-      <BalloonStyle>
-        <text>Call Setup Failure</text>
-      </BalloonStyle>
+    <Style id="drop-show">
+      <LabelStyle>
+        <scale>1.2</scale>
+      </LabelStyle>
+      <IconStyle>
+        <color>FFFFFFFF</color>
+        <scale>1.2</scale>
+        <Icon>
+          <href>http://google.com/mapfiles/ms/micons/red.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <StyleMap id="drop">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#drop-hide</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#drop-show</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="fail-hide">
+      <LabelStyle>
+        <scale>0.0</scale>
+      </LabelStyle>
       <IconStyle>
         <color>FFFFFFFF</color>
         <scale>1.2</scale>
@@ -26,10 +48,32 @@
         </Icon>
       </IconStyle>
     </Style>
-    <Style id="success">
-      <BalloonStyle>
-        <text>Successful Failure</text>
-      </BalloonStyle>
+    <Style id="fail-show">
+      <LabelStyle>
+        <scale>1.2</scale>
+      </LabelStyle>
+      <IconStyle>
+        <color>FFFFFFFF</color>
+        <scale>1.2</scale>
+        <Icon>
+          <href>http://google.com/mapfiles/ms/micons/yellow.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <StyleMap id="fail">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#fail-hide</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#fail-show</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="success-hide">
+      <LabelStyle>
+        <scale>0.0</scale>
+      </LabelStyle>
       <IconStyle>
         <color>FFFFFFFF</color>
         <scale>1.2</scale>
@@ -38,10 +82,32 @@
         </Icon>
       </IconStyle>
     </Style>
-    <Style id="drop-noise">
-      <BalloonStyle>
-        <text>Call Drop (Noise)</text>
-      </BalloonStyle>
+    <Style id="success-show">
+      <LabelStyle>
+        <scale>1.2</scale>
+      </LabelStyle>
+      <IconStyle>
+        <color>FFFFFFFF</color>
+        <scale>1.2</scale>
+        <Icon>
+          <href>http://google.com/mapfiles/ms/micons/green.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <StyleMap id="success">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#success-hide</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#success-show</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="drop-noise-hide">
+      <LabelStyle>
+        <scale>0.0</scale>
+      </LabelStyle>
       <IconStyle>
         <color>FFFFFFFF</color>
         <scale>1.2</scale>
@@ -50,10 +116,32 @@
         </Icon>
       </IconStyle>
     </Style>
-    <Style id="fail-noise">
-      <BalloonStyle>
-        <text>Call Setup Failure (Noise)</text>
-      </BalloonStyle>
+    <Style id="drop-noise-show">
+      <LabelStyle>
+        <scale>1.2</scale>
+      </LabelStyle>
+      <IconStyle>
+        <color>FFFFFFFF</color>
+        <scale>1.2</scale>
+        <Icon>
+          <href>http://google.com/mapfiles/ms/micons/red-dot.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <StyleMap id="drop-noise">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#drop-noise-hide</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#drop-noise-show</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="fail-noise-hide">
+      <LabelStyle>
+        <scale>0.0</scale>
+      </LabelStyle>
       <IconStyle>
         <color>FFFFFFFF</color>
         <scale>1.2</scale>
@@ -62,10 +150,32 @@
         </Icon>
       </IconStyle>
     </Style>
-    <Style id="success-noise">
-      <BalloonStyle>
-        <text>Successful Failure (Noise)</text>
-      </BalloonStyle>
+    <Style id="fail-noise-show">
+      <LabelStyle>
+        <scale>1.2</scale>
+      </LabelStyle>
+      <IconStyle>
+        <color>FFFFFFFF</color>
+        <scale>1.2</scale>
+        <Icon>
+          <href>http://google.com/mapfiles/ms/micons/yellow-dot.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <StyleMap id="fail-noise">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#fail-noise-hide</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#fail-noise-show</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="success-noise-hide">
+      <LabelStyle>
+        <scale>0.0</scale>
+      </LabelStyle>
       <IconStyle>
         <color>FFFFFFFF</color>
         <scale>1.2</scale>
@@ -74,323 +184,371 @@
         </Icon>
       </IconStyle>
     </Style>
+    <Style id="success-noise-show">
+      <LabelStyle>
+        <scale>1.2</scale>
+      </LabelStyle>
+      <IconStyle>
+        <color>FFFFFFFF</color>
+        <scale>1.2</scale>
+        <Icon>
+          <href>http://google.com/mapfiles/ms/micons/green-dot.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <StyleMap id="success-noise">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#success-noise-hide</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#success-noise-show</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="centroid-hide">
+      <LabelStyle>
+        <scale>0.0</scale>
+      </LabelStyle>
+      <IconStyle>
+        <color>FFFFFFFF</color>
+        <scale>1.2</scale>
+        <Icon>
+          <href>http://google.com/mapfiles/ms/micons/blue.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Style id="centroid-show">
+      <LabelStyle>
+        <scale>1.2</scale>
+      </LabelStyle>
+      <IconStyle>
+        <color>FFFFFFFF</color>
+        <scale>1.2</scale>
+        <Icon>
+          <href>http://google.com/mapfiles/ms/micons/blue.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <StyleMap id="centroid">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#centroid-hide</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#centroid-show</styleUrl>
+      </Pair>
+    </StyleMap>
     <Folder>
-      <name />
+      <name>Cluster 0</name>
       <description />
       <Placemark>
-        <name />
-        <description><![CDATA[<div class="googft-info-window"><b>Cordinate:</b> -0.35173840, 51.53695340 <br><b>Latitude:</b> -0.3517384 <br><b>Longitude:</b> 51.5369534 <br></div>]]></description>
-        <styleUrl>#fail</styleUrl>
+        <name>Centroid</name>
+        <styleUrl>centroid</styleUrl>
+        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.34795058, 51.55072864</td></tr><tr><td><b>Radius: </b></td><td>2</td></tr></table></div>]]></description>
+        <Point>
+          <coordinates>-0.34795058, 51.55072864</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Drop</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.35173840, 51.53695340</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
+        <styleUrl>#drop</styleUrl>
         <Point>
           <coordinates>-0.35173840, 51.53695340</coordinates>
         </Point>
       </Placemark>
       <Placemark>
-        <name />
-        <description><![CDATA[<div class="googft-info-window"><b>Cordinate:</b> -0.38427630, 51.54519040 <br><b>Latitude:</b> -0.3842763 <br><b>Longitude:</b> 51.5451904 <br></div>]]></description>
-        <styleUrl>#fail</styleUrl>
+        <name>Drop</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.38427630, 51.54519040</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
+        <styleUrl>#drop</styleUrl>
         <Point>
           <coordinates>-0.38427630, 51.54519040</coordinates>
         </Point>
       </Placemark>
       <Placemark>
-        <name />
-        <description><![CDATA[<div class="googft-info-window"><b>Cordinate:</b> -0.31493920, 51.55048900 <br><b>Latitude:</b> -0.3149392 <br><b>Longitude:</b> 51.550489 <br></div>]]></description>
-        <styleUrl>#fail</styleUrl>
+        <name>Drop</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.31493920, 51.55048900</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
+        <styleUrl>#drop</styleUrl>
         <Point>
           <coordinates>-0.31493920, 51.55048900</coordinates>
         </Point>
       </Placemark>
       <Placemark>
-        <name />
-        <description><![CDATA[<div class="googft-info-window"><b>Cordinate:</b> -0.33562770, 51.55659750 <br><b>Latitude:</b> -0.3356277 <br><b>Longitude:</b> 51.5565975 <br></div>]]></description>
-        <styleUrl>#fail</styleUrl>
+        <name>Drop</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.33562770, 51.55659750</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
+        <styleUrl>#drop</styleUrl>
         <Point>
           <coordinates>-0.33562770, 51.55659750</coordinates>
         </Point>
       </Placemark>
       <Placemark>
-        <name />
-        <description><![CDATA[<div class="googft-info-window"><b>Cordinate:</b> -0.35317130, 51.56441290 <br><b>Latitude:</b> -0.3531713 <br><b>Longitude:</b> 51.5644129 <br></div>]]></description>
-        <styleUrl>#fail</styleUrl>
+        <name>Drop</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.35317130, 51.56441290</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
+        <styleUrl>#drop</styleUrl>
         <Point>
           <coordinates>-0.35317130, 51.56441290</coordinates>
         </Point>
       </Placemark>
     </Folder>
     <Folder>
-      <name />
+      <name>Cluster 1</name>
       <description />
       <Placemark>
-        <name />
-        <description><![CDATA[<div class="googft-info-window"><b>Cordinate:</b> -0.38138740, 51.31027920 <br><b>Latitude:</b> -0.3813874 <br><b>Longitude:</b> 51.3102792 <br></div>]]></description>
-        <styleUrl>#fail</styleUrl>
+        <name>Centroid</name>
+        <styleUrl>centroid</styleUrl>
+        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.15606836, 51.43351160</td></tr><tr><td><b>Radius: </b></td><td>2</td></tr></table></div>]]></description>
         <Point>
-          <coordinates>-0.38138740, 51.31027920</coordinates>
+          <coordinates>-0.15606836, 51.43351160</coordinates>
         </Point>
       </Placemark>
       <Placemark>
-        <name />
-        <description><![CDATA[<div class="googft-info-window"><b>Cordinate:</b> -0.38367720, 51.30956050 <br><b>Latitude:</b> -0.3836772 <br><b>Longitude:</b> 51.3095605 <br></div>]]></description>
-        <styleUrl>#fail</styleUrl>
-        <Point>
-          <coordinates>-0.38367720, 51.30956050</coordinates>
-        </Point>
-      </Placemark>
-    </Folder>
-    <Folder>
-      <name />
-      <description />
-      <Placemark>
-        <name />
-        <description><![CDATA[<div class="googft-info-window"><b>Cordinate:</b> -0.14689730, 51.43131280 <br><b>Latitude:</b> -0.1468973 <br><b>Longitude:</b> 51.4313128 <br></div>]]></description>
-        <styleUrl>#fail</styleUrl>
+        <name>Drop</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.14689730, 51.43131280</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
+        <styleUrl>#drop</styleUrl>
         <Point>
           <coordinates>-0.14689730, 51.43131280</coordinates>
         </Point>
       </Placemark>
       <Placemark>
-        <name />
-        <description><![CDATA[<div class="googft-info-window"><b>Cordinate:</b> -0.16147910, 51.43157090 <br><b>Latitude:</b> -0.1614791 <br><b>Longitude:</b> 51.4315709 <br></div>]]></description>
-        <styleUrl>#fail</styleUrl>
+        <name>Drop</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.16147910, 51.43157090</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
+        <styleUrl>#drop</styleUrl>
         <Point>
           <coordinates>-0.16147910, 51.43157090</coordinates>
         </Point>
       </Placemark>
       <Placemark>
-        <name />
-        <description><![CDATA[<div class="googft-info-window"><b>Cordinate:</b> -0.16097260, 51.43124810 <br><b>Latitude:</b> -0.1609726 <br><b>Longitude:</b> 51.4312481 <br></div>]]></description>
-        <styleUrl>#fail</styleUrl>
+        <name>Drop</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.16097260, 51.43124810</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
+        <styleUrl>#drop</styleUrl>
         <Point>
           <coordinates>-0.16097260, 51.43124810</coordinates>
         </Point>
       </Placemark>
       <Placemark>
-        <name />
-        <description><![CDATA[<div class="googft-info-window"><b>Cordinate:</b> -0.15397970, 51.44346000 <br><b>Latitude:</b> -0.1539797 <br><b>Longitude:</b> 51.44346 <br></div>]]></description>
-        <styleUrl>#fail</styleUrl>
+        <name>Drop</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.15397970, 51.44346000</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
+        <styleUrl>#drop</styleUrl>
         <Point>
           <coordinates>-0.15397970, 51.44346000</coordinates>
         </Point>
       </Placemark>
       <Placemark>
-        <name />
-        <description><![CDATA[<div class="googft-info-window"><b>Cordinate:</b> -0.15701310, 51.42996620 <br><b>Latitude:</b> -0.1570131 <br><b>Longitude:</b> 51.4299662 <br></div>]]></description>
-        <styleUrl>#fail</styleUrl>
+        <name>Drop</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.15701310, 51.42996620</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
+        <styleUrl>#drop</styleUrl>
         <Point>
           <coordinates>-0.15701310, 51.42996620</coordinates>
         </Point>
       </Placemark>
     </Folder>
     <Folder>
-      <name />
+      <name>Cluster 2</name>
       <description />
       <Placemark>
-        <name />
-        <description><![CDATA[<div class="googft-info-window"><b>Cordinate:</b> -0.27038740, 51.33097530 <br><b>Latitude:</b> -0.2703874 <br><b>Longitude:</b> 51.3309753 <br></div>]]></description>
-        <styleUrl>#fail</styleUrl>
+        <name>Centroid</name>
+        <styleUrl>centroid</styleUrl>
+        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.27308703, 51.32920308</td></tr><tr><td><b>Radius: </b></td><td>2</td></tr></table></div>]]></description>
+        <Point>
+          <coordinates>-0.27308703, 51.32920308</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Drop</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.27038740, 51.33097530</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
+        <styleUrl>#drop</styleUrl>
         <Point>
           <coordinates>-0.27038740, 51.33097530</coordinates>
         </Point>
       </Placemark>
       <Placemark>
-        <name />
-        <description><![CDATA[<div class="googft-info-window"><b>Cordinate:</b> -0.28653180, 51.32190430 <br><b>Latitude:</b> -0.2865318 <br><b>Longitude:</b> 51.3219043 <br></div>]]></description>
-        <styleUrl>#fail</styleUrl>
+        <name>Drop</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.28653180, 51.32190430</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
+        <styleUrl>#drop</styleUrl>
         <Point>
           <coordinates>-0.28653180, 51.32190430</coordinates>
         </Point>
       </Placemark>
       <Placemark>
-        <name />
-        <description><![CDATA[<div class="googft-info-window"><b>Cordinate:</b> -0.27023610, 51.33083060 <br><b>Latitude:</b> -0.2702361 <br><b>Longitude:</b> 51.3308306 <br></div>]]></description>
-        <styleUrl>#fail</styleUrl>
+        <name>Drop</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.27023610, 51.33083060</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
+        <styleUrl>#drop</styleUrl>
         <Point>
           <coordinates>-0.27023610, 51.33083060</coordinates>
         </Point>
       </Placemark>
       <Placemark>
-        <name />
-        <description><![CDATA[<div class="googft-info-window"><b>Cordinate:</b> -0.27022750, 51.33089980 <br><b>Latitude:</b> -0.2702275 <br><b>Longitude:</b> 51.3308998 <br></div>]]></description>
-        <styleUrl>#fail</styleUrl>
+        <name>Drop</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.27022750, 51.33089980</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
+        <styleUrl>#drop</styleUrl>
         <Point>
           <coordinates>-0.27022750, 51.33089980</coordinates>
         </Point>
       </Placemark>
       <Placemark>
-        <name />
-        <description><![CDATA[<div class="googft-info-window"><b>Cordinate:</b> -0.27027810, 51.33102270 <br><b>Latitude:</b> -0.2702781 <br><b>Longitude:</b> 51.3310227 <br></div>]]></description>
-        <styleUrl>#fail</styleUrl>
+        <name>Drop</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.27027810, 51.33102270</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
+        <styleUrl>#drop</styleUrl>
         <Point>
           <coordinates>-0.27027810, 51.33102270</coordinates>
         </Point>
       </Placemark>
       <Placemark>
-        <name />
-        <description><![CDATA[<div class="googft-info-window"><b>Cordinate:</b> -0.27028280, 51.33117240 <br><b>Latitude:</b> -0.2702828 <br><b>Longitude:</b> 51.3311724 <br></div>]]></description>
-        <styleUrl>#fail</styleUrl>
+        <name>Drop</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.27028280, 51.33117240</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
+        <styleUrl>#drop</styleUrl>
         <Point>
           <coordinates>-0.27028280, 51.33117240</coordinates>
         </Point>
       </Placemark>
       <Placemark>
-        <name />
-        <description><![CDATA[<div class="googft-info-window"><b>Cordinate:</b> -0.27018810, 51.33089920 <br><b>Latitude:</b> -0.2701881 <br><b>Longitude:</b> 51.3308992 <br></div>]]></description>
-        <styleUrl>#fail</styleUrl>
+        <name>Drop</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.27018810, 51.33089920</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
+        <styleUrl>#drop</styleUrl>
         <Point>
           <coordinates>-0.27018810, 51.33089920</coordinates>
         </Point>
       </Placemark>
       <Placemark>
-        <name />
-        <description><![CDATA[<div class="googft-info-window"><b>Cordinate:</b> -0.27656440, 51.32592030 <br><b>Latitude:</b> -0.2765644 <br><b>Longitude:</b> 51.3259203 <br></div>]]></description>
-        <styleUrl>#fail</styleUrl>
+        <name>Drop</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.27656440, 51.32592030</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
+        <styleUrl>#drop</styleUrl>
         <Point>
           <coordinates>-0.27656440, 51.32592030</coordinates>
         </Point>
       </Placemark>
     </Folder>
     <Folder>
-      <name />
+      <name>Cluster 3</name>
       <description />
       <Placemark>
-        <name />
-        <description><![CDATA[<div class="googft-info-window"><b>Cordinate:</b> -0.23400160, 51.36551130 <br><b>Latitude:</b> -0.2340016 <br><b>Longitude:</b> 51.3655113 <br></div>]]></description>
-        <styleUrl>#fail</styleUrl>
+        <name>Centroid</name>
+        <styleUrl>centroid</styleUrl>
+        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.22200541, 51.37603399</td></tr><tr><td><b>Radius: </b></td><td>2</td></tr></table></div>]]></description>
+        <Point>
+          <coordinates>-0.22200541, 51.37603399</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Drop</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.23400160, 51.36551130</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
+        <styleUrl>#drop</styleUrl>
         <Point>
           <coordinates>-0.23400160, 51.36551130</coordinates>
         </Point>
       </Placemark>
       <Placemark>
-        <name />
-        <description><![CDATA[<div class="googft-info-window"><b>Cordinate:</b> -0.23197060, 51.36738990 <br><b>Latitude:</b> -0.2319706 <br><b>Longitude:</b> 51.3673899 <br></div>]]></description>
-        <styleUrl>#fail</styleUrl>
+        <name>Drop</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.23197060, 51.36738990</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
+        <styleUrl>#drop</styleUrl>
         <Point>
           <coordinates>-0.23197060, 51.36738990</coordinates>
         </Point>
       </Placemark>
       <Placemark>
-        <name />
-        <description><![CDATA[<div class="googft-info-window"><b>Cordinate:</b> -0.21234180, 51.38516390 <br><b>Latitude:</b> -0.2123418 <br><b>Longitude:</b> 51.3851639 <br></div>]]></description>
-        <styleUrl>#fail</styleUrl>
+        <name>Drop</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.21234180, 51.38516390</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
+        <styleUrl>#drop</styleUrl>
         <Point>
           <coordinates>-0.21234180, 51.38516390</coordinates>
         </Point>
       </Placemark>
       <Placemark>
-        <name />
-        <description><![CDATA[<div class="googft-info-window"><b>Cordinate:</b> -0.20342760, 51.39172930 <br><b>Latitude:</b> -0.2034276 <br><b>Longitude:</b> 51.3917293 <br></div>]]></description>
-        <styleUrl>#fail</styleUrl>
+        <name>Drop</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.20342760, 51.39172930</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
+        <styleUrl>#drop</styleUrl>
         <Point>
           <coordinates>-0.20342760, 51.39172930</coordinates>
         </Point>
       </Placemark>
       <Placemark>
-        <name />
-        <description><![CDATA[<div class="googft-info-window"><b>Cordinate:</b> -0.20350940, 51.39160640 <br><b>Latitude:</b> -0.2035094 <br><b>Longitude:</b> 51.3916064 <br></div>]]></description>
-        <styleUrl>#fail</styleUrl>
+        <name>Drop</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.20350940, 51.39160640</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
+        <styleUrl>#drop</styleUrl>
         <Point>
           <coordinates>-0.20350940, 51.39160640</coordinates>
         </Point>
       </Placemark>
       <Placemark>
-        <name />
-        <description><![CDATA[<div class="googft-info-window"><b>Cordinate:</b> -0.23398670, 51.36546400 <br><b>Latitude:</b> -0.2339867 <br><b>Longitude:</b> 51.365464 <br></div>]]></description>
-        <styleUrl>#fail</styleUrl>
+        <name>Drop</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.23398670, 51.36546400</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
+        <styleUrl>#drop</styleUrl>
         <Point>
           <coordinates>-0.23398670, 51.36546400</coordinates>
         </Point>
       </Placemark>
       <Placemark>
-        <name />
-        <description><![CDATA[<div class="googft-info-window"><b>Cordinate:</b> -0.23399480, 51.36542920 <br><b>Latitude:</b> -0.2339948 <br><b>Longitude:</b> 51.3654292 <br></div>]]></description>
-        <styleUrl>#fail</styleUrl>
+        <name>Drop</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.23399480, 51.36542920</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
+        <styleUrl>#drop</styleUrl>
         <Point>
           <coordinates>-0.23399480, 51.36542920</coordinates>
         </Point>
       </Placemark>
       <Placemark>
-        <name />
-        <description><![CDATA[<div class="googft-info-window"><b>Cordinate:</b> -0.23428250, 51.36516040 <br><b>Latitude:</b> -0.2342825 <br><b>Longitude:</b> 51.3651604 <br></div>]]></description>
-        <styleUrl>#fail</styleUrl>
+        <name>Drop</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.23428250, 51.36516040</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
+        <styleUrl>#drop</styleUrl>
         <Point>
           <coordinates>-0.23428250, 51.36516040</coordinates>
         </Point>
       </Placemark>
       <Placemark>
-        <name />
-        <description><![CDATA[<div class="googft-info-window"><b>Cordinate:</b> -0.21311010, 51.38442050 <br><b>Latitude:</b> -0.2131101 <br><b>Longitude:</b> 51.3844205 <br></div>]]></description>
-        <styleUrl>#fail</styleUrl>
+        <name>Drop</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.21311010, 51.38442050</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
+        <styleUrl>#drop</styleUrl>
         <Point>
           <coordinates>-0.21311010, 51.38442050</coordinates>
         </Point>
       </Placemark>
       <Placemark>
-        <name />
-        <description><![CDATA[<div class="googft-info-window"><b>Cordinate:</b> -0.21255290, 51.38498950 <br><b>Latitude:</b> -0.2125529 <br><b>Longitude:</b> 51.3849895 <br></div>]]></description>
-        <styleUrl>#fail</styleUrl>
+        <name>Drop</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.21255290, 51.38498950</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
+        <styleUrl>#drop</styleUrl>
         <Point>
           <coordinates>-0.21255290, 51.38498950</coordinates>
         </Point>
       </Placemark>
       <Placemark>
-        <name />
-        <description><![CDATA[<div class="googft-info-window"><b>Cordinate:</b> -0.23407000, 51.36529890 <br><b>Latitude:</b> -0.23407 <br><b>Longitude:</b> 51.3652989 <br></div>]]></description>
-        <styleUrl>#fail</styleUrl>
+        <name>Drop</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.23407000, 51.36529890</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
+        <styleUrl>#drop</styleUrl>
         <Point>
           <coordinates>-0.23407000, 51.36529890</coordinates>
         </Point>
       </Placemark>
       <Placemark>
-        <name />
-        <description><![CDATA[<div class="googft-info-window"><b>Cordinate:</b> -0.21208500, 51.38527190 <br><b>Latitude:</b> -0.212085 <br><b>Longitude:</b> 51.3852719 <br></div>]]></description>
-        <styleUrl>#fail</styleUrl>
+        <name>Drop</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.21208500, 51.38527190</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
+        <styleUrl>#drop</styleUrl>
         <Point>
           <coordinates>-0.21208500, 51.38527190</coordinates>
         </Point>
       </Placemark>
       <Placemark>
-        <name />
-        <description><![CDATA[<div class="googft-info-window"><b>Cordinate:</b> -0.20332890, 51.39164740 <br><b>Latitude:</b> -0.2033289 <br><b>Longitude:</b> 51.3916474 <br></div>]]></description>
-        <styleUrl>#fail</styleUrl>
+        <name>Drop</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.20332890, 51.39164740</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
+        <styleUrl>#drop</styleUrl>
         <Point>
           <coordinates>-0.20332890, 51.39164740</coordinates>
         </Point>
       </Placemark>
       <Placemark>
-        <name />
-        <description><![CDATA[<div class="googft-info-window"><b>Cordinate:</b> -0.23408220, 51.36536570 <br><b>Latitude:</b> -0.2340822 <br><b>Longitude:</b> 51.3653657 <br></div>]]></description>
-        <styleUrl>#fail</styleUrl>
+        <name>Drop</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.23408220, 51.36536570</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
+        <styleUrl>#drop</styleUrl>
         <Point>
           <coordinates>-0.23408220, 51.36536570</coordinates>
         </Point>
       </Placemark>
       <Placemark>
-        <name />
-        <description><![CDATA[<div class="googft-info-window"><b>Cordinate:</b> -0.23333710, 51.36606150 <br><b>Latitude:</b> -0.2333371 <br><b>Longitude:</b> 51.3660615 <br></div>]]></description>
-        <styleUrl>#fail</styleUrl>
+        <name>Drop</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.23333710, 51.36606150</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
+        <styleUrl>#drop</styleUrl>
         <Point>
           <coordinates>-0.23333710, 51.36606150</coordinates>
-        </Point>
-      </Placemark>
-    </Folder>
-    <Folder>
-      <name />
-      <description />
-      <Placemark>
-        <name />
-        <description><![CDATA[<div class="googft-info-window"><b>Cordinate:</b> -0.48522520, 51.34141640 <br><b>Latitude:</b> -0.4852252 <br><b>Longitude:</b> 51.3414164 <br></div>]]></description>
-        <styleUrl>#fail</styleUrl>
-        <Point>
-          <coordinates>-0.48522520, 51.34141640</coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name />
-        <description><![CDATA[<div class="googft-info-window"><b>Cordinate:</b> -0.47027820, 51.32557460 <br><b>Latitude:</b> -0.4702782 <br><b>Longitude:</b> 51.3255746 <br></div>]]></description>
-        <styleUrl>#fail</styleUrl>
-        <Point>
-          <coordinates>-0.47027820, 51.32557460</coordinates>
         </Point>
       </Placemark>
     </Folder>
@@ -398,41 +556,81 @@
       <name>Noisy Clusters</name>
       <description />
       <Placemark>
-        <name />
-        <description><![CDATA[<div class="googft-info-window"><b>Cordinate:</b> -0.32707490, 51.31086280 <br><b>Latitude:</b> -0.3270749 <br><b>Longitude:</b> 51.3108628 <br></div>]]></description>
-        <styleUrl>#fail-noise</styleUrl>
+        <name>Centroid</name>
+        <styleUrl>centroid</styleUrl>
+        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.47993442, 51.40448101</td></tr><tr><td><b>Radius: </b></td><td>0</td></tr></table></div>]]></description>
+        <Point>
+          <coordinates>-0.47993442, 51.40448101</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Drop</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.38138740, 51.31027920</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
+        <styleUrl>#drop-noise</styleUrl>
+        <Point>
+          <coordinates>-0.38138740, 51.31027920</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Drop</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.32707490, 51.31086280</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
+        <styleUrl>#drop-noise</styleUrl>
         <Point>
           <coordinates>-0.32707490, 51.31086280</coordinates>
         </Point>
       </Placemark>
       <Placemark>
-        <name />
-        <description><![CDATA[<div class="googft-info-window"><b>Cordinate:</b> -0.21276450, 51.49075310 <br><b>Latitude:</b> -0.2127645 <br><b>Longitude:</b> 51.4907531 <br></div>]]></description>
-        <styleUrl>#fail-noise</styleUrl>
+        <name>Drop</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.21276450, 51.49075310</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
+        <styleUrl>#drop-noise</styleUrl>
         <Point>
           <coordinates>-0.21276450, 51.49075310</coordinates>
         </Point>
       </Placemark>
       <Placemark>
-        <name />
-        <description><![CDATA[<div class="googft-info-window"><b>Cordinate:</b> -0.98688230, 51.42460160 <br><b>Latitude:</b> -0.9868823 <br><b>Longitude:</b> 51.4246016 <br></div>]]></description>
-        <styleUrl>#fail-noise</styleUrl>
+        <name>Drop</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.98688230, 51.42460160</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
+        <styleUrl>#drop-noise</styleUrl>
         <Point>
           <coordinates>-0.98688230, 51.42460160</coordinates>
         </Point>
       </Placemark>
       <Placemark>
-        <name />
-        <description><![CDATA[<div class="googft-info-window"><b>Cordinate:</b> -0.55756970, 51.56571860 <br><b>Latitude:</b> -0.5575697 <br><b>Longitude:</b> 51.5657186 <br></div>]]></description>
-        <styleUrl>#fail-noise</styleUrl>
+        <name>Drop</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.38367720, 51.30956050</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
+        <styleUrl>#drop-noise</styleUrl>
+        <Point>
+          <coordinates>-0.38367720, 51.30956050</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Drop</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.48522520, 51.34141640</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
+        <styleUrl>#drop-noise</styleUrl>
+        <Point>
+          <coordinates>-0.48522520, 51.34141640</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Drop</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.47027820, 51.32557460</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
+        <styleUrl>#drop-noise</styleUrl>
+        <Point>
+          <coordinates>-0.47027820, 51.32557460</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Drop</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.55756970, 51.56571860</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
+        <styleUrl>#drop-noise</styleUrl>
         <Point>
           <coordinates>-0.55756970, 51.56571860</coordinates>
         </Point>
       </Placemark>
       <Placemark>
-        <name />
-        <description><![CDATA[<div class="googft-info-window"><b>Cordinate:</b> -0.51455040, 51.56156230 <br><b>Latitude:</b> -0.5145504 <br><b>Longitude:</b> 51.5615623 <br></div>]]></description>
-        <styleUrl>#fail-noise</styleUrl>
+        <name>Drop</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.51455040, 51.56156230</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
+        <styleUrl>#drop-noise</styleUrl>
         <Point>
           <coordinates>-0.51455040, 51.56156230</coordinates>
         </Point>
