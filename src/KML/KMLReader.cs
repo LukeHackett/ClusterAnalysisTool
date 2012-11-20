@@ -157,9 +157,9 @@ namespace KML
           String[] values = reader.Value.Replace("\r\n", "").Split(',');
 
           // Create a new Coordinate Object
-          double lat = Double.Parse(values[0]);
-          double lon = Double.Parse(values[1]);
-          coordinate = new Coordinate(lat, lon);
+          double lon = Double.Parse(values[0]);
+          double lat = Double.Parse(values[1]);
+          coordinate = new Coordinate(lon,lat);
 
           // Break from the loop as a coordinate has been read
           break;

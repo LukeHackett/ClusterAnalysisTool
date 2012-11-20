@@ -23,8 +23,8 @@ namespace Cluster
     /// </summary>
     /// <param name="Long">The Longitude value of the coordinate.</param>
     /// <param name="Lat">The Latitude value of the coordinate.</param>
-    public Centroid(double Lat, double Long)
-      : base(Lat, Long)
+    public Centroid(double longitude, double latitude)
+      : base(longitude, latitude)
     {
 
     }

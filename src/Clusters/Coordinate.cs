@@ -51,6 +51,11 @@ namespace Cluster
     /// </summary>
     public double Longitude { get; set; }
 
+    /// <summary>
+    /// Elevation value (distance from sea level)
+    /// </summary>
+    public double Altitude { get; set; }
+
     #endregion
     
     #region Constructors
@@ -60,10 +65,24 @@ namespace Cluster
     /// </summary>
     /// <param name="Long">The Longitude value of the coordinate.</param>
     /// <param name="Lat">The Latitude value of the coordinate.</param>
-    public Coordinate(double Lat, double Long)
+    public Coordinate(double longitude, double latitude)
     { 
-      Longitude = Long;
-      Latitude = Lat;
+      Longitude = longitude;
+      Latitude = latitude;
+      Altitude = 0;
+    }
+
+    /// <summary>
+    /// Alternative Constructor
+    /// </summary>
+    /// <param name="Long">The Longitude value of the coordinate.</param>
+    /// <param name="Lat">The Latitude value of the coordinate.</param>
+    /// <param name="altitude">The altitude value of the coordinate.</param>
+    public Coordinate(double longitude, double latitude, double altitude)
+    {
+      Latitude = latitude;
+      Longitude = longitude;
+      Altitude = altitude;
     }
     
     #endregion
@@ -94,10 +113,18 @@ namespace Cluster
     /// <returns>a formatted string.</returns>
     public override String ToString()
     {
-      String latString = Latitude.ToString("N8");
-      String lonString = Longitude.ToString("N8");
-      
-      return String.Format("{0}, {1}", latString, lonString);
+      //return String.Format("{0},{1},{2}", Latitude, Longitude, Altitude);
+      return String.Format("{0},{1},{2}", Longitude, Latitude, Altitude);
+    }
+
+    /// <summary>
+    /// Spherical Coordinate based upon the Latitude and Longitude of this 
+    /// coordinate.
+    /// </summary>
+    /// <returns>a spherical coordinate</returns>
+    public SphericalCoordinate ToSphericalCoordinate()
+    {
+      return new SphericalCoordinate(LongitudeAsRadians(), LatitudeAsRadians());
     }
 
     /// <summary>
