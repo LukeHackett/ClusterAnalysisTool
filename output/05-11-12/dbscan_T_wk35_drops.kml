@@ -36,6 +36,15 @@
         <styleUrl>#drop-show</styleUrl>
       </Pair>
     </StyleMap>
+    <Style id="centroid-radius">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>2</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>7fff7920</color>
+      </PolyStyle>
+    </Style>
     <Style id="fail-hide">
       <LabelStyle>
         <scale>0.0</scale>
@@ -70,6 +79,15 @@
         <styleUrl>#fail-show</styleUrl>
       </Pair>
     </StyleMap>
+    <Style id="centroid-radius">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>2</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>7fff7920</color>
+      </PolyStyle>
+    </Style>
     <Style id="success-hide">
       <LabelStyle>
         <scale>0.0</scale>
@@ -104,6 +122,15 @@
         <styleUrl>#success-show</styleUrl>
       </Pair>
     </StyleMap>
+    <Style id="centroid-radius">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>2</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>7fff7920</color>
+      </PolyStyle>
+    </Style>
     <Style id="drop-noise-hide">
       <LabelStyle>
         <scale>0.0</scale>
@@ -138,6 +165,15 @@
         <styleUrl>#drop-noise-show</styleUrl>
       </Pair>
     </StyleMap>
+    <Style id="centroid-radius">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>2</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>7fff7920</color>
+      </PolyStyle>
+    </Style>
     <Style id="fail-noise-hide">
       <LabelStyle>
         <scale>0.0</scale>
@@ -172,6 +208,15 @@
         <styleUrl>#fail-noise-show</styleUrl>
       </Pair>
     </StyleMap>
+    <Style id="centroid-radius">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>2</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>7fff7920</color>
+      </PolyStyle>
+    </Style>
     <Style id="success-noise-hide">
       <LabelStyle>
         <scale>0.0</scale>
@@ -206,6 +251,15 @@
         <styleUrl>#success-noise-show</styleUrl>
       </Pair>
     </StyleMap>
+    <Style id="centroid-radius">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>2</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>7fff7920</color>
+      </PolyStyle>
+    </Style>
     <Style id="centroid-hide">
       <LabelStyle>
         <scale>0.0</scale>
@@ -240,13 +294,22 @@
         <styleUrl>#centroid-show</styleUrl>
       </Pair>
     </StyleMap>
+    <Style id="centroid-radius">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>2</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>7fff7920</color>
+      </PolyStyle>
+    </Style>
     <Folder>
       <name>Noisy Clusters</name>
       <description />
       <Placemark>
         <name>Centroid</name>
-        <styleUrl>centroid</styleUrl>
-        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.344567,51.4354428571429,0</td></tr><tr><td><b>Radius: </b></td><td>0</td></tr></table></div>]]></description>
+        <styleUrl>#centroid</styleUrl>
+        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.344567,51.4354428571429,0</td></tr><tr><td><b>Radius: </b></td><td>17.5118839465867</td></tr></table></div>]]></description>
         <Point>
           <coordinates>-0.344567,51.4354428571429,0</coordinates>
         </Point>
