@@ -112,6 +112,7 @@ namespace Cluster
       Clusters = new List<EventCollection>();
       Noise = new EventCollection();
       Noise.Name = "Noisy Clusters";
+      Noise.Noise = true;
 
       // Place each coordinate into a cluster or deduce it as noise
       int clusterId = 1;

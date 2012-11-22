@@ -50,9 +50,17 @@ namespace Cluster
     /// </summary>
     public static int EARTH_RADIUS
     {
-      get { return 6371; }
+      get { return 6378137; }
     }
 
+    /// <summary>
+    /// Distance from the Earth's center to the North/South Poles in KM.
+    /// </summary>
+    public static int POLAR_RADIUS
+    {
+      get { return 6356752; }
+    }
+ 
     #endregion
     
     #region Public Methods
@@ -82,7 +90,7 @@ namespace Cluster
       // Calculate the angular distance (in radians)
       double angDistance = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a));
 
-      return EARTH_RADIUS * angDistance;
+      return (EARTH_RADIUS / 1000) * angDistance;
     }
 
     /// <summary>
@@ -101,7 +109,7 @@ namespace Cluster
       double lon2 = c2.LongitudeAsRadians();
 
       return Math.Acos(Math.Sin(lat1) * Math.Sin(lat2) + Math.Cos(lat1)
-                * Math.Cos(lat2) * Math.Cos(lon2 - lon1)) * EARTH_RADIUS;
+                * Math.Cos(lat2) * Math.Cos(lon2 - lon1)) * (EARTH_RADIUS / 1000);
     }
 
     /// <summary>
@@ -124,7 +132,7 @@ namespace Cluster
       double x = (lon2 - lon1) * Math.Cos((lat1 + lat2) / 2);
       double y = (lat2 - lat1);
 
-      return Math.Sqrt(x * x + y * y) * EARTH_RADIUS;
+      return Math.Sqrt(x * x + y * y) * (EARTH_RADIUS / 1000);
     }
 
     /// <summary>
@@ -138,6 +146,17 @@ namespace Cluster
       double diffX = c2.Latitude - c1.Latitude;
       double diffY = c2.Longitude - c1.Longitude;
       return diffX * diffX + diffY * diffY;
+    }
+
+    /// <summary>
+    /// This method returns the linear interpolation of radius between the Polar 
+    /// radius and equatorial radius.
+    /// </summary>
+    /// <param name="latitude">the latitude of a coordinate</param>
+    /// <returns>the interpolation of radius</returns>
+    public static double EarthRadius(double latitude)
+    {
+      return (EARTH_RADIUS * (90 - Math.Abs(latitude)) + POLAR_RADIUS * Math.Abs(latitude)) / 90;
     }
 
     #endregion

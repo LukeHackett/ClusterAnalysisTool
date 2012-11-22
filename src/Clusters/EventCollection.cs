@@ -47,6 +47,11 @@ namespace Cluster
     public String Description { get; set; }
 
     /// <summary>
+    /// Whether or not this collection is classed as noise
+    /// </summary>
+    public Boolean Noise { get; set; }
+
+    /// <summary>
     /// The centroid of this cluster
     /// </summary>
     public Centroid Centroid { get; private set; }
@@ -112,27 +117,15 @@ namespace Cluster
     }
 
     /// <summary>
-    /// This method will calculate the Centroid of all types of calls (drops, 
-    /// fails and successful). The average values are obtained by calculating 
-    /// the mean Latitude and Longitude of every failed call.
+    /// 
     /// </summary>
     public void UpdateCentroid() 
     {
-      // Create LINQ statements to sup up all the drop Latitude values
-      var latitudes = (from call in this
-                      select call.Coordinate.Latitude);
+      // Update the Longitude and Latitude Values
+      UpdateCentroidLatLon();
 
-      // Create LINQ statements to sup up all the drop Longitude values
-      var longitudes = (from call in this
-                        select call.Coordinate.Longitude);
-
-      // Calculate the average Latitude value
-      double latitude = latitudes.Sum() / latitudes.Count();
-      Centroid.Latitude = Double.IsNaN(latitude) ? 0 : latitude;
-
-      // Calculate the average Longitude value
-      double longitude = longitudes.Sum() / longitudes.Count();
-      Centroid.Longitude = Double.IsNaN(longitude) ? 0 : longitude;
+      // Update the radial distance
+      UpdateCentroidRadius();
     }
 
     /// <summary>
@@ -214,6 +207,54 @@ namespace Cluster
       UpdateCentroid();
     }
 
-    #endregion    
+    #endregion   
+ 
+    #region Private Methods
+
+    /// <summary>
+    /// This method will calculate the Centroid of all types of calls. The 
+    /// average values are obtained by calculating the mean Latitude and 
+    /// Longitude of all calls in the collection.
+    /// </summary>
+    private void UpdateCentroidLatLon()
+    {
+      // Create LINQ statements to sup up all the drop Latitude values
+      var latitudes = (from call in this
+                       select call.Coordinate.Latitude);
+
+      // Create LINQ statements to sup up all the drop Longitude values
+      var longitudes = (from call in this
+                        select call.Coordinate.Longitude);
+
+      // Calculate the average Latitude value
+      double latitude = latitudes.Sum() / latitudes.Count();
+      Centroid.Latitude = Double.IsNaN(latitude) ? 0 : latitude;
+
+      // Calculate the average Longitude value
+      double longitude = longitudes.Sum() / longitudes.Count();
+      Centroid.Longitude = Double.IsNaN(longitude) ? 0 : longitude;
+    }
+
+    /// <summary>
+    /// This method will update the centroid's radius value, which will be updated
+    /// to the distance between the centroid and the furthest event in this 
+    /// collection.
+    /// </summary>
+    private void UpdateCentroidRadius()
+    {
+      // Loop over the collection
+      foreach(Event evt in this)
+      {
+        // Calculate the distance
+        double distance = Distance.haversine(evt.Coordinate, Centroid);
+        // Update the distance if a larger one has been found.
+        if(distance > Centroid.Radius)
+        {
+          Centroid.Radius = distance;
+        }
+      }
+    }
+
+    #endregion
   }
 }

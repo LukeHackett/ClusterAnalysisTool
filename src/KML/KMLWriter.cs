@@ -187,19 +187,31 @@ namespace KML
         // Create the main style
         Kml.WriteStartElement("StyleMap");
         Kml.WriteAttributeString("id", style[0]);
-
         // Create the "Hide Pair"
         Kml.WriteStartElement("Pair");
         Kml.WriteElementString("key", "normal");
         Kml.WriteElementString("styleUrl", String.Format("#{0}-hide", style[0]));
         Kml.WriteEndElement();
-
         // Create the "Show Pair"
         Kml.WriteStartElement("Pair");
         Kml.WriteElementString("key", "highlight");
         Kml.WriteElementString("styleUrl", String.Format("#{0}-show", style[0]));
         Kml.WriteEndElement();
+        // End Style
+        Kml.WriteEndElement();
 
+        // Create the Radius Style
+        Kml.WriteStartElement("Style");
+        Kml.WriteAttributeString("id", "centroid-radius");
+        // LineStyle
+        Kml.WriteStartElement("LineStyle");
+        Kml.WriteElementString("color", "ffff0000");
+        Kml.WriteElementString("width", "2");
+        Kml.WriteEndElement();
+        // PolyStyle
+        Kml.WriteStartElement("PolyStyle");
+        Kml.WriteElementString("color", "7fff7920");
+        Kml.WriteEndElement();
         // End Style
         Kml.WriteEndElement();
       }
@@ -225,6 +237,13 @@ namespace KML
       
       // Create a placemark for the centroid cluster
       WriteCentroid(cluster.Centroid);
+
+      // Create a Radius around the centroid
+      if (!cluster.Noise)
+      {
+        double radius = cluster.Centroid.Radius * 1000;
+        WriteRadialCircle(cluster.Centroid, radius);
+      }
 
       // Create a new Placemark for each Coordinate
       foreach(Event evt in cluster)
@@ -280,7 +299,7 @@ namespace KML
       Kml.WriteElementString("name", "Centroid");
 
       // Set the Style
-      Kml.WriteElementString("styleUrl", "centroid");
+      Kml.WriteElementString("styleUrl", "#centroid");
 
       // Create a fancy description
       String description = CreateCooridnateDescription(centroid);
@@ -297,6 +316,38 @@ namespace KML
       Kml.WriteEndElement();  
     }
 
+    private static void WriteRadialCircle(Centroid centre, double radius)
+    {
+      // New Placemark
+      Kml.WriteStartElement("Placemark");
+      Kml.WriteElementString("name", "Cluster Radius");
+      Kml.WriteElementString("styleUrl", "#centroid-radius");
+      
+      // Setup various polgon elements
+      Kml.WriteStartElement("Polygon");
+      Kml.WriteStartElement("outerBoundaryIs");
+      Kml.WriteStartElement("LinearRing");
+      Kml.WriteStartElement("coordinates");
+
+      // Get a list of Radial Locations to create the circle
+      RadialCircle r = new RadialCircle(centre, radius);
+      List<Coordinate> radialLocations = r.CreateRadialCircle();
+
+      // Add each coordinate to the coordinates list
+      foreach (Coordinate coordinate in radialLocations)
+      {
+        //Kml.WriteValue(coordinate.ToString());
+        Kml.WriteValue(coordinate.ToString() + Environment.NewLine);
+        //kml += coordinate.ToString();
+      }
+
+      // End the Elements
+      Kml.WriteEndElement();
+      Kml.WriteEndElement();
+      Kml.WriteEndElement();
+      Kml.WriteEndElement();
+      Kml.WriteEndElement();
+    }
 
     /// <summary>
     /// This method will create a html string that can be used as a hover 
