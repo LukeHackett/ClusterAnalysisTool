@@ -190,6 +190,18 @@ namespace Cluster
       return clusters;
     }
 
+    /// <summary>
+    /// This method will convert the current EventCollection into a list of 
+    /// Coordiantes. Additional meta data such as RAT, MIX_BAND will not be 
+    /// copied across, only the raw GPS points.
+    /// </summary>
+    /// <returns>A list of coordinates</returns>
+    public List<Coordinate> ToCoordinateList()
+    {
+      // Get all the Coordinates in this list
+      var coordinates = (from call in this select call.Coordinate);
+      return new List<Coordinate>(coordinates);
+    }
 
     /// <summary>
     /// This method will append a collection of call logs to this collection 
