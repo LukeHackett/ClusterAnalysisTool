@@ -95,7 +95,7 @@ namespace Cluster
     /// <returns>longitude as a radian value.</returns>
     public double LongitudeAsRadians()
     {
-      return Longitude * (Math.PI / 180);
+      return DegreesToRadians(Longitude);
     }
     
     /// <summary>
@@ -104,7 +104,7 @@ namespace Cluster
     /// <returns>latitude as a radian value.</returns>
     public double LatitudeAsRadians()
     {
-      return Latitude * (Math.PI / 180);
+      return DegreesToRadians(Latitude);
     }    
     
     /// <summary>
@@ -170,5 +170,19 @@ namespace Cluster
     }
 
     #endregion        
+
+    #region Public Static Methods
+
+    /// <summary>
+    /// This method will convert degrees into radians.
+    /// </summary>
+    /// <param name="degrees">The value to be converted</param>
+    /// <returns>The radians value</returns>
+    public static double DegreesToRadians(double degrees)
+    {
+      return (Math.PI / 180) * degrees;
+    }
+
+    #endregion
   }
 }
