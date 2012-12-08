@@ -688,7 +688,7 @@
       </Placemark>
       <Placemark>
         <name>Drop</name>
-        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.1167252,51.3361343,0</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.1167252,51.3361343,0</td></tr><tr><td><b>Device: </b></td><td>9380</td><tr><tr><td><b>Reference Device: </b></td><td>False</td><tr><tr><td><b>PIN: </b></td><td>efc99a74</td><tr><tr><td><b>Start RAT: </b></td><td>3G</td><tr><tr><td><b>End RAT: </b></td><td>3G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq2</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq4</td><tr></table></div>]]></description>
         <styleUrl>#drop-noise</styleUrl>
         <Point>
           <coordinates>-0.1167252,51.3361343,0</coordinates>
@@ -1079,17 +1079,17 @@
         </Polygon>
       </Placemark>
       <Placemark>
-        <name>Drop</name>
-        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.3833194,51.3096586,0</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
-        <styleUrl>#drop-noise</styleUrl>
+        <name>Fail</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.3833194,51.3096586,0</td></tr><tr><td><b>Device: </b></td><td>9800</td><tr><tr><td><b>Reference Device: </b></td><td>True</td><tr><tr><td><b>PIN: </b></td><td>5a9322fb</td><tr><tr><td><b>Start RAT: </b></td><td>3G</td><tr><tr><td><b>End RAT: </b></td><td>2G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq1</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq2</td><tr></table></div>]]></description>
+        <styleUrl>#fail-noise</styleUrl>
         <Point>
           <coordinates>-0.3833194,51.3096586,0</coordinates>
         </Point>
       </Placemark>
       <Placemark>
-        <name>Drop</name>
-        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.3885545,51.307998,0</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
-        <styleUrl>#drop-noise</styleUrl>
+        <name>Fail</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.3885545,51.307998,0</td></tr><tr><td><b>Device: </b></td><td>9790</td><tr><tr><td><b>Reference Device: </b></td><td>False</td><tr><tr><td><b>PIN: </b></td><td>1b47730e</td><tr><tr><td><b>Start RAT: </b></td><td>2G</td><tr><tr><td><b>End RAT: </b></td><td>3G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq3</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq3</td><tr></table></div>]]></description>
+        <styleUrl>#fail-noise</styleUrl>
         <Point>
           <coordinates>-0.3885545,51.307998,0</coordinates>
         </Point>
@@ -1480,7 +1480,7 @@
       </Placemark>
       <Placemark>
         <name>Drop</name>
-        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.1611086,51.4349184,0</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.1611086,51.4349184,0</td></tr><tr><td><b>Device: </b></td><td>9800</td><tr><tr><td><b>Reference Device: </b></td><td>True</td><tr><tr><td><b>PIN: </b></td><td>5a9322fb</td><tr><tr><td><b>Start RAT: </b></td><td>3G</td><tr><tr><td><b>End RAT: </b></td><td>3G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq1</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq3</td><tr></table></div>]]></description>
         <styleUrl>#drop</styleUrl>
         <Point>
           <coordinates>-0.1611086,51.4349184,0</coordinates>
@@ -1488,7 +1488,7 @@
       </Placemark>
       <Placemark>
         <name>Drop</name>
-        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.1712235,51.447235,0</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.1712235,51.447235,0</td></tr><tr><td><b>Device: </b></td><td>9800</td><tr><tr><td><b>Reference Device: </b></td><td>True</td><tr><tr><td><b>PIN: </b></td><td>5a9322fb</td><tr><tr><td><b>Start RAT: </b></td><td>3G</td><tr><tr><td><b>End RAT: </b></td><td>2G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq3</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq4</td><tr></table></div>]]></description>
         <styleUrl>#drop</styleUrl>
         <Point>
           <coordinates>-0.1712235,51.447235,0</coordinates>
@@ -1496,103 +1496,103 @@
       </Placemark>
       <Placemark>
         <name>Drop</name>
-        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.1646906,51.4313542,0</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.1646906,51.4313542,0</td></tr><tr><td><b>Device: </b></td><td>9800</td><tr><tr><td><b>Reference Device: </b></td><td>True</td><tr><tr><td><b>PIN: </b></td><td>5a9322fb</td><tr><tr><td><b>Start RAT: </b></td><td>3G</td><tr><tr><td><b>End RAT: </b></td><td>2G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq3</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq2</td><tr></table></div>]]></description>
         <styleUrl>#drop</styleUrl>
         <Point>
           <coordinates>-0.1646906,51.4313542,0</coordinates>
         </Point>
       </Placemark>
       <Placemark>
-        <name>Drop</name>
-        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.1645208,51.4314465,0</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
-        <styleUrl>#drop</styleUrl>
+        <name>Fail</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.1645208,51.4314465,0</td></tr><tr><td><b>Device: </b></td><td>9360</td><tr><tr><td><b>Reference Device: </b></td><td>False</td><tr><tr><td><b>PIN: </b></td><td>31138eb8</td><tr><tr><td><b>Start RAT: </b></td><td>3G</td><tr><tr><td><b>End RAT: </b></td><td>2G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq3</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq2</td><tr></table></div>]]></description>
+        <styleUrl>#fail</styleUrl>
         <Point>
           <coordinates>-0.1645208,51.4314465,0</coordinates>
         </Point>
       </Placemark>
       <Placemark>
-        <name>Drop</name>
-        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.1674822,51.4433042,0</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
-        <styleUrl>#drop</styleUrl>
+        <name>Fail</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.1674822,51.4433042,0</td></tr><tr><td><b>Device: </b></td><td>9360</td><tr><tr><td><b>Reference Device: </b></td><td>False</td><tr><tr><td><b>PIN: </b></td><td>31138eb8</td><tr><tr><td><b>Start RAT: </b></td><td>3G</td><tr><tr><td><b>End RAT: </b></td><td>3G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq1</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq4</td><tr></table></div>]]></description>
+        <styleUrl>#fail</styleUrl>
         <Point>
           <coordinates>-0.1674822,51.4433042,0</coordinates>
         </Point>
       </Placemark>
       <Placemark>
-        <name>Drop</name>
-        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.194755,51.4793316,0</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
-        <styleUrl>#drop-noise</styleUrl>
+        <name>Fail</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.194755,51.4793316,0</td></tr><tr><td><b>Device: </b></td><td>9790</td><tr><tr><td><b>Reference Device: </b></td><td>False</td><tr><tr><td><b>PIN: </b></td><td>eb3a215d</td><tr><tr><td><b>Start RAT: </b></td><td>3G</td><tr><tr><td><b>End RAT: </b></td><td>3G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq4</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq4</td><tr></table></div>]]></description>
+        <styleUrl>#fail-noise</styleUrl>
         <Point>
           <coordinates>-0.194755,51.4793316,0</coordinates>
         </Point>
       </Placemark>
       <Placemark>
         <name>Drop</name>
-        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.2066425,51.4905589,0</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.2066425,51.4905589,0</td></tr><tr><td><b>Device: </b></td><td>9320</td><tr><tr><td><b>Reference Device: </b></td><td>False</td><tr><tr><td><b>PIN: </b></td><td>0d81755e</td><tr><tr><td><b>Start RAT: </b></td><td>3G</td><tr><tr><td><b>End RAT: </b></td><td>3G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq4</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq1</td><tr></table></div>]]></description>
         <styleUrl>#drop-noise</styleUrl>
         <Point>
           <coordinates>-0.2066425,51.4905589,0</coordinates>
         </Point>
       </Placemark>
       <Placemark>
-        <name>Drop</name>
-        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.1631956,51.4331197,0</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
-        <styleUrl>#drop</styleUrl>
+        <name>Fail</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.1631956,51.4331197,0</td></tr><tr><td><b>Device: </b></td><td>9360</td><tr><tr><td><b>Reference Device: </b></td><td>False</td><tr><tr><td><b>PIN: </b></td><td>31138eb8</td><tr><tr><td><b>Start RAT: </b></td><td>2G</td><tr><tr><td><b>End RAT: </b></td><td>3G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq1</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq4</td><tr></table></div>]]></description>
+        <styleUrl>#fail</styleUrl>
         <Point>
           <coordinates>-0.1631956,51.4331197,0</coordinates>
         </Point>
       </Placemark>
       <Placemark>
-        <name>Drop</name>
-        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.1371609,51.4303573,0</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
-        <styleUrl>#drop</styleUrl>
+        <name>Fail</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.1371609,51.4303573,0</td></tr><tr><td><b>Device: </b></td><td>9790</td><tr><tr><td><b>Reference Device: </b></td><td>False</td><tr><tr><td><b>PIN: </b></td><td>1b47730e</td><tr><tr><td><b>Start RAT: </b></td><td>3G</td><tr><tr><td><b>End RAT: </b></td><td>3G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq2</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq2</td><tr></table></div>]]></description>
+        <styleUrl>#fail</styleUrl>
         <Point>
           <coordinates>-0.1371609,51.4303573,0</coordinates>
         </Point>
       </Placemark>
       <Placemark>
         <name>Drop</name>
-        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.137366,51.4303856,0</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.137366,51.4303856,0</td></tr><tr><td><b>Device: </b></td><td>9380</td><tr><tr><td><b>Reference Device: </b></td><td>False</td><tr><tr><td><b>PIN: </b></td><td>efc99a74</td><tr><tr><td><b>Start RAT: </b></td><td>3G</td><tr><tr><td><b>End RAT: </b></td><td>2G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq4</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq1</td><tr></table></div>]]></description>
         <styleUrl>#drop</styleUrl>
         <Point>
           <coordinates>-0.137366,51.4303856,0</coordinates>
         </Point>
       </Placemark>
       <Placemark>
-        <name>Drop</name>
-        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.1684697,51.4274284,0</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
-        <styleUrl>#drop</styleUrl>
+        <name>Fail</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.1684697,51.4274284,0</td></tr><tr><td><b>Device: </b></td><td>9320</td><tr><tr><td><b>Reference Device: </b></td><td>False</td><tr><tr><td><b>PIN: </b></td><td>03dcde00</td><tr><tr><td><b>Start RAT: </b></td><td>2G</td><tr><tr><td><b>End RAT: </b></td><td>2G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq4</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq3</td><tr></table></div>]]></description>
+        <styleUrl>#fail</styleUrl>
         <Point>
           <coordinates>-0.1684697,51.4274284,0</coordinates>
         </Point>
       </Placemark>
       <Placemark>
         <name>Drop</name>
-        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.1702625,51.4406783,0</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.1702625,51.4406783,0</td></tr><tr><td><b>Device: </b></td><td>9320</td><tr><tr><td><b>Reference Device: </b></td><td>False</td><tr><tr><td><b>PIN: </b></td><td>03dcde00</td><tr><tr><td><b>Start RAT: </b></td><td>3G</td><tr><tr><td><b>End RAT: </b></td><td>2G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq2</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq1</td><tr></table></div>]]></description>
         <styleUrl>#drop</styleUrl>
         <Point>
           <coordinates>-0.1702625,51.4406783,0</coordinates>
         </Point>
       </Placemark>
       <Placemark>
-        <name>Drop</name>
-        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.1766675,51.4318065,0</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
-        <styleUrl>#drop</styleUrl>
+        <name>Fail</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.1766675,51.4318065,0</td></tr><tr><td><b>Device: </b></td><td>9790</td><tr><tr><td><b>Reference Device: </b></td><td>False</td><tr><tr><td><b>PIN: </b></td><td>1b47730e</td><tr><tr><td><b>Start RAT: </b></td><td>3G</td><tr><tr><td><b>End RAT: </b></td><td>3G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq3</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq2</td><tr></table></div>]]></description>
+        <styleUrl>#fail</styleUrl>
         <Point>
           <coordinates>-0.1766675,51.4318065,0</coordinates>
         </Point>
       </Placemark>
       <Placemark>
-        <name>Drop</name>
-        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.1679659,51.43855,0</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
-        <styleUrl>#drop</styleUrl>
+        <name>Fail</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.1679659,51.43855,0</td></tr><tr><td><b>Device: </b></td><td>9320</td><tr><tr><td><b>Reference Device: </b></td><td>False</td><tr><tr><td><b>PIN: </b></td><td>0d81755e</td><tr><tr><td><b>Start RAT: </b></td><td>2G</td><tr><tr><td><b>End RAT: </b></td><td>3G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq3</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq1</td><tr></table></div>]]></description>
+        <styleUrl>#fail</styleUrl>
         <Point>
           <coordinates>-0.1679659,51.43855,0</coordinates>
         </Point>
       </Placemark>
       <Placemark>
         <name>Drop</name>
-        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.1692714,51.4396926,0</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.1692714,51.4396926,0</td></tr><tr><td><b>Device: </b></td><td>9320</td><tr><tr><td><b>Reference Device: </b></td><td>False</td><tr><tr><td><b>PIN: </b></td><td>0d81755e</td><tr><tr><td><b>Start RAT: </b></td><td>3G</td><tr><tr><td><b>End RAT: </b></td><td>2G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq3</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq4</td><tr></table></div>]]></description>
         <styleUrl>#drop</styleUrl>
         <Point>
           <coordinates>-0.1692714,51.4396926,0</coordinates>
@@ -1600,63 +1600,63 @@
       </Placemark>
       <Placemark>
         <name>Drop</name>
-        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.1599247,51.4355207,0</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.1599247,51.4355207,0</td></tr><tr><td><b>Device: </b></td><td>9360</td><tr><tr><td><b>Reference Device: </b></td><td>False</td><tr><tr><td><b>PIN: </b></td><td>31138eb8</td><tr><tr><td><b>Start RAT: </b></td><td>3G</td><tr><tr><td><b>End RAT: </b></td><td>3G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq3</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq4</td><tr></table></div>]]></description>
         <styleUrl>#drop</styleUrl>
         <Point>
           <coordinates>-0.1599247,51.4355207,0</coordinates>
         </Point>
       </Placemark>
       <Placemark>
-        <name>Drop</name>
-        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.1490243,51.4313773,0</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
-        <styleUrl>#drop</styleUrl>
+        <name>Fail</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.1490243,51.4313773,0</td></tr><tr><td><b>Device: </b></td><td>9790</td><tr><tr><td><b>Reference Device: </b></td><td>False</td><tr><tr><td><b>PIN: </b></td><td>eb3a215d</td><tr><tr><td><b>Start RAT: </b></td><td>3G</td><tr><tr><td><b>End RAT: </b></td><td>3G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq1</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq1</td><tr></table></div>]]></description>
+        <styleUrl>#fail</styleUrl>
         <Point>
           <coordinates>-0.1490243,51.4313773,0</coordinates>
         </Point>
       </Placemark>
       <Placemark>
-        <name>Drop</name>
-        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.1663971,51.4328318,0</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
-        <styleUrl>#drop</styleUrl>
+        <name>Fail</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.1663971,51.4328318,0</td></tr><tr><td><b>Device: </b></td><td>9360</td><tr><tr><td><b>Reference Device: </b></td><td>False</td><tr><tr><td><b>PIN: </b></td><td>31138eb8</td><tr><tr><td><b>Start RAT: </b></td><td>3G</td><tr><tr><td><b>End RAT: </b></td><td>3G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq1</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq4</td><tr></table></div>]]></description>
+        <styleUrl>#fail</styleUrl>
         <Point>
           <coordinates>-0.1663971,51.4328318,0</coordinates>
         </Point>
       </Placemark>
       <Placemark>
         <name>Drop</name>
-        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.160886,51.4350996,0</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.160886,51.4350996,0</td></tr><tr><td><b>Device: </b></td><td>9790</td><tr><tr><td><b>Reference Device: </b></td><td>False</td><tr><tr><td><b>PIN: </b></td><td>eb3a215d</td><tr><tr><td><b>Start RAT: </b></td><td>3G</td><tr><tr><td><b>End RAT: </b></td><td>3G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq1</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq1</td><tr></table></div>]]></description>
         <styleUrl>#drop</styleUrl>
         <Point>
           <coordinates>-0.160886,51.4350996,0</coordinates>
         </Point>
       </Placemark>
       <Placemark>
-        <name>Drop</name>
-        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.1713007,51.4419374,0</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
-        <styleUrl>#drop</styleUrl>
+        <name>Fail</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.1713007,51.4419374,0</td></tr><tr><td><b>Device: </b></td><td>9800</td><tr><tr><td><b>Reference Device: </b></td><td>True</td><tr><tr><td><b>PIN: </b></td><td>80ae02aa</td><tr><tr><td><b>Start RAT: </b></td><td>3G</td><tr><tr><td><b>End RAT: </b></td><td>2G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq4</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq4</td><tr></table></div>]]></description>
+        <styleUrl>#fail</styleUrl>
         <Point>
           <coordinates>-0.1713007,51.4419374,0</coordinates>
         </Point>
       </Placemark>
       <Placemark>
         <name>Drop</name>
-        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.1395432,51.4306013,0</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.1395432,51.4306013,0</td></tr><tr><td><b>Device: </b></td><td>9320</td><tr><tr><td><b>Reference Device: </b></td><td>False</td><tr><tr><td><b>PIN: </b></td><td>0d81755e</td><tr><tr><td><b>Start RAT: </b></td><td>3G</td><tr><tr><td><b>End RAT: </b></td><td>2G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq2</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq4</td><tr></table></div>]]></description>
         <styleUrl>#drop</styleUrl>
         <Point>
           <coordinates>-0.1395432,51.4306013,0</coordinates>
         </Point>
       </Placemark>
       <Placemark>
-        <name>Drop</name>
-        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.1643254,51.4286503,0</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
-        <styleUrl>#drop</styleUrl>
+        <name>Fail</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.1643254,51.4286503,0</td></tr><tr><td><b>Device: </b></td><td>9360</td><tr><tr><td><b>Reference Device: </b></td><td>False</td><tr><tr><td><b>PIN: </b></td><td>a5e7feb0</td><tr><tr><td><b>Start RAT: </b></td><td>3G</td><tr><tr><td><b>End RAT: </b></td><td>2G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq2</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq4</td><tr></table></div>]]></description>
+        <styleUrl>#fail</styleUrl>
         <Point>
           <coordinates>-0.1643254,51.4286503,0</coordinates>
         </Point>
       </Placemark>
       <Placemark>
         <name>Drop</name>
-        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.1236241,51.4122247,0</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.1236241,51.4122247,0</td></tr><tr><td><b>Device: </b></td><td>9800</td><tr><tr><td><b>Reference Device: </b></td><td>True</td><tr><tr><td><b>PIN: </b></td><td>80ae02aa</td><tr><tr><td><b>Start RAT: </b></td><td>2G</td><tr><tr><td><b>End RAT: </b></td><td>3G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq4</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq1</td><tr></table></div>]]></description>
         <styleUrl>#drop</styleUrl>
         <Point>
           <coordinates>-0.1236241,51.4122247,0</coordinates>
@@ -2047,33 +2047,33 @@
         </Polygon>
       </Placemark>
       <Placemark>
-        <name>Drop</name>
-        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.5227345,51.4500859,0</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
-        <styleUrl>#drop</styleUrl>
+        <name>Fail</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.5227345,51.4500859,0</td></tr><tr><td><b>Device: </b></td><td>9320</td><tr><tr><td><b>Reference Device: </b></td><td>False</td><tr><tr><td><b>PIN: </b></td><td>03dcde00</td><tr><tr><td><b>Start RAT: </b></td><td>3G</td><tr><tr><td><b>End RAT: </b></td><td>3G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq3</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq4</td><tr></table></div>]]></description>
+        <styleUrl>#fail</styleUrl>
         <Point>
           <coordinates>-0.5227345,51.4500859,0</coordinates>
         </Point>
       </Placemark>
       <Placemark>
-        <name>Drop</name>
-        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.5398504,51.4162945,0</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
-        <styleUrl>#drop</styleUrl>
+        <name>Fail</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.5398504,51.4162945,0</td></tr><tr><td><b>Device: </b></td><td>9800</td><tr><tr><td><b>Reference Device: </b></td><td>True</td><tr><tr><td><b>PIN: </b></td><td>80ae02aa</td><tr><tr><td><b>Start RAT: </b></td><td>2G</td><tr><tr><td><b>End RAT: </b></td><td>2G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq4</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq1</td><tr></table></div>]]></description>
+        <styleUrl>#fail</styleUrl>
         <Point>
           <coordinates>-0.5398504,51.4162945,0</coordinates>
         </Point>
       </Placemark>
       <Placemark>
-        <name>Drop</name>
-        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.493657,51.3565301,0</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
-        <styleUrl>#drop-noise</styleUrl>
+        <name>Fail</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.493657,51.3565301,0</td></tr><tr><td><b>Device: </b></td><td>9790</td><tr><tr><td><b>Reference Device: </b></td><td>False</td><tr><tr><td><b>PIN: </b></td><td>eb3a215d</td><tr><tr><td><b>Start RAT: </b></td><td>3G</td><tr><tr><td><b>End RAT: </b></td><td>3G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq2</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq3</td><tr></table></div>]]></description>
+        <styleUrl>#fail-noise</styleUrl>
         <Point>
           <coordinates>-0.493657,51.3565301,0</coordinates>
         </Point>
       </Placemark>
       <Placemark>
-        <name>Drop</name>
-        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.5360094,51.4362205,0</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
-        <styleUrl>#drop</styleUrl>
+        <name>Fail</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.5360094,51.4362205,0</td></tr><tr><td><b>Device: </b></td><td>9800</td><tr><tr><td><b>Reference Device: </b></td><td>True</td><tr><tr><td><b>PIN: </b></td><td>80ae02aa</td><tr><tr><td><b>Start RAT: </b></td><td>3G</td><tr><tr><td><b>End RAT: </b></td><td>3G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq2</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq2</td><tr></table></div>]]></description>
+        <styleUrl>#fail</styleUrl>
         <Point>
           <coordinates>-0.5360094,51.4362205,0</coordinates>
         </Point>
@@ -2464,48 +2464,48 @@
       </Placemark>
       <Placemark>
         <name>Drop</name>
-        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.2340139,51.3653603,0</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.2340139,51.3653603,0</td></tr><tr><td><b>Device: </b></td><td>9790</td><tr><tr><td><b>Reference Device: </b></td><td>False</td><tr><tr><td><b>PIN: </b></td><td>1b47730e</td><tr><tr><td><b>Start RAT: </b></td><td>3G</td><tr><tr><td><b>End RAT: </b></td><td>3G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq2</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq2</td><tr></table></div>]]></description>
         <styleUrl>#drop</styleUrl>
         <Point>
           <coordinates>-0.2340139,51.3653603,0</coordinates>
         </Point>
       </Placemark>
       <Placemark>
-        <name>Drop</name>
-        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.2036565,51.3914754,0</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
-        <styleUrl>#drop</styleUrl>
+        <name>Fail</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.2036565,51.3914754,0</td></tr><tr><td><b>Device: </b></td><td>9380</td><tr><tr><td><b>Reference Device: </b></td><td>False</td><tr><tr><td><b>PIN: </b></td><td>bb16716d</td><tr><tr><td><b>Start RAT: </b></td><td>2G</td><tr><tr><td><b>End RAT: </b></td><td>3G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq2</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq4</td><tr></table></div>]]></description>
+        <styleUrl>#fail</styleUrl>
         <Point>
           <coordinates>-0.2036565,51.3914754,0</coordinates>
         </Point>
       </Placemark>
       <Placemark>
-        <name>Drop</name>
-        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.1860342,51.3305545,0</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
-        <styleUrl>#drop-noise</styleUrl>
+        <name>Fail</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.1860342,51.3305545,0</td></tr><tr><td><b>Device: </b></td><td>9360</td><tr><tr><td><b>Reference Device: </b></td><td>False</td><tr><tr><td><b>PIN: </b></td><td>a5e7feb0</td><tr><tr><td><b>Start RAT: </b></td><td>3G</td><tr><tr><td><b>End RAT: </b></td><td>3G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq3</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq2</td><tr></table></div>]]></description>
+        <styleUrl>#fail-noise</styleUrl>
         <Point>
           <coordinates>-0.1860342,51.3305545,0</coordinates>
         </Point>
       </Placemark>
       <Placemark>
-        <name>Drop</name>
-        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.233318,51.3660532,0</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
-        <styleUrl>#drop</styleUrl>
+        <name>Fail</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.233318,51.3660532,0</td></tr><tr><td><b>Device: </b></td><td>9800</td><tr><tr><td><b>Reference Device: </b></td><td>True</td><tr><tr><td><b>PIN: </b></td><td>80ae02aa</td><tr><tr><td><b>Start RAT: </b></td><td>3G</td><tr><tr><td><b>End RAT: </b></td><td>3G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq2</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq3</td><tr></table></div>]]></description>
+        <styleUrl>#fail</styleUrl>
         <Point>
           <coordinates>-0.233318,51.3660532,0</coordinates>
         </Point>
       </Placemark>
       <Placemark>
         <name>Drop</name>
-        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.2454507,51.3538597,0</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.2454507,51.3538597,0</td></tr><tr><td><b>Device: </b></td><td>9320</td><tr><tr><td><b>Reference Device: </b></td><td>False</td><tr><tr><td><b>PIN: </b></td><td>03dcde00</td><tr><tr><td><b>Start RAT: </b></td><td>3G</td><tr><tr><td><b>End RAT: </b></td><td>3G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq1</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq4</td><tr></table></div>]]></description>
         <styleUrl>#drop</styleUrl>
         <Point>
           <coordinates>-0.2454507,51.3538597,0</coordinates>
         </Point>
       </Placemark>
       <Placemark>
-        <name>Drop</name>
-        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.2186459,51.3796215,0</td></tr><tr><td><b>Device: </b></td><td>Value</td><tr><tr><td><b>PIN: </b></td><td>Value</td><tr><tr><td><b>Start RAT: </b></td><td>Value</td><tr><tr><td><b>End RAT: </b></td><td>Value</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Value</td><tr><tr><td><b>End Mix-Band: </b></td><td>Value</td><tr></table></div>]]></description>
-        <styleUrl>#drop</styleUrl>
+        <name>Fail</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.2186459,51.3796215,0</td></tr><tr><td><b>Device: </b></td><td>9800</td><tr><tr><td><b>Reference Device: </b></td><td>True</td><tr><tr><td><b>PIN: </b></td><td>80ae02aa</td><tr><tr><td><b>Start RAT: </b></td><td>3G</td><tr><tr><td><b>End RAT: </b></td><td>3G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq4</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq2</td><tr></table></div>]]></description>
+        <styleUrl>#fail</styleUrl>
         <Point>
           <coordinates>-0.2186459,51.3796215,0</coordinates>
         </Point>
