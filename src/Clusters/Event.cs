@@ -45,6 +45,11 @@ namespace Cluster
     /// The device PIN.
     /// </summary>
     public String Pin { get; set; }
+
+    /// <summary>
+    /// Whether or not the given device is a reference device
+    /// </summary>
+    public Boolean Reference { get; set; }
     
     /// <summary>
     /// The start RAT of the device.

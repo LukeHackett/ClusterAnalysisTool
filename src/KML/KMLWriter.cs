@@ -357,7 +357,7 @@ namespace KML
     /// <returns>A well formed html string description</returns>
     private static String CreateCooridnateDescription(Event evt)
     {
-      return String.Format("<div class=\"googft-info-window\" style=\"width:250px\">" + 
+      return String.Format("<div class=\"googft-info-window\" style=\"width:300px\">" + 
                               "<table>" + 
                                 "<tr>" +
                                   "<td><b>Coordinate: </b></td>" +
@@ -368,29 +368,34 @@ namespace KML
                                   "<td>{1}</td>" +
                                 "<tr>" +
                                 "<tr>" +
-                                  "<td><b>PIN: </b></td>" +
+                                  "<td><b>Reference Device: </b></td>" +
                                   "<td>{2}</td>" +
                                 "<tr>" +
                                 "<tr>" +
-                                  "<td><b>Start RAT: </b></td>" +
+                                  "<td><b>PIN: </b></td>" +
                                   "<td>{3}</td>" +
                                 "<tr>" +
                                 "<tr>" +
-                                  "<td><b>End RAT: </b></td>" +
+                                  "<td><b>Start RAT: </b></td>" +
                                   "<td>{4}</td>" +
                                 "<tr>" +
                                 "<tr>" +
-                                  "<td><b>Start Mix-Band: </b></td>" +
+                                  "<td><b>End RAT: </b></td>" +
                                   "<td>{5}</td>" +
                                 "<tr>" +
                                 "<tr>" +
-                                  "<td><b>End Mix-Band: </b></td>" +
+                                  "<td><b>Start Mix-Band: </b></td>" +
                                   "<td>{6}</td>" +
+                                "<tr>" +
+                                "<tr>" +
+                                  "<td><b>End Mix-Band: </b></td>" +
+                                  "<td>{7}</td>" +
                                 "<tr>" +
                               "</table>" +
                             "</div>",
                              evt.Coordinate.ToString(), 
                              evt.Device, 
+                             evt.Reference.ToString(),
                              evt.Pin,
                              evt.StartRat, 
                              evt.EndRat, 
