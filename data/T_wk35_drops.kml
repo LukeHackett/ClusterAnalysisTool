@@ -20,13 +20,14 @@
         <coordinates>-0.499703,51.484481,0</coordinates>
       </Point>
       <ExtendedData>
-        <SimpleData name="device">Value</SimpleData>
-        <SimpleData name="pin">Value</SimpleData>
-        <SimpleData name="type">drop</SimpleData>
-        <SimpleData name="start_rat">Value</SimpleData>
-        <SimpleData name="end_rat">Value</SimpleData>
-        <SimpleData name="start_mix_band">Value</SimpleData>
-        <SimpleData name="end_mix_band">Value</SimpleData>
+        <SimpleData name="device">9380</SimpleData>
+        <SimpleData name="pin">bb16716d</SimpleData>
+        <SimpleData name="reference">false</SimpleData>
+        <SimpleData name="type">fail</SimpleData>
+        <SimpleData name="start_rat">2G</SimpleData>
+        <SimpleData name="end_rat">3G</SimpleData>
+        <SimpleData name="start_mix_band">Freq2</SimpleData>
+        <SimpleData name="end_mix_band">Freq2</SimpleData>
       </ExtendedData>
     </Placemark>
     <Placemark>
@@ -35,13 +36,14 @@
         <coordinates>-0.198472,51.47988,0</coordinates>
       </Point>
       <ExtendedData>
-        <SimpleData name="device">Value</SimpleData>
-        <SimpleData name="pin">Value</SimpleData>
+        <SimpleData name="device">9320</SimpleData>
+        <SimpleData name="pin">0d81755e</SimpleData>
+        <SimpleData name="reference">false</SimpleData>
         <SimpleData name="type">drop</SimpleData>
-        <SimpleData name="start_rat">Value</SimpleData>
-        <SimpleData name="end_rat">Value</SimpleData>
-        <SimpleData name="start_mix_band">Value</SimpleData>
-        <SimpleData name="end_mix_band">Value</SimpleData>
+        <SimpleData name="start_rat">3G</SimpleData>
+        <SimpleData name="end_rat">3G</SimpleData>
+        <SimpleData name="start_mix_band">Freq3</SimpleData>
+        <SimpleData name="end_mix_band">Freq3</SimpleData>
       </ExtendedData>
     </Placemark>
     <Placemark>
@@ -50,13 +52,14 @@
         <coordinates>-0.270266,51.330773,0</coordinates>
       </Point>
       <ExtendedData>
-        <SimpleData name="device">Value</SimpleData>
-        <SimpleData name="pin">Value</SimpleData>
-        <SimpleData name="type">drop</SimpleData>
-        <SimpleData name="start_rat">Value</SimpleData>
-        <SimpleData name="end_rat">Value</SimpleData>
-        <SimpleData name="start_mix_band">Value</SimpleData>
-        <SimpleData name="end_mix_band">Value</SimpleData>
+        <SimpleData name="device">9380</SimpleData>
+        <SimpleData name="pin">efc99a74</SimpleData>
+        <SimpleData name="reference">false</SimpleData>
+        <SimpleData name="type">fail</SimpleData>
+        <SimpleData name="start_rat">2G</SimpleData>
+        <SimpleData name="end_rat">3G</SimpleData>
+        <SimpleData name="start_mix_band">Freq2</SimpleData>
+        <SimpleData name="end_mix_band">Freq4</SimpleData>
       </ExtendedData>
     </Placemark>
     <Placemark>
@@ -65,13 +68,14 @@
         <coordinates>-0.270362,51.330812,0</coordinates>
       </Point>
       <ExtendedData>
-        <SimpleData name="device">Value</SimpleData>
-        <SimpleData name="pin">Value</SimpleData>
+        <SimpleData name="device">9360</SimpleData>
+        <SimpleData name="pin">31138eb8</SimpleData>
+        <SimpleData name="reference">false</SimpleData>
         <SimpleData name="type">drop</SimpleData>
-        <SimpleData name="start_rat">Value</SimpleData>
-        <SimpleData name="end_rat">Value</SimpleData>
-        <SimpleData name="start_mix_band">Value</SimpleData>
-        <SimpleData name="end_mix_band">Value</SimpleData>
+        <SimpleData name="start_rat">2G</SimpleData>
+        <SimpleData name="end_rat">3G</SimpleData>
+        <SimpleData name="start_mix_band">Freq3</SimpleData>
+        <SimpleData name="end_mix_band">Freq3</SimpleData>
       </ExtendedData>
     </Placemark>
     <Placemark>
@@ -80,13 +84,14 @@
         <coordinates>-0.464911,51.557609,0</coordinates>
       </Point>
       <ExtendedData>
-        <SimpleData name="device">Value</SimpleData>
-        <SimpleData name="pin">Value</SimpleData>
-        <SimpleData name="type">drop</SimpleData>
-        <SimpleData name="start_rat">Value</SimpleData>
-        <SimpleData name="end_rat">Value</SimpleData>
-        <SimpleData name="start_mix_band">Value</SimpleData>
-        <SimpleData name="end_mix_band">Value</SimpleData>
+        <SimpleData name="device">9320</SimpleData>
+        <SimpleData name="pin">0d81755e</SimpleData>
+        <SimpleData name="reference">false</SimpleData>
+        <SimpleData name="type">fail</SimpleData>
+        <SimpleData name="start_rat">3G</SimpleData>
+        <SimpleData name="end_rat">3G</SimpleData>
+        <SimpleData name="start_mix_band">Freq1</SimpleData>
+        <SimpleData name="end_mix_band">Freq1</SimpleData>
       </ExtendedData>
     </Placemark>
     <Placemark>
@@ -95,13 +100,14 @@
         <coordinates>-0.20075,51.395725,0</coordinates>
       </Point>
       <ExtendedData>
-        <SimpleData name="device">Value</SimpleData>
-        <SimpleData name="pin">Value</SimpleData>
-        <SimpleData name="type">drop</SimpleData>
-        <SimpleData name="start_rat">Value</SimpleData>
-        <SimpleData name="end_rat">Value</SimpleData>
-        <SimpleData name="start_mix_band">Value</SimpleData>
-        <SimpleData name="end_mix_band">Value</SimpleData>
+        <SimpleData name="device">9360</SimpleData>
+        <SimpleData name="pin">31138eb8</SimpleData>
+        <SimpleData name="reference">false</SimpleData>
+        <SimpleData name="type">fail</SimpleData>
+        <SimpleData name="start_rat">3G</SimpleData>
+        <SimpleData name="end_rat">3G</SimpleData>
+        <SimpleData name="start_mix_band">Freq2</SimpleData>
+        <SimpleData name="end_mix_band">Freq2</SimpleData>
       </ExtendedData>
     </Placemark>
     <Placemark>
@@ -110,13 +116,14 @@
         <coordinates>-0.507505,51.46882,0</coordinates>
       </Point>
       <ExtendedData>
-        <SimpleData name="device">Value</SimpleData>
-        <SimpleData name="pin">Value</SimpleData>
+        <SimpleData name="device">9360</SimpleData>
+        <SimpleData name="pin">a5e7feb0</SimpleData>
+        <SimpleData name="reference">false</SimpleData>
         <SimpleData name="type">drop</SimpleData>
-        <SimpleData name="start_rat">Value</SimpleData>
-        <SimpleData name="end_rat">Value</SimpleData>
-        <SimpleData name="start_mix_band">Value</SimpleData>
-        <SimpleData name="end_mix_band">Value</SimpleData>
+        <SimpleData name="start_rat">3G</SimpleData>
+        <SimpleData name="end_rat">3G</SimpleData>
+        <SimpleData name="start_mix_band">Freq1</SimpleData>
+        <SimpleData name="end_mix_band">Freq1</SimpleData>
       </ExtendedData>
     </Placemark>
     <!-- End Placemarks -->
