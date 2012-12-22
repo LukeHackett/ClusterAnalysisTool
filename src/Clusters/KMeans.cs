@@ -56,14 +56,24 @@ namespace Cluster
     #region Properties
     
     /// <summary>
-    /// Collection of original Coordinates
+    /// Collection of original calls
     /// </summary>
-    public EventCollection Coordinates { get; private set; }
-        
+    public EventCollection Calls { get; private set; }
+
     /// <summary>
-    /// List of clustered Coordinates
+    /// Collection of coordinates
     /// </summary>
-    public List<EventCollection> Clusters { get; private set; }
+    public CoordinateCollection Coordinates { get; private set; }
+
+    /// <summary>
+    /// List of clustered events
+    /// </summary>
+    public List<EventCollection> ClusteredEvents { get; private set; }
+
+    /// <summary>
+    /// List of clustered coordinates
+    /// </summary>
+    public List<CoordinateCollection> ClusteredCoordinates { get; private set; }
         
     /// <summary>
     /// The number of Clusters to be used (K Value)
@@ -78,24 +88,25 @@ namespace Cluster
     /// Primary Constructor
     /// </summary>
     /// <param name="events">The events to be clustered</param>
-    public KMeans(EventCollection events)
+    /// <param name="k">The number of clusters</param>
+    public KMeans(EventCollection events, int k = 0)
     {
-      Coordinates = events;
-      K = CalcKValue();
+      Calls = events;
+      Coordinates = (CoordinateCollection) events.ToCoordinateList();
+      K = (k > 0) ? k : CalcKValue();
     }
-    
-    
+
     /// <summary>
     /// Secondary Constructor
     /// </summary>
-    /// <param name="events">The events to be clustered</param>
+    /// <param name="coordinates">The coordinates to be clustered</param>
     /// <param name="k">The number of clusters</param>
-    public KMeans(EventCollection events, int k)
+    public KMeans(CoordinateCollection coordinates, int k = 0)
     {
-      Coordinates = events;
+      Coordinates = coordinates;
       K = (k > 0) ? k : CalcKValue();
     }
-    
+       
     #endregion
     
     #region Public Methods
@@ -111,7 +122,8 @@ namespace Cluster
     public void Analyse()
     {
       // Divide the Coordinates in K Clusters
-      Clusters = Coordinates.Split(K);
+      //ClusteredEvents = Calls.Split(K);
+      ClusteredCoordinates = Coordinates.Split(K);
 
       // Number of changes made within a pass
       int changes = 0;
@@ -123,26 +135,26 @@ namespace Cluster
         changes = 0;
 
         // Loop over all Clusters
-        foreach (EventCollection cluster in Clusters)
+        foreach (CoordinateCollection cluster in ClusteredCoordinates)
         {
           // Loop over each Coordinate
           for (int i = 0; i < cluster.Count; i++)
           {
-            // Grab the event
-            Event evt = cluster[i];
+            // Get the coordinate
+            Coordinate coordinate = cluster[i];
             
             // Find the nearest cluster's index
-            int nearest = FindNearestCluster(Clusters, evt);
+            int nearest = FindNearestCluster(ClusteredCoordinates, coordinate);
             
             // Check to see if the point has moved and is not empty
-            if (nearest != Clusters.IndexOf(cluster) && cluster.Count > 1)
+            if (nearest != ClusteredCoordinates.IndexOf(cluster) && cluster.Count > 1)
             {
               // Remove the event from the current location
-              cluster.Remove(evt);
+              cluster.Remove(coordinate);
 
               // Insert previously removed event into the correct cluster
-              evt.ClusterId = nearest;
-              Clusters[nearest].Add(evt);
+              coordinate.ClusterId = nearest;
+              ClusteredCoordinates[nearest].Add(coordinate);
 
               // A change has happened
               changes++;
@@ -151,6 +163,12 @@ namespace Cluster
         }
       } 
       while (changes > 0);
+
+      // Convert the clustered coordinates to events
+      if (Calls != null)
+      {
+        CreateEventClusters();
+      }
     }
         
     #endregion
@@ -166,7 +184,7 @@ namespace Cluster
     /// <param name="clusters">a list of clusters</param>
     /// <param name="evt">the pivot event</param>
     /// <returns>index location of the cluster</returns>
-    private int FindNearestCluster(List<EventCollection> clusters, Event evt)
+    private int FindNearestCluster(List<CoordinateCollection> clusters, Coordinate coordinate)
     {
       // The minimum distance to a coordinate
       double minimumDistance = Double.MaxValue;
@@ -178,7 +196,7 @@ namespace Cluster
       for (int k = 0; k < clusters.Count; k++)
       {
         // Calculate the distance
-        double distance = Distance.haversine(evt.Coordinate, clusters[k].Centroid);
+        double distance = Distance.haversine(coordinate, clusters[k].Centroid);
         
         // Compare the two distance values
         if (minimumDistance > distance)
@@ -198,7 +216,27 @@ namespace Cluster
     /// <returns>The K value</returns>
     private int CalcKValue()
     {
-      return (int) Math.Ceiling( Math.Sqrt(Coordinates.Count / 2) );
+      return (int) Math.Ceiling( Math.Sqrt(Calls.Count / 2) );
+    }
+
+    /// <summary>
+    /// This method will create the various event clusters based upon the 
+    /// original call input data.
+    /// </summary>
+    private void CreateEventClusters()
+    {
+      // Setup a new ClusteredEvents list.
+      ClusteredEvents = new List<EventCollection>();
+      
+      // Loop over each cluster
+      for (int n = 0; n < K; n++)
+      {
+        // Find all the coordinates that are part of the Nth cluster
+        var result = Calls.Where(c => c.Coordinate.ClusterId == n);
+
+        // Clustered Events
+        ClusteredEvents.Add(new EventCollection(result));
+      }
     }
 
     #endregion Private Methods

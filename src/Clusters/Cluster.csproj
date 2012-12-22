@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="Centroid.cs" />
     <Compile Include="Coordinate.cs" />
+    <Compile Include="CoordinateCollection.cs" />
     <Compile Include="DBSCAN.cs" />
     <Compile Include="Distance.cs" />
     <Compile Include="Drop.cs" />

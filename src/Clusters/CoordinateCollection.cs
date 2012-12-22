@@ -32,7 +32,7 @@ using System.Text;
 
 namespace Cluster
 {
-  public class EventCollection : List<Event>
+  public class CoordinateCollection : List<Coordinate>
   {
     #region Properties
 
@@ -63,7 +63,7 @@ namespace Cluster
     /// <summary>
     /// Default Constructor
     /// </summary>
-    public EventCollection()
+    public CoordinateCollection()
       : base()
     {
       Centroid = new Centroid(0, 0);
@@ -72,8 +72,8 @@ namespace Cluster
     /// <summary>
     /// Secondary Constructor
     /// </summary>
-    /// <param name="collection"></param>
-    public EventCollection(IEnumerable<Event> collection)
+    /// <param name="collection">A collection of elements to be added</param>
+    public CoordinateCollection(IEnumerable<Coordinate> collection)
       : base(collection)
     {
       Centroid = new Centroid(0, 0);
@@ -85,42 +85,39 @@ namespace Cluster
     #region Public Methods
 
     /// <summary>
-    /// Adds a event to the end of this event collection
+    /// Adds a coordinate to the end of this coordinate collection
     /// </summary>
-    /// <param name="evt">Event to be added</param>
-    public new void Add(Event evt)
+    /// <param name="coordinate">Coordinate to be added</param>
+    public new void Add(Coordinate coordinate)
     {
-      base.Add(evt);
-      UpdateCentroid();
-    }
-    
-    /// <summary>
-    /// Adds a collection events to the end of this event collection.
-    /// </summary>
-    /// <param name="collection">a collection of events to be added</param>
-    public void AddRange(EventCollection collection)
-    {
-      foreach (Event evt in collection)
-      {
-        Add(evt);
-      }
+      base.Add(coordinate);
       UpdateCentroid();
     }
 
     /// <summary>
-    /// Removes the first occurrence of the given event.
+    /// Adds a collection of coordinates to the end of this coordinate collection.
     /// </summary>
-    /// <param name="evt">Event to be removed</param>
-    public new void Remove(Event evt)
+    /// <param name="collection">a collection of coordinate to be added</param>
+    public void AddRange(CoordinateCollection collection)
     {
-      base.Remove(evt);
+      base.AddRange(collection);
       UpdateCentroid();
     }
 
     /// <summary>
-    /// Removes the event at the specified index.
+    /// Removes the first occurrence of the given coordinate.
     /// </summary>
-    /// <param name="index">event's index location</param>
+    /// <param name="coordinate">Coordinate to be removed</param>
+    public new void Remove(Coordinate coordinate)
+    {
+      base.Remove(coordinate);
+      UpdateCentroid();
+    }
+
+    /// <summary>
+    /// Removes the coordinate at the specified index.
+    /// </summary>
+    /// <param name="index">coordinate's index location</param>
     public new void RemoveAt(int index)
     {
       base.RemoveAt(index);
@@ -128,9 +125,10 @@ namespace Cluster
     }
 
     /// <summary>
-    /// 
+    /// This method will calculate the centroid's Longitude and Latitude based 
+    /// upon all of the coordinates within this collection.
     /// </summary>
-    public void UpdateCentroid() 
+    public void UpdateCentroid()
     {
       // Update the Longitude and Latitude Values
       UpdateCentroidLatLon();
@@ -148,9 +146,34 @@ namespace Cluster
     {
       for (int i = 0; i < this.Count; i++)
       {
-        this[i].Coordinate.ClusterId = clusterID;
-        this[i].Coordinate.Noise = false;
+        this[i].ClusterId = clusterID;
+        this[i].Noise = false;
       }
+    }
+
+    /// <summary>
+    /// This method will deep clone the current object instance.
+    /// </summary>
+    /// <returns>A CoordinateCollection object</returns>
+    public Object Clone()
+    {
+      // Create a new list to store the clone in
+      CoordinateCollection collection = new CoordinateCollection();
+
+      // Copy over each coordinate in the list
+      foreach (Coordinate c in this)
+      {
+        collection.Add(c);
+      }
+
+      // Copy over the meta-data
+      collection.Name = this.Name;
+      collection.Description = this.Description;
+      collection.Noise = this.Noise;
+      collection.Centroid = this.Centroid;
+
+      // Return the newly cloned coordinate collection
+      return collection;
     }
 
     /// <summary>
@@ -161,7 +184,7 @@ namespace Cluster
     /// <param name="sections">The number of call logs the lists should be split into</param>
     /// <returns>A list of CallCollections</returns>
     /// <exception cref="System.ArgumentException">Thrown when parameter is less than 1</exception>
-    public List<EventCollection> Split(int sections)
+    public List<CoordinateCollection> Split(int sections)
     {
       // Validate Input
       if (sections <= 0)
@@ -173,8 +196,8 @@ namespace Cluster
       int noElements = (int)Math.Ceiling((double)this.Count / (double)sections);
 
       // Make a copy of the current list and Generate a new list
-      List<Event> currentList = this;
-      List<List<Event>> splitList = new List<List<Event>>();
+      List<Coordinate> currentList = (CoordinateCollection) Clone();
+      List<List<Coordinate>> splitList = new List<List<Coordinate>>();
       //Loop until there is no more
       while (currentList.Count > 0)
       {
@@ -186,10 +209,10 @@ namespace Cluster
       }
 
       // Loop over the split collection and copy each element into a CoordinateCollection
-      List<EventCollection> clusters = new List<EventCollection>();
-      foreach (List<Event> list in splitList)
+      List<CoordinateCollection> clusters = new List<CoordinateCollection>();
+      foreach (List<Coordinate> list in splitList)
       {
-        EventCollection cluster = new EventCollection();
+        CoordinateCollection cluster = new CoordinateCollection();
         cluster.AddRange(list);
 
         // Update the centroid
@@ -200,38 +223,25 @@ namespace Cluster
       }
       return clusters;
     }
-
+    
     /// <summary>
-    /// This method will convert the current EventCollection into a list of 
-    /// Coordiantes. Additional meta data such as RAT, MIX_BAND will not be 
-    /// copied across, only the raw GPS points.
-    /// </summary>
-    /// <returns>A list of coordinates</returns>
-    public List<Coordinate> ToCoordinateList()
-    {
-      // Get all the Coordinates in this list
-      var coordinates = (from call in this select call.Coordinate);
-      return new List<Coordinate>(coordinates);
-    }
-
-    /// <summary>
-    /// This method will append a collection of call logs to this collection 
-    /// of call logs.
+    /// This method will append a collection of coordinates to this collection 
+    /// of coordinates.
     /// </summary>
     /// <param name="collection">The collection to appended to the end of this collection.</param>
-    public void Append(EventCollection collection)
+    public void Append(CoordinateCollection collection)
     {
-      foreach (Event call in collection)
+      foreach (Coordinate coordinate in collection)
       {
-        Add(call);
+        Add(coordinate);
       }
 
       // Update all the centroids
       UpdateCentroid();
     }
 
-    #endregion   
- 
+    #endregion
+
     #region Private Methods
 
     /// <summary>
@@ -243,11 +253,11 @@ namespace Cluster
     {
       // Create LINQ statements to sup up all the drop Latitude values
       var latitudes = (from call in this
-                       select call.Coordinate.Latitude);
-
+                       select call.Latitude);
+      
       // Create LINQ statements to sup up all the drop Longitude values
       var longitudes = (from call in this
-                        select call.Coordinate.Longitude);
+                        select call.Longitude);
 
       // Calculate the average Latitude value
       double latitude = latitudes.Sum() / latitudes.Count();
@@ -266,12 +276,12 @@ namespace Cluster
     private void UpdateCentroidRadius()
     {
       // Loop over the collection
-      foreach(Event evt in this)
+      foreach (Coordinate coordinate in this)
       {
         // Calculate the distance
-        double distance = Distance.haversine(evt.Coordinate, Centroid);
+        double distance = Distance.haversine(coordinate, Centroid);
         // Update the distance if a larger one has been found.
-        if(distance > Centroid.Radius)
+        if (distance > Centroid.Radius)
         {
           Centroid.Radius = distance;
         }
@@ -280,4 +290,5 @@ namespace Cluster
 
     #endregion
   }
+  
 }

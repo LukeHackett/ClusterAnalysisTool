@@ -56,6 +56,21 @@ namespace Cluster
     /// </summary>
     public double Altitude { get; set; }
 
+    /// <summary>
+    /// The cluster that this event belongs to.
+    /// </summary>
+    public int ClusterId { get; set; }
+
+    /// <summary>
+    /// Whether or not this event is classed as noise.
+    /// </summary>
+    public bool Noise { get; set; }
+
+    /// <summary>
+    /// Whether or not this event has been classified (or visited).
+    /// </summary>
+    public bool Classified { get; set; }
+
     #endregion
     
     #region Constructors

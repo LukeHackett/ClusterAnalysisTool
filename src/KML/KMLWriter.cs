@@ -276,7 +276,7 @@ namespace KML
 
       // Set the Style
       String style = "#" + eventName.ToLower();
-      style += (cluster.Noise) ? "-noise" : "";
+      style += (cluster.Coordinate.Noise) ? "-noise" : "";
       Kml.WriteElementString("styleUrl", style);
 
       // Create a new Point
