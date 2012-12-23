@@ -376,20 +376,24 @@ namespace KML
                                   "<td>{3}</td>" +
                                 "<tr>" +
                                 "<tr>" +
-                                  "<td><b>Start RAT: </b></td>" +
+                                  "<td><b>Timestamp: </b></td>" +
                                   "<td>{4}</td>" +
                                 "<tr>" +
                                 "<tr>" +
-                                  "<td><b>End RAT: </b></td>" +
+                                  "<td><b>Start RAT: </b></td>" +
                                   "<td>{5}</td>" +
                                 "<tr>" +
                                 "<tr>" +
-                                  "<td><b>Start Mix-Band: </b></td>" +
+                                  "<td><b>End RAT: </b></td>" +
                                   "<td>{6}</td>" +
                                 "<tr>" +
                                 "<tr>" +
-                                  "<td><b>End Mix-Band: </b></td>" +
+                                  "<td><b>Start Mix-Band: </b></td>" +
                                   "<td>{7}</td>" +
+                                "<tr>" +
+                                "<tr>" +
+                                  "<td><b>End Mix-Band: </b></td>" +
+                                  "<td>{8}</td>" +
                                 "<tr>" +
                               "</table>" +
                             "</div>",
@@ -397,6 +401,7 @@ namespace KML
                              evt.Device, 
                              evt.Reference.ToString(),
                              evt.Pin,
+                             evt.Timestamp.ToString(),
                              evt.StartRat, 
                              evt.EndRat, 
                              evt.StartMixBand,

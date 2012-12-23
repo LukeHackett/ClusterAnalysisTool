@@ -22,6 +22,7 @@
       <ExtendedData>
         <SimpleData name="device">9380</SimpleData>
         <SimpleData name="pin">bb16716d</SimpleData>
+        <SimpleData name="timestamp">29/08/2012 00:00:00</SimpleData>
         <SimpleData name="reference">false</SimpleData>
         <SimpleData name="type">fail</SimpleData>
         <SimpleData name="start_rat">2G</SimpleData>
@@ -38,6 +39,7 @@
       <ExtendedData>
         <SimpleData name="device">9320</SimpleData>
         <SimpleData name="pin">0d81755e</SimpleData>
+        <SimpleData name="timestamp">27/08/2012 00:00:00</SimpleData>
         <SimpleData name="reference">false</SimpleData>
         <SimpleData name="type">drop</SimpleData>
         <SimpleData name="start_rat">3G</SimpleData>
@@ -54,6 +56,7 @@
       <ExtendedData>
         <SimpleData name="device">9380</SimpleData>
         <SimpleData name="pin">efc99a74</SimpleData>
+        <SimpleData name="timestamp">29/08/2012 00:00:00</SimpleData>
         <SimpleData name="reference">false</SimpleData>
         <SimpleData name="type">fail</SimpleData>
         <SimpleData name="start_rat">2G</SimpleData>
@@ -70,6 +73,7 @@
       <ExtendedData>
         <SimpleData name="device">9360</SimpleData>
         <SimpleData name="pin">31138eb8</SimpleData>
+        <SimpleData name="timestamp">27/08/2012 00:00:00</SimpleData>
         <SimpleData name="reference">false</SimpleData>
         <SimpleData name="type">drop</SimpleData>
         <SimpleData name="start_rat">2G</SimpleData>
@@ -86,6 +90,7 @@
       <ExtendedData>
         <SimpleData name="device">9320</SimpleData>
         <SimpleData name="pin">0d81755e</SimpleData>
+        <SimpleData name="timestamp">28/08/2012 00:00:00</SimpleData>
         <SimpleData name="reference">false</SimpleData>
         <SimpleData name="type">fail</SimpleData>
         <SimpleData name="start_rat">3G</SimpleData>
@@ -102,6 +107,7 @@
       <ExtendedData>
         <SimpleData name="device">9360</SimpleData>
         <SimpleData name="pin">31138eb8</SimpleData>
+        <SimpleData name="timestamp">27/08/2012 00:00:00</SimpleData>
         <SimpleData name="reference">false</SimpleData>
         <SimpleData name="type">fail</SimpleData>
         <SimpleData name="start_rat">3G</SimpleData>
@@ -118,6 +124,7 @@
       <ExtendedData>
         <SimpleData name="device">9360</SimpleData>
         <SimpleData name="pin">a5e7feb0</SimpleData>
+        <SimpleData name="timestamp">29/08/2012 00:00:00</SimpleData>
         <SimpleData name="reference">false</SimpleData>
         <SimpleData name="type">drop</SimpleData>
         <SimpleData name="start_rat">3G</SimpleData>

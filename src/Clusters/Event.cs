@@ -47,6 +47,11 @@ namespace Cluster
     public String Pin { get; set; }
 
     /// <summary>
+    /// The timestamp of the event
+    /// </summary>
+    public DateTime Timestamp { get; set; }
+
+    /// <summary>
     /// Whether or not the given device is a reference device
     /// </summary>
     public Boolean Reference { get; set; }

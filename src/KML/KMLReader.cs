@@ -84,6 +84,7 @@ namespace KML
         //Get the additional data elements
         String device = GetSimpleData("device");
         String pin = GetSimpleData("pin");
+        String timestamp = GetSimpleData("timestamp");
         String reference = GetSimpleData("reference");
         String type = GetSimpleData("type");
         String start_rat = GetSimpleData("start_rat");
@@ -118,6 +119,7 @@ namespace KML
         {
           callLog.Device = device;
           callLog.Pin = pin;
+          callLog.Timestamp = DateTime.Parse(timestamp);
           callLog.Reference = Boolean.Parse(reference);
           callLog.StartRat = start_rat;
           callLog.EndRat = end_rat;
