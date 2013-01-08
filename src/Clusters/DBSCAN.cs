@@ -104,7 +104,7 @@ namespace Cluster
     public DBSCAN(EventCollection calls, double eps = 1.5, int min = 3)
     {
       Calls = calls;
-      Coordinates = (CoordinateCollection) calls.ToCoordinateList();
+      Coordinates = calls.ToCoordinateCollection();
       Epsilon = eps;
       MinPoints = min;
     }
@@ -181,7 +181,7 @@ namespace Cluster
       // Convert the clustered coordinates to a clustered event collection
       if (Calls != null)
       {
-        CreateEventClusters(clusterId);
+        CreateEventClusters();
       }
     }
     
@@ -314,13 +314,13 @@ namespace Cluster
     /// will be added to the noise cluster.
     /// </summary>
     /// <param name="clusterId">the maximum cluster id (including noise)</param>
-    private void CreateEventClusters(int clusterId)
+    private void CreateEventClusters()
     {
       // Setup a new ClusteredEvents list.
       ClusteredEvents = new List<EventCollection>();
 
       // Loop over each of the known clusters
-      for (int n = 0; n < clusterId; n++)
+      for (int n = 0; n < ClusteredCoordinates.Count+1; n++)
       {
         // Find all the coordinates that are part of the Nth cluster
         var result = Calls.Where(c => c.Coordinate.ClusterId == n);
