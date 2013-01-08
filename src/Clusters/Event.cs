@@ -29,6 +29,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Globalization;
 
 namespace Cluster
 {
@@ -85,9 +86,15 @@ namespace Cluster
 
     #region Public Methods
 
-    public Event()
+    /// <summary>
+    /// This method will return the week number based upon the timestamp.
+    /// </summary>
+    /// <param name="StartDay">The start day of a week</param>
+    /// <returns>Week number as an integer</returns>
+    public int GetWeekNumber(DayOfWeek StartDay = DayOfWeek.Sunday)
     {
-
+      Calendar cal = DateTimeFormatInfo.CurrentInfo.Calendar;
+      return cal.GetWeekOfYear(Timestamp, CalendarWeekRule.FirstFullWeek, StartDay);
     }
 
     #endregion
