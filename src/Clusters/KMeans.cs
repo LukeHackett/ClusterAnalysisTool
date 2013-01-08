@@ -92,7 +92,7 @@ namespace Cluster
     public KMeans(EventCollection events, int k = 0)
     {
       Calls = events;
-      Coordinates = (CoordinateCollection) events.ToCoordinateList();
+      Coordinates = events.ToCoordinateCollection();
       K = (k > 0) ? k : CalcKValue();
     }
 
