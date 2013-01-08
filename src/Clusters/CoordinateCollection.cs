@@ -233,11 +233,23 @@ namespace Cluster
     {
       foreach (Coordinate coordinate in collection)
       {
-        Add(coordinate);
+        Add(coordinate);         
       }
 
       // Update all the centroids
       UpdateCentroid();
+    }
+
+    /// <summary>
+    /// This method will clear the values that are associated with the clustering 
+    /// methods for each coordinate in the collection.
+    /// </summary>
+    public void ClearAllClusterData()
+    {
+      foreach (Coordinate coordinate in this)
+      {
+        coordinate.ClearClusterData();
+      }
     }
 
     #endregion
