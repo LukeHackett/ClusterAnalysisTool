@@ -154,6 +154,24 @@ namespace Cluster
     }
 
     /// <summary>
+    /// This method will return all the given events within this object. The 
+    /// optional parameter allows for filtering by event type. Possible options 
+    /// are "Drop" or "Fail".
+    /// </summary>
+    /// <param name="type">The event type to filter by (optional)</param>
+    /// <returns>An IEnumberable event object</returns>
+    public IEnumerable<Event> GetEvents(String type = null)
+    {
+      // Return all events if no type is given
+      if(type == null)
+      {
+        return this.Select(i => i);
+      }
+      // Return the events within the given type
+      return this.Where(evt => evt.GetType().Name == type);
+    }
+
+    /// <summary>
     /// This method will split the current Collection into a list of section 
     /// number of elements. Each element is a Call Log Collection, and each 
     /// collection will have an equal number of Call logs.
@@ -207,11 +225,11 @@ namespace Cluster
     /// copied across, only the raw GPS points.
     /// </summary>
     /// <returns>A list of coordinates</returns>
-    public List<Coordinate> ToCoordinateList()
+    public CoordinateCollection ToCoordinateCollection()
     {
       // Get all the Coordinates in this list
       var coordinates = (from call in this select call.Coordinate);
-      return new List<Coordinate>(coordinates);
+      return new CoordinateCollection(coordinates);
     }
 
     /// <summary>
@@ -228,6 +246,18 @@ namespace Cluster
 
       // Update all the centroids
       UpdateCentroid();
+    }
+
+    /// <summary>
+    /// This method will clear the values that are associated with the clustering 
+    /// methods for each coordinate in the collection.
+    /// </summary>
+    public void ClearAllClusterData()
+    {
+      foreach (Event evt in this)
+      {
+        evt.Coordinate.ClearClusterData();
+      }
     }
 
     #endregion   
