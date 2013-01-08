@@ -198,6 +198,17 @@ namespace Cluster
       return (Math.PI / 180) * degrees;
     }
 
+    /// <summary>
+    /// This method will clear the values that are associated with the clustering 
+    /// methods.
+    /// </summary>
+    public void ClearClusterData()
+    {
+      ClusterId = -1;
+      Noise = false;
+      Classified = false;
+    }
+
     #endregion
   }
 }
