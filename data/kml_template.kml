@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
   <Document>
-    <!-- Start Basic Style -->
+    <!-- Name of the Document (can be empty) -->
     <name>DOCUMENT NAME</name>
+    <!-- Start Basic Style -->
     <Style id="BasicStyle">
       <IconStyle>
         <color>FFFFFFFF</color>
@@ -17,16 +18,31 @@
     <Placemark>
       <styleUrl>#BasicStyle</styleUrl>
       <Point>
+        <!-- Longitude, Latitude, Altitude (No Spaces) -->
         <coordinates>-0.2341408,51.3653237,0</coordinates>
       </Point>
+      <!-- Extended Data must preserve this order -->
       <ExtendedData>
-        <SimpleData name="device">Value</SimpleData>
-        <SimpleData name="pin">Value</SimpleData>
-        <SimpleData name="type">Value</SimpleData>
-        <SimpleData name="start_rat">Value</SimpleData>
-        <SimpleData name="end_rat">Value</SimpleData>
-        <SimpleData name="start_mix_band">Value</SimpleData>
-        <SimpleData name="end_mix_band">Value</SimpleData>
+        <!-- Device Name -->
+        <SimpleData name="device">9800</SimpleData>
+        <!-- Device PIN -->
+        <SimpleData name="pin">03dcde00</SimpleData>
+        <!-- Time stamp of the event -->
+        <SimpleData name="timestamp">07/08/2012 00:00:00<SimpleData>
+        <!-- Reference device? (true/false) -->
+        <SimpleData name="reference">true</SimpleData>          
+        <!-- Event type (drop/fail/success - success not implemented) -->
+        <SimpleData name="type">drop</SimpleData>
+        <!-- Device Start RAT -->
+        <SimpleData name="start_rat">2G</SimpleData>
+        <!-- Device End RAT -->
+        <SimpleData name="end_rat">3G</SimpleData>
+        <!-- Device Start Mix-Band -->
+        <SimpleData name="start_mix_band">Freq1</SimpleData>
+        <!-- Device End Mix-Band -->
+        <SimpleData name="end_mix_band">Freq2</SimpleData>
+        <!-- Device Start RRC State -->
+        <SimpleData name="start_rrc_state">IDLE<SimpleData>
       </ExtendedData>
     </Placemark>
     <!-- End Placemarks -->
