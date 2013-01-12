@@ -29,6 +29,7 @@
         <SimpleData name="end_rat">3G</SimpleData>
         <SimpleData name="start_mix_band">Freq1</SimpleData>
         <SimpleData name="end_mix_band">Freq1</SimpleData>
+        <SimpleData name="start_rrc_state">URA_PCH</SimpleData>
       </ExtendedData>
     </Placemark>
     <Placemark>
@@ -46,6 +47,7 @@
         <SimpleData name="end_rat">3G</SimpleData>
         <SimpleData name="start_mix_band">Freq4</SimpleData>
         <SimpleData name="end_mix_band">Freq4</SimpleData>
+        <SimpleData name="start_rrc_state">CELL_FACH</SimpleData>
       </ExtendedData>
     </Placemark>
     <Placemark>
@@ -63,6 +65,7 @@
         <SimpleData name="end_rat">2G</SimpleData>
         <SimpleData name="start_mix_band">Freq3</SimpleData>
         <SimpleData name="end_mix_band">Freq3</SimpleData>
+        <SimpleData name="start_rrc_state">CELL_PCH</SimpleData>
       </ExtendedData>
     </Placemark>
     <Placemark>
@@ -80,6 +83,7 @@
         <SimpleData name="end_rat">3G</SimpleData>
         <SimpleData name="start_mix_band">Freq3</SimpleData>
         <SimpleData name="end_mix_band">Freq3</SimpleData>
+        <SimpleData name="start_rrc_state">CELL_FACH</SimpleData>
       </ExtendedData>
     </Placemark>
     <Placemark>
@@ -97,6 +101,7 @@
         <SimpleData name="end_rat">3G</SimpleData>
         <SimpleData name="start_mix_band">Freq4</SimpleData>
         <SimpleData name="end_mix_band">Freq2</SimpleData>
+        <SimpleData name="start_rrc_state">URA_PCH</SimpleData>
       </ExtendedData>
     </Placemark>
     <Placemark>
@@ -114,6 +119,7 @@
         <SimpleData name="end_rat">3G</SimpleData>
         <SimpleData name="start_mix_band">Freq2</SimpleData>
         <SimpleData name="end_mix_band">Freq1</SimpleData>
+        <SimpleData name="start_rrc_state">URA_PCH</SimpleData>
       </ExtendedData>
     </Placemark>
     <Placemark>
@@ -131,6 +137,7 @@
         <SimpleData name="end_rat">3G</SimpleData>
         <SimpleData name="start_mix_band">Freq2</SimpleData>
         <SimpleData name="end_mix_band">Freq2</SimpleData>
+        <SimpleData name="start_rrc_state">CELL_FACH</SimpleData>
       </ExtendedData>
     </Placemark>
     <Placemark>
@@ -148,6 +155,7 @@
         <SimpleData name="end_rat">2G</SimpleData>
         <SimpleData name="start_mix_band">Freq1</SimpleData>
         <SimpleData name="end_mix_band">Freq1</SimpleData>
+        <SimpleData name="start_rrc_state">CELL_DCH</SimpleData>
       </ExtendedData>
     </Placemark>
     <Placemark>
@@ -165,6 +173,7 @@
         <SimpleData name="end_rat">3G</SimpleData>
         <SimpleData name="start_mix_band">Freq2</SimpleData>
         <SimpleData name="end_mix_band">Freq2</SimpleData>
+        <SimpleData name="start_rrc_state">CELL_PCH</SimpleData>
       </ExtendedData>
     </Placemark>
     <Placemark>
@@ -182,6 +191,7 @@
         <SimpleData name="end_rat">3G</SimpleData>
         <SimpleData name="start_mix_band">Freq1</SimpleData>
         <SimpleData name="end_mix_band">Freq2</SimpleData>
+        <SimpleData name="start_rrc_state">CELL_PCH</SimpleData>
       </ExtendedData>
     </Placemark>
     <Placemark>
@@ -199,6 +209,7 @@
         <SimpleData name="end_rat">3G</SimpleData>
         <SimpleData name="start_mix_band">Freq2</SimpleData>
         <SimpleData name="end_mix_band">Freq3</SimpleData>
+        <SimpleData name="start_rrc_state">CELL_DCH</SimpleData>
       </ExtendedData>
     </Placemark>
     <!-- End Placemarks -->
