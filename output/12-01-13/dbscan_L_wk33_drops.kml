@@ -1,0 +1,1751 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>dbscan_L_wk33_drops.kml</name>
+    <Style id="drop-hide">
+      <LabelStyle>
+        <scale>0.0</scale>
+      </LabelStyle>
+      <IconStyle>
+        <color>FFFFFFFF</color>
+        <scale>1.2</scale>
+        <Icon>
+          <href>http://google.com/mapfiles/ms/micons/red.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Style id="drop-show">
+      <LabelStyle>
+        <scale>1.2</scale>
+      </LabelStyle>
+      <IconStyle>
+        <color>FFFFFFFF</color>
+        <scale>1.2</scale>
+        <Icon>
+          <href>http://google.com/mapfiles/ms/micons/red.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <StyleMap id="drop">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#drop-hide</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#drop-show</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="centroid-radius">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>2</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>7fff7920</color>
+      </PolyStyle>
+    </Style>
+    <Style id="fail-hide">
+      <LabelStyle>
+        <scale>0.0</scale>
+      </LabelStyle>
+      <IconStyle>
+        <color>FFFFFFFF</color>
+        <scale>1.2</scale>
+        <Icon>
+          <href>http://google.com/mapfiles/ms/micons/yellow.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Style id="fail-show">
+      <LabelStyle>
+        <scale>1.2</scale>
+      </LabelStyle>
+      <IconStyle>
+        <color>FFFFFFFF</color>
+        <scale>1.2</scale>
+        <Icon>
+          <href>http://google.com/mapfiles/ms/micons/yellow.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <StyleMap id="fail">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#fail-hide</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#fail-show</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="centroid-radius">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>2</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>7fff7920</color>
+      </PolyStyle>
+    </Style>
+    <Style id="success-hide">
+      <LabelStyle>
+        <scale>0.0</scale>
+      </LabelStyle>
+      <IconStyle>
+        <color>FFFFFFFF</color>
+        <scale>1.2</scale>
+        <Icon>
+          <href>http://google.com/mapfiles/ms/micons/green.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Style id="success-show">
+      <LabelStyle>
+        <scale>1.2</scale>
+      </LabelStyle>
+      <IconStyle>
+        <color>FFFFFFFF</color>
+        <scale>1.2</scale>
+        <Icon>
+          <href>http://google.com/mapfiles/ms/micons/green.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <StyleMap id="success">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#success-hide</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#success-show</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="centroid-radius">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>2</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>7fff7920</color>
+      </PolyStyle>
+    </Style>
+    <Style id="drop-noise-hide">
+      <LabelStyle>
+        <scale>0.0</scale>
+      </LabelStyle>
+      <IconStyle>
+        <color>FFFFFFFF</color>
+        <scale>1.2</scale>
+        <Icon>
+          <href>http://google.com/mapfiles/ms/micons/red-dot.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Style id="drop-noise-show">
+      <LabelStyle>
+        <scale>1.2</scale>
+      </LabelStyle>
+      <IconStyle>
+        <color>FFFFFFFF</color>
+        <scale>1.2</scale>
+        <Icon>
+          <href>http://google.com/mapfiles/ms/micons/red-dot.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <StyleMap id="drop-noise">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#drop-noise-hide</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#drop-noise-show</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="centroid-radius">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>2</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>7fff7920</color>
+      </PolyStyle>
+    </Style>
+    <Style id="fail-noise-hide">
+      <LabelStyle>
+        <scale>0.0</scale>
+      </LabelStyle>
+      <IconStyle>
+        <color>FFFFFFFF</color>
+        <scale>1.2</scale>
+        <Icon>
+          <href>http://google.com/mapfiles/ms/micons/yellow-dot.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Style id="fail-noise-show">
+      <LabelStyle>
+        <scale>1.2</scale>
+      </LabelStyle>
+      <IconStyle>
+        <color>FFFFFFFF</color>
+        <scale>1.2</scale>
+        <Icon>
+          <href>http://google.com/mapfiles/ms/micons/yellow-dot.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <StyleMap id="fail-noise">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#fail-noise-hide</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#fail-noise-show</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="centroid-radius">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>2</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>7fff7920</color>
+      </PolyStyle>
+    </Style>
+    <Style id="success-noise-hide">
+      <LabelStyle>
+        <scale>0.0</scale>
+      </LabelStyle>
+      <IconStyle>
+        <color>FFFFFFFF</color>
+        <scale>1.2</scale>
+        <Icon>
+          <href>http://google.com/mapfiles/ms/micons/green-dot.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Style id="success-noise-show">
+      <LabelStyle>
+        <scale>1.2</scale>
+      </LabelStyle>
+      <IconStyle>
+        <color>FFFFFFFF</color>
+        <scale>1.2</scale>
+        <Icon>
+          <href>http://google.com/mapfiles/ms/micons/green-dot.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <StyleMap id="success-noise">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#success-noise-hide</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#success-noise-show</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="centroid-radius">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>2</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>7fff7920</color>
+      </PolyStyle>
+    </Style>
+    <Style id="centroid-hide">
+      <LabelStyle>
+        <scale>0.0</scale>
+      </LabelStyle>
+      <IconStyle>
+        <color>FFFFFFFF</color>
+        <scale>1.2</scale>
+        <Icon>
+          <href>http://google.com/mapfiles/ms/micons/blue.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Style id="centroid-show">
+      <LabelStyle>
+        <scale>1.2</scale>
+      </LabelStyle>
+      <IconStyle>
+        <color>FFFFFFFF</color>
+        <scale>1.2</scale>
+        <Icon>
+          <href>http://google.com/mapfiles/ms/micons/blue.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <StyleMap id="centroid">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#centroid-hide</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#centroid-show</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="centroid-radius">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>2</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>7fff7920</color>
+      </PolyStyle>
+    </Style>
+    <Folder>
+      <name>Cluster 0</name>
+      <description />
+      <Placemark>
+        <name>Centroid</name>
+        <styleUrl>#centroid</styleUrl>
+        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.15888716,51.433835665,0</td></tr><tr><td><b>Radius: </b></td><td>3.43200235426266</td></tr></table></div>]]></description>
+        <Point>
+          <coordinates>-0.15888716,51.433835665,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cluster Radius</name>
+        <styleUrl>#centroid-radius</styleUrl>
+        <Polygon>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>-0.109338717311149,51.433835665,0
+-0.109345971509465,51.4343747607008,0
+-0.109368316956948,51.4349136953656,0
+-0.109405747380563,51.4354523048212,0
+-0.109458251910986,51.4359904249877,0
+-0.109525815085273,51.4365278919282,0
+-0.10960841685092,51.4370645418991,0
+-0.109706032571327,51.4376002114002,0
+-0.109818633032666,51.4381347372239,0
+-0.109946184452141,51.4386679565056,0
+-0.11008864848765,51.439199706773,0
+-0.110245982248843,51.4397298259956,0
+-0.110418138309566,51.4402581526345,0
+-0.110605064721703,51.4407845256913,0
+-0.110806705030394,51.4413087847575,0
+-0.111022998290644,51.441830770063,0
+-0.111253879085305,51.4423503225256,0
+-0.11149927754443,51.4428672837988,0
+-0.111759119365998,51.4433814963206,0
+-0.112033325837997,51.4438928033613,0
+-0.112321813861866,51.4444010490719,0
+-0.112624495977288,51.444906078531,0
+-0.112941280388318,51.4454077377924,0
+-0.113272070990855,51.4459058739324,0
+-0.113616767401439,51.4464003350962,0
+-0.113975264987361,51.4468909705443,0
+-0.114347454898092,51.4473776306987,0
+-0.114733224098011,51.4478601671885,0
+-0.115132455400422,51.4483384328956,0
+-0.115545027502856,51.448812281999,0
+-0.11597081502365,51.4492815700201,0
+-0.116409688539773,51.4497461538663,0
+-0.11686151462592,51.4502058918752,0
+-0.117326155894832,51.4506606438577,0
+-0.117803471038849,51.4511102711409,0
+-0.118293314872674,51.4515546366105,0
+-0.118795538377344,51.4519936047531,0
+-0.119309988745385,51.4524270416971,0
+-0.119836509427142,51.4528548152539,0
+-0.120374940178278,51.4532767949587,0
+-0.12092511710841,51.4536928521098,0
+-0.121486872730886,51.4541028598087,0
+-0.122060036013675,51.4545066929984,0
+-0.122644432431362,51.4549042285019,0
+-0.123239884018228,51.45529534506,0
+-0.123846209422401,51.4556799233682,0
+-0.124463223961064,51.4560578461137,0
+-0.125090739676694,51.4564289980108,0
+-0.125728565394329,51.4567932658364,0
+-0.126376506779833,51.457150538465,0
+-0.127034366399146,51.4575007069024,0
+-0.127701943778505,51.4578436643192,0
+-0.128379035465609,51.4581793060835,0
+-0.129065435091715,51.4585075297931,0
+-0.129760933434648,51.4588282353068,0
+-0.130465318482698,51.4591413247751,0
+-0.131178375499392,51.4594467026702,0
+-0.131899887089114,51.4597442758155,0
+-0.13262963326356,51.4600339534136,0
+-0.133367391509004,51.4603156470748,0
+-0.134112936854349,51.4605892708439,0
+-0.134866041939958,51.4608547412267,0
+-0.135626477087218,51.4611119772152,0
+-0.136394010368844,51.461360900313,0
+-0.137168407679876,51.4616014345591,0
+-0.137949432809371,51.4618335065512,0
+-0.138736847512739,51.4620570454684,0
+-0.139530411584734,51.4622719830926,0
+-0.140329882933045,51.4624782538299,0
+-0.141135017652486,51.4626757947301,0
+-0.141945570099757,51.4628645455067,0
+-0.142761292968742,51.463044448555,0
+-0.143581937366338,51.4632154489697,0
+-0.144407252888776,51.4633774945622,0
+-0.145236987698419,51.4635305358762,0
+-0.146070888601009,51.4636745262029,0
+-0.14690870112334,51.4638094215956,0
+-0.147750169591335,51.4639351808831,0
+-0.148595037208496,51.4640517656823,0
+-0.149443046134714,51.4641591404097,0
+-0.150293937565396,51.4642572722929,0
+-0.151147451810905,51.4643461313802,0
+-0.152003328376274,51.4644256905501,0
+-0.152861306041172,51.4644959255194,0
+-0.153721122940104,51.4645568148507,0
+-0.154582516642802,51.4646083399591,0
+-0.155445224234808,51.4646504851178,0
+-0.1563089823982,51.4646832374629,0
+-0.157173527492446,51.4647065869977,0
+-0.15803859563536,51.464720526595,0
+-0.158903922784138,51.4647250520003,0
+-0.159769244816438,51.4647201618321,0
+-0.16063429761149,51.4647058575831,0
+-0.161498817131202,51.4646821436194,0
+-0.162362539501243,51.4646490271791,0
+-0.163225201092073,51.4646065183703,0
+-0.164086538599894,51.4645546301678,0
+-0.164946289127504,51.4644933784092,0
+-0.165804190265017,51.46442278179,0
+-0.166659980170436,51.4643428618581,0
+-0.16751339765004,51.4642536430067,0
+-0.168364182238574,51.4641551524671,0
+-0.169212074279206,51.4640474203005,0
+-0.170056815003233,51.4639304793884,0
+-0.170898146609503,51.4638043654229,0
+-0.171735812343538,51.4636691168954,0
+-0.172569556576325,51.4635247750849,0
+-0.173399124882757,51.4633713840453,0
+-0.174224264119688,51.4632089905922,0
+-0.175044722503596,51.4630376442879,0
+-0.175860249687811,51.4628573974267,0
+-0.176670596839292,51.4626683050187,0
+-0.177475516714936,51.4624704247728,0
+-0.17827476373738,51.4622638170792,0
+-0.179068094070284,51.4620485449907,0
+-0.179855265693068,51.4618246742034,0
+-0.180636038475074,51.4615922730366,0
+-0.181410174249147,51.4613514124115,0
+-0.182177436884588,51.4611021658301,0
+-0.182937592359473,51.460844609352,0
+-0.183690408832317,51.4605788215714,0
+-0.184435656713042,51.4603048835929,0
+-0.185173108733255,51.4600228790067,0
+-0.185902540015785,51.4597328938628,0
+-0.186623728143483,51.4594350166448,0
+-0.187336453227241,51.4591293382425,0
+-0.18804049797323,51.4588159519243,0
+-0.188735647749322,51.4584949533085,0
+-0.189421690650675,51.458166440334,0
+-0.190098417564478,51.4578305132301,0
+-0.190765622233806,51.4574872744859,0
+-0.191423101320602,51.4571368288192,0
+-0.192070654467731,51.4567792831437,0
+-0.192708084360114,51.4564147465369,0
+-0.193335196784908,51.4560433302062,0
+-0.193951800690721,51.4556651474553,0
+-0.194557708245837,51.4552803136489,0
+-0.195152734895443,51.4548889461779,0
+-0.19573669941783,51.4544911644231,0
+-0.196309423979561,51.4540870897186,0
+-0.196870734189577,51.453676845315,0
+-0.19742045915224,51.4532605563414,0
+-0.19795843151928,51.4528383497669,0
+-0.198484487540648,51.4524103543622,0
+-0.198998467114246,51.4519767006596,0
+-0.199500213834519,51.4515375209137,0
+-0.199989575039911,51.4510929490604,0
+-0.200466401859146,51.4506431206761,0
+-0.200930549256341,51.4501881729361,0
+-0.20138187607493,51.4497282445728,0
+-0.201820245080379,51.4492634758332,0
+-0.202245523001693,51.4487940084361,0
+-0.202657580571693,51.4483199855284,0
+-0.203056292566048,51.4478415516416,0
+-0.203441537841071,51.4473588526477,0
+-0.203813199370233,51.4468720357144,0
+-0.204171164279424,51.44638124926,0
+-0.204515323880919,51.4458866429085,0
+-0.204845573706055,51.4453883674433,0
+-0.205161813536606,51.4448865747616,0
+-0.205463947434848,51.4443814178276,0
+-0.205751883772302,51.4438730506261,0
+-0.206025535257151,51.4433616281152,0
+-0.206284818960325,51.4428473061791,0
+-0.206529656340231,51.4423302415807,0
+-0.206759973266153,51.4418105919131,0
+-0.206975700040272,51.4412885155522,0
+-0.207176771418346,51.4407641716079,0
+-0.207363126629008,51.4402377198759,0
+-0.207534709391696,51.4397093207883,0
+-0.207691467933206,51.4391791353656,0
+-0.207833355002859,51.4386473251665,0
+-0.207960327886287,51.4381140522397,0
+-0.208072348417825,51.4375794790734,0
+-0.208169382991515,51.4370437685465,0
+-0.208251402570711,51.4365070838789,0
+-0.208318382696289,51.4359695885812,0
+-0.208370303493458,51.4354314464054,0
+-0.208407149677169,51.4348928212948,0
+-0.208428910556128,51.4343538773338,0
+-0.208435580035397,51.4338147786984,0
+-0.208427156617607,51.4332756896057,0
+-0.208403643402761,51.4327367742643,0
+-0.208365048086637,51.4321981968239,0
+-0.208311382957797,51.4316601213254,0
+-0.208242664893193,51.4311227116512,0
+-0.208158915352384,51.430586131475,0
+-0.208060160370352,51.4300505442124,0
+-0.207946430548941,51.4295161129704,0
+-0.207817761046894,51.4289830004985,0
+-0.207674191568522,51.428451369139,0
+-0.207515766350987,51.4279213807773,0
+-0.207342534150209,51.427393196793,0
+-0.207154548225417,51.4268669780106,0
+-0.206951866322319,51.4263428846509,0
+-0.206734550654932,51.4258210762817,0
+-0.206502667886049,51.42530171177,0
+-0.206256289106367,51.4247849492331,0
+-0.205995489812275,51.424270945991,0
+-0.205720349882317,51.4237598585182,0
+-0.205430953552327,51.4232518423965,0
+-0.205127389389255,51.4227470522675,0
+-0.204809750263683,51.4222456417856,0
+-0.204478133321049,51.4217477635716,0
+-0.204132639951583,51.421253569166,0
+-0.203773375758966,51.4207632089834,0
+-0.203400450527718,51.4202768322662,0
+-0.203013978189336,51.4197945870401,0
+-0.202614076787183,51.4193166200685,0
+-0.202200868440141,51.4188430768082,0
+-0.201774479305042,51.4183741013653,0
+-0.201335039537891,51.4179098364515,0
+-0.200882683253885,51.4174504233407,0
+-0.200417548486248,51.4169960018261,0
+-0.199939777143895,51.416546710178,0
+-0.19944951496793,51.4161026851017,0
+-0.198946911487006,51.4156640616961,0
+-0.19843211997154,51.4152309734127,0
+-0.197905297386825,51.4148035520152,0
+-0.197366604345023,51.4143819275395,0
+-0.19681620505608,51.4139662282543,0
+-0.19625426727756,51.4135565806223,0
+-0.195680962263425,51.4131531092617,0
+-0.195096464711772,51.4127559369088,0
+-0.194500952711537,51.4123651843802,0
+-0.193894607688199,51.4119809705369,0
+-0.193277614348482,51.4116034122478,0
+-0.192650160624083,51.4112326243545,0
+-0.192012437614439,51.4108687196365,0
+-0.191364639528556,51.410511808777,0
+-0.190706963625907,51.4101620003295,0
+-0.190039610156428,51.4098194006848,0
+-0.189362782299622,51.4094841140387,0
+-0.188676686102797,51.409156242361,0
+-0.18798153041845,51.4088358853639,0
+-0.187277526840815,51.4085231404722,0
+-0.186564889641605,51.408218102794,0
+-0.185843835704955,51.4079208650915,0
+-0.185114584461591,51.4076315177532,0
+-0.184377357822243,51.4073501487665,0
+-0.183632380110328,51.407076843691,0
+-0.182879877993914,51.4068116856328,0
+-0.182120080416987,51.4065547552192,0
+-0.181353218530053,51.4063061305744,0
+-0.180579525620081,51.4060658872956,0
+-0.179799237039813,51.4058340984308,0
+-0.179012590136464,51.4056108344559,0
+-0.178219824179838,51.405396163254,0
+-0.177421180289863,51.4051901500945,0
+-0.176616901363595,51.4049928576136,0
+-0.175807232001683,51.4048043457952,0
+-0.174992418434338,51.404624671953,0
+-0.174172708446817,51.4044538907129,0
+-0.173348351304456,51.4042920539965,0
+-0.172519597677252,51.4041392110057,0
+-0.171686699564043,51.4039954082076,0
+-0.170849910216287,51.4038606893204,0
+-0.170009484061481,51.4037350953002,0
+-0.169165676626222,51.403618664329,0
+-0.168318744458951,51.4035114318027,0
+-0.167468945052393,51.4034134303204,0
+-0.16661653676572,51.4033246896749,0
+-0.165761778746457,51.4032452368436,0
+-0.164904930852156,51.4031750959801,0
+-0.164046253571859,51.403114288407,0
+-0.163186007947381,51.4030628326097,0
+-0.162324455494421,51.4030207442305,0
+-0.161461858123542,51.4029880360641,0
+-0.160598478061024,51.4029647180535,0
+-0.15973457776964,51.4029507972873,0
+-0.158870419869343,51.4029462779974,0
+-0.158006267057925,51.4029511615574,0
+-0.157142382031637,51.402965446483,0
+-0.156279027405822,51.4029891284314,0
+-0.155416465635564,51.4030222002037,0
+-0.154554958936391,51.4030646517461,0
+-0.153694769205038,51.4031164701537,0
+-0.152836157940318,51.4031776396738,0
+-0.151979386164096,51.403248141711,0
+-0.151124714342417,51.4033279548329,0
+-0.150272402306784,51.4034170547764,0
+-0.149422709175639,51.4035154144549,0
+-0.148575893276038,51.4036230039667,0
+-0.147732212065571,51.403739790604,0
+-0.146891922054535,51.4038657388629,0
+-0.146055278728381,51.4040008104538,0
+-0.145222536470476,51.4041449643132,0
+-0.144393948485173,51.4042981566162,0
+-0.143569766721246,51.4044603407894,0
+-0.142750241795683,51.4046314675254,0
+-0.141935622917881,51.4048114847974,0
+-0.141126157814244,51.4050003378752,0
+-0.140322092653239,51.4051979693412,0
+-0.139523671970889,51.4054043191085,0
+-0.138731138596766,51.4056193244384,0
+-0.137944733580481,51.4058429199601,0
+-0.137164696118696,51.4060750376894,0
+-0.136391263482696,51.4063156070504,0
+-0.135624670946514,51.4065645548962,0
+-0.134865151715661,51.4068218055309,0
+-0.134112936856459,51.4070872807331,0
+-0.133368255226014,51.4073608997789,0
+-0.13263133340283,51.4076425794668,0
+-0.131902395618118,51.4079322341425,0
+-0.131181663687777,51.4082297757252,0
+-0.13046935694511,51.4085351137339,0
+-0.129765692174263,51.408848155315,0
+-0.129070883544427,51.40916880527,0
+-0.12838514254481,51.4094969660851,0
+-0.127708677920406,51.4098325379599,0
+-0.127041695608582,51.4101754188379,0
+-0.12638439867649,51.4105255044377,0
+-0.125736987259339,51.410882688284,0
+-0.125099658499534,51.4112468617402,0
+-0.124472606486708,51.4116179140413,0
+-0.123856022198651,51.4119957323273,0
+-0.123250093443182,51.4123802016773,0
+-0.122655004800944,51.4127712051446,0
+-0.122070937569178,51.4131686237919,0
+-0.12149806970646,51.4135723367273,0
+-0.12093657577844,51.4139822211411,0
+-0.120386626904592,51.4143981523428,0
+-0.119848390705989,51.4148200037991,0
+-0.11932203125412,51.4152476471721,0
+-0.118807709020769,51.4156809523583,0
+-0.118305580828971,51.4161197875276,0
+-0.117815799805049,51.4165640191642,0
+-0.117338515331765,51.4170135121061,0
+-0.116873873002584,51.4174681295865,0
+-0.116422014577073,51.4179277332755,0
+-0.115983077937448,51.4183921833216,0
+-0.115557197046279,51.4188613383944,0
+-0.115144501905376,51.4193350557275,0
+-0.114745118515848,51.4198131911616,0
+-0.114359168839378,51.4202955991884,0
+-0.113986770760699,51.4207821329948,0
+-0.113628038051294,51.4212726445071,0
+-0.113283080334334,51.4217669844366,0
+-0.112952003050864,51.4222650023244,0
+-0.112634907427239,51.422766546587,0
+-0.112331890443838,51.4232714645631,0
+-0.112043044805039,51.4237796025588,0
+-0.111768458910504,51.4242908058954,0
+-0.111508216827737,51.4248049189555,0
+-0.111262398265966,51.4253217852311,0
+-0.111031078551328,51.4258412473704,0
+-0.110814328603382,51.426363147226,0
+-0.110612214912948,51.4268873259031,0
+-0.11042479952129,51.4274136238075,0
+-0.110252140000635,51.4279418806942,0
+-0.11009428943605,51.4284719357162,0
+-0.109951296408672,51.4290036274735,0
+-0.109823204980308,51.4295367940619,0
+-0.109710054679394,51.4300712731227,0
+-0.109611880488337,51.4306069018914,0
+-0.109528712832228,51.4311435172481,0
+-0.109460577568943,51.4316809557664,0
+-0.10940749598063,51.4322190537635,0
+-0.109369484766578,51.43275764735,0
+-0.109346556037492,51.4332965724798,0
+-0.109338717311149,51.433835665,0
+</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+      <Placemark>
+        <name>Fail</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.1631956,51.4331197,0</td></tr><tr><td><b>Device: </b></td><td>9360</td><tr><tr><td><b>Reference Device: </b></td><td>False</td><tr><tr><td><b>PIN: </b></td><td>31138eb8</td><tr><tr><td><b>Timestamp: </b></td><td>13/08/2012 00:00:00</td><tr><tr><td><b>Start RAT: </b></td><td>2G</td><tr><tr><td><b>End RAT: </b></td><td>3G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq1</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq4</td><tr><tr><td><b>Start RRC State: </b></td><td>URA_PCH</td><tr></table></div>]]></description>
+        <styleUrl>#fail</styleUrl>
+        <Point>
+          <coordinates>-0.1631956,51.4331197,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Drop</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.1236241,51.4122247,0</td></tr><tr><td><b>Device: </b></td><td>9800</td><tr><tr><td><b>Reference Device: </b></td><td>True</td><tr><tr><td><b>PIN: </b></td><td>80ae02aa</td><tr><tr><td><b>Timestamp: </b></td><td>13/08/2012 00:00:00</td><tr><tr><td><b>Start RAT: </b></td><td>2G</td><tr><tr><td><b>End RAT: </b></td><td>3G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq4</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq1</td><tr><tr><td><b>Start RRC State: </b></td><td>CELL_DCH</td><tr></table></div>]]></description>
+        <styleUrl>#drop</styleUrl>
+        <Point>
+          <coordinates>-0.1236241,51.4122247,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Fail</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.1371609,51.4303573,0</td></tr><tr><td><b>Device: </b></td><td>9790</td><tr><tr><td><b>Reference Device: </b></td><td>False</td><tr><tr><td><b>PIN: </b></td><td>1b47730e</td><tr><tr><td><b>Timestamp: </b></td><td>13/08/2012 00:00:00</td><tr><tr><td><b>Start RAT: </b></td><td>3G</td><tr><tr><td><b>End RAT: </b></td><td>3G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq2</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq2</td><tr><tr><td><b>Start RRC State: </b></td><td>CELL_PCH</td><tr></table></div>]]></description>
+        <styleUrl>#fail</styleUrl>
+        <Point>
+          <coordinates>-0.1371609,51.4303573,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Fail</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.1490243,51.4313773,0</td></tr><tr><td><b>Device: </b></td><td>9790</td><tr><tr><td><b>Reference Device: </b></td><td>False</td><tr><tr><td><b>PIN: </b></td><td>eb3a215d</td><tr><tr><td><b>Timestamp: </b></td><td>16/08/2012 00:00:00</td><tr><tr><td><b>Start RAT: </b></td><td>3G</td><tr><tr><td><b>End RAT: </b></td><td>3G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq1</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq1</td><tr><tr><td><b>Start RRC State: </b></td><td>CELL_DCH</td><tr></table></div>]]></description>
+        <styleUrl>#fail</styleUrl>
+        <Point>
+          <coordinates>-0.1490243,51.4313773,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Drop</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.137366,51.4303856,0</td></tr><tr><td><b>Device: </b></td><td>9380</td><tr><tr><td><b>Reference Device: </b></td><td>False</td><tr><tr><td><b>PIN: </b></td><td>efc99a74</td><tr><tr><td><b>Timestamp: </b></td><td>15/08/2012 00:00:00</td><tr><tr><td><b>Start RAT: </b></td><td>3G</td><tr><tr><td><b>End RAT: </b></td><td>2G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq4</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq1</td><tr><tr><td><b>Start RRC State: </b></td><td>CELL_DCH</td><tr></table></div>]]></description>
+        <styleUrl>#drop</styleUrl>
+        <Point>
+          <coordinates>-0.137366,51.4303856,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Drop</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.1395432,51.4306013,0</td></tr><tr><td><b>Device: </b></td><td>9320</td><tr><tr><td><b>Reference Device: </b></td><td>False</td><tr><tr><td><b>PIN: </b></td><td>0d81755e</td><tr><tr><td><b>Timestamp: </b></td><td>16/08/2012 00:00:00</td><tr><tr><td><b>Start RAT: </b></td><td>3G</td><tr><tr><td><b>End RAT: </b></td><td>2G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq2</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq4</td><tr><tr><td><b>Start RRC State: </b></td><td>URA_PCH</td><tr></table></div>]]></description>
+        <styleUrl>#drop</styleUrl>
+        <Point>
+          <coordinates>-0.1395432,51.4306013,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Fail</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.1663971,51.4328318,0</td></tr><tr><td><b>Device: </b></td><td>9360</td><tr><tr><td><b>Reference Device: </b></td><td>False</td><tr><tr><td><b>PIN: </b></td><td>31138eb8</td><tr><tr><td><b>Timestamp: </b></td><td>18/08/2012 00:00:00</td><tr><tr><td><b>Start RAT: </b></td><td>3G</td><tr><tr><td><b>End RAT: </b></td><td>3G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq1</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq4</td><tr><tr><td><b>Start RRC State: </b></td><td>CELL_DCH</td><tr></table></div>]]></description>
+        <styleUrl>#fail</styleUrl>
+        <Point>
+          <coordinates>-0.1663971,51.4328318,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Fail</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.1684697,51.4274284,0</td></tr><tr><td><b>Device: </b></td><td>9320</td><tr><tr><td><b>Reference Device: </b></td><td>False</td><tr><tr><td><b>PIN: </b></td><td>03dcde00</td><tr><tr><td><b>Timestamp: </b></td><td>13/08/2012 00:00:00</td><tr><tr><td><b>Start RAT: </b></td><td>2G</td><tr><tr><td><b>End RAT: </b></td><td>2G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq4</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq3</td><tr><tr><td><b>Start RRC State: </b></td><td>URA_PCH</td><tr></table></div>]]></description>
+        <styleUrl>#fail</styleUrl>
+        <Point>
+          <coordinates>-0.1684697,51.4274284,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Drop</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.160886,51.4350996,0</td></tr><tr><td><b>Device: </b></td><td>9790</td><tr><tr><td><b>Reference Device: </b></td><td>False</td><tr><tr><td><b>PIN: </b></td><td>eb3a215d</td><tr><tr><td><b>Timestamp: </b></td><td>15/08/2012 00:00:00</td><tr><tr><td><b>Start RAT: </b></td><td>3G</td><tr><tr><td><b>End RAT: </b></td><td>3G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq1</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq1</td><tr><tr><td><b>Start RRC State: </b></td><td>CELL_DCH</td><tr></table></div>]]></description>
+        <styleUrl>#drop</styleUrl>
+        <Point>
+          <coordinates>-0.160886,51.4350996,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Drop</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.1611086,51.4349184,0</td></tr><tr><td><b>Device: </b></td><td>9800</td><tr><tr><td><b>Reference Device: </b></td><td>True</td><tr><tr><td><b>PIN: </b></td><td>5a9322fb</td><tr><tr><td><b>Timestamp: </b></td><td>17/08/2012 00:00:00</td><tr><tr><td><b>Start RAT: </b></td><td>3G</td><tr><tr><td><b>End RAT: </b></td><td>3G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq1</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq3</td><tr><tr><td><b>Start RRC State: </b></td><td>CELL_DCH</td><tr></table></div>]]></description>
+        <styleUrl>#drop</styleUrl>
+        <Point>
+          <coordinates>-0.1611086,51.4349184,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Drop</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.1712235,51.447235,0</td></tr><tr><td><b>Device: </b></td><td>9800</td><tr><tr><td><b>Reference Device: </b></td><td>True</td><tr><tr><td><b>PIN: </b></td><td>5a9322fb</td><tr><tr><td><b>Timestamp: </b></td><td>13/08/2012 00:00:00</td><tr><tr><td><b>Start RAT: </b></td><td>3G</td><tr><tr><td><b>End RAT: </b></td><td>2G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq3</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq4</td><tr><tr><td><b>Start RRC State: </b></td><td>URA_PCH</td><tr></table></div>]]></description>
+        <styleUrl>#drop</styleUrl>
+        <Point>
+          <coordinates>-0.1712235,51.447235,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Drop</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.1646906,51.4313542,0</td></tr><tr><td><b>Device: </b></td><td>9800</td><tr><tr><td><b>Reference Device: </b></td><td>True</td><tr><tr><td><b>PIN: </b></td><td>5a9322fb</td><tr><tr><td><b>Timestamp: </b></td><td>15/08/2012 00:00:00</td><tr><tr><td><b>Start RAT: </b></td><td>3G</td><tr><tr><td><b>End RAT: </b></td><td>2G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq3</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq2</td><tr><tr><td><b>Start RRC State: </b></td><td>CELL_FACH</td><tr></table></div>]]></description>
+        <styleUrl>#drop</styleUrl>
+        <Point>
+          <coordinates>-0.1646906,51.4313542,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Fail</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.1645208,51.4314465,0</td></tr><tr><td><b>Device: </b></td><td>9360</td><tr><tr><td><b>Reference Device: </b></td><td>False</td><tr><tr><td><b>PIN: </b></td><td>31138eb8</td><tr><tr><td><b>Timestamp: </b></td><td>14/08/2012 00:00:00</td><tr><tr><td><b>Start RAT: </b></td><td>3G</td><tr><tr><td><b>End RAT: </b></td><td>2G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq3</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq2</td><tr><tr><td><b>Start RRC State: </b></td><td>CELL_PCH</td><tr></table></div>]]></description>
+        <styleUrl>#fail</styleUrl>
+        <Point>
+          <coordinates>-0.1645208,51.4314465,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Fail</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.1674822,51.4433042,0</td></tr><tr><td><b>Device: </b></td><td>9360</td><tr><tr><td><b>Reference Device: </b></td><td>False</td><tr><tr><td><b>PIN: </b></td><td>31138eb8</td><tr><tr><td><b>Timestamp: </b></td><td>13/08/2012 00:00:00</td><tr><tr><td><b>Start RAT: </b></td><td>3G</td><tr><tr><td><b>End RAT: </b></td><td>3G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq1</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq4</td><tr><tr><td><b>Start RRC State: </b></td><td>CELL_DCH</td><tr></table></div>]]></description>
+        <styleUrl>#fail</styleUrl>
+        <Point>
+          <coordinates>-0.1674822,51.4433042,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Drop</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.1702625,51.4406783,0</td></tr><tr><td><b>Device: </b></td><td>9320</td><tr><tr><td><b>Reference Device: </b></td><td>False</td><tr><tr><td><b>PIN: </b></td><td>03dcde00</td><tr><tr><td><b>Timestamp: </b></td><td>17/08/2012 00:00:00</td><tr><tr><td><b>Start RAT: </b></td><td>3G</td><tr><tr><td><b>End RAT: </b></td><td>2G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq2</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq1</td><tr><tr><td><b>Start RRC State: </b></td><td>CELL_FACH</td><tr></table></div>]]></description>
+        <styleUrl>#drop</styleUrl>
+        <Point>
+          <coordinates>-0.1702625,51.4406783,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Fail</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.1713007,51.4419374,0</td></tr><tr><td><b>Device: </b></td><td>9800</td><tr><tr><td><b>Reference Device: </b></td><td>True</td><tr><tr><td><b>PIN: </b></td><td>80ae02aa</td><tr><tr><td><b>Timestamp: </b></td><td>15/08/2012 00:00:00</td><tr><tr><td><b>Start RAT: </b></td><td>3G</td><tr><tr><td><b>End RAT: </b></td><td>2G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq4</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq4</td><tr><tr><td><b>Start RRC State: </b></td><td>9790</td><tr></table></div>]]></description>
+        <styleUrl>#fail</styleUrl>
+        <Point>
+          <coordinates>-0.1713007,51.4419374,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Fail</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.1643254,51.4286503,0</td></tr><tr><td><b>Device: </b></td><td>9360</td><tr><tr><td><b>Reference Device: </b></td><td>False</td><tr><tr><td><b>PIN: </b></td><td>a5e7feb0</td><tr><tr><td><b>Timestamp: </b></td><td>13/08/2012 00:00:00</td><tr><tr><td><b>Start RAT: </b></td><td>3G</td><tr><tr><td><b>End RAT: </b></td><td>2G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq2</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq4</td><tr><tr><td><b>Start RRC State: </b></td><td>CELL_PCH</td><tr></table></div>]]></description>
+        <styleUrl>#fail</styleUrl>
+        <Point>
+          <coordinates>-0.1643254,51.4286503,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Fail</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.1679659,51.43855,0</td></tr><tr><td><b>Device: </b></td><td>9320</td><tr><tr><td><b>Reference Device: </b></td><td>False</td><tr><tr><td><b>PIN: </b></td><td>0d81755e</td><tr><tr><td><b>Timestamp: </b></td><td>13/08/2012 00:00:00</td><tr><tr><td><b>Start RAT: </b></td><td>2G</td><tr><tr><td><b>End RAT: </b></td><td>3G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq3</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq1</td><tr><tr><td><b>Start RRC State: </b></td><td>URA_PCH</td><tr></table></div>]]></description>
+        <styleUrl>#fail</styleUrl>
+        <Point>
+          <coordinates>-0.1679659,51.43855,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Drop</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.1692714,51.4396926,0</td></tr><tr><td><b>Device: </b></td><td>9320</td><tr><tr><td><b>Reference Device: </b></td><td>False</td><tr><tr><td><b>PIN: </b></td><td>0d81755e</td><tr><tr><td><b>Timestamp: </b></td><td>14/08/2012 00:00:00</td><tr><tr><td><b>Start RAT: </b></td><td>3G</td><tr><tr><td><b>End RAT: </b></td><td>2G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq3</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq4</td><tr><tr><td><b>Start RRC State: </b></td><td>CELL_DCH</td><tr></table></div>]]></description>
+        <styleUrl>#drop</styleUrl>
+        <Point>
+          <coordinates>-0.1692714,51.4396926,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Drop</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.1599247,51.4355207,0</td></tr><tr><td><b>Device: </b></td><td>9360</td><tr><tr><td><b>Reference Device: </b></td><td>False</td><tr><tr><td><b>PIN: </b></td><td>31138eb8</td><tr><tr><td><b>Timestamp: </b></td><td>14/08/2012 00:00:00</td><tr><tr><td><b>Start RAT: </b></td><td>3G</td><tr><tr><td><b>End RAT: </b></td><td>3G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq3</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq4</td><tr><tr><td><b>Start RRC State: </b></td><td>URA_PCH</td><tr></table></div>]]></description>
+        <styleUrl>#drop</styleUrl>
+        <Point>
+          <coordinates>-0.1599247,51.4355207,0</coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>Cluster 1</name>
+      <description />
+      <Placemark>
+        <name>Centroid</name>
+        <styleUrl>#centroid</styleUrl>
+        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.532864766666667,51.4342003,0</td></tr><tr><td><b>Radius: </b></td><td>2.05134963377279</td></tr></table></div>]]></description>
+        <Point>
+          <coordinates>-0.532864766666667,51.4342003,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cluster Radius</name>
+        <styleUrl>#centroid-radius</styleUrl>
+        <Polygon>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>-0.503248821820354,51.4342003,0
+-0.503253228054627,51.4345225237182,0
+-0.503266654438923,51.4348446504193,0
+-0.503289097074066,51.4351665819772,0
+-0.503320549313986,51.4354882203234,0
+-0.503361001767512,51.4358094674764,0
+-0.503410442301006,51.436130225572,0
+-0.503468856041824,51.4364503968929,0
+-0.503536225382622,51.4367698838984,0
+-0.503612529986489,51.4370885892542,0
+-0.503697746792919,51.4374064158623,0
+-0.503791850024613,51.4377232668904,0
+-0.50389481119511,51.4380390458011,0
+-0.504006599117249,51.438353656382,0
+-0.504127179912449,51.4386670027746,0
+-0.504256517020825,51.4389789895034,0
+-0.50439457121211,51.4392895215054,0
+-0.504541300597408,51.4395985041591,0
+-0.504696660641747,51.4399058433129,0
+-0.504860604177455,51.4402114453141,0
+-0.505033081418333,51.4405152170378,0
+-0.505214039974635,51.4408170659146,0
+-0.505403424868849,51.4411168999594,0
+-0.50560117855226,51.4414146277994,0
+-0.505807240922318,51.4417101587015,0
+-0.506021549340773,51.4420034026009,0
+-0.506244038652602,51.4422942701276,0
+-0.506474641205698,51.4425826726343,0
+-0.506713286871337,51.4428685222233,0
+-0.506959903065391,51.4431517317733,0
+-0.50721441477031,51.443432214966,0
+-0.507476744557845,51.4437098863126,0
+-0.50774681261251,51.4439846611796,0
+-0.508024536755785,51.4442564558148,0
+-0.50830983247104,51.4445251873731,0
+-0.50860261292918,51.4447907739414,0
+-0.508902789015006,51.445053134564,0
+-0.509210269354273,51.4453121892669,0
+-0.50952496034145,51.4455678590826,0
+-0.50984676616816,51.4458200660742,0
+-0.510175588852311,51.446068733359,0
+-0.510511328267881,51.446313785132,0
+-0.510853882175379,51.4465551466894,0
+-0.511203146252948,51.4467927444509,0
+-0.511559014128116,51.4470265059827,0
+-0.511921377410174,51.4472563600193,0
+-0.512290125723184,51.4474822364854,0
+-0.512665146739592,51.4477040665173,0
+-0.513046326214452,51.4479217824839,0
+-0.513433548020237,51.4481353180076,0
+-0.513826694182229,51.4483446079843,0
+-0.514225644914489,51.4485495886034,0
+-0.514630278656375,51.4487501973674,0
+-0.515040472109619,51.4489463731108,0
+-0.515456100275937,51.4491380560192,0
+-0.515877036495162,51.4493251876471,0
+-0.516303152483895,51.4495077109361,0
+-0.516734318374658,51.4496855702323,0
+-0.517170402755534,51.4498587113031,0
+-0.517611272710291,51.4500270813542,0
+-0.518056793858963,51.4501906290454,0
+-0.518506830398893,51.4503493045062,0
+-0.51896124514621,51.4505030593517,0
+-0.519419899577738,51.4506518466967,0
+-0.519882653873317,51.4507956211703,0
+-0.520349366958529,51.4509343389298,0
+-0.520819896547809,51.4510679576743,0
+-0.521294099187935,51.4511964366571,0
+-0.521771830301873,51.4513197366988,0
+-0.522252944232984,51.451437820199,0
+-0.522737294289551,51.4515506511475,0
+-0.523224732789632,51.4516581951361,0
+-0.523715111106228,51.4517604193681,0
+-0.52420827971273,51.4518572926694,0
+-0.524704088228658,51.4519487854971,0
+-0.525202385465654,51.4520348699494,0
+-0.525703019473738,51.4521155197733,0
+-0.526205837587784,51.4521907103733,0
+-0.526710686474237,51.4522604188185,0
+-0.52721741217802,51.45232462385,0
+-0.527725860169647,51.452383305887,0
+-0.528235875392503,51.452436447033,0
+-0.5287473023103,51.4524840310814,0
+-0.52925998495467,51.4525260435202,0
+-0.5297737669729,51.4525624715367,0
+-0.530288491675785,51.452593304021,0
+-0.530804002085581,51.4526185315701,0
+-0.531320140984053,51.45263814649,0
+-0.531836750960594,51.4526521427986,0
+-0.532353674460409,51.4526605162273,0
+-0.532870753832735,51.4526632642225,0
+-0.533387831379099,51.4526603859459,0
+-0.533904749401588,51.4526518822755,0
+-0.534421350251115,51.4526377558047,0
+-0.534937476375679,51.4526180108417,0
+-0.535452970368582,51.4525926534084,0
+-0.535967675016615,51.4525616912382,0
+-0.536481433348173,51.4525251337739,0
+-0.536994088681299,51.4524829921647,0
+-0.537505484671641,51.4524352792627,0
+-0.538015465360296,51.4523820096192,0
+-0.538523875221545,51.4523231994802,0
+-0.539030559210446,51.452258866781,0
+-0.539535362810279,51.4521890311414,0
+-0.540038132079826,51.4521137138591,0
+-0.540538713700481,51.4520329379037,0
+-0.541036955023153,51.4519467279091,0
+-0.541532704114971,51.4518551101666,0
+-0.542025809805764,51.4517581126161,0
+-0.542516121734305,51.4516557648383,0
+-0.5430034903943,51.4515480980451,0
+-0.543487767180122,51.4514351450705,0
+-0.543968804432249,51.4513169403601,0
+-0.544446455482428,51.4511935199609,0
+-0.544920574698514,51.45106492151,0
+-0.545391017529003,51.4509311842234,0
+-0.545857640547213,51.4507923488837,0
+-0.546320301495137,51.4506484578278,0
+-0.546778859326913,51.450499554934,0
+-0.547233174251935,51.4503456856082,0
+-0.547683107777562,51.4501868967705,0
+-0.548128522751436,51.4500232368407,0
+-0.548569283403376,51.4498547557233,0
+-0.549005255386849,51.4496815047922,0
+-0.54943630582,51.4495035368754,0
+-0.549862303326224,51.4493209062385,0
+-0.550283118074279,51.4491336685682,0
+-0.550698621817912,51.4489418809552,0
+-0.551108687935006,51.4487456018768,0
+-0.551513191466212,51.448544891179,0
+-0.551912009153078,51.4483398100584,0
+-0.552305019475639,51.448130421043,0
+-0.552692102689488,51.4479167879736,0
+-0.553073140862277,51.447698975984,0
+-0.553448017909673,51.4474770514812,0
+-0.55381661963074,51.4472510821249,0
+-0.554178833742731,51.4470211368073,0
+-0.554534549915302,51.4467872856313,0
+-0.554883659804109,51.4465495998898,0
+-0.5552260570838,51.4463081520434,0
+-0.555561637480381,51.4460630156986,0
+-0.555890298802954,51.445814265585,0
+-0.5562119409748,51.4455619775329,0
+-0.556526466063828,51.4453062284495,0
+-0.556833778312345,51.4450470962961,0
+-0.55713378416617,51.4447846600636,0
+-0.557426392303058,51.444518999749,0
+-0.557711513660443,51.4442501963304,0
+-0.557989061462486,51.443978331743,0
+-0.558258951246411,51.443703488853,0
+-0.558521100888137,51.4434257514334,0
+-0.55877543062719,51.4431452041376,0
+-0.55902186309088,51.4428619324741,0
+-0.559260323317752,51.4425760227801,0
+-0.559490738780292,51.4422875621951,0
+-0.559713039406888,51.4419966386345,0
+-0.559927157603029,51.4417033407627,0
+-0.56013302827175,51.4414077579659,0
+-0.56033058883331,51.4411099803249,0
+-0.560519779244094,51.4408100985878,0
+-0.560700542014734,51.4405082041419,0
+-0.560872822227456,51.4402043889863,0
+-0.561036567552629,51.4398987457033,0
+-0.561191728264523,51.4395913674306,0
+-0.561338257256273,51.4392823478328,0
+-0.561476110054034,51.4389717810724,0
+-0.561605244830332,51.4386597617817,0
+-0.561725622416611,51.4383463850336,0
+-0.561837206314952,51.4380317463127,0
+-0.561939962708989,51.437715941486,0
+-0.562033860473997,51.4373990667739,0
+-0.562118871186156,51.4370812187208,0
+-0.562194969130998,51.4367624941655,0
+-0.562262131311009,51.436442990212,0
+-0.562320337452424,51.4361228041996,0
+-0.562369570011168,51.4358020336733,0
+-0.562409814177979,51.4354807763542,0
+-0.562441057882686,51.4351591301097,0
+-0.562463291797662,51.4348371929235,0
+-0.562476509340427,51.4345150628659,0
+-0.562480706675427,51.4341928380638,0
+-0.562475882714967,51.433870616671,0
+-0.562462039119312,51.4335484968381,0
+-0.562439180295946,51.4332265766828,0
+-0.562407313398001,51.4329049542598,0
+-0.562366448321842,51.432583727531,0
+-0.562316597703826,51.4322629943358,0
+-0.562257776916221,51.4319428523614,0
+-0.562190004062294,51.4316233991124,0
+-0.562113299970576,51.4313047318821,0
+-0.562027688188284,51.430986947722,0
+-0.561933194973936,51.4306701434129,0
+-0.561829849289126,51.430354415435,0
+-0.561717682789488,51.4300398599389,0
+-0.561596729814839,51.4297265727158,0
+-0.561467027378507,51.4294146491692,0
+-0.561328615155856,51.429104184285,0
+-0.561181535471987,51.4287952726031,0
+-0.561025833288658,51.4284880081885,0
+-0.560861556190383,51.4281824846029,0
+-0.560688754369757,51.4278787948757,0
+-0.560507480611974,51.4275770314764,0
+-0.560317790278573,51.4272772862858,0
+-0.560119741290398,51.4269796505687,0
+-0.559913394109784,51.4266842149457,0
+-0.559698811721977,51.4263910693657,0
+-0.55947605961579,51.4261003030789,0
+-0.559245205763504,51.4258120046091,0
+-0.559006320600015,51.4255262617274,0
+-0.558759477001239,51.4252431614251,0
+-0.558504750261785,51.4249627898872,0
+-0.55824221807189,51.4246852324668,0
+-0.557971960493635,51.4244105736583,0
+-0.557694059936445,51.4241388970727,0
+-0.557408601131885,51.4238702854111,0
+-0.557115671107748,51.4236048204406,0
+-0.556815359161456,51.4233425829689,0
+-0.556507756832781,51.4230836528197,0
+-0.556192957875879,51.4228281088089,0
+-0.55587105823067,51.4225760287201,0
+-0.555542155993553,51.4223274892814,0
+-0.555206351387471,51.422082566142,0
+-0.55486374673134,51.4218413338491,0
+-0.554514446408846,51.4216038658253,0
+-0.554158556836623,51.4213702343466,0
+-0.553796186431813,51.4211405105198,0
+-0.553427445579032,51.4209147642617,0
+-0.553052446596746,51.4206930642773,0
+-0.552671303703055,51.4204754780393,0
+-0.552284132980919,51.4202620717672,0
+-0.551891052342818,51.4200529104077,0
+-0.551492181494862,51.4198480576146,0
+-0.551087641900365,51.4196475757298,0
+-0.550677556742891,51.419451525764,0
+-0.550262050888783,51.4192599673786,0
+-0.549841250849191,51.4190729588673,0
+-0.5494152847416,51.4188905571384,0
+-0.548984282250879,51.4187128176979,0
+-0.548548374589869,51.4185397946322,0
+-0.548107694459497,51.4183715405919,0
+-0.547662376008455,51.4182081067758,0
+-0.547212554792448,51.4180495429157,0
+-0.546758367733005,51.4178958972606,0
+-0.5462999530759,51.4177472165625,0
+-0.545837450349166,51.4176035460626,0
+-0.545371000320723,51.4174649294767,0
+-0.544900744955641,51.4173314089826,0
+-0.544426827373044,51.4172030252072,0
+-0.543949391802665,51.4170798172139,0
+-0.54346858354107,51.416961822491,0
+-0.542984548907564,51.4168490769405,0
+-0.542497435199795,51.4167416148667,0
+-0.542007390649053,51.4166394689663,0
+-0.541514564375305,51.416542670318,0
+-0.54101910634195,51.4164512483738,0
+-0.540521167310336,51.4163652309492,0
+-0.540020898794028,51.4162846442154,0
+-0.539518453012853,51.4162095126912,0
+-0.539013982846737,51.4161398592353,0
+-0.538507641789344,51.4160757050398,0
+-0.537999583901528,51.4160170696235,0
+-0.537489963764622,51.415963970826,0
+-0.536978936433563,51.4159164248025,0
+-0.536466657389883,51.4158744460185,0
+-0.535953282494569,51.4158380472459,0
+-0.53543896794081,51.4158072395587,0
+-0.534923870206647,51.4157820323299,0
+-0.534408146007531,51.4157624332287,0
+-0.533891952248823,51.4157484482178,0
+-0.53337544597822,51.4157400815522,0
+-0.532858784338154,51.4157373357772,0
+-0.532342124518156,51.4157402117283,0
+-0.531825623707205,51.4157487085305,0
+-0.531309439046077,51.4157628235987,0
+-0.530793727579714,51.4157825526386,0
+-0.530278646209614,51.4158078896476,0
+-0.52976435164627,51.4158388269173,0
+-0.529251000361661,51.4158753550353,0
+-0.528738748541819,51.415917462888,0
+-0.528227752039478,51.4159651376644,0
+-0.527718166326826,51.4160183648598,0
+-0.527210146448364,51.4160771282799,0
+-0.5267038469739,51.4161414100462,0
+-0.526199421951684,51.416211190601,0
+-0.525697024861691,51.4162864487138,0
+-0.525196808569086,51.416367161487,0
+-0.524698925277865,51.4164533043637,0
+-0.52420352648469,51.4165448511344,0
+-0.523710762932949,51.4166417739456,0
+-0.523220784567025,51.4167440433078,0
+-0.522733740486815,51.4168516281044,0
+-0.522249778902499,51.4169644956015,0
+-0.521769047089571,51.4170826114576,0
+-0.521291691344156,51.417205939734,0
+-0.520817856938613,51.4173344429057,0
+-0.520347688077452,51.4174680818729,0
+-0.519881327853562,51.4176068159727,0
+-0.519418918204778,51.4177506029916,0
+-0.51896059987079,51.4178993991781,0
+-0.518506512350417,51.4180531592562,0
+-0.51805679385924,51.4182118364389,0
+-0.517611581287631,51.4183753824425,0
+-0.517171010159175,51.4185437475015,0
+-0.516735214589501,51.418716880383,0
+-0.516304327245531,51.418894728403,0
+-0.51587847930517,51.419077237442,0
+-0.515457800417439,51.4192643519614,0
+-0.515042418663065,51.4194560150207,0
+-0.51463246051554,51.4196521682942,0
+-0.51422805080267,51.4198527520891,0
+-0.513829312668605,51.4200577053637,0
+-0.513436367536385,51.4202669657454,0
+-0.513049335070994,51.4204804695504,0
+-0.512668333142952,51.4206981518022,0
+-0.512293477792433,51.420919946252,0
+-0.511924883193939,51.4211457853984,0
+-0.511562661621538,51.4213756005081,0
+-0.511206923414667,51.4216093216365,0
+-0.510857776944514,51.4218468776495,0
+-0.510515328580999,51.4220881962443,0
+-0.510179682660355,51.4223332039719,0
+-0.509850941453313,51.4225818262594,0
+-0.509529205133916,51.4228339874324,0
+-0.509214571748962,51.4230896107381,0
+-0.508907137188085,51.4233486183686,0
+-0.508606995154486,51.4236109314846,0
+-0.508314237136323,51.423876470239,0
+-0.508028952378771,51.4241451538019,0
+-0.507751227856746,51.4244169003844,0
+-0.507481148248332,51.4246916272636,0
+-0.507218795908879,51.4249692508081,0
+-0.50696425084582,51.4252496865032,0
+-0.506717590694183,51.4255328489763,0
+-0.506478890692826,51.4258186520234,0
+-0.506248223661391,51.4261070086348,0
+-0.506025659977989,51.4263978310218,0
+-0.505811267557625,51.4266910306433,0
+-0.505605111831363,51.4269865182328,0
+-0.505407255726244,51.4272842038254,0
+-0.505217759645957,51.4275839967852,0
+-0.50503668145228,51.4278858058331,0
+-0.504864076447283,51.428189539074,0
+-0.504699997356306,51.4284951040255,0
+-0.50454449431172,51.4288024076451,0
+-0.504397614837471,51.4291113563595,0
+-0.504259403834413,51.4294218560923,0
+-0.504129903566435,51.4297338122928,0
+-0.504009153647391,51.4300471299652,0
+-0.503897191028828,51.4303617136968,0
+-0.503794049988526,51.4306774676875,0
+-0.503699762119841,51.430994295779,0
+-0.503614356321873,51.4313121014835,0
+-0.503537858790444,51.431630788014,0
+-0.503470293009898,51.4319502583127,0
+-0.503411679745728,51.4322704150813,0
+-0.503362037038025,51.4325911608104,0
+-0.503321380195753,51.4329123978092,0
+-0.503289721791863,51.433234028235,0
+-0.503267071659232,51.4335559541235,0
+-0.503253436887434,51.4338780774181,0
+-0.503248821820354,51.4342003,0
+</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+      <Placemark>
+        <name>Fail</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.5360094,51.4362205,0</td></tr><tr><td><b>Device: </b></td><td>9800</td><tr><tr><td><b>Reference Device: </b></td><td>True</td><tr><tr><td><b>PIN: </b></td><td>80ae02aa</td><tr><tr><td><b>Timestamp: </b></td><td>13/08/2012 00:00:00</td><tr><tr><td><b>Start RAT: </b></td><td>3G</td><tr><tr><td><b>End RAT: </b></td><td>3G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq2</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq2</td><tr><tr><td><b>Start RRC State: </b></td><td>CELL_PCH</td><tr></table></div>]]></description>
+        <styleUrl>#fail</styleUrl>
+        <Point>
+          <coordinates>-0.5360094,51.4362205,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Fail</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.5227345,51.4500859,0</td></tr><tr><td><b>Device: </b></td><td>9320</td><tr><tr><td><b>Reference Device: </b></td><td>False</td><tr><tr><td><b>PIN: </b></td><td>03dcde00</td><tr><tr><td><b>Timestamp: </b></td><td>15/08/2012 00:00:00</td><tr><tr><td><b>Start RAT: </b></td><td>3G</td><tr><tr><td><b>End RAT: </b></td><td>3G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq3</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq4</td><tr><tr><td><b>Start RRC State: </b></td><td>CELL_DCH</td><tr></table></div>]]></description>
+        <styleUrl>#fail</styleUrl>
+        <Point>
+          <coordinates>-0.5227345,51.4500859,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Fail</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.5398504,51.4162945,0</td></tr><tr><td><b>Device: </b></td><td>9800</td><tr><tr><td><b>Reference Device: </b></td><td>True</td><tr><tr><td><b>PIN: </b></td><td>80ae02aa</td><tr><tr><td><b>Timestamp: </b></td><td>16/08/2012 00:00:00</td><tr><tr><td><b>Start RAT: </b></td><td>2G</td><tr><tr><td><b>End RAT: </b></td><td>2G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq4</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq1</td><tr><tr><td><b>Start RRC State: </b></td><td>CELL_FACH</td><tr></table></div>]]></description>
+        <styleUrl>#fail</styleUrl>
+        <Point>
+          <coordinates>-0.5398504,51.4162945,0</coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>Cluster 2</name>
+      <description />
+      <Placemark>
+        <name>Centroid</name>
+        <styleUrl>#centroid</styleUrl>
+        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.227017,51.37127402,0</td></tr><tr><td><b>Radius: </b></td><td>2.77328023231225</td></tr></table></div>]]></description>
+        <Point>
+          <coordinates>-0.227017,51.37127402,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cluster Radius</name>
+        <styleUrl>#centroid-radius</styleUrl>
+        <Polygon>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>-0.187033474207138,51.37127402,0
+-0.187039373737735,51.3717096430023,0
+-0.187057451182363,51.37214513538,0
+-0.187087701381617,51.3725803644723,0
+-0.187130115467333,51.3730151976948,0
+-0.187184680864865,51.37344950258,0
+-0.187251381296492,51.3738831468175,0
+-0.187330196785963,51.3743159982944,0
+-0.187421103664161,51.3747479251357,0
+-0.187524074575903,51.3751787957442,0
+-0.187639078487864,51.375608478841,0
+-0.187766080697617,51.3760368435052,0
+-0.187905042843813,51.3764637592138,0
+-0.188055922917463,51.376889095882,0
+-0.188218675274345,51.3773127239022,0
+-0.188393250648524,51.3777345141841,0
+-0.188579596166983,51.3781543381937,0
+-0.18877765536535,51.3785720679927,0
+-0.188987368204741,51.3789875762775,0
+-0.189208671089689,51.3794007364181,0
+-0.189441496887167,51.3798114224966,0
+-0.1896857749467,51.3802195093459,0
+-0.189941431121554,51.3806248725875,0
+-0.190208387791001,51.3810273886699,0
+-0.190486563883651,51.3814269349062,0
+-0.190775874901852,51.3818233895112,0
+-0.191076232947129,51.3822166316393,0
+-0.191387546746689,51.3826065414207,0
+-0.19170972168095,51.3829929999984,0
+-0.192042659812107,51.3833758895646,0
+-0.192386259913724,51.3837550933964,0
+-0.192740417501334,51.3841304958915,0
+-0.193105024864044,51.3845019826039,0
+-0.193479971097144,51.3848694402783,0
+-0.193865142135692,51.3852327568852,0
+-0.194260420789079,51.3855918216549,0
+-0.194665686776561,51.3859465251115,0
+-0.195080816763742,51.3862967591062,0
+-0.195505684400008,51.3866424168505,0
+-0.195940160356886,51.3869833929489,0
+-0.196384112367329,51.3873195834309,0
+-0.196837405265907,51.3876508857831,0
+-0.197299901029903,51.3879771989803,0
+-0.197771458821284,51.3882984235166,0
+-0.198251935029551,51.3886144614357,0
+-0.198741183315444,51.3889252163609,0
+-0.199239054655499,51.3892305935247,0
+-0.199745397387431,51.3895304997977,0
+-0.200260057256337,51.389824843717,0
+-0.200782877461708,51.3901135355145,0
+-0.201313698705228,51.390396487144,0
+-0.201852359239346,51.3906736123084,0
+-0.202398694916612,51.3909448264862,0
+-0.202952539239763,51.391210046957,0
+-0.203513723412526,51.3914691928272,0
+-0.204082076391152,51.3917221850545,0
+-0.204657424936638,51.3919689464724,0
+-0.205239593667633,51.3922094018135,0
+-0.205828405114016,51.3924434777328,0
+-0.206423679771117,51.3926711028301,0
+-0.20702523615458,51.3928922076718,0
+-0.20763289085583,51.3931067248122,0
+-0.208246458598154,51.3933145888142,0
+-0.208865752293351,51.3935157362692,0
+-0.209490583098953,51.3937101058168,0
+-0.210120760475994,51.3938976381635,0
+-0.210756092247303,51.3940782761006,0
+-0.21139638465631,51.3942519645221,0
+-0.212041442426347,51.3944186504414,0
+-0.212691068820418,51.3945782830075,0
+-0.213345065701429,51.3947308135207,0
+-0.21400323359285,51.3948761954474,0
+-0.214665371739803,51.3950143844346,0
+-0.215331278170541,51.3951453383232,0
+-0.216000749758309,51.3952690171611,0
+-0.216673582283569,51.3953853832153,0
+-0.217349570496561,51.3954944009837,0
+-0.218028508180189,51.3955960372058,0
+-0.218710188213211,51.3956902608728,0
+-0.219394402633705,51.3957770432376,0
+-0.220080942702803,51.3958563578228,0
+-0.220769598968667,51.3959281804296,0
+-0.221460161330687,51.3959924891448,0
+-0.222152419103878,51.3960492643477,0
+-0.222846161083468,51.3960984887158,0
+-0.223541175609642,51.3961401472305,0
+-0.224237250632427,51.3961742271816,0
+-0.224934173776706,51.3962007181711,0
+-0.225631732407327,51.3962196121163,0
+-0.226329713694298,51.3962309032525,0
+-0.227027904678035,51.3962345881348,0
+-0.227726092334664,51.3962306656388,0
+-0.228424063641328,51.3962191369613,0
+-0.229121605641506,51.3962000056199,0
+-0.229818505510303,51.3961732774516,0
+-0.230514550619704,51.3961389606114,0
+-0.231209528603763,51.3960970655696,0
+-0.231903227423711,51.3960476051087,0
+-0.232595435432966,51.3959905943192,0
+-0.233285941442011,51.3959260505955,0
+-0.233974534783141,51.3958539936301,0
+-0.234661005375035,51.3957744454075,0
+-0.235345143787155,51.3956874301981,0
+-0.236026741303935,51.3955929745499,0
+-0.236705589988749,51.3954911072812,0
+-0.237381482747637,51.3953818594709,0
+-0.238054213392765,51.39526526445,0
+-0.238723576705601,51.3951413577903,0
+-0.239389368499797,51.3950101772942,0
+-0.240051385683735,51.3948717629832,0
+-0.240709426322744,51.3947261570848,0
+-0.241363289700945,51.3945734040205,0
+-0.242012776382727,51.3944135503919,0
+-0.242657688273812,51.3942466449659,0
+-0.243297828681909,51.3940727386605,0
+-0.243933002376928,51.3938918845288,0
+-0.244563015650739,51.3937041377427,0
+-0.245187676376454,51.3935095555763,0
+-0.245806794067216,51.3933081973879,0
+-0.246420179934484,51.3931001246023,0
+-0.247027646945777,51.3928854006917,0
+-0.247629009881877,51.3926640911561,0
+-0.24822408539347,51.3924362635038,0
+-0.248812692057199,51.39220198723,0
+-0.249394650431117,51.3919613337961,0
+-0.249969783109531,51.3917143766074,0
+-0.250537914777199,51.3914611909911,0
+-0.251098872262891,51.3912018541725,0
+-0.251652484592271,51.3909364452522,0
+-0.252198583040104,51.3906650451812,0
+-0.252737001181756,51.3903877367365,0
+-0.253267574943986,51.3901046044955,0
+-0.253790142655005,51.3898157348104,0
+-0.254304545093784,51.3895212157815,0
+-0.254810625538609,51.3892211372303,0
+-0.255308229814851,51.3889155906721,0
+-0.255797206341956,51.3886046692881,0
+-0.256277406179619,51.3882884678963,0
+-0.256748683073144,51.3879670829233,0
+-0.257210893497975,51.3876406123741,0
+-0.257663896703373,51.3873091558028,0
+-0.258107554755237,51.3869728142813,0
+-0.258541732578055,51.3866316903691,0
+-0.258966297995963,51.3862858880817,0
+-0.259381121772914,51.3859355128585,0
+-0.259786077651929,51.3855806715312,0
+-0.260181042393434,51.3852214722903,0
+-0.260565895812661,51.3848580246528,0
+-0.260940520816099,51.3844904394282,0
+-0.261304803436998,51.3841188286848,0
+-0.261658632869906,51.3837433057156,0
+-0.262001901504222,51.3833639850033,0
+-0.262334504956771,51.3829809821858,0
+-0.26265634210338,51.3825944140202,0
+-0.262967315109449,51.3822043983479,0
+-0.263267329459508,51.381811054058,0
+-0.26355629398575,51.3814145010511,0
+-0.263834120895532,51.3810148602031,0
+-0.264100725797841,51.3806122533275,0
+-0.264356027728707,51.3802068031391,0
+-0.264599949175569,51.3797986332158,0
+-0.264832416100566,51.3793878679611,0
+-0.265053357962777,51.3789746325663,0
+-0.265262707739375,51.378559052972,0
+-0.265460401945702,51.3781412558299,0
+-0.265646380654259,51.377721368464,0
+-0.265820587512603,51.3772995188319,0
+-0.265982969760154,51.3768758354854,0
+-0.266133478243885,51.3764504475317,0
+-0.266272067432926,51.3760234845938,0
+-0.266398695432041,51.3755950767708,0
+-0.266513323994003,51.3751653545988,0
+-0.266615918530845,51.3747344490104,0
+-0.266706448123997,51.3743024912951,0
+-0.266784885533298,51.3738696130594,0
+-0.266851207204884,51.3734359461863,0
+-0.266905393277948,51.3730016227955,0
+-0.266947427590375,51.3725667752029,0
+-0.266977297683245,51.3721315358803,0
+-0.26699499480421,51.371696037415,0
+-0.267000513909736,51.3712604124697,0
+-0.266993853666216,51.3708247937414,0
+-0.266975016449953,51.370389313922,0
+-0.266944008346016,51.3699541056568,0
+-0.266900839145958,51.3695193015048,0
+-0.266845522344414,51.3690850338981,0
+-0.266778075134575,51.3686514351018,0
+-0.266698518402524,51.3682186371733,0
+-0.266606876720467,51.3677867719225,0
+-0.266503178338832,51.3673559708714,0
+-0.266387455177254,51.3669263652143,0
+-0.266259742814452,51.3664980857776,0
+-0.266120080476987,51.3660712629806,0
+-0.265968511026923,51.3656460267948,0
+-0.26580508094838,51.3652225067055,0
+-0.265629840332991,51.3648008316713,0
+-0.265442842864268,51.364381130086,0
+-0.265244145800882,51.3639635297387,0
+-0.265033809958857,51.3635481577752,0
+-0.264811899692693,51.3631351406594,0
+-0.264578482875417,51.362724604135,0
+-0.264333630877571,51.362316673187,0
+-0.264077418545143,51.3619114720038,0
+-0.263809924176454,51.3615091239395,0
+-0.263531229497997,51.3611097514764,0
+-0.263241419639242,51.3607134761878,0
+-0.262940583106424,51.360320418701,0
+-0.262628811755299,51.3599306986608,0
+-0.262306200762907,51.3595444346928,0
+-0.261972848598321,51.359161744368,0
+-0.261628856992415,51.3587827441665,0
+-0.261274330906644,51.3584075494424,0
+-0.260909378500859,51.3580362743887,0
+-0.260534111100152,51.3576690320027,0
+-0.260148643160761,51.3573059340516,0
+-0.259753092235023,51.3569470910388,0
+-0.259347578935404,51.35659261217,0
+-0.258932226897613,51.3562426053203,0
+-0.258507162742798,51.3558971770015,0
+-0.258072516038863,51.3555564323296,0
+-0.257628419260885,51.3552204749932,0
+-0.257175007750669,51.3548894072215,0
+-0.256712419675445,51.3545633297541,0
+-0.256240795985714,51.3542423418095,0
+-0.255760280372263,51.3539265410559,0
+-0.255271019222362,51.3536160235809,0
+-0.254773161575149,51.3533108838628,0
+-0.254266859076228,51.3530112147417,0
+-0.253752265931485,51.3527171073915,0
+-0.253229538860136,51.3524286512922,0
+-0.25269883704703,51.3521459342028,0
+-0.252160322094211,51.3518690421345,0
+-0.251614157971761,51.3515980593251,0
+-0.251060510967933,51.3513330682129,0
+-0.250499549638594,51.3510741494121,0
+-0.249931444755997,51.3508213816883,0
+-0.249356369256877,51.3505748419346,0
+-0.248774498189922,51.3503346051483,0
+-0.248186008662596,51.350100744408,0
+-0.247591079787359,51.3498733308519,0
+-0.246989892627289,51.3496524336558,0
+-0.246382630141116,51.3494381200124,0
+-0.245769477127703,51.3492304551109,0
+-0.245150620169967,51.3490295021173,0
+-0.244526247578279,51.3488353221551,0
+-0.243896549333342,51.3486479742868,0
+-0.243261717028579,51.3484675154964,0
+-0.242621943812036,51.3482940006715,0
+-0.241977424327827,51.3481274825874,0
+-0.241328354657128,51.3479680118905,0
+-0.240674932258753,51.3478156370833,0
+-0.24001735590931,51.3476704045096,0
+-0.239355825642977,51.3475323583406,0
+-0.238690542690891,51.3474015405613,0
+-0.238021709420193,51.347277990958,0
+-0.237349529272731,51.3471617471062,0
+-0.236674206703442,51.3470528443592,0
+-0.235995947118437,51.3469513158374,0
+-0.235314956812799,51.3468571924182,0
+-0.234631442908122,51.3467705027268,0
+-0.233945613289802,51.3466912731274,0
+-0.233257676544103,51.3466195277155,0
+-0.23256784189501,51.3465552883101,0
+-0.231876319140899,51.3464985744477,0
+-0.231183318591035,51.3464494033758,0
+-0.230489051001914,51.3464077900481,0
+-0.229793727513479,51.3463737471198,0
+-0.229097559585219,51.3463472849439,0
+-0.228400758932168,51.3463284115678,0
+-0.227703537460841,51.3463171327313,0
+-0.227006107205101,51.3463134518642,0
+-0.226308680261991,51.3463173700861,0
+-0.225611468727555,51.3463288862053,0
+-0.224914684632647,51.3463479967197,0
+-0.22421853987877,51.3463746958174,0
+-0.223523246173948,51.346408975379,0
+-0.222829014968655,51.3464508249796,0
+-0.222136057391823,51.346500231892,0
+-0.221444584186943,51.346557181091,0
+-0.220754805648284,51.3466216552572,0
+-0.220066931557242,51.3466936347829,0
+-0.21938117111884,51.3467730977778,0
+-0.218697732898403,51.3468600200756,0
+-0.21801682475842,51.3469543752413,0
+-0.217338653795617,51.3470561345791,0
+-0.216663426278254,51.3471652671414,0
+-0.21599134758367,51.347281739738,0
+-0.215322622136095,51.3474055169459,0
+-0.214657453344736,51.3475365611205,0
+-0.213996043542177,51.3476748324067,0
+-0.21333859392309,51.3478202887508,0
+-0.212685304483284,51.3479728859136,0
+-0.212036373959117,51.3481325774838,0
+-0.211391999767274,51.3482993148915,0
+-0.210752377944941,51.3484730474236,0
+-0.210117703090392,51.3486537222388,0
+-0.209488168303998,51.3488412843835,0
+-0.208863965129683,51.3490356768087,0
+-0.208245283496848,51.3492368403871,0
+-0.207632311662765,51.3494447139312,0
+-0.207025236155481,51.3496592342115,0
+-0.206424241717226,51.3498803359759,0
+-0.205829511248356,51.3501079519695,0
+-0.20524122575185,51.3503420129548,0
+-0.204659564278359,51.3505824477328,0
+-0.204084703871854,51.3508291831645,0
+-0.203516819515852,51.351082144193,0
+-0.202956084080275,51.3513412538664,0
+-0.202402668268926,51.3516064333611,0
+-0.201856740567614,51.3518776020055,0
+-0.201318467192945,51.3521546773047,0
+-0.200788012041785,51.3524375749651,0
+-0.200265536641415,51.3527262089204,0
+-0.199751200100398,51.3530204913576,0
+-0.199245159060164,51.3533203327434,0
+-0.198747567647333,51.3536256418513,0
+-0.19825857742679,51.3539363257897,0
+-0.197778337355523,51.3542522900296,0
+-0.197306993737248,51.3545734384334,0
+-0.196844690177816,51.3548996732844,0
+-0.196391567541437,51.3552308953157,0
+-0.195947763907721,51.3555670037411,0
+-0.195513414529551,51.355907896285,0
+-0.195088651791804,51.3562534692139,0
+-0.194673605170935,51.3566036173677,0
+-0.194268401195422,51.3569582341916,0
+-0.193873163407107,51.3573172117684,0
+-0.193488012323426,51.3576804408512,0
+-0.193113065400549,51.3580478108969,0
+-0.192748436997434,51.3584192100992,0
+-0.192394238340819,51.3587945254229,0
+-0.192050577491145,51.3591736426382,0
+-0.191717559309444,51.3595564463554,0
+-0.19139528542517,51.3599428200597,0
+-0.191083854205023,51.3603326461467,0
+-0.190783360722737,51.3607258059583,0
+-0.190493896729867,51.3611221798187,0
+-0.19021555062758,51.3615216470702,0
+-0.189948407439444,51.3619240861106,0
+-0.189692548785247,51.36232937443,0
+-0.189448052855835,51.3627373886475,0
+-0.189214994388984,51.3631480045493,0
+-0.188993444646317,51.363561097126,0
+-0.188783471391272,51.3639765406111,0
+-0.188585138868118,51.3643942085187,0
+-0.188398507782044,51.3648139736822,0
+-0.188223635280313,51.3652357082931,0
+-0.188060574934491,51.3656592839394,0
+-0.18790937672376,51.3660845716454,0
+-0.187770087019317,51.3665114419101,0
+-0.187642748569867,51.3669397647472,0
+-0.18752740048821,51.3673694097244,0
+-0.187424078238937,51.3678002460031,0
+-0.187332813627222,51.368232142378,0
+-0.187253634788731,51.3686649673176,0
+-0.187186566180646,51.3690985890037,0
+-0.187131628573799,51.3695328753717,0
+-0.187088839045933,51.3699676941508,0
+-0.187058210976079,51.3704029129043,0
+-0.187039754040064,51.3708383990698,0
+-0.187033474207138,51.37127402,0
+</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+      <Placemark>
+        <name>Drop</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.2454507,51.3538597,0</td></tr><tr><td><b>Device: </b></td><td>9320</td><tr><tr><td><b>Reference Device: </b></td><td>False</td><tr><tr><td><b>PIN: </b></td><td>03dcde00</td><tr><tr><td><b>Timestamp: </b></td><td>18/08/2012 00:00:00</td><tr><tr><td><b>Start RAT: </b></td><td>3G</td><tr><tr><td><b>End RAT: </b></td><td>3G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq1</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq4</td><tr><tr><td><b>Start RRC State: </b></td><td>CELL_FACH</td><tr></table></div>]]></description>
+        <styleUrl>#drop</styleUrl>
+        <Point>
+          <coordinates>-0.2454507,51.3538597,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Fail</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.233318,51.3660532,0</td></tr><tr><td><b>Device: </b></td><td>9800</td><tr><tr><td><b>Reference Device: </b></td><td>True</td><tr><tr><td><b>PIN: </b></td><td>80ae02aa</td><tr><tr><td><b>Timestamp: </b></td><td>17/08/2012 00:00:00</td><tr><tr><td><b>Start RAT: </b></td><td>3G</td><tr><tr><td><b>End RAT: </b></td><td>3G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq2</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq3</td><tr><tr><td><b>Start RRC State: </b></td><td>URA_PCH</td><tr></table></div>]]></description>
+        <styleUrl>#fail</styleUrl>
+        <Point>
+          <coordinates>-0.233318,51.3660532,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Fail</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.2186459,51.3796215,0</td></tr><tr><td><b>Device: </b></td><td>9800</td><tr><tr><td><b>Reference Device: </b></td><td>True</td><tr><tr><td><b>PIN: </b></td><td>80ae02aa</td><tr><tr><td><b>Timestamp: </b></td><td>16/08/2012 00:00:00</td><tr><tr><td><b>Start RAT: </b></td><td>3G</td><tr><tr><td><b>End RAT: </b></td><td>3G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq4</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq2</td><tr><tr><td><b>Start RRC State: </b></td><td>CELL_FACH</td><tr></table></div>]]></description>
+        <styleUrl>#fail</styleUrl>
+        <Point>
+          <coordinates>-0.2186459,51.3796215,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Drop</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.2340139,51.3653603,0</td></tr><tr><td><b>Device: </b></td><td>9790</td><tr><tr><td><b>Reference Device: </b></td><td>False</td><tr><tr><td><b>PIN: </b></td><td>1b47730e</td><tr><tr><td><b>Timestamp: </b></td><td>15/08/2012 00:00:00</td><tr><tr><td><b>Start RAT: </b></td><td>3G</td><tr><tr><td><b>End RAT: </b></td><td>3G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq2</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq2</td><tr><tr><td><b>Start RRC State: </b></td><td>CELL_DCH</td><tr></table></div>]]></description>
+        <styleUrl>#drop</styleUrl>
+        <Point>
+          <coordinates>-0.2340139,51.3653603,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Fail</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.2036565,51.3914754,0</td></tr><tr><td><b>Device: </b></td><td>9380</td><tr><tr><td><b>Reference Device: </b></td><td>False</td><tr><tr><td><b>PIN: </b></td><td>bb16716d</td><tr><tr><td><b>Timestamp: </b></td><td>18/08/2012 00:00:00</td><tr><tr><td><b>Start RAT: </b></td><td>2G</td><tr><tr><td><b>End RAT: </b></td><td>3G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq2</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq4</td><tr><tr><td><b>Start RRC State: </b></td><td>CELL_FACH</td><tr></table></div>]]></description>
+        <styleUrl>#fail</styleUrl>
+        <Point>
+          <coordinates>-0.2036565,51.3914754,0</coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name />
+      <description />
+      <Placemark>
+        <name>Centroid</name>
+        <styleUrl>#centroid</styleUrl>
+        <description><![CDATA[<div class="googft-info-window" style="width:250px"><table><tr><td><b>Coordinate: </b></td><td>-0.281383971428571,51.3729665714286,0</td></tr><tr><td><b>Radius: </b></td><td>14.8664111391968</td></tr></table></div>]]></description>
+        <Point>
+          <coordinates>-0.281383971428571,51.3729665714286,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Fail</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.1860342,51.3305545,0</td></tr><tr><td><b>Device: </b></td><td>9360</td><tr><tr><td><b>Reference Device: </b></td><td>False</td><tr><tr><td><b>PIN: </b></td><td>a5e7feb0</td><tr><tr><td><b>Timestamp: </b></td><td>14/08/2012 00:00:00</td><tr><tr><td><b>Start RAT: </b></td><td>3G</td><tr><tr><td><b>End RAT: </b></td><td>3G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq3</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq2</td><tr><tr><td><b>Start RRC State: </b></td><td>CELL_DCH</td><tr></table></div>]]></description>
+        <styleUrl>#fail-noise</styleUrl>
+        <Point>
+          <coordinates>-0.1860342,51.3305545,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Drop</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.1167252,51.3361343,0</td></tr><tr><td><b>Device: </b></td><td>9380</td><tr><tr><td><b>Reference Device: </b></td><td>False</td><tr><tr><td><b>PIN: </b></td><td>efc99a74</td><tr><tr><td><b>Timestamp: </b></td><td>17/08/2012 00:00:00</td><tr><tr><td><b>Start RAT: </b></td><td>3G</td><tr><tr><td><b>End RAT: </b></td><td>3G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq2</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq4</td><tr><tr><td><b>Start RRC State: </b></td><td>URA_PCH</td><tr></table></div>]]></description>
+        <styleUrl>#drop-noise</styleUrl>
+        <Point>
+          <coordinates>-0.1167252,51.3361343,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Fail</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.3833194,51.3096586,0</td></tr><tr><td><b>Device: </b></td><td>9800</td><tr><tr><td><b>Reference Device: </b></td><td>True</td><tr><tr><td><b>PIN: </b></td><td>5a9322fb</td><tr><tr><td><b>Timestamp: </b></td><td>16/08/2012 00:00:00</td><tr><tr><td><b>Start RAT: </b></td><td>3G</td><tr><tr><td><b>End RAT: </b></td><td>2G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq1</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq2</td><tr><tr><td><b>Start RRC State: </b></td><td>CELL_DCH</td><tr></table></div>]]></description>
+        <styleUrl>#fail-noise</styleUrl>
+        <Point>
+          <coordinates>-0.3833194,51.3096586,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Fail</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.3885545,51.307998,0</td></tr><tr><td><b>Device: </b></td><td>9790</td><tr><tr><td><b>Reference Device: </b></td><td>False</td><tr><tr><td><b>PIN: </b></td><td>1b47730e</td><tr><tr><td><b>Timestamp: </b></td><td>15/08/2012 00:00:00</td><tr><tr><td><b>Start RAT: </b></td><td>2G</td><tr><tr><td><b>End RAT: </b></td><td>3G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq3</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq3</td><tr><tr><td><b>Start RRC State: </b></td><td>URA_PCH</td><tr></table></div>]]></description>
+        <styleUrl>#fail-noise</styleUrl>
+        <Point>
+          <coordinates>-0.3885545,51.307998,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Fail</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.194755,51.4793316,0</td></tr><tr><td><b>Device: </b></td><td>9790</td><tr><tr><td><b>Reference Device: </b></td><td>False</td><tr><tr><td><b>PIN: </b></td><td>eb3a215d</td><tr><tr><td><b>Timestamp: </b></td><td>16/08/2012 00:00:00</td><tr><tr><td><b>Start RAT: </b></td><td>3G</td><tr><tr><td><b>End RAT: </b></td><td>3G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq4</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq4</td><tr><tr><td><b>Start RRC State: </b></td><td>CELL_PCH</td><tr></table></div>]]></description>
+        <styleUrl>#fail-noise</styleUrl>
+        <Point>
+          <coordinates>-0.194755,51.4793316,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Drop</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.2066425,51.4905589,0</td></tr><tr><td><b>Device: </b></td><td>9320</td><tr><tr><td><b>Reference Device: </b></td><td>False</td><tr><tr><td><b>PIN: </b></td><td>0d81755e</td><tr><tr><td><b>Timestamp: </b></td><td>16/08/2012 00:00:00</td><tr><tr><td><b>Start RAT: </b></td><td>3G</td><tr><tr><td><b>End RAT: </b></td><td>3G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq4</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq1</td><tr><tr><td><b>Start RRC State: </b></td><td>CELL_PCH</td><tr></table></div>]]></description>
+        <styleUrl>#drop-noise</styleUrl>
+        <Point>
+          <coordinates>-0.2066425,51.4905589,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Fail</name>
+        <description><![CDATA[<div class="googft-info-window" style="width:300px"><table><tr><td><b>Coordinate: </b></td><td>-0.493657,51.3565301,0</td></tr><tr><td><b>Device: </b></td><td>9790</td><tr><tr><td><b>Reference Device: </b></td><td>False</td><tr><tr><td><b>PIN: </b></td><td>eb3a215d</td><tr><tr><td><b>Timestamp: </b></td><td>18/08/2012 00:00:00</td><tr><tr><td><b>Start RAT: </b></td><td>3G</td><tr><tr><td><b>End RAT: </b></td><td>3G</td><tr><tr><td><b>Start Mix-Band: </b></td><td>Freq2</td><tr><tr><td><b>End Mix-Band: </b></td><td>Freq3</td><tr><tr><td><b>Start RRC State: </b></td><td>CELL_FACH</td><tr></table></div>]]></description>
+        <styleUrl>#fail-noise</styleUrl>
+        <Point>
+          <coordinates>-0.493657,51.3565301,0</coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>
