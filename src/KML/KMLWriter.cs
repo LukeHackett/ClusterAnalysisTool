@@ -395,6 +395,10 @@ namespace KML
                                   "<td><b>End Mix-Band: </b></td>" +
                                   "<td>{8}</td>" +
                                 "<tr>" +
+                                "<tr>" +
+                                  "<td><b>Start RRC State: </b></td>" +
+                                  "<td>{9}</td>" +
+                                "<tr>" +
                               "</table>" +
                             "</div>",
                              evt.Coordinate.ToString(), 
@@ -405,7 +409,8 @@ namespace KML
                              evt.StartRat, 
                              evt.EndRat, 
                              evt.StartMixBand,
-                             evt.EndMixBand);
+                             evt.EndMixBand,
+                             evt.StartRRCState);
     }
 
     /// <summary>

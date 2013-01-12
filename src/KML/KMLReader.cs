@@ -91,6 +91,7 @@ namespace KML
         String end_rat = GetSimpleData("end_rat");
         String start_mix_band = GetSimpleData("start_mix_band");
         String end_mix_band = GetSimpleData("end_mix_band");
+        String start_rrc_state = GetSimpleData("start_rrc_state");
 
         // Create a new Call Log Object
         Event callLog = null;
@@ -125,6 +126,7 @@ namespace KML
           callLog.EndRat = end_rat;
           callLog.StartMixBand = start_mix_band;
           callLog.EndMixBand = end_mix_band;
+          callLog.StartRRCState = start_rrc_state;
           callLog.Coordinate = coordinate;
 
           calls.Add(callLog);
