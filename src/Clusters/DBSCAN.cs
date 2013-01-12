@@ -330,6 +330,7 @@ namespace Cluster
         {
           // Noise Events
           NoiseEvents = new EventCollection(result);
+          NoiseEvents.Noise = true;
         }
         else
         {
