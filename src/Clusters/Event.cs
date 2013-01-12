@@ -76,6 +76,11 @@ namespace Cluster
     /// The end frequency band of the device.
     /// </summary>
     public String EndMixBand { get; set; }
+    
+    /// <summary>
+    /// The state rrc state of the device
+    /// </summary>
+    public String StartRRCState { get; set; }
 
     /// <summary>
     /// Latitude Value (North-South Position) of the event.
