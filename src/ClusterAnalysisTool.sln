@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KML", "KML\KML.csproj", "{B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Analysis.Heatmap", "Analysis.Heatmap\Analysis.Heatmap.csproj", "{7BDC71EA-B1AB-408C-8912-EA959F5AE7C6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Analysis", "Analysis\Analysis.csproj", "{6C618B39-DC89-4CEC-AC3A-A533D62CCBA7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{7BDC71EA-B1AB-408C-8912-EA959F5AE7C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7BDC71EA-B1AB-408C-8912-EA959F5AE7C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7BDC71EA-B1AB-408C-8912-EA959F5AE7C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C618B39-DC89-4CEC-AC3A-A533D62CCBA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C618B39-DC89-4CEC-AC3A-A533D62CCBA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C618B39-DC89-4CEC-AC3A-A533D62CCBA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C618B39-DC89-4CEC-AC3A-A533D62CCBA7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
