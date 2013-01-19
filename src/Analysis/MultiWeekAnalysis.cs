@@ -101,7 +101,7 @@ namespace Analysis
     public void Analyse()
     {
       // Ensure the data has been clustered
-      if (WeeklyAnalysis == null)
+      if (DBscan == null)
       {
         throw new Exception("Data has not been clustered.");
       }
