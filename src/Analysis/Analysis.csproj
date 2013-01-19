@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Analysis.cs" />
     <Compile Include="AnalysisResults.cs" />
     <Compile Include="ClusterAnalysis.cs" />
     <Compile Include="DropAnalysis.cs" />
