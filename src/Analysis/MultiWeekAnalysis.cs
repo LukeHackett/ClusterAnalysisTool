@@ -26,6 +26,11 @@ namespace Analysis
     /// </summary>
     public Dictionary<int, WeekAnalysis> WeeklyAnalysis { get; private set; }
 
+    /// <summary>
+    /// A list of product analysis objects
+    /// </summary>
+    public Dictionary<String, ProductAnalysis> ProductsAnalysis { get; private set; }
+
     #endregion
     
     #region Constructors
@@ -96,9 +101,9 @@ namespace Analysis
     }
 
     /// <summary>
-    /// This method will analyse the clustered events.
+    /// This method will analyse the clustered events upon a Multi-Week basis.
     /// </summary>
-    public void Analyse()
+    public void AnalyseMultiWeek()
     {
       // Ensure the data has been clustered
       if (DBscan == null)
@@ -128,6 +133,33 @@ namespace Analysis
       }
 
       return WeeklyAnalysis[weekNumber];
+    }
+
+
+    public void AnalyseProducts()
+    {
+      // Ensure the data has been clustered
+      if (DBscan == null)
+      {
+        throw new Exception("Data has not been clustered.");
+      }
+
+      // Setup the analysis storage objects
+      ProductsAnalysis = new Dictionary<String, ProductAnalysis>();
+
+      // Split the clustered data into the various weeks
+      CreateProductAnalysis();
+    }
+
+    public ProductAnalysis AnalyseProduct(String device)
+    {
+      // Ensure that the given key exists 
+      if (!ProductsAnalysis.ContainsKey(device))
+      {
+        throw new Exception("Devce: " + device + " does not exist.");
+      }
+
+      return ProductsAnalysis[device];
     }
 
     #endregion
@@ -160,6 +192,32 @@ namespace Analysis
         }
         // Add the week analysis to the known weeks
         WeeklyAnalysis.Add(key, new WeekAnalysis(week, key));
+      }
+    }
+
+
+    private void CreateProductAnalysis()
+    {
+      // Get a list of non-noise calls and group by device name
+      var results = DBscan.Calls.Where(evt => evt.Coordinate.Noise == false)
+                                .GroupBy(evt => evt.Device);
+      // Loop over each grouped calls
+      foreach (var result in results)
+      {
+        // Get the key - Device Name
+        String key = result.Key;
+        // Setup a new list of EventCollections to store all clusters
+        List<EventCollection> week = new List<EventCollection>();
+        // Start from 1 as 0 reserved for noise
+        for (int i = 1; i < DBscan.ClusteredEvents.Count; i++)
+        {
+          // Obtain the cluster from the inital results set
+          var cluster = result.Where(evt => evt.Coordinate.ClusterId == i);
+          // Add the cluster to the week's worth of clusters
+          week.Add(new EventCollection(cluster));
+        }
+        // Add the week analysis to the known weeks
+        ProductsAnalysis.Add(key, new ProductAnalysis(week, key));
       }
     }
 
