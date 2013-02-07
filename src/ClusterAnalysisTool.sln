@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Analysis.Heatmap", "Analysi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Analysis", "Analysis\Analysis.csproj", "{6C618B39-DC89-4CEC-AC3A-A533D62CCBA7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSON", "JSON\JSON.csproj", "{14D92E0E-996E-4A58-9E38-28EDF222B117}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,9 @@ Global
 		{6C618B39-DC89-4CEC-AC3A-A533D62CCBA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C618B39-DC89-4CEC-AC3A-A533D62CCBA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C618B39-DC89-4CEC-AC3A-A533D62CCBA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14D92E0E-996E-4A58-9E38-28EDF222B117}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14D92E0E-996E-4A58-9E38-28EDF222B117}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14D92E0E-996E-4A58-9E38-28EDF222B117}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
