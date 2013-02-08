@@ -54,11 +54,6 @@ namespace Analysis
     /// </summary>
     public Dictionary<int, WeekAnalysis> WeeklyAnalysis { get; private set; }
 
-    /// <summary>
-    /// A list of product analysis objects
-    /// </summary>
-    public Dictionary<String, ProductAnalysis> ProductsAnalysis { get; private set; }
-
     #endregion
     
     #region Constructors
@@ -165,46 +160,7 @@ namespace Analysis
 
       return WeeklyAnalysis[weekNumber];
     }
-
-    /// <summary>
-    /// This method will analyse the clustered events upon a Product basis. 
-    /// This means that products will be grouped by their device name, and
-    /// comparisons of events will be made from a product perspective. This 
-    /// method does not take the timestamps into consideration when grouping 
-    /// and analysing.
-    /// </summary>
-    public void AnalyseProducts()
-    {
-      // Ensure the data has been clustered
-      if (DBscan == null)
-      {
-        throw new Exception("Data has not been clustered.");
-      }
-
-      // Setup the analysis storage objects
-      ProductsAnalysis = new Dictionary<String, ProductAnalysis>();
-
-      // Split the clustered data into the various weeks
-      CreateProductAnalysis();
-    }
-
-    /// <summary>
-    /// This method will return a ProductAnalysis object based upon the given 
-    /// device name. If the device name does not exist, an exception is thrown.
-    /// </summary>
-    /// <param name="device">The name of the device</param>
-    /// <returns>A product analysis object for the given device</returns>
-    public ProductAnalysis AnalyseProduct(String device)
-    {
-      // Ensure that the given key exists 
-      if (!ProductsAnalysis.ContainsKey(device))
-      {
-        throw new Exception("Devce: " + device + " does not exist.");
-      }
-
-      return ProductsAnalysis[device];
-    }
-
+    
     /// <summary>
     /// This method is the main entry point to create the various weekly JSON 
     /// analysis files. A total of four files will be created, one for each 
@@ -375,35 +331,6 @@ namespace Analysis
         }
         // Add the week analysis to the known weeks
         WeeklyAnalysis.Add(key, new WeekAnalysis(week, key));
-      }
-    }
-
-    /// <summary>
-    /// This method will create the analysis object when wanting to analyse the 
-    /// events utilising the product (name) as the main pivot point.
-    /// </summary
-    private void CreateProductAnalysis()
-    {
-      // Get a list of non-noise calls and group by device name
-      var results = DBscan.Calls.Where(evt => evt.Coordinate.Noise == false)
-                                .GroupBy(evt => evt.Device);
-      // Loop over each grouped calls
-      foreach (var result in results)
-      {
-        // Get the key - Device Name
-        String key = result.Key;
-        // Setup a new list of EventCollections to store all clusters
-        List<EventCollection> week = new List<EventCollection>();
-        // Start from 1 as 0 reserved for noise
-        for (int i = 1; i < DBscan.ClusteredEvents.Count; i++)
-        {
-          // Obtain the cluster from the inital results set
-          var cluster = result.Where(evt => evt.Coordinate.ClusterId == i);
-          // Add the cluster to the week's worth of clusters
-          week.Add(new EventCollection(cluster));
-        }
-        // Add the week analysis to the known weeks
-        ProductsAnalysis.Add(key, new ProductAnalysis(week, key));
       }
     }
 
