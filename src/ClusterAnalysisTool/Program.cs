@@ -82,7 +82,7 @@ namespace ClusterAnalysisTool
         // Cluster the Multi-Week Data
         multi.Cluster();
         // Analyse the Multi-Week Data
-        multi.AnalyseMultiWeek();
+        multi.AnalyseWeeks();
         // Save the results to the output directory
 
         foreach (DictionaryEntry entry in arguments)
