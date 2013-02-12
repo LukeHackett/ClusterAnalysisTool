@@ -1,0 +1,2106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <!-- Start Basic Style -->
+    <name>Drops and Fails</name>
+    <Style id="BasicStyle">
+      <IconStyle>
+        <color>FFFFFFFF</color>
+        <scale>1.2</scale>
+        <Icon>
+          <href>http://google.com/mapfiles/ms/micons/red.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.892,-6.14403,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">9800</SimpleData>
+			<SimpleData name="pin">227f88d1</SimpleData>
+			<SimpleData name="timestamp">2013-01-28 14:25:00</SimpleData>
+			<SimpleData name="reference">true</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">GSM</SimpleData>
+			<SimpleData name="end_rat">GSM</SimpleData>
+			<SimpleData name="start_mix_band">GSM_900</SimpleData>
+			<SimpleData name="end_mix_band">DCS_PCS</SimpleData>
+			<SimpleData name="start_rrc_state">NOT_WCDMA</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.891,-6.14422,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">9800</SimpleData>
+			<SimpleData name="pin">227fe0f1</SimpleData>
+			<SimpleData name="timestamp">2013-01-28 16:32:30</SimpleData>
+			<SimpleData name="reference">true</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">GSM</SimpleData>
+			<SimpleData name="end_rat">GSM</SimpleData>
+			<SimpleData name="start_mix_band">GSM_900</SimpleData>
+			<SimpleData name="end_mix_band">SAME</SimpleData>
+			<SimpleData name="start_rrc_state">NOT_WCDMA</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.885,-6.15589,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a918052</SimpleData>
+			<SimpleData name="timestamp">2013-01-28 14:32:30</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">CELL_FACH</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.887,-6.15391,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a9181ab</SimpleData>
+			<SimpleData name="timestamp">2013-01-28 14:30:00</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Setup Failure</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">CELL_FACH</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.9,-6.16909,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a9181ab</SimpleData>
+			<SimpleData name="timestamp">2013-01-28 16:20:00</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.999,-6.17773,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">9800</SimpleData>
+			<SimpleData name="pin">227f88d1</SimpleData>
+			<SimpleData name="timestamp">2013-01-29 14:00:00</SimpleData>
+			<SimpleData name="reference">true</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band">10763</SimpleData>
+			<SimpleData name="end_mix_band">SAME</SimpleData>
+			<SimpleData name="start_rrc_state">CELL_FACH</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.99,-6.16193,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">9800</SimpleData>
+			<SimpleData name="pin">227f88d1</SimpleData>
+			<SimpleData name="timestamp">2013-01-29 14:12:30</SimpleData>
+			<SimpleData name="reference">true</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band">10763</SimpleData>
+			<SimpleData name="end_mix_band">SAME</SimpleData>
+			<SimpleData name="start_rrc_state">CELL_DCH</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.991,-6.14722,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">9800</SimpleData>
+			<SimpleData name="pin">227f88d1</SimpleData>
+			<SimpleData name="timestamp">2013-01-29 14:20:02</SimpleData>
+			<SimpleData name="reference">true</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band">10763</SimpleData>
+			<SimpleData name="end_mix_band">SAME</SimpleData>
+			<SimpleData name="start_rrc_state">CELL_FACH</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.992,-6.12633,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">9800</SimpleData>
+			<SimpleData name="pin">227f88d1</SimpleData>
+			<SimpleData name="timestamp">2013-01-29 14:25:00</SimpleData>
+			<SimpleData name="reference">true</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band">10763</SimpleData>
+			<SimpleData name="end_mix_band">SAME</SimpleData>
+			<SimpleData name="start_rrc_state">CELL_DCH</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.893,-6.1505,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">9800</SimpleData>
+			<SimpleData name="pin">227f88d1</SimpleData>
+			<SimpleData name="timestamp">2013-01-29 16:32:30</SimpleData>
+			<SimpleData name="reference">true</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">GSM</SimpleData>
+			<SimpleData name="start_mix_band">10763</SimpleData>
+			<SimpleData name="end_mix_band">DCS_PCS</SimpleData>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.821,-6.16852,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">9800</SimpleData>
+			<SimpleData name="pin">227fe0f1</SimpleData>
+			<SimpleData name="timestamp">2013-01-29 10:50:00</SimpleData>
+			<SimpleData name="reference">true</SimpleData>
+			<SimpleData name="type">Setup Failure</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band">10788</SimpleData>
+			<SimpleData name="end_mix_band">SAME</SimpleData>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.821,-6.16757,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">9800</SimpleData>
+			<SimpleData name="pin">227fe0f1</SimpleData>
+			<SimpleData name="timestamp">2013-01-29 10:52:30</SimpleData>
+			<SimpleData name="reference">true</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band">10788</SimpleData>
+			<SimpleData name="end_mix_band">SAME</SimpleData>
+			<SimpleData name="start_rrc_state">CELL_FACH</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.923,-6.22187,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">9800</SimpleData>
+			<SimpleData name="pin">227fe0f1</SimpleData>
+			<SimpleData name="timestamp">2013-01-29 11:45:00</SimpleData>
+			<SimpleData name="reference">true</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band">10763</SimpleData>
+			<SimpleData name="end_mix_band">SAME</SimpleData>
+			<SimpleData name="start_rrc_state">CELL_DCH</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.956,-6.18669,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">9800</SimpleData>
+			<SimpleData name="pin">227fe0f1</SimpleData>
+			<SimpleData name="timestamp">2013-01-29 12:07:30</SimpleData>
+			<SimpleData name="reference">true</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band">10788</SimpleData>
+			<SimpleData name="end_mix_band">SAME</SimpleData>
+			<SimpleData name="start_rrc_state">CELL_FACH</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.999,-6.18133,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">9800</SimpleData>
+			<SimpleData name="pin">227fe0f1</SimpleData>
+			<SimpleData name="timestamp">2013-01-29 14:00:00</SimpleData>
+			<SimpleData name="reference">true</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band">10788</SimpleData>
+			<SimpleData name="end_mix_band">SAME</SimpleData>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.99,-6.16188,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">9800</SimpleData>
+			<SimpleData name="pin">227fe0f1</SimpleData>
+			<SimpleData name="timestamp">2013-01-29 14:15:00</SimpleData>
+			<SimpleData name="reference">true</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band">10763</SimpleData>
+			<SimpleData name="end_mix_band">SAME</SimpleData>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.99,-6.15516,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">9800</SimpleData>
+			<SimpleData name="pin">227fe0f1</SimpleData>
+			<SimpleData name="timestamp">2013-01-29 14:17:30</SimpleData>
+			<SimpleData name="reference">true</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band">10788</SimpleData>
+			<SimpleData name="end_mix_band">SAME</SimpleData>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.821,-6.16853,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a918052</SimpleData>
+			<SimpleData name="timestamp">2013-01-29 10:50:00</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">CELL_DCH</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.999,-6.17952,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a918052</SimpleData>
+			<SimpleData name="timestamp">2013-01-29 14:00:00</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.99,-6.16378,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a918052</SimpleData>
+			<SimpleData name="timestamp">2013-01-29 14:10:00</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.99,-6.16199,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a918052</SimpleData>
+			<SimpleData name="timestamp">2013-01-29 14:12:30</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.991,-6.14717,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a918052</SimpleData>
+			<SimpleData name="timestamp">2013-01-29 14:20:00</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">CELL_DCH</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.893,-6.15098,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a918052</SimpleData>
+			<SimpleData name="timestamp">2013-01-29 16:32:30</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">CELL_DCH</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.839,-6.16728,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a9181ab</SimpleData>
+			<SimpleData name="timestamp">2013-01-29 10:57:30</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">CELL_FACH</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.999,-6.18376,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a9181ab</SimpleData>
+			<SimpleData name="timestamp">2013-01-29 14:00:00</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">CELL_FACH</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.999,-6.17762,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a9181ab</SimpleData>
+			<SimpleData name="timestamp">2013-01-29 14:02:30</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">CELL_DCH</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.991,-6.14803,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a9181ab</SimpleData>
+			<SimpleData name="timestamp">2013-01-29 14:20:00</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.891,-6.14585,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a9181ab</SimpleData>
+			<SimpleData name="timestamp">2013-01-29 16:10:00</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">GSM</SimpleData>
+			<SimpleData name="end_rat">GSM</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">NOT_WCDMA</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.893,-6.15096,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a9181ab</SimpleData>
+			<SimpleData name="timestamp">2013-01-29 16:32:30</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">CELL_FACH</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.999,-6.18041,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">9800</SimpleData>
+			<SimpleData name="pin">227f88d1</SimpleData>
+			<SimpleData name="timestamp">2013-01-30 14:32:30</SimpleData>
+			<SimpleData name="reference">true</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band">10763</SimpleData>
+			<SimpleData name="end_mix_band">SAME</SimpleData>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.979,-6.19658,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">9800</SimpleData>
+			<SimpleData name="pin">227fe0f1</SimpleData>
+			<SimpleData name="timestamp">2013-01-30 14:17:30</SimpleData>
+			<SimpleData name="reference">true</SimpleData>
+			<SimpleData name="type">Setup Failure</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band">10788</SimpleData>
+			<SimpleData name="end_mix_band">SAME</SimpleData>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.999,-6.18083,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">9800</SimpleData>
+			<SimpleData name="pin">227fe0f1</SimpleData>
+			<SimpleData name="timestamp">2013-01-30 14:32:30</SimpleData>
+			<SimpleData name="reference">true</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band">10788</SimpleData>
+			<SimpleData name="end_mix_band">SAME</SimpleData>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.877,-6.2752,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a918052</SimpleData>
+			<SimpleData name="timestamp">2013-01-30 11:47:30</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.886,-6.2909,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a918052</SimpleData>
+			<SimpleData name="timestamp">2013-01-30 11:57:30</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Setup Failure</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">CELL_FACH</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.999,-6.18016,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a918052</SimpleData>
+			<SimpleData name="timestamp">2013-01-30 14:32:30</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">CELL_DCH</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.886,-6.291,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a9181ab</SimpleData>
+			<SimpleData name="timestamp">2013-01-30 11:57:30</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Setup Failure</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.979,-6.19652,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a9181ab</SimpleData>
+			<SimpleData name="timestamp">2013-01-30 14:17:30</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Setup Failure</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.999,-6.18004,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a9181ab</SimpleData>
+			<SimpleData name="timestamp">2013-01-30 14:32:30</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.99,-6.16426,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a9181ab</SimpleData>
+			<SimpleData name="timestamp">2013-01-30 14:42:30</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.992,-6.13101,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a9181ab</SimpleData>
+			<SimpleData name="timestamp">2013-01-30 14:57:30</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">CELL_DCH</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.94,-6.10513,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a9181ab</SimpleData>
+			<SimpleData name="timestamp">2013-01-30 15:27:30</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.891,-6.14611,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">9800</SimpleData>
+			<SimpleData name="pin">227f88d1</SimpleData>
+			<SimpleData name="timestamp">2013-01-31 10:00:00</SimpleData>
+			<SimpleData name="reference">true</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">GSM</SimpleData>
+			<SimpleData name="start_mix_band">10763</SimpleData>
+			<SimpleData name="end_mix_band">GSM_900</SimpleData>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.854,-6.17461,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">9800</SimpleData>
+			<SimpleData name="pin">227f88d1</SimpleData>
+			<SimpleData name="timestamp">2013-01-31 10:17:30</SimpleData>
+			<SimpleData name="reference">true</SimpleData>
+			<SimpleData name="type">Setup Failure</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band">10788</SimpleData>
+			<SimpleData name="end_mix_band">SAME</SimpleData>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.787,-6.13905,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">9800</SimpleData>
+			<SimpleData name="pin">227f88d1</SimpleData>
+			<SimpleData name="timestamp">2013-01-31 13:45:00</SimpleData>
+			<SimpleData name="reference">true</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band">10763</SimpleData>
+			<SimpleData name="end_mix_band">SAME</SimpleData>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.776,-6.12319,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">9800</SimpleData>
+			<SimpleData name="pin">227f88d1</SimpleData>
+			<SimpleData name="timestamp">2013-01-31 13:50:00</SimpleData>
+			<SimpleData name="reference">true</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">GSM</SimpleData>
+			<SimpleData name="end_rat">GSM</SimpleData>
+			<SimpleData name="start_mix_band">GSM_900</SimpleData>
+			<SimpleData name="end_mix_band">SAME</SimpleData>
+			<SimpleData name="start_rrc_state">NOT_WCDMA</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.692,-6.10865,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">9800</SimpleData>
+			<SimpleData name="pin">227f88d1</SimpleData>
+			<SimpleData name="timestamp">2013-01-31 14:42:30</SimpleData>
+			<SimpleData name="reference">true</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">GSM</SimpleData>
+			<SimpleData name="end_rat">GSM</SimpleData>
+			<SimpleData name="start_mix_band">GSM_900</SimpleData>
+			<SimpleData name="end_mix_band">SAME</SimpleData>
+			<SimpleData name="start_rrc_state">NOT_WCDMA</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.756,-6.1226,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">9800</SimpleData>
+			<SimpleData name="pin">227f88d1</SimpleData>
+			<SimpleData name="timestamp">2013-01-31 14:52:30</SimpleData>
+			<SimpleData name="reference">true</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band">10788</SimpleData>
+			<SimpleData name="end_mix_band">SAME</SimpleData>
+			<SimpleData name="start_rrc_state">CELL_DCH</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.798,-6.19768,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">9800</SimpleData>
+			<SimpleData name="pin">227f88d1</SimpleData>
+			<SimpleData name="timestamp">2013-01-31 15:12:30</SimpleData>
+			<SimpleData name="reference">true</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band">10788</SimpleData>
+			<SimpleData name="end_mix_band">10763</SimpleData>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.812,-6.21817,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">9800</SimpleData>
+			<SimpleData name="pin">227f88d1</SimpleData>
+			<SimpleData name="timestamp">2013-01-31 15:17:30</SimpleData>
+			<SimpleData name="reference">true</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band">10788</SimpleData>
+			<SimpleData name="end_mix_band">SAME</SimpleData>
+			<SimpleData name="start_rrc_state">CELL_FACH</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.843,-6.24302,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">9800</SimpleData>
+			<SimpleData name="pin">227f88d1</SimpleData>
+			<SimpleData name="timestamp">2013-01-31 15:25:00</SimpleData>
+			<SimpleData name="reference">true</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band">10763</SimpleData>
+			<SimpleData name="end_mix_band">SAME</SimpleData>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.89,-6.14683,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">9800</SimpleData>
+			<SimpleData name="pin">227f88d1</SimpleData>
+			<SimpleData name="timestamp">2013-01-31 15:52:30</SimpleData>
+			<SimpleData name="reference">true</SimpleData>
+			<SimpleData name="type">Setup Failure</SimpleData>
+			<SimpleData name="start_rat">GSM</SimpleData>
+			<SimpleData name="end_rat">GSM</SimpleData>
+			<SimpleData name="start_mix_band">GSM_900</SimpleData>
+			<SimpleData name="end_mix_band">SAME</SimpleData>
+			<SimpleData name="start_rrc_state">NOT_WCDMA</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.854,-6.17465,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">9800</SimpleData>
+			<SimpleData name="pin">227fe0f1</SimpleData>
+			<SimpleData name="timestamp">2013-01-31 10:17:30</SimpleData>
+			<SimpleData name="reference">true</SimpleData>
+			<SimpleData name="type">Setup Failure</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band">10788</SimpleData>
+			<SimpleData name="end_mix_band">SAME</SimpleData>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.776,-6.12339,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">9800</SimpleData>
+			<SimpleData name="pin">227fe0f1</SimpleData>
+			<SimpleData name="timestamp">2013-01-31 13:50:00</SimpleData>
+			<SimpleData name="reference">true</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band">10788</SimpleData>
+			<SimpleData name="end_mix_band">SAME</SimpleData>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.779,-6.12807,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">9800</SimpleData>
+			<SimpleData name="pin">227fe0f1</SimpleData>
+			<SimpleData name="timestamp">2013-01-31 14:57:30</SimpleData>
+			<SimpleData name="reference">true</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band">10763</SimpleData>
+			<SimpleData name="end_mix_band">SAME</SimpleData>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.81,-6.21645,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">9800</SimpleData>
+			<SimpleData name="pin">227fe0f1</SimpleData>
+			<SimpleData name="timestamp">2013-01-31 15:17:30</SimpleData>
+			<SimpleData name="reference">true</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band">10763</SimpleData>
+			<SimpleData name="end_mix_band">SAME</SimpleData>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.849,-6.17496,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a918052</SimpleData>
+			<SimpleData name="timestamp">2013-01-31 11:17:30</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Setup Failure</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.881,-6.163,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a918052</SimpleData>
+			<SimpleData name="timestamp">2013-01-31 12:57:30</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.81,-6.21635,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a918052</SimpleData>
+			<SimpleData name="timestamp">2013-01-31 13:35:00</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.777,-6.12465,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a918052</SimpleData>
+			<SimpleData name="timestamp">2013-01-31 13:50:00</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">GSM</SimpleData>
+			<SimpleData name="end_rat">GSM</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">NOT_WCDMA</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.649,-6.12881,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a918052</SimpleData>
+			<SimpleData name="timestamp">2013-01-31 14:32:30</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.846,-6.1986,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a9181ab</SimpleData>
+			<SimpleData name="timestamp">2013-01-31 12:40:00</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">CELL_DCH</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.876,-6.17664,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a9181ab</SimpleData>
+			<SimpleData name="timestamp">2013-01-31 13:10:00</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">CELL_FACH</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.775,-6.12242,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a9181ab</SimpleData>
+			<SimpleData name="timestamp">2013-01-31 13:50:00</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.779,-6.12806,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a9181ab</SimpleData>
+			<SimpleData name="timestamp">2013-01-31 14:57:30</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.793,-6.1577,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a9181ab</SimpleData>
+			<SimpleData name="timestamp">2013-01-31 15:02:30</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">CELL_DCH</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.819,-6.22967,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a9181ab</SimpleData>
+			<SimpleData name="timestamp">2013-01-31 15:20:00</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Setup Failure</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.891,-6.14526,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a9181ab</SimpleData>
+			<SimpleData name="timestamp">2013-01-31 16:00:00</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Setup Failure</SimpleData>
+			<SimpleData name="start_rat">GSM</SimpleData>
+			<SimpleData name="end_rat">GSM</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">NOT_WCDMA</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.898,-6.15623,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a9181ab</SimpleData>
+			<SimpleData name="timestamp">2013-01-31 16:10:00</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">CELL_DCH</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.797,-6.19068,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">9800</SimpleData>
+			<SimpleData name="pin">227f88d1</SimpleData>
+			<SimpleData name="timestamp">2013-02-01 11:02:30</SimpleData>
+			<SimpleData name="reference">true</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band">10788</SimpleData>
+			<SimpleData name="end_mix_band">10763</SimpleData>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.874,-6.21523,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">9800</SimpleData>
+			<SimpleData name="pin">227f88d1</SimpleData>
+			<SimpleData name="timestamp">2013-02-01 13:42:30</SimpleData>
+			<SimpleData name="reference">true</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band">10763</SimpleData>
+			<SimpleData name="end_mix_band">SAME</SimpleData>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.874,-6.20467,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">9800</SimpleData>
+			<SimpleData name="pin">227f88d1</SimpleData>
+			<SimpleData name="timestamp">2013-02-01 15:00:00</SimpleData>
+			<SimpleData name="reference">true</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band">10763</SimpleData>
+			<SimpleData name="end_mix_band">SAME</SimpleData>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.874,-6.21475,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">9800</SimpleData>
+			<SimpleData name="pin">227f88d1</SimpleData>
+			<SimpleData name="timestamp">2013-02-01 15:02:30</SimpleData>
+			<SimpleData name="reference">true</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band">10763</SimpleData>
+			<SimpleData name="end_mix_band">SAME</SimpleData>
+			<SimpleData name="start_rrc_state">CELL_FACH</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.855,-6.2432,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">9800</SimpleData>
+			<SimpleData name="pin">227f88d1</SimpleData>
+			<SimpleData name="timestamp">2013-02-01 15:10:00</SimpleData>
+			<SimpleData name="reference">true</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band">10763</SimpleData>
+			<SimpleData name="end_mix_band">SAME</SimpleData>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.891,-6.14388,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">9800</SimpleData>
+			<SimpleData name="pin">227f88d1</SimpleData>
+			<SimpleData name="timestamp">2013-02-01 16:57:30</SimpleData>
+			<SimpleData name="reference">true</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">GSM</SimpleData>
+			<SimpleData name="start_mix_band">10763</SimpleData>
+			<SimpleData name="end_mix_band">GSM_900</SimpleData>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.874,-6.21507,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">9800</SimpleData>
+			<SimpleData name="pin">227fe0f1</SimpleData>
+			<SimpleData name="timestamp">2013-02-01 10:07:30</SimpleData>
+			<SimpleData name="reference">true</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band">10788</SimpleData>
+			<SimpleData name="end_mix_band">SAME</SimpleData>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.81,-6.22575,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">9800</SimpleData>
+			<SimpleData name="pin">227fe0f1</SimpleData>
+			<SimpleData name="timestamp">2013-02-01 10:47:30</SimpleData>
+			<SimpleData name="reference">true</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">GSM</SimpleData>
+			<SimpleData name="start_mix_band">10788</SimpleData>
+			<SimpleData name="end_mix_band">GSM_900</SimpleData>
+			<SimpleData name="start_rrc_state">AWAIT_GSM</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.797,-6.19058,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">9800</SimpleData>
+			<SimpleData name="pin">227fe0f1</SimpleData>
+			<SimpleData name="timestamp">2013-02-01 11:02:30</SimpleData>
+			<SimpleData name="reference">true</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band">10788</SimpleData>
+			<SimpleData name="end_mix_band">10763</SimpleData>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.862,-6.12209,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">9800</SimpleData>
+			<SimpleData name="pin">227fe0f1</SimpleData>
+			<SimpleData name="timestamp">2013-02-01 11:35:00</SimpleData>
+			<SimpleData name="reference">true</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">GSM</SimpleData>
+			<SimpleData name="end_rat">GSM</SimpleData>
+			<SimpleData name="start_mix_band">DCS_PCS</SimpleData>
+			<SimpleData name="end_mix_band">GSM_900</SimpleData>
+			<SimpleData name="start_rrc_state">NOT_WCDMA</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.882,-6.12614,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">9800</SimpleData>
+			<SimpleData name="pin">227fe0f1</SimpleData>
+			<SimpleData name="timestamp">2013-02-01 11:37:30</SimpleData>
+			<SimpleData name="reference">true</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">GSM</SimpleData>
+			<SimpleData name="end_rat">GSM</SimpleData>
+			<SimpleData name="start_mix_band">GSM_900</SimpleData>
+			<SimpleData name="end_mix_band">SAME</SimpleData>
+			<SimpleData name="start_rrc_state">NOT_WCDMA</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.875,-6.19132,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">9800</SimpleData>
+			<SimpleData name="pin">227fe0f1</SimpleData>
+			<SimpleData name="timestamp">2013-02-01 13:40:00</SimpleData>
+			<SimpleData name="reference">true</SimpleData>
+			<SimpleData name="type">Setup Failure</SimpleData>
+			<SimpleData name="start_rat">GSM</SimpleData>
+			<SimpleData name="end_rat">GSM</SimpleData>
+			<SimpleData name="start_mix_band">DCS_PCS</SimpleData>
+			<SimpleData name="end_mix_band">GSM_900</SimpleData>
+			<SimpleData name="start_rrc_state">NOT_WCDMA</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.796,-6.13228,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">9800</SimpleData>
+			<SimpleData name="pin">227fe0f1</SimpleData>
+			<SimpleData name="timestamp">2013-02-01 14:12:30</SimpleData>
+			<SimpleData name="reference">true</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">GSM</SimpleData>
+			<SimpleData name="end_rat">GSM</SimpleData>
+			<SimpleData name="start_mix_band">DCS_PCS</SimpleData>
+			<SimpleData name="end_mix_band">GSM_900</SimpleData>
+			<SimpleData name="start_rrc_state">NOT_WCDMA</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.874,-6.20472,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">9800</SimpleData>
+			<SimpleData name="pin">227fe0f1</SimpleData>
+			<SimpleData name="timestamp">2013-02-01 15:00:00</SimpleData>
+			<SimpleData name="reference">true</SimpleData>
+			<SimpleData name="type">Setup Failure</SimpleData>
+			<SimpleData name="start_rat">GSM</SimpleData>
+			<SimpleData name="end_rat">GSM</SimpleData>
+			<SimpleData name="start_mix_band">GSM_900</SimpleData>
+			<SimpleData name="end_mix_band">SAME</SimpleData>
+			<SimpleData name="start_rrc_state">NOT_WCDMA</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.874,-6.21512,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">9800</SimpleData>
+			<SimpleData name="pin">227fe0f1</SimpleData>
+			<SimpleData name="timestamp">2013-02-01 15:02:30</SimpleData>
+			<SimpleData name="reference">true</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band">10788</SimpleData>
+			<SimpleData name="end_mix_band">SAME</SimpleData>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.855,-6.24326,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">9800</SimpleData>
+			<SimpleData name="pin">227fe0f1</SimpleData>
+			<SimpleData name="timestamp">2013-02-01 15:10:00</SimpleData>
+			<SimpleData name="reference">true</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band">10788</SimpleData>
+			<SimpleData name="end_mix_band">SAME</SimpleData>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.887,-6.15006,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">9800</SimpleData>
+			<SimpleData name="pin">227fe0f1</SimpleData>
+			<SimpleData name="timestamp">2013-02-01 16:22:30</SimpleData>
+			<SimpleData name="reference">true</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band">10788</SimpleData>
+			<SimpleData name="end_mix_band">SAME</SimpleData>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.876,-6.18174,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a918052</SimpleData>
+			<SimpleData name="timestamp">2013-02-01 10:02:30</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.811,-6.22461,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a918052</SimpleData>
+			<SimpleData name="timestamp">2013-02-01 10:50:00</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">GSM</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.793,-6.15518,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a918052</SimpleData>
+			<SimpleData name="timestamp">2013-02-01 11:07:30</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.865,-6.12297,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a918052</SimpleData>
+			<SimpleData name="timestamp">2013-02-01 11:35:00</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">GSM</SimpleData>
+			<SimpleData name="end_rat">GSM</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">NOT_WCDMA</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.874,-6.20003,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a918052</SimpleData>
+			<SimpleData name="timestamp">2013-02-01 13:40:00</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.874,-6.21535,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a918052</SimpleData>
+			<SimpleData name="timestamp">2013-02-01 13:42:30</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.813,-6.22091,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a918052</SimpleData>
+			<SimpleData name="timestamp">2013-02-01 14:00:00</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.86,-6.24319,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a918052</SimpleData>
+			<SimpleData name="timestamp">2013-02-01 15:10:00</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">CELL_DCH</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.874,-6.22225,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a918052</SimpleData>
+			<SimpleData name="timestamp">2013-02-01 16:12:30</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">CELL_DCH</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.88,-6.16445,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a918052</SimpleData>
+			<SimpleData name="timestamp">2013-02-01 16:20:00</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Setup Failure</SimpleData>
+			<SimpleData name="start_rat">GSM</SimpleData>
+			<SimpleData name="end_rat">GSM</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">NOT_WCDMA</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.887,-6.14997,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a918052</SimpleData>
+			<SimpleData name="timestamp">2013-02-01 16:22:30</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.901,-6.15785,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a918052</SimpleData>
+			<SimpleData name="timestamp">2013-02-01 16:32:31</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.891,-6.14402,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a918052</SimpleData>
+			<SimpleData name="timestamp">2013-02-01 16:45:00</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Setup Failure</SimpleData>
+			<SimpleData name="start_rat">GSM</SimpleData>
+			<SimpleData name="end_rat">GSM</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">NOT_WCDMA</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.876,-6.18098,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a9181ab</SimpleData>
+			<SimpleData name="timestamp">2013-02-01 10:02:30</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.874,-6.20694,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a9181ab</SimpleData>
+			<SimpleData name="timestamp">2013-02-01 10:07:30</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Setup Failure</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.793,-6.15658,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a9181ab</SimpleData>
+			<SimpleData name="timestamp">2013-02-01 11:07:30</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.874,-6.21546,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a9181ab</SimpleData>
+			<SimpleData name="timestamp">2013-02-01 13:42:30</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.875,-6.22173,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a9181ab</SimpleData>
+			<SimpleData name="timestamp">2013-02-01 13:45:00</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">CELL_DCH</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.788,-6.17044,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a9181ab</SimpleData>
+			<SimpleData name="timestamp">2013-02-01 14:07:30</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Setup Failure</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">CELL_DCH</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.793,-6.15119,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a9181ab</SimpleData>
+			<SimpleData name="timestamp">2013-02-01 14:10:00</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Setup Failure</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.879,-6.12557,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a9181ab</SimpleData>
+			<SimpleData name="timestamp">2013-02-01 14:25:00</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.888,-6.15177,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a9181ab</SimpleData>
+			<SimpleData name="timestamp">2013-02-01 14:30:00</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">CELL_DCH</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.874,-6.21521,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a9181ab</SimpleData>
+			<SimpleData name="timestamp">2013-02-01 15:02:30</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">CELL_DCH</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.855,-6.24324,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a9181ab</SimpleData>
+			<SimpleData name="timestamp">2013-02-01 15:10:00</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">IDLE</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+	<Placemark>
+		<styleUrl>#BasicStyle</styleUrl>
+		<Point>
+		<coordinates>106.842,-6.2428,0</coordinates>
+		</Point>
+		<ExtendedData>
+			<SimpleData name="device">R072</SimpleData>
+			<SimpleData name="pin">2a9181ab</SimpleData>
+			<SimpleData name="timestamp">2013-02-01 15:12:30</SimpleData>
+			<SimpleData name="reference">false</SimpleData>
+			<SimpleData name="type">Call Drop</SimpleData>
+			<SimpleData name="start_rat">WCDMA</SimpleData>
+			<SimpleData name="end_rat">WCDMA</SimpleData>
+			<SimpleData name="start_mix_band"/>
+			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_rrc_state">CELL_DCH</SimpleData>
+		</ExtendedData>
+
+	</Placemark>
+  </Document>
+</kml>
