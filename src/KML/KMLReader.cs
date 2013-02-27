@@ -78,7 +78,6 @@ namespace KML
         Coordinate coordinate = ReadCoordinate();
         
         // Move to the ExtendedData Space
-        reader.Read();
         reader.ReadToNextSibling("ExtendedData");
         
         //Get the additional data elements
@@ -99,15 +98,15 @@ namespace KML
         // Force the call log to be a type
         switch (type)
         {
-          case "drop":
+          case "Call Drop":
             callLog = new Drop();
             break;
 
-          case "fail":
+          case "Setup Failure":
             callLog = new Fail();
             break;
 
-          case "success":
+          case "Call Success":
             callLog = new Success();
             break;
 
@@ -131,7 +130,6 @@ namespace KML
 
           calls.Add(callLog);
         }
-
       }
 
       return calls;
