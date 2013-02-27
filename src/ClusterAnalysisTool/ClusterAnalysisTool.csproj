@@ -5,12 +5,13 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{21863393-D14B-412C-9B0A-D72F83E0A5BC}</ProjectGuid>
+    <ProjectGuid>{98EE3CB4-6DD1-4507-A643-3CEE342DBF6C}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ClusterAnalysisTool</RootNamespace>
     <AssemblyName>ClusterAnalysisTool</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -37,6 +38,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
@@ -47,15 +49,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Analysis\Analysis.csproj">
-      <Project>{6C618B39-DC89-4CEC-AC3A-A533D62CCBA7}</Project>
+      <Project>{C3088AFE-37D3-461A-91F8-79199D59FF78}</Project>
       <Name>Analysis</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Clusters\Cluster.csproj">
-      <Project>{D1A1C25C-4BB8-488A-B639-0C47E50DB904}</Project>
-      <Name>Cluster</Name>
+    <ProjectReference Include="..\Clusters\Clusters.csproj">
+      <Project>{8FBC4F88-C8F5-4007-981B-665C751C6201}</Project>
+      <Name>Clusters</Name>
     </ProjectReference>
     <ProjectReference Include="..\KML\KML.csproj">
-      <Project>{BCE7D55F-C3D2-4B91-B9A3-3F1151C595B0}</Project>
+      <Project>{681BD5CC-203C-4970-8499-7D0F950DB906}</Project>
       <Name>KML</Name>
     </ProjectReference>
   </ItemGroup>

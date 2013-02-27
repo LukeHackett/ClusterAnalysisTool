@@ -1,17 +1,16 @@
 ﻿using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-using System.Resources;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Clustering Algorithms")]
-[assembly: AssemblyDescription("A collection of basic clustering algorithms")]
+[assembly: AssemblyTitle("Clusters")]
+[assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Research In Motion")]
-[assembly: AssemblyProduct("")]
-[assembly: AssemblyCopyright("Copyright © Research In Motion 2012")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("Clusters")]
+[assembly: AssemblyCopyright("Copyright ©  2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -21,7 +20,7 @@ using System.Resources;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("0b090d3f-daeb-48b4-b651-89098ae6a629")]
+[assembly: Guid("8d2cd97d-4b96-4396-87dc-f28e0455c4fb")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -35,4 +34,3 @@ using System.Resources;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
-[assembly: NeutralResourcesLanguageAttribute("en-GB")]

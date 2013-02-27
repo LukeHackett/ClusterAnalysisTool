@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{4CEF8F6A-5F52-4F8C-BB73-BE313CFFE904}</ProjectGuid>
+    <ProjectGuid>{8FBC4F88-C8F5-4007-981B-665C751C6201}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>JSON</RootNamespace>
-    <AssemblyName>JSON</AssemblyName>
+    <RootNamespace>Clusters</RootNamespace>
+    <AssemblyName>Clusters</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,8 +40,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="JSONWriter.cs" />
+    <Compile Include="Centroid.cs" />
+    <Compile Include="Coordinate.cs" />
+    <Compile Include="CoordinateCollection.cs" />
+    <Compile Include="DBSCAN.cs" />
+    <Compile Include="Distance.cs" />
+    <Compile Include="Drop.cs" />
+    <Compile Include="Event.cs" />
+    <Compile Include="EventCollection.cs" />
+    <Compile Include="Fail.cs" />
+    <Compile Include="KMeans.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RadialCircle.cs" />
+    <Compile Include="SphericalCoordinate.cs" />
+    <Compile Include="Success.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
