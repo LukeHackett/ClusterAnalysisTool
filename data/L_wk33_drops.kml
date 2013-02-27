@@ -24,7 +24,7 @@
         <SimpleData name="pin">31138eb8</SimpleData>
         <SimpleData name="timestamp">13/08/2012 00:00:00</SimpleData>
         <SimpleData name="reference">false</SimpleData>
-        <SimpleData name="type">fail</SimpleData>
+        <SimpleData name="type">Setup Failure</SimpleData>
         <SimpleData name="start_rat">2G</SimpleData>
         <SimpleData name="end_rat">3G</SimpleData>
         <SimpleData name="start_mix_band">Freq1</SimpleData>
@@ -42,7 +42,7 @@
         <SimpleData name="pin">80ae02aa</SimpleData>
         <SimpleData name="timestamp">13/08/2012 00:00:00</SimpleData>
         <SimpleData name="reference">true</SimpleData>
-        <SimpleData name="type">drop</SimpleData>
+        <SimpleData name="type">Call Drop</SimpleData>
         <SimpleData name="start_rat">2G</SimpleData>
         <SimpleData name="end_rat">3G</SimpleData>
         <SimpleData name="start_mix_band">Freq4</SimpleData>
@@ -60,7 +60,7 @@
         <SimpleData name="pin">1b47730e</SimpleData>
         <SimpleData name="timestamp">13/08/2012 00:00:00</SimpleData>
         <SimpleData name="reference">false</SimpleData>
-        <SimpleData name="type">fail</SimpleData>
+        <SimpleData name="type">Setup Failure</SimpleData>
         <SimpleData name="start_rat">3G</SimpleData>
         <SimpleData name="end_rat">3G</SimpleData>
         <SimpleData name="start_mix_band">Freq2</SimpleData>
@@ -78,7 +78,7 @@
         <SimpleData name="pin">eb3a215d</SimpleData>
         <SimpleData name="timestamp">16/08/2012 00:00:00</SimpleData>
         <SimpleData name="reference">false</SimpleData>
-        <SimpleData name="type">fail</SimpleData>
+        <SimpleData name="type">Setup Failure</SimpleData>
         <SimpleData name="start_rat">3G</SimpleData>
         <SimpleData name="end_rat">3G</SimpleData>
         <SimpleData name="start_mix_band">Freq1</SimpleData>
@@ -96,7 +96,7 @@
         <SimpleData name="pin">efc99a74</SimpleData>
         <SimpleData name="timestamp">15/08/2012 00:00:00</SimpleData>
         <SimpleData name="reference">false</SimpleData>
-        <SimpleData name="type">drop</SimpleData>
+        <SimpleData name="type">Call Drop</SimpleData>
         <SimpleData name="start_rat">3G</SimpleData>
         <SimpleData name="end_rat">2G</SimpleData>
         <SimpleData name="start_mix_band">Freq4</SimpleData>
@@ -114,7 +114,7 @@
         <SimpleData name="pin">0d81755e</SimpleData>
         <SimpleData name="timestamp">16/08/2012 00:00:00</SimpleData>
         <SimpleData name="reference">false</SimpleData>
-        <SimpleData name="type">drop</SimpleData>
+        <SimpleData name="type">Call Drop</SimpleData>
         <SimpleData name="start_rat">3G</SimpleData>
         <SimpleData name="end_rat">2G</SimpleData>
         <SimpleData name="start_mix_band">Freq2</SimpleData>
@@ -132,7 +132,7 @@
         <SimpleData name="pin">a5e7feb0</SimpleData>
         <SimpleData name="timestamp">14/08/2012 00:00:00</SimpleData>
         <SimpleData name="reference">false</SimpleData>
-        <SimpleData name="type">fail</SimpleData>
+        <SimpleData name="type">Setup Failure</SimpleData>
         <SimpleData name="start_rat">3G</SimpleData>
         <SimpleData name="end_rat">3G</SimpleData>
         <SimpleData name="start_mix_band">Freq3</SimpleData>
@@ -150,7 +150,7 @@
         <SimpleData name="pin">efc99a74</SimpleData>
         <SimpleData name="timestamp">17/08/2012 00:00:00</SimpleData>
         <SimpleData name="reference">false</SimpleData>
-        <SimpleData name="type">drop</SimpleData>
+        <SimpleData name="type">Call Drop</SimpleData>
         <SimpleData name="start_rat">3G</SimpleData>
         <SimpleData name="end_rat">3G</SimpleData>
         <SimpleData name="start_mix_band">Freq2</SimpleData>
@@ -168,7 +168,7 @@
         <SimpleData name="pin">80ae02aa</SimpleData>
         <SimpleData name="timestamp">13/08/2012 00:00:00</SimpleData>
         <SimpleData name="reference">true</SimpleData>
-        <SimpleData name="type">fail</SimpleData>
+        <SimpleData name="type">Setup Failure</SimpleData>
         <SimpleData name="start_rat">3G</SimpleData>
         <SimpleData name="end_rat">3G</SimpleData>
         <SimpleData name="start_mix_band">Freq2</SimpleData>
@@ -186,7 +186,7 @@
         <SimpleData name="pin">31138eb8</SimpleData>
         <SimpleData name="timestamp">18/08/2012 00:00:00</SimpleData>
         <SimpleData name="reference">false</SimpleData>
-        <SimpleData name="type">fail</SimpleData>
+        <SimpleData name="type">Setup Failure</SimpleData>
         <SimpleData name="start_rat">3G</SimpleData>
         <SimpleData name="end_rat">3G</SimpleData>
         <SimpleData name="start_mix_band">Freq1</SimpleData>
@@ -204,7 +204,7 @@
         <SimpleData name="pin">5a9322fb</SimpleData>
         <SimpleData name="timestamp">16/08/2012 00:00:00</SimpleData>
         <SimpleData name="reference">true</SimpleData>
-        <SimpleData name="type">fail</SimpleData>
+        <SimpleData name="type">Setup Failure</SimpleData>
         <SimpleData name="start_rat">3G</SimpleData>
         <SimpleData name="end_rat">2G</SimpleData>
         <SimpleData name="start_mix_band">Freq1</SimpleData>
@@ -222,7 +222,7 @@
         <SimpleData name="pin">03dcde00</SimpleData>
         <SimpleData name="timestamp">18/08/2012 00:00:00</SimpleData>
         <SimpleData name="reference">false</SimpleData>
-        <SimpleData name="type">drop</SimpleData>
+        <SimpleData name="type">Call Drop</SimpleData>
         <SimpleData name="start_rat">3G</SimpleData>
         <SimpleData name="end_rat">3G</SimpleData>
         <SimpleData name="start_mix_band">Freq1</SimpleData>
@@ -240,7 +240,7 @@
         <SimpleData name="pin">03dcde00</SimpleData>
         <SimpleData name="timestamp">13/08/2012 00:00:00</SimpleData>
         <SimpleData name="reference">false</SimpleData>
-        <SimpleData name="type">fail</SimpleData>
+        <SimpleData name="type">Setup Failure</SimpleData>
         <SimpleData name="start_rat">2G</SimpleData>
         <SimpleData name="end_rat">2G</SimpleData>
         <SimpleData name="start_mix_band">Freq4</SimpleData>
@@ -258,7 +258,7 @@
         <SimpleData name="pin">eb3a215d</SimpleData>
         <SimpleData name="timestamp">15/08/2012 00:00:00</SimpleData>
         <SimpleData name="reference">false</SimpleData>
-        <SimpleData name="type">drop</SimpleData>
+        <SimpleData name="type">Call Drop</SimpleData>
         <SimpleData name="start_rat">3G</SimpleData>
         <SimpleData name="end_rat">3G</SimpleData>
         <SimpleData name="start_mix_band">Freq1</SimpleData>
@@ -276,7 +276,7 @@
         <SimpleData name="pin">1b47730e</SimpleData>
         <SimpleData name="timestamp">15/08/2012 00:00:00</SimpleData>
         <SimpleData name="reference">false</SimpleData>
-        <SimpleData name="type">fail</SimpleData>
+        <SimpleData name="type">Setup Failure</SimpleData>
         <SimpleData name="start_rat">2G</SimpleData>
         <SimpleData name="end_rat">3G</SimpleData>
         <SimpleData name="start_mix_band">Freq3</SimpleData>
@@ -294,7 +294,7 @@
         <SimpleData name="pin">80ae02aa</SimpleData>
         <SimpleData name="timestamp">17/08/2012 00:00:00</SimpleData>
         <SimpleData name="reference">true</SimpleData>
-        <SimpleData name="type">fail</SimpleData>
+        <SimpleData name="type">Setup Failure</SimpleData>
         <SimpleData name="start_rat">3G</SimpleData>
         <SimpleData name="end_rat">3G</SimpleData>
         <SimpleData name="start_mix_band">Freq2</SimpleData>
@@ -312,7 +312,7 @@
         <SimpleData name="pin">80ae02aa</SimpleData>
         <SimpleData name="timestamp">16/08/2012 00:00:00</SimpleData>
         <SimpleData name="reference">true</SimpleData>
-        <SimpleData name="type">fail</SimpleData>
+        <SimpleData name="type">Setup Failure</SimpleData>
         <SimpleData name="start_rat">3G</SimpleData>
         <SimpleData name="end_rat">3G</SimpleData>
         <SimpleData name="start_mix_band">Freq4</SimpleData>
@@ -330,7 +330,7 @@
         <SimpleData name="pin">5a9322fb</SimpleData>
         <SimpleData name="timestamp">17/08/2012 00:00:00</SimpleData>
         <SimpleData name="reference">true</SimpleData>
-        <SimpleData name="type">drop</SimpleData>
+        <SimpleData name="type">Call Drop</SimpleData>
         <SimpleData name="start_rat">3G</SimpleData>
         <SimpleData name="end_rat">3G</SimpleData>
         <SimpleData name="start_mix_band">Freq1</SimpleData>
@@ -348,7 +348,7 @@
         <SimpleData name="pin">5a9322fb</SimpleData>
         <SimpleData name="timestamp">13/08/2012 00:00:00</SimpleData>
         <SimpleData name="reference">true</SimpleData>
-        <SimpleData name="type">drop</SimpleData>
+        <SimpleData name="type">Call Drop</SimpleData>
         <SimpleData name="start_rat">3G</SimpleData>
         <SimpleData name="end_rat">2G</SimpleData>
         <SimpleData name="start_mix_band">Freq3</SimpleData>
@@ -366,7 +366,7 @@
         <SimpleData name="pin">5a9322fb</SimpleData>
         <SimpleData name="timestamp">15/08/2012 00:00:00</SimpleData>
         <SimpleData name="reference">true</SimpleData>
-        <SimpleData name="type">drop</SimpleData>
+        <SimpleData name="type">Call Drop</SimpleData>
         <SimpleData name="start_rat">3G</SimpleData>
         <SimpleData name="end_rat">2G</SimpleData>
         <SimpleData name="start_mix_band">Freq3</SimpleData>
@@ -384,7 +384,7 @@
         <SimpleData name="pin">31138eb8</SimpleData>
         <SimpleData name="timestamp">14/08/2012 00:00:00</SimpleData>
         <SimpleData name="reference">false</SimpleData>
-        <SimpleData name="type">fail</SimpleData>
+        <SimpleData name="type">Setup Failure</SimpleData>
         <SimpleData name="start_rat">3G</SimpleData>
         <SimpleData name="end_rat">2G</SimpleData>
         <SimpleData name="start_mix_band">Freq3</SimpleData>
@@ -402,7 +402,7 @@
         <SimpleData name="pin">31138eb8</SimpleData>
         <SimpleData name="timestamp">13/08/2012 00:00:00</SimpleData>
         <SimpleData name="reference">false</SimpleData>
-        <SimpleData name="type">fail</SimpleData>
+        <SimpleData name="type">Setup Failure</SimpleData>
         <SimpleData name="start_rat">3G</SimpleData>
         <SimpleData name="end_rat">3G</SimpleData>
         <SimpleData name="start_mix_band">Freq1</SimpleData>
@@ -420,7 +420,7 @@
         <SimpleData name="pin">eb3a215d</SimpleData>
         <SimpleData name="timestamp">16/08/2012 00:00:00</SimpleData>
         <SimpleData name="reference">false</SimpleData>
-        <SimpleData name="type">fail</SimpleData>
+        <SimpleData name="type">Setup Failure</SimpleData>
         <SimpleData name="start_rat">3G</SimpleData>
         <SimpleData name="end_rat">3G</SimpleData>
         <SimpleData name="start_mix_band">Freq4</SimpleData>
@@ -438,7 +438,7 @@
         <SimpleData name="pin">0d81755e</SimpleData>
         <SimpleData name="timestamp">16/08/2012 00:00:00</SimpleData>
         <SimpleData name="reference">false</SimpleData>
-        <SimpleData name="type">drop</SimpleData>
+        <SimpleData name="type">Call Drop</SimpleData>
         <SimpleData name="start_rat">3G</SimpleData>
         <SimpleData name="end_rat">3G</SimpleData>
         <SimpleData name="start_mix_band">Freq4</SimpleData>
@@ -456,7 +456,7 @@
         <SimpleData name="pin">03dcde00</SimpleData>
         <SimpleData name="timestamp">15/08/2012 00:00:00</SimpleData>
         <SimpleData name="reference">false</SimpleData>
-        <SimpleData name="type">fail</SimpleData>
+        <SimpleData name="type">Setup Failure</SimpleData>
         <SimpleData name="start_rat">3G</SimpleData>
         <SimpleData name="end_rat">3G</SimpleData>
         <SimpleData name="start_mix_band">Freq3</SimpleData>
@@ -474,7 +474,7 @@
         <SimpleData name="pin">80ae02aa</SimpleData>
         <SimpleData name="timestamp">16/08/2012 00:00:00</SimpleData>
         <SimpleData name="reference">true</SimpleData>
-        <SimpleData name="type">fail</SimpleData>
+        <SimpleData name="type">Setup Failure</SimpleData>
         <SimpleData name="start_rat">2G</SimpleData>
         <SimpleData name="end_rat">2G</SimpleData>
         <SimpleData name="start_mix_band">Freq4</SimpleData>
@@ -492,7 +492,7 @@
         <SimpleData name="pin">eb3a215d</SimpleData>
         <SimpleData name="timestamp">18/08/2012 00:00:00</SimpleData>
         <SimpleData name="reference">false</SimpleData>
-        <SimpleData name="type">fail</SimpleData>
+        <SimpleData name="type">Setup Failure</SimpleData>
         <SimpleData name="start_rat">3G</SimpleData>
         <SimpleData name="end_rat">3G</SimpleData>
         <SimpleData name="start_mix_band">Freq2</SimpleData>
@@ -510,7 +510,7 @@
         <SimpleData name="pin">03dcde00</SimpleData>
         <SimpleData name="timestamp">17/08/2012 00:00:00</SimpleData>
         <SimpleData name="reference">false</SimpleData>
-        <SimpleData name="type">drop</SimpleData>
+        <SimpleData name="type">Call Drop</SimpleData>
         <SimpleData name="start_rat">3G</SimpleData>
         <SimpleData name="end_rat">2G</SimpleData>
         <SimpleData name="start_mix_band">Freq2</SimpleData>
@@ -528,7 +528,7 @@
         <SimpleData name="pin">80ae02aa</SimpleData>
         <SimpleData name="timestamp">15/08/2012 00:00:00</SimpleData>
         <SimpleData name="reference">true</SimpleData>
-        <SimpleData name="type">fail</SimpleData>
+        <SimpleData name="type">Setup Failure</SimpleData>
         <SimpleData name="start_rat">3G</SimpleData>
         <SimpleData name="end_rat">2G</SimpleData>
         <SimpleData name="start_mix_band">Freq4</SimpleData>
@@ -546,7 +546,7 @@
         <SimpleData name="pin">1b47730e</SimpleData>
         <SimpleData name="timestamp">13/08/2012 00:00:00</SimpleData>
         <SimpleData name="reference">false</SimpleData>
-        <SimpleData name="type">fail</SimpleData>
+        <SimpleData name="type">Setup Failure</SimpleData>
         <SimpleData name="start_rat">3G</SimpleData>
         <SimpleData name="end_rat">3G</SimpleData>
         <SimpleData name="start_mix_band">Freq3</SimpleData>
@@ -564,7 +564,7 @@
         <SimpleData name="pin">a5e7feb0</SimpleData>
         <SimpleData name="timestamp">13/08/2012 00:00:00</SimpleData>
         <SimpleData name="reference">false</SimpleData>
-        <SimpleData name="type">fail</SimpleData>
+        <SimpleData name="type">Setup Failure</SimpleData>
         <SimpleData name="start_rat">3G</SimpleData>
         <SimpleData name="end_rat">2G</SimpleData>
         <SimpleData name="start_mix_band">Freq2</SimpleData>
@@ -582,7 +582,7 @@
         <SimpleData name="pin">0d81755e</SimpleData>
         <SimpleData name="timestamp">13/08/2012 00:00:00</SimpleData>
         <SimpleData name="reference">false</SimpleData>
-        <SimpleData name="type">fail</SimpleData>
+        <SimpleData name="type">Setup Failure</SimpleData>
         <SimpleData name="start_rat">2G</SimpleData>
         <SimpleData name="end_rat">3G</SimpleData>
         <SimpleData name="start_mix_band">Freq3</SimpleData>
@@ -600,7 +600,7 @@
         <SimpleData name="pin">0d81755e</SimpleData>
         <SimpleData name="timestamp">14/08/2012 00:00:00</SimpleData>
         <SimpleData name="reference">false</SimpleData>
-        <SimpleData name="type">drop</SimpleData>
+        <SimpleData name="type">Call Drop</SimpleData>
         <SimpleData name="start_rat">3G</SimpleData>
         <SimpleData name="end_rat">2G</SimpleData>
         <SimpleData name="start_mix_band">Freq3</SimpleData>
@@ -618,7 +618,7 @@
         <SimpleData name="pin">1b47730e</SimpleData>
         <SimpleData name="timestamp">15/08/2012 00:00:00</SimpleData>
         <SimpleData name="reference">false</SimpleData>
-        <SimpleData name="type">drop</SimpleData>
+        <SimpleData name="type">Call Drop</SimpleData>
         <SimpleData name="start_rat">3G</SimpleData>
         <SimpleData name="end_rat">3G</SimpleData>
         <SimpleData name="start_mix_band">Freq2</SimpleData>
@@ -636,7 +636,7 @@
         <SimpleData name="pin">bb16716d</SimpleData>
         <SimpleData name="timestamp">18/08/2012 00:00:00</SimpleData>
         <SimpleData name="reference">false</SimpleData>
-        <SimpleData name="type">fail</SimpleData>
+        <SimpleData name="type">Setup Failure</SimpleData>
         <SimpleData name="start_rat">2G</SimpleData>
         <SimpleData name="end_rat">3G</SimpleData>
         <SimpleData name="start_mix_band">Freq2</SimpleData>
@@ -654,7 +654,7 @@
         <SimpleData name="pin">31138eb8</SimpleData>
         <SimpleData name="timestamp">14/08/2012 00:00:00</SimpleData>
         <SimpleData name="reference">false</SimpleData>
-        <SimpleData name="type">drop</SimpleData>
+        <SimpleData name="type">Call Drop</SimpleData>
         <SimpleData name="start_rat">3G</SimpleData>
         <SimpleData name="end_rat">3G</SimpleData>
         <SimpleData name="start_mix_band">Freq3</SimpleData>
