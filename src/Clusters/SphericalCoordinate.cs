@@ -104,21 +104,28 @@ namespace Cluster
     public Coordinate ToCoordinate()
     {
       // Longitude value
-      double longitude = (X == 0) ? Math.PI / 2 : Math.Atan(Y / X);
+      double longitude = (X == 0) ? Math.PI / 2.0 : Math.Atan(Y / X);
 
       // Calculate the colatitude angle (complementary angle of the latitude)
       double colatitude = Math.Acos(Z);
-      double latitude = Math.PI / 2 - colatitude;
+      double latitude = Math.PI / 2.0 - colatitude;
 
-      // Select the correct branch of arctan
-      if(X == 0)
+      // select correct branch of arctan
+      if (X < 0.0)
       {
-        longitude = (Y <= 0) ? longitude - Math.PI : longitude + Math.PI;
+        if (Y <= 0.0)
+        {
+          longitude -= Math.PI;
+        }
+        else
+        {
+          longitude += Math.PI;
+        }
       }
 
-      // Convert the radian values back into degrees
-      latitude *= 180 / Math.PI;
-      longitude *= 180 / Math.PI;
+      // Convert the radian values nack into degrees
+      longitude *= 180.0 / Math.PI;
+      latitude *= 180.0 / Math.PI;
 
       return new Coordinate(longitude, latitude);
     }
