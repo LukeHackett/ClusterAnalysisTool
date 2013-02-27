@@ -63,8 +63,8 @@
 			<SimpleData name="type">Call Drop</SimpleData>
 			<SimpleData name="start_rat">WCDMA</SimpleData>
 			<SimpleData name="end_rat">WCDMA</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">CELL_FACH</SimpleData>
 		</ExtendedData>
 
@@ -82,8 +82,8 @@
 			<SimpleData name="type">Setup Failure</SimpleData>
 			<SimpleData name="start_rat">WCDMA</SimpleData>
 			<SimpleData name="end_rat">WCDMA</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">CELL_FACH</SimpleData>
 		</ExtendedData>
 
@@ -101,8 +101,8 @@
 			<SimpleData name="type">Call Drop</SimpleData>
 			<SimpleData name="start_rat">WCDMA</SimpleData>
 			<SimpleData name="end_rat">WCDMA</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">IDLE</SimpleData>
 		</ExtendedData>
 
@@ -348,8 +348,8 @@
 			<SimpleData name="type">Call Drop</SimpleData>
 			<SimpleData name="start_rat">WCDMA</SimpleData>
 			<SimpleData name="end_rat">WCDMA</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">CELL_DCH</SimpleData>
 		</ExtendedData>
 
@@ -367,8 +367,8 @@
 			<SimpleData name="type">Call Drop</SimpleData>
 			<SimpleData name="start_rat">WCDMA</SimpleData>
 			<SimpleData name="end_rat">WCDMA</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">IDLE</SimpleData>
 		</ExtendedData>
 
@@ -386,8 +386,8 @@
 			<SimpleData name="type">Call Drop</SimpleData>
 			<SimpleData name="start_rat">WCDMA</SimpleData>
 			<SimpleData name="end_rat">WCDMA</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">IDLE</SimpleData>
 		</ExtendedData>
 
@@ -405,8 +405,8 @@
 			<SimpleData name="type">Call Drop</SimpleData>
 			<SimpleData name="start_rat">WCDMA</SimpleData>
 			<SimpleData name="end_rat">WCDMA</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">IDLE</SimpleData>
 		</ExtendedData>
 
@@ -424,8 +424,8 @@
 			<SimpleData name="type">Call Drop</SimpleData>
 			<SimpleData name="start_rat">WCDMA</SimpleData>
 			<SimpleData name="end_rat">WCDMA</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">CELL_DCH</SimpleData>
 		</ExtendedData>
 
@@ -443,8 +443,8 @@
 			<SimpleData name="type">Call Drop</SimpleData>
 			<SimpleData name="start_rat">WCDMA</SimpleData>
 			<SimpleData name="end_rat">WCDMA</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">CELL_DCH</SimpleData>
 		</ExtendedData>
 
@@ -462,8 +462,8 @@
 			<SimpleData name="type">Call Drop</SimpleData>
 			<SimpleData name="start_rat">WCDMA</SimpleData>
 			<SimpleData name="end_rat">WCDMA</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">CELL_FACH</SimpleData>
 		</ExtendedData>
 
@@ -481,8 +481,8 @@
 			<SimpleData name="type">Call Drop</SimpleData>
 			<SimpleData name="start_rat">WCDMA</SimpleData>
 			<SimpleData name="end_rat">WCDMA</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">CELL_FACH</SimpleData>
 		</ExtendedData>
 
@@ -500,8 +500,8 @@
 			<SimpleData name="type">Call Drop</SimpleData>
 			<SimpleData name="start_rat">WCDMA</SimpleData>
 			<SimpleData name="end_rat">WCDMA</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">CELL_DCH</SimpleData>
 		</ExtendedData>
 
@@ -519,8 +519,8 @@
 			<SimpleData name="type">Call Drop</SimpleData>
 			<SimpleData name="start_rat">WCDMA</SimpleData>
 			<SimpleData name="end_rat">WCDMA</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">IDLE</SimpleData>
 		</ExtendedData>
 
@@ -538,8 +538,8 @@
 			<SimpleData name="type">Call Drop</SimpleData>
 			<SimpleData name="start_rat">GSM</SimpleData>
 			<SimpleData name="end_rat">GSM</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">NOT_WCDMA</SimpleData>
 		</ExtendedData>
 
@@ -557,8 +557,8 @@
 			<SimpleData name="type">Call Drop</SimpleData>
 			<SimpleData name="start_rat">WCDMA</SimpleData>
 			<SimpleData name="end_rat">WCDMA</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">CELL_FACH</SimpleData>
 		</ExtendedData>
 
@@ -633,8 +633,8 @@
 			<SimpleData name="type">Call Drop</SimpleData>
 			<SimpleData name="start_rat">WCDMA</SimpleData>
 			<SimpleData name="end_rat">WCDMA</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">IDLE</SimpleData>
 		</ExtendedData>
 
@@ -652,8 +652,8 @@
 			<SimpleData name="type">Setup Failure</SimpleData>
 			<SimpleData name="start_rat">WCDMA</SimpleData>
 			<SimpleData name="end_rat">WCDMA</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">CELL_FACH</SimpleData>
 		</ExtendedData>
 
@@ -671,8 +671,8 @@
 			<SimpleData name="type">Call Drop</SimpleData>
 			<SimpleData name="start_rat">WCDMA</SimpleData>
 			<SimpleData name="end_rat">WCDMA</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">CELL_DCH</SimpleData>
 		</ExtendedData>
 
@@ -690,8 +690,8 @@
 			<SimpleData name="type">Setup Failure</SimpleData>
 			<SimpleData name="start_rat">WCDMA</SimpleData>
 			<SimpleData name="end_rat">WCDMA</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">IDLE</SimpleData>
 		</ExtendedData>
 
@@ -709,8 +709,8 @@
 			<SimpleData name="type">Setup Failure</SimpleData>
 			<SimpleData name="start_rat">WCDMA</SimpleData>
 			<SimpleData name="end_rat">WCDMA</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">IDLE</SimpleData>
 		</ExtendedData>
 
@@ -728,8 +728,8 @@
 			<SimpleData name="type">Call Drop</SimpleData>
 			<SimpleData name="start_rat">WCDMA</SimpleData>
 			<SimpleData name="end_rat">WCDMA</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">IDLE</SimpleData>
 		</ExtendedData>
 
@@ -747,8 +747,8 @@
 			<SimpleData name="type">Call Drop</SimpleData>
 			<SimpleData name="start_rat">WCDMA</SimpleData>
 			<SimpleData name="end_rat">WCDMA</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">IDLE</SimpleData>
 		</ExtendedData>
 
@@ -766,8 +766,8 @@
 			<SimpleData name="type">Call Drop</SimpleData>
 			<SimpleData name="start_rat">WCDMA</SimpleData>
 			<SimpleData name="end_rat">WCDMA</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">CELL_DCH</SimpleData>
 		</ExtendedData>
 
@@ -785,8 +785,8 @@
 			<SimpleData name="type">Call Drop</SimpleData>
 			<SimpleData name="start_rat">WCDMA</SimpleData>
 			<SimpleData name="end_rat">WCDMA</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">IDLE</SimpleData>
 		</ExtendedData>
 
@@ -1070,8 +1070,8 @@
 			<SimpleData name="type">Setup Failure</SimpleData>
 			<SimpleData name="start_rat">WCDMA</SimpleData>
 			<SimpleData name="end_rat">WCDMA</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">IDLE</SimpleData>
 		</ExtendedData>
 
@@ -1089,8 +1089,8 @@
 			<SimpleData name="type">Call Drop</SimpleData>
 			<SimpleData name="start_rat">WCDMA</SimpleData>
 			<SimpleData name="end_rat">WCDMA</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">IDLE</SimpleData>
 		</ExtendedData>
 
@@ -1108,8 +1108,8 @@
 			<SimpleData name="type">Call Drop</SimpleData>
 			<SimpleData name="start_rat">WCDMA</SimpleData>
 			<SimpleData name="end_rat">WCDMA</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">IDLE</SimpleData>
 		</ExtendedData>
 
@@ -1127,8 +1127,8 @@
 			<SimpleData name="type">Call Drop</SimpleData>
 			<SimpleData name="start_rat">GSM</SimpleData>
 			<SimpleData name="end_rat">GSM</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">NOT_WCDMA</SimpleData>
 		</ExtendedData>
 
@@ -1146,8 +1146,8 @@
 			<SimpleData name="type">Call Drop</SimpleData>
 			<SimpleData name="start_rat">WCDMA</SimpleData>
 			<SimpleData name="end_rat">WCDMA</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">IDLE</SimpleData>
 		</ExtendedData>
 
@@ -1165,8 +1165,8 @@
 			<SimpleData name="type">Call Drop</SimpleData>
 			<SimpleData name="start_rat">WCDMA</SimpleData>
 			<SimpleData name="end_rat">WCDMA</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">CELL_DCH</SimpleData>
 		</ExtendedData>
 
@@ -1184,8 +1184,8 @@
 			<SimpleData name="type">Call Drop</SimpleData>
 			<SimpleData name="start_rat">WCDMA</SimpleData>
 			<SimpleData name="end_rat">WCDMA</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">CELL_FACH</SimpleData>
 		</ExtendedData>
 
@@ -1203,8 +1203,8 @@
 			<SimpleData name="type">Call Drop</SimpleData>
 			<SimpleData name="start_rat">WCDMA</SimpleData>
 			<SimpleData name="end_rat">WCDMA</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">IDLE</SimpleData>
 		</ExtendedData>
 
@@ -1222,8 +1222,8 @@
 			<SimpleData name="type">Call Drop</SimpleData>
 			<SimpleData name="start_rat">WCDMA</SimpleData>
 			<SimpleData name="end_rat">WCDMA</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">IDLE</SimpleData>
 		</ExtendedData>
 
@@ -1241,8 +1241,8 @@
 			<SimpleData name="type">Call Drop</SimpleData>
 			<SimpleData name="start_rat">WCDMA</SimpleData>
 			<SimpleData name="end_rat">WCDMA</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">CELL_DCH</SimpleData>
 		</ExtendedData>
 
@@ -1260,8 +1260,8 @@
 			<SimpleData name="type">Setup Failure</SimpleData>
 			<SimpleData name="start_rat">WCDMA</SimpleData>
 			<SimpleData name="end_rat">WCDMA</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">IDLE</SimpleData>
 		</ExtendedData>
 
@@ -1279,8 +1279,8 @@
 			<SimpleData name="type">Setup Failure</SimpleData>
 			<SimpleData name="start_rat">GSM</SimpleData>
 			<SimpleData name="end_rat">GSM</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">NOT_WCDMA</SimpleData>
 		</ExtendedData>
 
@@ -1298,8 +1298,8 @@
 			<SimpleData name="type">Call Drop</SimpleData>
 			<SimpleData name="start_rat">WCDMA</SimpleData>
 			<SimpleData name="end_rat">WCDMA</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">CELL_DCH</SimpleData>
 		</ExtendedData>
 
@@ -1640,8 +1640,8 @@
 			<SimpleData name="type">Call Drop</SimpleData>
 			<SimpleData name="start_rat">WCDMA</SimpleData>
 			<SimpleData name="end_rat">WCDMA</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">IDLE</SimpleData>
 		</ExtendedData>
 
@@ -1659,8 +1659,8 @@
 			<SimpleData name="type">Call Drop</SimpleData>
 			<SimpleData name="start_rat">WCDMA</SimpleData>
 			<SimpleData name="end_rat">GSM</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">IDLE</SimpleData>
 		</ExtendedData>
 
@@ -1678,8 +1678,8 @@
 			<SimpleData name="type">Call Drop</SimpleData>
 			<SimpleData name="start_rat">WCDMA</SimpleData>
 			<SimpleData name="end_rat">WCDMA</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">IDLE</SimpleData>
 		</ExtendedData>
 
@@ -1697,8 +1697,8 @@
 			<SimpleData name="type">Call Drop</SimpleData>
 			<SimpleData name="start_rat">GSM</SimpleData>
 			<SimpleData name="end_rat">GSM</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">NOT_WCDMA</SimpleData>
 		</ExtendedData>
 
@@ -1716,8 +1716,8 @@
 			<SimpleData name="type">Call Drop</SimpleData>
 			<SimpleData name="start_rat">WCDMA</SimpleData>
 			<SimpleData name="end_rat">WCDMA</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">IDLE</SimpleData>
 		</ExtendedData>
 
@@ -1735,8 +1735,8 @@
 			<SimpleData name="type">Call Drop</SimpleData>
 			<SimpleData name="start_rat">WCDMA</SimpleData>
 			<SimpleData name="end_rat">WCDMA</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">IDLE</SimpleData>
 		</ExtendedData>
 
@@ -1754,8 +1754,8 @@
 			<SimpleData name="type">Call Drop</SimpleData>
 			<SimpleData name="start_rat">WCDMA</SimpleData>
 			<SimpleData name="end_rat">WCDMA</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">IDLE</SimpleData>
 		</ExtendedData>
 
@@ -1773,8 +1773,8 @@
 			<SimpleData name="type">Call Drop</SimpleData>
 			<SimpleData name="start_rat">WCDMA</SimpleData>
 			<SimpleData name="end_rat">WCDMA</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">CELL_DCH</SimpleData>
 		</ExtendedData>
 
@@ -1792,8 +1792,8 @@
 			<SimpleData name="type">Call Drop</SimpleData>
 			<SimpleData name="start_rat">WCDMA</SimpleData>
 			<SimpleData name="end_rat">WCDMA</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">CELL_DCH</SimpleData>
 		</ExtendedData>
 
@@ -1811,8 +1811,8 @@
 			<SimpleData name="type">Setup Failure</SimpleData>
 			<SimpleData name="start_rat">GSM</SimpleData>
 			<SimpleData name="end_rat">GSM</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">NOT_WCDMA</SimpleData>
 		</ExtendedData>
 
@@ -1830,8 +1830,8 @@
 			<SimpleData name="type">Call Drop</SimpleData>
 			<SimpleData name="start_rat">WCDMA</SimpleData>
 			<SimpleData name="end_rat">WCDMA</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">IDLE</SimpleData>
 		</ExtendedData>
 
@@ -1849,8 +1849,8 @@
 			<SimpleData name="type">Call Drop</SimpleData>
 			<SimpleData name="start_rat">WCDMA</SimpleData>
 			<SimpleData name="end_rat">WCDMA</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">IDLE</SimpleData>
 		</ExtendedData>
 
@@ -1868,8 +1868,8 @@
 			<SimpleData name="type">Setup Failure</SimpleData>
 			<SimpleData name="start_rat">GSM</SimpleData>
 			<SimpleData name="end_rat">GSM</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">NOT_WCDMA</SimpleData>
 		</ExtendedData>
 
@@ -1887,8 +1887,8 @@
 			<SimpleData name="type">Call Drop</SimpleData>
 			<SimpleData name="start_rat">WCDMA</SimpleData>
 			<SimpleData name="end_rat">WCDMA</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">IDLE</SimpleData>
 		</ExtendedData>
 
@@ -1906,8 +1906,8 @@
 			<SimpleData name="type">Setup Failure</SimpleData>
 			<SimpleData name="start_rat">WCDMA</SimpleData>
 			<SimpleData name="end_rat">WCDMA</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">IDLE</SimpleData>
 		</ExtendedData>
 
@@ -1925,8 +1925,8 @@
 			<SimpleData name="type">Call Drop</SimpleData>
 			<SimpleData name="start_rat">WCDMA</SimpleData>
 			<SimpleData name="end_rat">WCDMA</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">IDLE</SimpleData>
 		</ExtendedData>
 
@@ -1944,8 +1944,8 @@
 			<SimpleData name="type">Call Drop</SimpleData>
 			<SimpleData name="start_rat">WCDMA</SimpleData>
 			<SimpleData name="end_rat">WCDMA</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">IDLE</SimpleData>
 		</ExtendedData>
 
@@ -1963,8 +1963,8 @@
 			<SimpleData name="type">Call Drop</SimpleData>
 			<SimpleData name="start_rat">WCDMA</SimpleData>
 			<SimpleData name="end_rat">WCDMA</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">CELL_DCH</SimpleData>
 		</ExtendedData>
 
@@ -1982,8 +1982,8 @@
 			<SimpleData name="type">Setup Failure</SimpleData>
 			<SimpleData name="start_rat">WCDMA</SimpleData>
 			<SimpleData name="end_rat">WCDMA</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">CELL_DCH</SimpleData>
 		</ExtendedData>
 
@@ -2001,8 +2001,8 @@
 			<SimpleData name="type">Setup Failure</SimpleData>
 			<SimpleData name="start_rat">WCDMA</SimpleData>
 			<SimpleData name="end_rat">WCDMA</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">IDLE</SimpleData>
 		</ExtendedData>
 
@@ -2020,8 +2020,8 @@
 			<SimpleData name="type">Call Drop</SimpleData>
 			<SimpleData name="start_rat">WCDMA</SimpleData>
 			<SimpleData name="end_rat">WCDMA</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">IDLE</SimpleData>
 		</ExtendedData>
 
@@ -2039,8 +2039,8 @@
 			<SimpleData name="type">Call Drop</SimpleData>
 			<SimpleData name="start_rat">WCDMA</SimpleData>
 			<SimpleData name="end_rat">WCDMA</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">CELL_DCH</SimpleData>
 		</ExtendedData>
 
@@ -2058,8 +2058,8 @@
 			<SimpleData name="type">Call Drop</SimpleData>
 			<SimpleData name="start_rat">WCDMA</SimpleData>
 			<SimpleData name="end_rat">WCDMA</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">CELL_DCH</SimpleData>
 		</ExtendedData>
 
@@ -2077,8 +2077,8 @@
 			<SimpleData name="type">Call Drop</SimpleData>
 			<SimpleData name="start_rat">WCDMA</SimpleData>
 			<SimpleData name="end_rat">WCDMA</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">IDLE</SimpleData>
 		</ExtendedData>
 
@@ -2096,8 +2096,8 @@
 			<SimpleData name="type">Call Drop</SimpleData>
 			<SimpleData name="start_rat">WCDMA</SimpleData>
 			<SimpleData name="end_rat">WCDMA</SimpleData>
-			<SimpleData name="start_mix_band"/>
-			<SimpleData name="end_mix_band"/>
+			<SimpleData name="start_mix_band"></SimpleData>
+			<SimpleData name="end_mix_band"></SimpleData>
 			<SimpleData name="start_rrc_state">CELL_DCH</SimpleData>
 		</ExtendedData>
 
