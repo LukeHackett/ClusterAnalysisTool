@@ -30,6 +30,7 @@ using JSON;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 
@@ -117,10 +118,10 @@ namespace Analysis
       }
 
       // Create each output file
-      System.IO.File.WriteAllText(directory + "week_drop_rats.json", drop_rats);
-      System.IO.File.WriteAllText(directory + "week_drop_mix_band.json", drop_mixbands);
-      System.IO.File.WriteAllText(directory + "week_fail_rats.json", fail_rats);
-      System.IO.File.WriteAllText(directory + "week_fail_mix_band.json", fail_mixbands);
+      File.WriteAllText(directory + "weekly_drop_rat.json", drop_rats);
+      File.WriteAllText(directory + "weekly_drop_mix_band.json", drop_mixbands);
+      File.WriteAllText(directory + "weekly_fail_rat.json", fail_rats);
+      File.WriteAllText(directory + "weekly_fail_mix_band.json", fail_mixbands);
     }
 
     /// <summary>
