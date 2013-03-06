@@ -49,6 +49,9 @@
     <Compile Include="FailAnalysis.cs" />
     <Compile Include="JSONResults.cs" />
     <Compile Include="MultiAnalysis.cs" />
+    <Compile Include="MultiProductAnalysis.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="MultiWeekAnalysis.cs" />
     <Compile Include="ProductAnalysis.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
