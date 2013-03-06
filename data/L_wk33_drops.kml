@@ -533,7 +533,7 @@
         <SimpleData name="end_rat">2G</SimpleData>
         <SimpleData name="start_mix_band">Freq4</SimpleData>
         <SimpleData name="end_mix_band">Freq4</SimpleData>
-
+        <SimpleData name="start_rrc_state">CELL_DCH</SimpleData>
       </ExtendedData>
     </Placemark>
     <Placemark>
