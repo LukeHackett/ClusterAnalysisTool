@@ -32,35 +32,52 @@ using System.Text.RegularExpressions;
 namespace ClusterAnalysisTool
 {
   /// <summary>
-  /// Arguments class
-  /// * Arguments class: application arguments interpreter
-  /// *
-  /// * Authors:		R. LOPES
-  /// * Contributors:	R. LOPES
-  /// * Created:		25 October 2002
-  /// * Modified:		28 October 2002
-  /// *
-  /// * Version:		1.0
-  /// http://www.codeproject.com/Articles/3111/C-NET-Command-Line-Arguments-Parser
+  /// This class parses command line arguments. An argument is one that contains
+  /// a parameter that starts with -, -- or / and all the values linked. The 
+  /// parser supports separtion between the parameter with a space, a : or a =.
+  /// The parser will also look for enclosing characters like ' or " and remove
+  /// them.
+  /// 
+  /// Examples: -param1 value1 --param2 /param3:"Test-:-work" 
+  ///           /param4=happy -param5 '--=nice=--'
+  /// 
+  /// Original Author: R. Lopes
+  /// Created: 25th October 2002
+  /// Modified: Luke Hackett
+  /// Source: http://www.codeproject.com/Articles/3111/C-NET-Command-Line-Arguments-Parser
   /// </summary>
   public static class Arguments
   {
 
+    /// <summary>
+    /// This method will obtain all the arguments and their values. Each 
+    /// argument will become the key in the returned StringDictionary, with the 
+    /// associated value being stored alongside the key.
+    /// 
+    /// Examples: -param1 value1 --param2 /param3:"Test-:-work" 
+    ///           /param4=happy -param5 '--=nice=--'
+    /// </summary>
+    /// <param name="args">String array of arguments</param>
+    /// <returns>A StringDictionary collection of parameters and values</returns>
     public static StringDictionary GetArguments(string[] args)
     {
+      // A String Key/Value Dictionary of all the parameters
       StringDictionary Parameters = new StringDictionary();
+      // Regular Expression to split a parameter and it's value
       Regex Spliter = new Regex(@"^-{1,2}|^/|=|:", RegexOptions.IgnoreCase | RegexOptions.Compiled);
+      // Regular Expression to remove all starting and trailing ' or " characters
       Regex Remover = new Regex(@"^['""]?(.*?)['""]?$", RegexOptions.IgnoreCase | RegexOptions.Compiled);
-      string Parameter = null;
-      string[] Parts;
+      // Stores the current parameter that is being worked upon
+      String Parameter = null;
+      // Holds all the parts of the split parameter/value string
+      String[] Parts;
 
-      // Valid parameters forms:
-      // {-,/,--}param{ ,=,:}((",')value(",'))
-      // Examples: -param1 value1 --param2 /param3:"Test-:-work" /param4=happy -param5 '--=nice=--'
-      foreach (string Txt in args)
+      // Loop over all the arguments
+      foreach (String arg in args)
       {
         // Look for new parameters (-,/ or --) and a possible enclosed value (=,:)
-        Parts = Spliter.Split(Txt, 3);
+        Parts = Spliter.Split(arg, 3);
+        // Swtich between a parameter, value or other
         switch (Parts.Length)
         {
           // Found a value (for the last parameter found (space separator))
@@ -76,21 +93,29 @@ namespace ClusterAnalysisTool
             }
             // else Error: no parameter waiting for a value (skipped)
             break;
+
           // Found just a parameter
           case 2:
             // The last parameter is still waiting. With no value, set it to true.
             if (Parameter != null)
             {
-              if (!Parameters.ContainsKey(Parameter)) Parameters.Add(Parameter, "true");
+              if (!Parameters.ContainsKey(Parameter))
+              {
+                Parameters.Add(Parameter, "true");
+              }
             }
             Parameter = Parts[1];
             break;
+
           // Parameter with enclosed value
           case 3:
             // The last parameter is still waiting. With no value, set it to true.
             if (Parameter != null)
             {
-              if (!Parameters.ContainsKey(Parameter)) Parameters.Add(Parameter, "true");
+              if (!Parameters.ContainsKey(Parameter))
+              {
+                Parameters.Add(Parameter, "true");
+              }
             }
             Parameter = Parts[1];
             // Remove possible enclosing characters (",')
@@ -106,7 +131,10 @@ namespace ClusterAnalysisTool
       // In case a parameter is still waiting
       if (Parameter != null)
       {
-        if (!Parameters.ContainsKey(Parameter)) Parameters.Add(Parameter, "true");
+        if (!Parameters.ContainsKey(Parameter))
+        {
+          Parameters.Add(Parameter, "true");
+        }
       }
 
       return Parameters;
