@@ -41,6 +41,11 @@ namespace Analysis
     /// The week number of the cluster
     /// </summary>
     public int WeekNumber { get; private set; }
+    
+    /// <summary>
+    /// The name of the device of the cluster
+    /// </summary>
+    public String Device { get; private set; }
 
     #endregion
 
@@ -55,6 +60,10 @@ namespace Analysis
       WeekNumber = week_number;
     }
 
+    public JSONResults(String device)
+    {
+      Device = device;
+    }
     #endregion
 
     #region Public Methods
@@ -94,12 +103,12 @@ namespace Analysis
         // Add the cluster JSON object to all the known clusters
         clusters.Add(cluster);
       }
-      // Format the Week Number
-      String week_name = JSONWriter.CreateKeyValue("name", "Week " + WeekNumber);
+      // Format the key (either the device name or the week number)
+      String key = GetDataKey();
       // Format the children data
       String data = JSONWriter.CreateJSONArray("children", clusters);
       // Final Formatting of the string
-      return JSONWriter.CreateJSONObject(week_name, data);
+      return JSONWriter.CreateJSONObject(key, data);
     }
 
     /// <summary>
@@ -113,6 +122,28 @@ namespace Analysis
       String json = ToString();
       // Save to the given file path
       System.IO.File.WriteAllText(file, json);
+    }
+
+    #endregion
+
+    #region Private Methods
+
+    /// <summary>
+    /// This method will create a well formed key based upon the values of 
+    /// Device and WeekNumber. If the device is null, then the week number 
+    /// will be used to create a name key. E.g. "name": "9800" or 
+    /// "name": "Week 1".
+    /// </summary>
+    /// <returns>A well formed key/value pair</returns>
+    private String GetDataKey()
+    {
+      // Return the device name as a key if avaiable.
+      if (Device != null)
+      {
+        return JSONWriter.CreateKeyValue("name", Device);
+      }
+
+      return JSONWriter.CreateKeyValue("name", "Week " + WeekNumber);     
     }
 
     #endregion
