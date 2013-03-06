@@ -35,15 +35,14 @@ namespace Analysis
 {
   public class ProductAnalysis : Analysis
   {
-    #region Constructor
-    
+    #region Properties
+
     /// <summary>
-    /// 
+    /// The name of the device
     /// </summary>
     public String Device { get; private set; }
 
     #endregion
-
 
     #region Constructor
 
@@ -60,5 +59,154 @@ namespace Analysis
     }
 
     #endregion
+
+    #region Public Methods
+
+    /// <summary>
+    /// This method will produce a JSON object that contains all the data from 
+    /// the current instance. Only focusing upon drop events, this method will 
+    /// firstly group the events by the start RAT only, and then by the start 
+    /// and end RAT values.
+    /// </summary>
+    /// <returns>A well formed JSON string</returns>
+    public String CreateDropRATJSON()
+    {
+      // Create a new JSONResults Data Structure
+      JSONResults json = new JSONResults(Device);
+      // Loop over all clusters in this week
+      foreach (KeyValuePair<int, ClusterAnalysis> pair in ClustersAnalysis)
+      {
+        // Get the Drop Analysis object
+        DropAnalysis analysis = pair.Value.DropAnalysis;
+        // Used to stores the split up events
+        List<String> keys = analysis.GroupByStartRat().Keys.ToList();
+        AnalysisResultsCollection groups = new AnalysisResultsCollection(keys);
+        // Get the Analysis result
+        AnalysisResults results = analysis.GroupByStartEndRat();
+        // Loop over each result
+        foreach (KeyValuePair<String, EventCollection> p in results)
+        {
+          // Calculate the Key
+          String key = p.Value[0].StartRat;
+          // Add into the array
+          groups[key].Add(p.Key, p.Value);
+        }
+        // Add the RAT goup to the JSONResults Data Structure
+        json.Add(pair.Key, groups);
+      }
+      // return the JSON data structure for this week
+      return json.ToString();
+    }
+
+    /// <summary>
+    /// This method will produce a JSON object that contains all the data from 
+    /// the current instance. Only focusing upon fail events, this method will 
+    /// firstly group the events by the start RAT only, and then by the start 
+    /// and end RAT values.
+    /// </summary>
+    /// <returns>A well formed JSON string</returns>
+    public String CreateFailRATJSON()
+    {
+      // Create a new JSONResults Data Structure
+      JSONResults json = new JSONResults(Device);
+      // Loop over all clusters in this week
+      foreach (KeyValuePair<int, ClusterAnalysis> pair in ClustersAnalysis)
+      {
+        // Get the Drop Analysis object
+        FailAnalysis analysis = pair.Value.FailAnalysis;
+        // Used to stores the split up events
+        List<String> keys = analysis.GroupByStartRat().Keys.ToList();
+        AnalysisResultsCollection groups = new AnalysisResultsCollection(keys);
+        // Get the Analysis result
+        AnalysisResults results = analysis.GroupByStartEndRat();
+        // Loop over each result
+        foreach (KeyValuePair<String, EventCollection> p in results)
+        {
+          // Calculate the Key
+          String key = p.Value[0].StartRat;
+          // Add into the array
+          groups[key].Add(p.Key, p.Value);
+        }
+        // Add the RAT goup to the JSONResults Data Structure
+        json.Add(pair.Key, groups);
+      }
+      // return the JSON data structure for this week
+      return json.ToString();
+    }
+
+    /// <summary>
+    /// This method will produce a JSON object that contains all the data from 
+    /// the current instance. Only focusing upon drop events, this method will 
+    /// firstly group the events by the start MixBand only, and then by the 
+    /// start and end MixBand values.
+    /// </summary>
+    /// <returns>A well formed JSON string</returns>
+    public String CreateDropMixBandJSON()
+    {
+      // Create a new JSONResults Data Structure
+      JSONResults json = new JSONResults(Device);
+      // Loop over all clusters in this week
+      foreach (KeyValuePair<int, ClusterAnalysis> pair in ClustersAnalysis)
+      {
+        // Get the Drop Analysis object
+        DropAnalysis analysis = pair.Value.DropAnalysis;
+        // Used to stores the split up events
+        List<String> keys = analysis.GroupByStartMixBand().Keys.ToList();
+        AnalysisResultsCollection groups = new AnalysisResultsCollection(keys);
+        // Get the Analysis result
+        AnalysisResults results = analysis.GroupByStartEndMixBand();
+        // Loop over each result
+        foreach (KeyValuePair<String, EventCollection> p in results)
+        {
+          // Calculate the Key
+          String key = p.Value[0].StartMixBand;
+          // Add into the array
+          groups[key].Add(p.Key, p.Value);
+        }
+        // Add the Mix-Band goup to the JSONResults Data Structure
+        json.Add(pair.Key, groups);
+      }
+      // return the JSON data structure for this week
+      return json.ToString();
+    }
+
+    /// <summary>
+    /// This method will produce a JSON object that contains all the data from 
+    /// the current instance. Only focusing upon fail events, this method will 
+    /// firstly group the events by the start MixBand only, and then by the 
+    /// start and end MixBand values.
+    /// </summary>
+    /// <returns>A well formed JSON string</returns>
+    public String CreateFailMixBandJSON()
+    {
+      // Create a new JSONResults Data Structure
+      JSONResults json = new JSONResults(Device);
+      // Loop over all clusters in this week
+      foreach (KeyValuePair<int, ClusterAnalysis> pair in ClustersAnalysis)
+      {
+        // Get the Drop Analysis object
+        FailAnalysis analysis = pair.Value.FailAnalysis;
+        // Used to stores the split up events
+        List<String> keys = analysis.GroupByStartMixBand().Keys.ToList();
+        AnalysisResultsCollection groups = new AnalysisResultsCollection(keys);
+        // Get the Analysis result
+        AnalysisResults results = analysis.GroupByStartEndMixBand();
+        // Loop over each result
+        foreach (KeyValuePair<String, EventCollection> p in results)
+        {
+          // Calculate the Key
+          String key = p.Value[0].StartMixBand;
+          // Add into the array
+          groups[key].Add(p.Key, p.Value);
+        }
+        // Add the Mix-Band goup to the JSONResults Data Structure
+        json.Add(pair.Key, groups);
+      }
+      // return the JSON data structure for this week
+      return json.ToString();
+    }
+
+    #endregion
+
   }
 }
