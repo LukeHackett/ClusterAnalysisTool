@@ -26,6 +26,7 @@
 /// POSSIBILITY OF SUCH DAMAGE.
 
 using Cluster;
+using KML;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -113,6 +114,22 @@ namespace Analysis
       // Cluster the data
       DBscan = new DBSCAN(Events);
       DBscan.Analyse();
+    }
+
+    /// <summary>
+    /// This method will output the analysed KML file to the given location.
+    /// </summary>
+    /// <param name="file">The output location of the KML file</param>
+    public void GenerateKML(String file)
+    {
+      // Ensure that analysis has been performed
+      if (DBscan == null)
+      {
+        throw new Exception("Input data has not been clustered");
+      }
+
+      // Output the KML
+      KMLWriter.GenerateKML(file, DBscan.ClusteredEvents, DBscan.NoiseEvents);
     }
 
     #endregion

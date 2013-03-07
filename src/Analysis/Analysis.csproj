@@ -66,6 +66,10 @@
       <Project>{4CEF8F6A-5F52-4F8C-BB73-BE313CFFE904}</Project>
       <Name>JSON</Name>
     </ProjectReference>
+    <ProjectReference Include="..\KML\KML.csproj">
+      <Project>{681BD5CC-203C-4970-8499-7D0F950DB906}</Project>
+      <Name>KML</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
