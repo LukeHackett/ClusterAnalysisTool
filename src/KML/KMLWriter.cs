@@ -126,13 +126,13 @@ namespace KML
       // Write the Clusters to the KML file
       for (int i = 0; i < clusters.Count; i++)
       {
-        WriteClusterCollection(clusters[i], "Cluster " + i);
+        WriteCluster(clusters[i], "Cluster " + i);
       }
       
       //Write the Noise to the KML file
       if(noise.Count > 0)
       {
-        WriteClusterCollection(noise);
+        WriteCluster(noise);
       }
 
       // End Document
@@ -225,7 +225,7 @@ namespace KML
     /// pointer should be used to show the point upon the map.
     /// </summary>
     /// <param name="cluster">A Collection of events</param>
-    private static void WriteClusterCollection(EventCollection cluster, String name = null)
+    private static void WriteCluster(EventCollection cluster, String name = null)
     {
       // Get the name of the cluster if over written via the parameter
       name = (name == null) ? cluster.Name : name;
@@ -248,7 +248,7 @@ namespace KML
       // Create a new Placemark for each Coordinate
       foreach(Event evt in cluster)
       {
-        WriteCluster(evt);
+        WriteEvent(evt);
       }
 
       // Finish the Folder
@@ -256,10 +256,10 @@ namespace KML
     }
 
     /// <summary>
-    /// 
+    /// This method will write the given event to the output KML file.
     /// </summary>
-    /// <param name="cluster"></param>
-    private static void WriteCluster(Event cluster)
+    /// <param name="cluster">The event to be written to the output kml</param>
+    private static void WriteEvent(Event cluster)
     {
       // Get the event name based upon the class name
       String eventName = cluster.GetType().Name;
@@ -269,7 +269,7 @@ namespace KML
       Kml.WriteElementString("name", eventName);
 
       // Create a fancy description
-      String description = CreateCooridnateDescription(cluster);
+      String description = CreateCoordinateDescription(cluster);
       Kml.WriteStartElement("description");
       Kml.WriteCData(description);
       Kml.WriteEndElement();
@@ -289,9 +289,9 @@ namespace KML
     }
 
     /// <summary>
-    /// 
+    /// This method will write the given centroid to the output KML file.
     /// </summary>
-    /// <param name="coordinate"></param>
+    /// <param name="cluster">The centroid to be written to the output kml</param>
     private static void WriteCentroid(Centroid centroid)
     {
       // Create a new Placemark
@@ -302,7 +302,7 @@ namespace KML
       Kml.WriteElementString("styleUrl", "#centroid");
 
       // Create a fancy description
-      String description = CreateCooridnateDescription(centroid);
+      String description = CreateCoordinateDescription(centroid);
       Kml.WriteStartElement("description");
       Kml.WriteCData(description);
       Kml.WriteEndElement();
@@ -316,6 +316,13 @@ namespace KML
       Kml.WriteEndElement();  
     }
 
+    /// <summary>
+    /// This method will write a radial circle to the output KML file. Google 
+    /// Earth does not support a circle, a point is written and rotated around 
+    /// a given centroid object 360 times to make a radial circle.
+    /// </summary>
+    /// <param name="centre">The centroid of the radial circle</param>
+    /// <param name="radius">The radius of the circle (in KM)</param>
     private static void WriteRadialCircle(Centroid centre, double radius)
     {
       // New Placemark
@@ -336,9 +343,7 @@ namespace KML
       // Add each coordinate to the coordinates list
       foreach (Coordinate coordinate in radialLocations)
       {
-        //Kml.WriteValue(coordinate.ToString());
         Kml.WriteValue(coordinate.ToString() + Environment.NewLine);
-        //kml += coordinate.ToString();
       }
 
       // End the Elements
@@ -355,7 +360,7 @@ namespace KML
     /// </summary>
     /// <param name="evt">The event to have a description created for</param>
     /// <returns>A well formed html string description</returns>
-    private static String CreateCooridnateDescription(Event evt)
+    private static String CreateCoordinateDescription(Event evt)
     {
       return String.Format("<div class=\"googft-info-window\" style=\"width:300px\">" + 
                               "<table>" + 
@@ -421,7 +426,7 @@ namespace KML
     /// <param name="c">The coordinate to have a description created for</param>
     /// <param name="centroid">Whether or not the coordinate is the centroid</param>
     /// <returns>A well formed html string description</returns>
-    private static String CreateCooridnateDescription(Centroid centroid)
+    private static String CreateCoordinateDescription(Centroid centroid)
     {
       return String.Format("<div class=\"googft-info-window\" style=\"width:250px\">" +
                               "<table>" +
