@@ -28,7 +28,7 @@
         <!-- Device PIN -->
         <SimpleData name="pin">03dcde00</SimpleData>
         <!-- Time stamp of the event -->
-        <SimpleData name="timestamp">07/08/2012 00:00:00<SimpleData>
+        <SimpleData name="timestamp">07/08/2012 00:00:00</SimpleData>
         <!-- Reference device? (true/false) -->
         <SimpleData name="reference">true</SimpleData>          
         <!-- Event type (drop/fail/success - success not implemented) -->
@@ -42,7 +42,7 @@
         <!-- Device End Mix-Band -->
         <SimpleData name="end_mix_band">Freq2</SimpleData>
         <!-- Device Start RRC State -->
-        <SimpleData name="start_rrc_state">IDLE<SimpleData>
+        <SimpleData name="start_rrc_state">IDLE</SimpleData>
       </ExtendedData>
     </Placemark>
     <!-- End Placemarks -->
