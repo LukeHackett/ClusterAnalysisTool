@@ -94,9 +94,9 @@ namespace KML
     /// <see cref="KML.GenerateKML"/>
     /// <param name="file">The KML file output name</param>
     /// <param name="clusters">A list of collection of events</param>
-    public static void GenerateKML(String file, List<EventCollection> clusters, String location = null)
+    public static void GenerateKML(List<EventCollection> clusters, String file, String location = null)
     {
-      GenerateKML(file, clusters, new EventCollection(), location);
+      GenerateKML(clusters, new EventCollection(), file, location);
     }
 
     /// <summary>
@@ -109,7 +109,7 @@ namespace KML
     /// <param name="file">the name of the KML file</param>
     /// <param name="clusters">A list of collection of events</param>
     /// <param name="noise">A collection of events that are deemed to be noise</param>
-    public static void GenerateKML(String file, List<EventCollection> clusters, EventCollection noise, String location = null)
+    public static void GenerateKML(List<EventCollection> clusters, EventCollection noise, String file, String location = null)
     {
       // Initalise a new Writer
       Kml = new XmlTextWriter(file, Encoding.UTF8);

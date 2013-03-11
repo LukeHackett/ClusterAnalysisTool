@@ -129,7 +129,7 @@ namespace Analysis
       }
 
       // Output the KML
-      KMLWriter.GenerateKML(file, DBscan.Clusters, DBscan.Noise);
+      KMLWriter.GenerateKML(DBscan.Clusters, DBscan.Noise, file);
     }
 
     /// <summary>

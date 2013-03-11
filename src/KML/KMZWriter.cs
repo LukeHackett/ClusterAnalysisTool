@@ -108,7 +108,7 @@ namespace KML
       map.GenerateHeatMap(heatmap);
 
       // Generate the KML
-      KMLWriter.GenerateKML(kml, clusters, noise, "heatmap.png");
+      KMLWriter.GenerateKML(clusters, noise, kml, "heatmap.png");
 
       // Create the GMZ File
       SaveToGMZ(tempDirectory, output);
