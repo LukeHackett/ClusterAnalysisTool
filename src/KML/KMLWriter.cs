@@ -32,6 +32,8 @@ using System.Text;
 using System.Xml;
 using Cluster;
 using System.IO;
+using System.Collections;
+using System.Collections.Specialized;
 
 namespace KML
 {
@@ -92,9 +94,9 @@ namespace KML
     /// <see cref="KML.GenerateKML"/>
     /// <param name="file">The KML file output name</param>
     /// <param name="clusters">A list of collection of events</param>
-    public static void GenerateKML(String file, List<EventCollection> clusters)
+    public static void GenerateKML(String file, List<EventCollection> clusters, String location = null)
     {
-      GenerateKML(file, clusters, new EventCollection());
+      GenerateKML(file, clusters, new EventCollection(), location);
     }
 
     /// <summary>
@@ -107,7 +109,7 @@ namespace KML
     /// <param name="file">the name of the KML file</param>
     /// <param name="clusters">A list of collection of events</param>
     /// <param name="noise">A collection of events that are deemed to be noise</param>
-    public static void GenerateKML(String file, List<EventCollection> clusters, EventCollection noise)
+    public static void GenerateKML(String file, List<EventCollection> clusters, EventCollection noise, String location = null)
     {
       // Initalise a new Writer
       Kml = new XmlTextWriter(file, Encoding.UTF8);
@@ -122,6 +124,12 @@ namespace KML
       Kml.WriteStartElement("Document");
       Kml.WriteElementString("name", Path.GetFileName(file));
       GenerateStyles();
+
+      // Generate a Heatmap if requested
+      if (location != null)
+      {
+        WriteHeatmap(location, clusters, noise);
+      }
       
       // Write the Clusters to the KML file
       for (int i = 0; i < clusters.Count; i++)
@@ -216,7 +224,76 @@ namespace KML
         Kml.WriteEndElement();
       }
     }
-    
+
+    /// <summary>
+    /// This method will create a Heatmap folder within the KML file to allow 
+    /// for a heatmap to be displayed. The location of the heatmap must be 
+    /// given as a parameter.
+    /// </summary>
+    /// <param name="location">The location of the image</param>
+    private static void WriteHeatmap(String location, List<EventCollection> clusters, EventCollection noise)
+    {
+      // Obtain a hastable of postitions for the heatmap
+      StringDictionary positions = GetImagePositions(clusters, noise);
+
+      // Folder
+      Kml.WriteStartElement("Folder");
+      Kml.WriteElementString("name", "Heatmap");
+
+      // Ground Overlay
+      Kml.WriteStartElement("GroundOverlay");
+
+      // Icon href
+      Kml.WriteStartElement("Icon");
+      Kml.WriteElementString("href", location);
+      Kml.WriteEndElement();
+
+      // LatLonBox
+      Kml.WriteStartElement("LatLonBox");
+      Kml.WriteElementString("north", positions["north"]);
+      Kml.WriteElementString("south", positions["south"]);
+      Kml.WriteElementString("east", positions["east"]);
+      Kml.WriteElementString("west", positions["west"]);
+
+      Kml.WriteEndElement();
+      Kml.WriteEndElement();
+      Kml.WriteEndElement();
+    }
+
+    /// <summary>
+    /// This method will return the positional coordinates for each of the four
+    /// corners of the heatmap. This allows for the heatmap image to be placed 
+    /// at these locations (north, south, east, west).
+    /// </summary>
+    /// <param name="clusters">A list of Clusters</param>
+    /// <param name="noise">A list of noise data</param>
+    /// <returns>A StringDictionarry of positions</returns>
+    private static StringDictionary GetImagePositions(List<EventCollection> clusters, EventCollection noise)
+    {
+      // Make a 'clone' of the input data structures
+      // Add the noise to the list of event collections
+      List<EventCollection> collection = new List<EventCollection>();
+      collection.AddRange(clusters);
+      collection.Add(noise);
+
+      // Obtain all the longitude values
+      var longitudes = collection.SelectMany(z => z.GetEvents())
+                                 .Select(evt => evt.Coordinate.Longitude);
+
+      // Obtain all the latitude values
+      var latitudes = collection.SelectMany(z => z.GetEvents())
+                                .Select(evt => evt.Coordinate.Latitude);
+
+      // Create a new Hashtable to store the min/max values.
+      StringDictionary table = new StringDictionary();
+      table["north"] = latitudes.Max().ToString();
+      table["south"] = latitudes.Min().ToString();
+      table["east"] = longitudes.Max().ToString();
+      table["west"] = longitudes.Min().ToString();
+
+      return table;
+    }
+
     /// <summary>
     /// This method will write each coordinate found within the given event 
     /// Collection to the KML file. Additional meta data such as the name and 
