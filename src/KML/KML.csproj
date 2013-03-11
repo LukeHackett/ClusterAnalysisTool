@@ -31,8 +31,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Ionic.Zip">
+      <HintPath>dll\Ionic.Zip.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,9 +46,14 @@
   <ItemGroup>
     <Compile Include="KMLReader.cs" />
     <Compile Include="KMLWriter.cs" />
+    <Compile Include="KMZWriter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Analysis.Heatmap\Analysis.Heatmap.csproj">
+      <Project>{362638A9-1730-44F1-9E36-6F78D6285AEF}</Project>
+      <Name>Analysis.Heatmap</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Clusters\Clusters.csproj">
       <Project>{8FBC4F88-C8F5-4007-981B-665C751C6201}</Project>
       <Name>Clusters</Name>
