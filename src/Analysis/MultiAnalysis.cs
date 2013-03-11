@@ -129,7 +129,23 @@ namespace Analysis
       }
 
       // Output the KML
-      KMLWriter.GenerateKML(file, DBscan.ClusteredEvents, DBscan.NoiseEvents);
+      KMLWriter.GenerateKML(file, DBscan.Clusters, DBscan.Noise);
+    }
+
+    /// <summary>
+    /// This method will output the analysed KMZ file to the given location. 
+    /// </summary>
+    /// <param name="file">The output location of the KMZ file</param>
+    public void GenerateKMZ(String file)
+    {
+      // Ensure that analysis has been performed
+      if (DBscan == null)
+      {
+        throw new Exception("Input data has not been clustered");
+      }
+
+      // Output the KMZ
+      KMZWriter.GenerateKMZ(DBscan.Clusters, DBscan.Noise, file);
     }
 
     #endregion

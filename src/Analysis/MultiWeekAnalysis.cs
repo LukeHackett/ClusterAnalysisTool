@@ -249,7 +249,7 @@ namespace Analysis
         // Setup a new list of EventCollections to store all clusters
         List<EventCollection> week = new List<EventCollection>();
         // Start from 1 as 0 reserved for noise
-        for(int i = 1; i < DBscan.ClusteredEvents.Count; i++)
+        for(int i = 1; i < DBscan.Clusters.Count; i++)
         {
           // Obtain the cluster from the inital results set
           var cluster = result.Where(evt => evt.Coordinate.ClusterId == i);
