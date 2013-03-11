@@ -153,6 +153,7 @@ namespace ClusterAnalysisTool
       try
       {
         // Get the attributes for file or directory
+        String arg = InputArguments["source"];
         FileAttributes fileattr = File.GetAttributes(InputArguments["source"]);
       }
       catch (FileNotFoundException ex)
@@ -321,8 +322,8 @@ namespace ClusterAnalysisTool
       multi.AnalyseWeeks();
 
       // Output the KML file
-      String kml_output = GenerateKMLOutputName();
-      multi.GenerateKML(kml_output);
+      String kml_output = GenerateOutputName(".kmz");
+      multi.GenerateKMZ(kml_output);
       
       // Save the results to the output directory
       bool minify = InputArguments.ContainsKey("jsminify") ? true : false;
@@ -350,8 +351,8 @@ namespace ClusterAnalysisTool
       multi.AnalyseProducts();
 
       // Output the KML file
-      String kml_output = GenerateKMLOutputName();
-      multi.GenerateKML(kml_output);
+      String kml_output = GenerateOutputName(".kmz");
+      multi.GenerateKMZ(kml_output);
 
       // Save the results to the output directory
       bool minify = InputArguments.ContainsKey("jsminify") ? true : false;
@@ -365,7 +366,7 @@ namespace ClusterAnalysisTool
     /// parent directory will be used for the output KML filename.
     /// </summary>
     /// <returns>A well formed KML file name</returns>
-    private static String GenerateKMLOutputName()
+    private static String GenerateOutputName(String ext = "")
     {
       // The name of the output file
       String name;
@@ -384,7 +385,7 @@ namespace ClusterAnalysisTool
         // File 
         name = Path.GetDirectoryName(InputArguments["source"]);
       }
-      return InputArguments["output"] + name + "_output.kml";
+      return InputArguments["output"] + name + "_output" + ext;
     }
 
     #endregion
