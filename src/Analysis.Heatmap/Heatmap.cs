@@ -81,12 +81,15 @@ namespace Analysis.Heatmap
     /// Primary Constructor
     /// </summary>
     /// <param name="coordinates">A list of coordinates to be processed</param>
-    public Heatmap(List<Coordinate> coordinates)
+    public Heatmap(List<EventCollection> events)
     {
-      Coordinates = coordinates;
+      // Convert the list of EventCollection to List of coordinates
+      Coordinates = events.SelectMany(z => z.GetEvents())
+                          .Select(evt => evt.Coordinate)
+                          .ToList();
       Size = new Size(1024, 1024);
       Radius = 50;
-      HeatPoints = GenerateHeatPoints(coordinates);
+      HeatPoints = GenerateHeatPoints(Coordinates);
     }
 
     /// <summary>
@@ -95,12 +98,15 @@ namespace Analysis.Heatmap
     /// <param name="coordinates">A list of coordinates to be processed</param>
     /// <param name="radius">The radius of each heat point</param>
     /// <param name="border">The size of the border around the image</param>
-    public Heatmap(List<Coordinate> coordinates, Size size, int radius)
+    public Heatmap(List<EventCollection> events, Size size, int radius)
     {
-      Coordinates = coordinates;
+      // Convert the list of EventCollection to List of coordinates
+      Coordinates = events.SelectMany(z => z.GetEvents())
+                          .Select(evt => evt.Coordinate)
+                          .ToList();
       Size = size;
       Radius = radius;
-      HeatPoints = GenerateHeatPoints(coordinates);
+      HeatPoints = GenerateHeatPoints(Coordinates);
     }
 
     #endregion
