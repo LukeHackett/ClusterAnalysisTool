@@ -128,7 +128,6 @@ namespace Cluster
     /// <returns>a formatted string.</returns>
     public override String ToString()
     {
-      //return String.Format("{0},{1},{2}", Latitude, Longitude, Altitude);
       return String.Format("{0},{1},{2}", Longitude, Latitude, Altitude);
     }
 
