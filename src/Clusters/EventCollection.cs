@@ -171,6 +171,32 @@ namespace Cluster
       return this.Where(evt => evt.GetType().Name == type);
     }
 
+
+    /// <summary>
+    /// This method will deep clone the current object instance.
+    /// </summary>
+    /// <returns>An EventCollection object</returns>
+    public Object Clone()
+    {
+      // Create a new list to store the clone in
+      EventCollection collection = new EventCollection();
+
+      // Copy over each coordinate in the list
+      foreach (Event evt in this)
+      {
+        collection.Add(evt);
+      }
+
+      // Copy over the meta-data
+      collection.Name = this.Name;
+      collection.Description = this.Description;
+      collection.Noise = this.Noise;
+      collection.Centroid = this.Centroid;
+
+      // Return the newly cloned coordinate collection
+      return collection;
+    }
+
     /// <summary>
     /// This method will split the current Collection into a list of section 
     /// number of elements. Each element is a Call Log Collection, and each 
