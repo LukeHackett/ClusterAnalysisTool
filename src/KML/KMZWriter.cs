@@ -103,13 +103,19 @@ namespace KML
       String kml = tempDirectory + "data.kml";
       String heatmap = tempDirectory + "heatmap.png";
 
-      // Generate the heatmap
-      Heatmap map = new Heatmap(clusters);
-      map.GenerateHeatMap(heatmap);
-
-      // Generate the KML
-      KMLWriter.GenerateKML(clusters, noise, kml, "heatmap.png");
-
+      // Generate the heatmap inc the KML if possible
+      if (clusters.Count > 0)
+      {
+        Heatmap map = new Heatmap(clusters);
+        map.GenerateHeatMap(heatmap);
+        // Generate the KML
+        KMLWriter.GenerateKML(clusters, noise, kml, "heatmap.png");
+      }
+      else
+      {
+        // Generate the KML on its own (no heatmap)
+        KMLWriter.GenerateKML(clusters, noise, kml);
+      }
       // Create the GMZ File
       SaveToGMZ(tempDirectory, output);
 
