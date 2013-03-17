@@ -193,6 +193,28 @@ namespace Analysis
     #region Public Methods (Fails)
 
     /// <summary>
+    /// This method will return all the failed events grouped by the cluster ID.
+    /// </summary>
+    /// <returns>A Dictionary of Analysis results</returns>
+    public Dictionary<int, EventCollection> GetFailFigures()
+    {
+      // Dictionary to hold the final results in.
+      Dictionary<int, EventCollection> results = new Dictionary<int, EventCollection>();
+      // Loop over each Cluster
+      foreach (KeyValuePair<int, ClusterAnalysis> pair in ClustersAnalysis)
+      {
+        // Get the index key (Cluster ID)
+        int index = pair.Key;
+        // Get the Start RAT figures
+        EventCollection collection = pair.Value.FailAnalysis.Cluster;
+        // Add the figures to the dictionary using the cluster ID as the index
+        results.Add(index, collection);
+      }
+
+      return results;
+    }
+
+    /// <summary>
     /// This method will return all the failed events grouped by the cluster ID 
     /// and the start RAT value.
     /// </summary>
@@ -309,14 +331,14 @@ namespace Analysis
 
     #endregion
 
-    #region Private Methods
+    #region Protected Methods
 
     /// <summary>
     /// This method will setup the WeekAnalysis object held within this object. 
     /// Each collection within the Events object will form a new ClusterAnalysis 
     /// object within the WeekAnalysis dictionary.
     /// </summary>
-    public void InitaliseAnalysis()
+    protected void InitaliseAnalysis()
     {
       // Setup the analysis object
       ClustersAnalysis = new Dictionary<int, ClusterAnalysis>();

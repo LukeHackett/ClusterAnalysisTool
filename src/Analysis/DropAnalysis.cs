@@ -47,5 +47,19 @@ namespace Analysis
     }
 
     #endregion
+
+    #region Public Methods
+
+    /// <summary>
+    /// This method will return the total number of drop events held within this 
+    /// object.
+    /// </summary>
+    /// <returns>The total number of drop events</returns>
+    public int GetTotalDropCount()
+    {
+      return Cluster.Count();
+    }
+
+    #endregion
   }
 }

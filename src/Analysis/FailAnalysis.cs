@@ -47,5 +47,19 @@ namespace Analysis
     }
 
     #endregion
+
+    #region Public Methods
+
+    /// <summary>
+    /// This method will return the total number of failed events held within 
+    /// this object.
+    /// </summary>
+    /// <returns>The total number of fail events</returns>
+    public int GetTotalFailCount()
+    {
+      return Cluster.Count();
+    }
+
+    #endregion
   }
 }
