@@ -53,18 +53,8 @@ namespace Analysis
     #region Public Methods
 
     /// <summary>
-    /// This method will return the total number of drop events held within this 
-    /// object.
-    /// </summary>
-    /// <returns>The total number of drop events</returns>
-    public int GetTotalDropCount()
-    {
-      return Cluster.Count();
-    }
-
-    /// <summary>
-    /// This method will return the total number of drop events held within this 
-    /// object that dropped upon the given start RAT.
+    /// This method will return the total number of events held within this 
+    /// object that had the given Start RAT.
     /// </summary>
     /// <param name="startrat">The start RAT value</param>
     /// <returns>Total number of drops upon the given start RAT</returns>
@@ -74,12 +64,12 @@ namespace Analysis
     }
 
     /// <summary>
-    /// This method will return the total number of drop events held within this 
-    /// object that dropped upon the given start/end RAT.
+    /// This method will return the total number of events held within this 
+    /// object that had the given Start and End RAT.
     /// </summary>
     /// <param name="startrat">The start RAT value</param>
     /// <param name="endrat">The end RAT value</param>
-    /// <returns>Total number of drops upon the given start/end RAT</returns>
+    /// <returns>Total number of events upon the given start/end RAT</returns>
     public int GetRatCount(String startrat, String endrat)
     {
       return Cluster.Where(evt => evt.StartRat == startrat)
@@ -87,23 +77,23 @@ namespace Analysis
     }
 
     /// <summary>
-    /// This method will return the total number of drop events held within this 
-    /// object that dropped upon the given start frequency.
+    /// This method will return the total number of events held within this 
+    /// object that had the given Start Mix Band.
     /// </summary>
     /// <param name="start">The start Mix-Band value</param>
-    /// <returns>Total number of drops on the given frequency</returns>
+    /// <returns>Total number of events on the given frequency</returns>
     public int GetMixBandCount(String start)
     {
       return Cluster.Where(evt => evt.StartMixBand == start).Count();
     }
 
     /// <summary>
-    /// This method will return the total number of drop events held within this 
-    /// object that dropped upon the given start/end frequency.
+    /// This method will return the total number of events held within this 
+    /// object that had the given Start and End Mix Band.
     /// </summary>
     /// <param name="start">The start Mix-Band value</param>
     /// <param name="end">The end Mix-Band value</param>
-    /// <returns>Total number of drops on the given frequency</returns>
+    /// <returns>Total number of events on the given frequency</returns>
     public int GetMixBandCount(String start, String end)
     {
       return Cluster.Where(evt => evt.StartMixBand == start)
@@ -112,10 +102,9 @@ namespace Analysis
     }
 
     /// <summary>
-    /// This method will return all the events grouped by the cluster ID and the 
-    /// start RAT value.
+    /// This method will return all the events grouped by the start RAT value.
     /// </summary>
-    /// <returns>A Dictionary of Analysis results</returns>
+    /// <returns>An AnalysisResult object</returns>
     public AnalysisResults GroupByStartRat() 
     {
       // Group all events by the Start RAT only.
@@ -140,8 +129,8 @@ namespace Analysis
     }
 
     /// <summary>
-    /// This method will return all the events grouped by the cluster ID and the 
-    /// start/end RAT value.
+    /// This method will return all the events grouped by the start/end RAT 
+    /// value.
     /// </summary>
     /// <returns>A Dictionary of Analysis results</returns>
     public AnalysisResults GroupByStartEndRat()
@@ -171,8 +160,8 @@ namespace Analysis
     }
 
     /// <summary>
-    /// This method will return all the events grouped by the cluster ID and the 
-    /// start Mix-Band value.
+    /// This method will return all the events grouped by the start Mix-Band 
+    /// value.
     /// </summary>
     /// <returns>A Dictionary of Analysis results</returns>
     public AnalysisResults GroupByStartMixBand()
@@ -199,8 +188,8 @@ namespace Analysis
     }
 
     /// <summary>
-    /// This method will return all the events grouped by the cluster ID and the 
-    /// start/end Mix-Band value.
+    /// This method will return all the events grouped by the start/end Mix-Band
+    /// value.
     /// </summary>
     /// <returns>A Dictionary of Analysis results</returns>
     public AnalysisResults GroupByStartEndMixBand()
@@ -230,8 +219,7 @@ namespace Analysis
     }
 
     /// <summary>
-    /// This method will return all the events grouped by the cluster ID and the 
-    /// start RRC state.
+    /// This method will return all the events grouped by the start RRC state.
     /// </summary>
     /// <returns>A Dictionary of Analysis results</returns>
     public AnalysisResults GroupByStartRRCState()

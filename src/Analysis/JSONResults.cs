@@ -60,10 +60,15 @@ namespace Analysis
       WeekNumber = week_number;
     }
 
+    /// <summary>
+    /// Secondary Constructor
+    /// </summary>
+    /// <param name="device">The device name associated with the cluster</param>
     public JSONResults(String device)
     {
       Device = device;
     }
+
     #endregion
 
     #region Public Methods
