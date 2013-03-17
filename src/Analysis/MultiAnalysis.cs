@@ -109,10 +109,12 @@ namespace Analysis
     /// This method will initalise the clustering algorithm, in order to cluster
     /// the data set held within this object.
     /// </summary>
-    public void Cluster()
+    /// <param name="eps">The epsilon value</param>
+    /// <param name="min">The minimum number of coordinates per cluster</param>
+    public void Cluster(double eps, int min)
     {
       // Cluster the data
-      DBscan = new DBSCAN(Events);
+      DBscan = new DBSCAN(Events, eps, min);
       DBscan.Analyse();
     }
 
