@@ -1,5 +1,13 @@
+# General Project Settings
 *.suo
 *.csproj.user
 
+# Source Settings
 src/*/bin/*
 src/*/obj/*
+
+# Test Settings
+tests/*/TestResults/*
+tests/*/bin/*
+tests/*/obj/*
+tests/*/output/*
