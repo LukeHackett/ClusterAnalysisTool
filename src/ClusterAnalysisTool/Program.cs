@@ -57,6 +57,16 @@ namespace ClusterAnalysisTool
     /// </summary>
     private static StringDictionary InputArguments;
 
+    /// <summary>
+    /// Default EPS value
+    /// </summary>
+    private const double EPS = 1.5;
+
+    /// <summary>
+    /// Default Minimum Points value to form a cluster
+    /// </summary>
+    private const int MIN_POINTS = 3;
+
     #endregion
 
     #region Public Static Methods
@@ -112,7 +122,7 @@ namespace ClusterAnalysisTool
     #region Private Static Methods
 
     /// <summary>
-    /// This meethod will print usage instructions - more specifically how to 
+    /// This method will print usage instructions - more specifically how to 
     /// use this console application.
     /// </summary>
     private static void PrintHelp()
@@ -122,16 +132,21 @@ namespace ClusterAnalysisTool
       Console.WriteLine("Copyright (c) BlackBerry 2013. All Rights Reserved.");
       Console.WriteLine("");
       Console.WriteLine("USAGE:");
-      Console.WriteLine("\t --source");
+      Console.WriteLine("\t --source=[value]");
       Console.WriteLine("\t\t The source directory or .KML file");
-      Console.WriteLine("\t --output");
+      Console.WriteLine("\t --output=[value]");
       Console.WriteLine("\t\t The analysis output directory");
       Console.WriteLine("\t --analysis=[option]");
       Console.WriteLine("\t\t The type of analysis to be performed. " + 
                         "option can be one of 'all', 'week' or 'product'");
       Console.WriteLine("");
       Console.WriteLine("\t --jsminify");
-      Console.WriteLine("\t\t Minifies all JavaScript output (default is false).");
+      Console.WriteLine("\t\t Minifies all JavaScript output (default is false)");
+      Console.WriteLine("\t --eps=[value]");
+      Console.WriteLine("\t\t The EPS value to be used (default is " + EPS + ")");
+      Console.WriteLine("\t --min=[value]");
+      Console.WriteLine("\t\t The minimum number of objects required to form " + 
+                        "a cluster (default is " + MIN_POINTS + ").");
       Console.WriteLine("");
     }
 
@@ -314,9 +329,15 @@ namespace ClusterAnalysisTool
       // Create a Multi-Week Analysis object
       MultiWeekAnalysis multi = new MultiWeekAnalysis();
       multi.AddRange(collection);
-      
+
+      // Obtain the EPS distance value
+      double eps = GetEPSInput();
+
+      // Obtain the Minimum Number of Objects per cluster value
+      int min = GetMinPointsInput();
+
       // Cluster the Multi-Week Data
-      multi.Cluster();
+      multi.Cluster(eps, min);
       
       // Analyse the Multi-Week Data
       multi.AnalyseWeeks();
@@ -344,8 +365,14 @@ namespace ClusterAnalysisTool
       MultiProductAnalysis multi = new MultiProductAnalysis();
       multi.AddRange(collection);
 
+      // Obtain the EPS distance value
+      double eps = GetEPSInput();
+
+      // Obtain the Minimum Number of Objects per cluster value
+      int min = GetMinPointsInput();
+
       // Cluster the Multi-Week Data
-      multi.Cluster();
+      multi.Cluster(eps, min);
 
       // Analyse the Multi-Week Data
       multi.AnalyseProducts();
@@ -387,6 +414,75 @@ namespace ClusterAnalysisTool
       }
       return InputArguments["output"] + name + "_output" + ext;
     }
+
+    /// <summary>
+    /// This method will try to obtain a correct EPS value from the given 
+    /// command line arguments. If the argument is invalid (null or less than 
+    /// 0), then the default value will be returned.
+    /// </summary>
+    /// <returns>The EPS value as a double</returns>
+    private static double GetEPSInput()
+    {
+      // Return the default value
+      if (!InputArguments.ContainsKey("eps"))
+      {
+        return EPS;
+      }
+
+      try
+      {
+        // Obtain the value
+        double eps = Double.Parse(InputArguments["eps"]);
+
+        // Return the eps value if deemed valid
+        if (eps > 0)
+        {
+          return eps;
+        }
+      }
+      catch (FormatException)
+      {
+        // do nothing
+      }
+
+      // default value
+      return EPS;
+    }
+
+    /// <summary>
+    /// This method will try to obtain a correct Minimum Points value from the 
+    /// given command line arguments. If the argument is invalid (null or less 
+    /// than 0), then the default value will be returned.
+    /// </summary>
+    /// <returns>The minimum number of points per cluster</returns>
+    private static int GetMinPointsInput()
+    {
+      // Return the default value
+      if (!InputArguments.ContainsKey("min"))
+      {
+        return MIN_POINTS;
+      }
+
+      try
+      {
+        // Obtain the value
+        int minpts = int.Parse(InputArguments["min"]);
+
+        // Return the eps value if deemed valid
+        if (minpts > 0)
+        {
+          return minpts;
+        }
+      }
+      catch (FormatException)
+      {
+        // do nothing
+      }
+
+      // default value
+      return MIN_POINTS;
+    }
+
 
     #endregion
   }
