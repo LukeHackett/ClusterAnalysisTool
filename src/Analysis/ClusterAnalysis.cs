@@ -68,7 +68,6 @@ namespace Analysis
     /// <param name="cluster">An EventCollection representing a cluster</param>
     /// <param name="clusterid">The ID of the cluster</param>
     public ClusterAnalysis(EventCollection cluster, int clusterid)
-      : base()
     {
       Cluster = cluster;
       ClusterID = clusterid;
@@ -77,7 +76,5 @@ namespace Analysis
     }
 
     #endregion
-
-
   }
 }
