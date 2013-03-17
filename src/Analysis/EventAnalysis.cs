@@ -257,6 +257,24 @@ namespace Analysis
       return results;
     }
 
+    /// <summary>
+    /// This method will split a key up into its components. Each component is 
+    /// split based upon the KeySeperator constant within this class.
+    /// </summary>
+    /// <param name="Key">The key to be split up</param>
+    /// <returns>A String array containing each component</returns>
+    public String[] SplitKey(String Key)
+    {
+      // Ensure the key can be split
+      if(!Key.Contains(KeySeperator))
+      {
+        return null;
+      }
+
+      // Split the key
+      return Key.Split(new String[] { KeySeperator }, StringSplitOptions.None);
+    }
+
     #endregion
 
     #region Private Methods
