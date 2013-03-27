@@ -1,13 +1,36 @@
-# General Project Settings
+# OS generated files  #
+#######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+
+
+#      VS Files       #
+#######################
 *.suo
 *.csproj.user
 
-# Source Settings
+
+# Source Build Files  #
+#######################
 src/*/bin/*
 src/*/obj/*
 
-# Test Settings
+
+#  Test Build Files   #
+#######################
 tests/*/TestResults/*
 tests/*/bin/*
 tests/*/obj/*
 tests/*/output/*
+
+
+# Visualisation Files #
+#######################
+# html output
+html/data/*
