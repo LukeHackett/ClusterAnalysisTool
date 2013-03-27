@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Visualisation Output</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple approach to outputing JSON data">
+    <meta name="author" content="Luke Hackett">
+    <!-- Style Sheets -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <style type="text/css">
+      .chart {
+        display: block;
+        margin: auto;
+      }
+
+      text {
+        font-size: 11px;
+      }
+
+      rect {
+        fill: none;
+      }
+
+      #page-content > div {
+        margin-bottom: 20px
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Main Navigation Bar -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="index.html">Visualisation Output</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="map.html">3D Map</a></li>
+              <li><a href="dendrogram.html">Dendrogram</a></li>
+              <li><a href="bar_chart.html">Bar Chart</a></li>
+              <li><a href="circle_pack.html">Circle Pack</a></li>
+              <li><a href="partition.html">Partition</a></li>
+              <li class="active"><a href="treemap.html">Treemap</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+    <!-- Main Container -->
+    <div id="content" class="container">
+      <!-- Page Sub-title -->
+      <div id="header-container">
+        <!-- Page Title -->
+        <h1>Treemap</h1>
+        <!-- Additional Options -->
+        <div id="mode" class="btn-group">
+          <!-- File Selector -->
+          <div id="files" class="btn-group">
+            <button class="btn btn-primary">File</button>
+            <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu pull-right"></ul>
+          </div>
+          <!-- Week or Product Selector -->
+          <div id="analysis" class="btn-group">
+            <button class="btn btn-info">Mode</button>
+            <button class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu pull-right">
+              <li><a href="#">Weekly</a></li>
+              <li><a href="#">Product</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+            <!-- Page Container -->
+      <div id="page-content">
+        <div id="weekly" style="display: none;">
+          <!-- Drop RAT -->
+          <div id="drop_rat">
+            <ul class="breadcrumb">
+              <li class="active">Drop Events RAT Usage</li>
+            </ul>
+          </div>
+
+          <!-- Drop Mix-Band -->
+          <div id="drop_mix_band">
+            <ul class="breadcrumb">
+              <li class="active">Drop Events Mix-Band Usage</li>
+            </ul>
+          </div>
+
+         <!-- Fail RAT -->
+          <div id="fail_rat">
+            <ul class="breadcrumb">
+              <li class="active">Fail Events RAT Usage</li>
+            </ul>
+          </div>
+
+         <!-- Fail Mix-Band -->
+          <div id="fail_mix_band">
+            <ul class="breadcrumb">
+              <li class="active">Fail Events Mix-Band Usage</li>
+            </ul>
+          </div>  
+        </div>
+
+        <div id="product" style="display: none;">
+          <!-- Drop RAT -->
+          <div id="drop_rat">
+            <ul class="breadcrumb">
+              <li class="active">Drop Events RAT Usage</li>
+            </ul>
+          </div>
+
+          <!-- Drop Mix-Band -->
+          <div id="drop_mix_band">
+            <ul class="breadcrumb">
+              <li class="active">Drop Events Mix-Band Usage</li>
+            </ul>
+          </div>
+
+         <!-- Fail RAT -->
+          <div id="fail_rat">
+            <ul class="breadcrumb">
+              <li class="active">Fail Events RAT Usage</li>
+            </ul>
+          </div>
+
+         <!-- Fail Mix-Band -->
+          <div id="fail_mix_band">
+            <ul class="breadcrumb">
+              <li class="active">Fail Events Mix-Band Usage</li>
+            </ul>
+          </div>  
+        </div>
+      </div>
+    </div>
+    <!-- JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.9.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/d3.v3.min.js"></script>
+    <script src="js/treemap.js"></script>
+    <script src="js/selector.js"></script>
+    </div>
+  </body>
+</html>

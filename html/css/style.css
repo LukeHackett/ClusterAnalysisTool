@@ -1,0 +1,68 @@
+body {
+  padding-top: 40px;
+  background-color: whiteSmoke;
+}
+
+svg {
+  font-size: 14px;
+}
+
+.invert {
+  background: #1f1f1f;
+  color: #dcdccc;
+}
+
+.invert h2, .invert h3 {
+  color: #7f9f7f;
+}
+
+.string, .regexp {
+  color: #f39;
+}
+
+.keyword {
+  color: #00c;
+}
+
+.comment {
+  color: #777;
+  font-style: oblique;
+}
+
+.number {
+  color: #369;
+}
+
+.class, .special {
+  color: #1181B8;
+}
+
+#content {
+  background-color: white;
+}
+
+#header-container {
+  background-color: #F0F8FA;
+  padding: 20px;
+  margin: 0px 0px 10px 0px;
+  border-bottom: 1px solid #BAD8E6;
+  position: relative;
+}
+
+#header-container > h1 {
+  display: inline-block;
+}
+
+#header-container > #mode {
+  position: absolute;
+  right: 20px;
+  bottom: 36px;
+}
+
+#page-content {
+  padding: 20px;
+}
+
+#drop_rat, #drop_mix_band, #fail_rat, #fail_mix_band {
+  margin-bottom: 50px;
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Visualisation Output</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple approach to outputing JSON data">
+    <meta name="author" content="Luke Hackett">
+    <!-- Style Sheets -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <!-- Main Navigation Bar -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="index.html">Visualisation Output</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="index.html">Home</a></li>
+              <li class="active"><a href="map.html">3D Map</a></li>
+              <li><a href="dendrogram.html">Dendrogram</a></li>
+              <li><a href="bar_chart.html">Bar Chart</a></li>
+              <li><a href="circle_pack.html">Circle Pack</a></li>
+              <li><a href="partition.html">Partition</a></li>
+              <li><a href="treemap.html">Treemap</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+    <!-- Main Container -->
+    <div id="content" class="container">
+      <!-- Page Sub-title -->
+      <div id="header-container">
+        <!-- Page Title -->
+        <h1>Google Earth 3D Map</h1>
+      </div>
+      <!-- Page Container -->
+      <div id="page-content">
+        <div class="row-fluid">
+          <!-- Options -->
+          <div class="span3">
+            <div class="well sidebar-nav">
+              <ul id="options-nav" class="nav nav-list">
+                <!-- Google Earth Options -->
+                <li class="nav-header">Google Earth Options</li>
+                <li>
+                  <label class="checkbox">
+                    <input type="checkbox" id="compass" onclick="toggleCompass()" checked="checked" />
+                    Compass
+                  </label>
+                </li>  
+                <li>
+                  <label class="checkbox">
+                    <input type="checkbox" id="roads" onclick="toggleRoads()" />
+                    Roads
+                  </label>
+                </li>  
+                <li>
+                  <label class="checkbox">
+                    <input type="checkbox" id="borders" onclick="toggleBoarders()" />
+                    Borders
+                  </label>
+                </li>  
+                <!-- Load Additional Data Files -->
+                <li class="nav-header">Data Files</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Map -->
+          <div class="span9">
+            <div id="map" style="height: 600px;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.9.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/d3.v3.min.js"></script>
+    <script src="js/selector.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script src="js/map.js"></script>
+  </body>
+</html>
