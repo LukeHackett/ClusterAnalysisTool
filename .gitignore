@@ -30,7 +30,10 @@ tests/*/obj/*
 tests/*/output/*
 
 
+#   KML Output Files  #
+#######################
+output/*
+
 # Visualisation Files #
 #######################
-# html output
 html/data/*
