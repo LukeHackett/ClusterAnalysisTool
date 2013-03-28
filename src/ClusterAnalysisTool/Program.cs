@@ -409,8 +409,8 @@ namespace ClusterAnalysisTool
       }
       else
       {
-        // File 
-        name = Path.GetDirectoryName(InputArguments["source"]);
+        // File
+        name = Path.GetFileNameWithoutExtension(InputArguments["source"]);
       }
       return InputArguments["output"] + name + "_output" + ext;
     }
