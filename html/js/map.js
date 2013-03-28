@@ -31,6 +31,37 @@ jQuery(document).ready(function($){
   var ge;
   google.load("earth", "1");
 
+
+  /**
+   * This function will return the BaseURL of the web application
+   */
+  function getBaseURL() {
+    var protocol = window.location.protocol + "//";
+    var hostname = window.location.hostname;
+    var pathname = window.location.pathname;
+    
+    // Get each part of the URL
+    var url = pathname.substring(1, pathname.length).split('/');
+
+    // Null the last value - /
+    url[url.length-1] = "";
+
+    // Clean the array
+    for(var i = 0; i < url.length; i++)
+    {
+      if(url[i] == ""){
+        url[i] = "/";
+      }
+    }
+
+    // Rebuild the path
+    var path = "/" + url.join().replace(",", "");
+
+    // Return the URL
+    return protocol + hostname + path;
+  }
+
+
   /**
    * Initialisation
    */
@@ -110,7 +141,7 @@ jQuery(document).ready(function($){
    */
   function loadKml(file) {
     // Create the FULL URL
-    var kmlUrl = SERVER_URL + file;
+    var kmlUrl = getBaseURL() + file;
     // fetch the KML
     google.earth.fetchKml(ge, kmlUrl, function(kmlObject) {
       // NOTE: we still have access to the 'file' variable (via JS closures)
