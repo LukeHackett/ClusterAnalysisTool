@@ -43,7 +43,7 @@ namespace KML
   /// A KMZ file can contain numerious KML files, and addtional supporting 
   /// material such as html, css, javascript and image files.
   /// </summary>
-  public class KMZWriter
+  public static class KMZWriter
   {
 
     /// <summary>
