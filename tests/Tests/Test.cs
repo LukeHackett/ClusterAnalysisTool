@@ -38,9 +38,9 @@ namespace Tests
       // Get the current executing assembly location
       String current = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
       // Set the SOLUTION_DIR as two up from executing directory
-      SOLUTION_DIR = Path.GetDirectoryName(Path.GetDirectoryName(Path.GetFullPath(current))) + "\\";
+      SOLUTION_DIR = Path.GetDirectoryName(Path.GetDirectoryName(Path.GetDirectoryName(Path.GetFullPath(current)))) + "\\";
       // Set the entire ROOT_DIR
-      ROOT_DIR = Path.GetDirectoryName(Path.GetDirectoryName(Path.GetDirectoryName(Path.GetFullPath(current)))) + "\\";
+      ROOT_DIR = Path.GetDirectoryName(Path.GetDirectoryName(Path.GetDirectoryName(Path.GetDirectoryName(Path.GetFullPath(current))))) + "\\";
       // Set the TEMP directory
       OUTPUT_DIR = SOLUTION_DIR + "\\output\\";
     }

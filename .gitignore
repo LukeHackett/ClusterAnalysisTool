@@ -25,9 +25,10 @@ src/*/obj/*
 #  Test Build Files   #
 #######################
 tests/TestResults/*
-tests/bin/*
-tests/obj/*
 tests/output/*
+tests/Tests/bin/*
+tests/Tests/obj/*
+
 
 
 #   KML Output Files  #
