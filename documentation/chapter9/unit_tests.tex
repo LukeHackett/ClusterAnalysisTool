@@ -1,0 +1,552 @@
+\section{Unit Testing}
+\label{sec:unit_testing}
+
+In order to test the various back end processes and methods a number of Unit 
+Tests have been developed.
+
+The classes are designed to test the underlying system, and are not able to 
+test how a user interacts with the system (though a shell). The testing of the 
+User Interface will be discussed within section \ref{sec:walkthroughs}.
+
+A listing of the automated unit test classes can be found within the supplied 
+software CD-ROM.
+
+\subsection{Unit Test Implementation}
+
+All test classes extend a main {\ttfamily Test} class. The objective of this 
+test class is to ensure various constants (such as root directories) are 
+available to all tests.
+
+The Test class does not serve any other purpose.
+
+\subsection{Test Solution Summary}
+The objective behind each of the tests was to firstly ensure that a various 
+stages of method calls a given variable should be equal to another variable. 
+
+Secondly the tests ensure that not only the output was correct, but in the case
+of JSON file to ensure that the output was syntactically correct. In this 
+instance, if a JSON file was not syntactically correct then it would cause the 
+visualisation aspect of the product to fail.
+
+It must be noted that the visualisation aspect of the product has not 
+undertaken any form of visualisation. The reason being is that the 
+visualisation aspect was an add-on to the main project. 
+
+The visualisation web files (HTML, CSS and JavaScript) are effectively a 
+framework that ``wraps around'' the JSON files --- hence why it is imperative 
+that the JSON files are syntactically correct.
+
+Table \ref{tab:test_class_summary} highlights the overall test results for each 
+(unit test) class.
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|l|c|c|c|}
+    \hline
+    {\bfseries Test Class}   & {\bfseries Tests Passed} & 
+    {\bfseries Tests Failed} & {\bfseries Tests Ignored} \\ 
+    \hline
+    CoordinateTest           & 5    & 0   & 0   \\ 
+    CentroidTest             & 5    & 0   & 0   \\
+    SphericalCoordinateTest  & 1    & 0   & 0   \\
+    CoordinateCollectionTest & 5    & 0   & 0   \\
+    EventCollectionTest      & 5    & 0   & 0   \\    
+    KMLReaderTest            & 8    & 0   & 0   \\  
+    KMLWriterTest            & 2    & 0   & 0   \\
+    JSONWriterTest           & 6    & 0   & 0   \\
+    DBSCANTest               & 1    & 0   & 0   \\
+    DropAnalysisTest         & 6    & 0   & 0   \\ 
+    FailAnalysisTest         & 6    & 0   & 0   \\ 
+    WeekAnalysisTest         & 12   & 0   & 0   \\ 
+    ProductAnalysisTest      & 12   & 0   & 0   \\ 
+    MultiWeekAnalysisTest    & 2    & 0   & 0   \\
+    MultiProductAnalysisTest & 2    & 0   & 0   \\
+    \hline
+  \end{tabular}
+  \caption[Summary of Unit Test Results]
+          {Summary of Unit Test Results}
+  \label{tab:test_class_summary}
+\end{table}
+
+
+\subsubsection{Coordinate Test}
+
+The {\ttfamily CoordinateTest} class tests the methods that are found 
+within the Coordinate class. This class acts as a base class to other classes 
+and hence will be tested multiple times.
+
+The main objective of this unit test is to ensure that the conversion between 
+decimal degrees to radians (and vice-versa) is performed correctly. It is these 
+carnations that form the basis of many aspects of the tool.
+
+Table \ref{tab:coordinate_test} highlights the Coordinate test results.
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|l|c|}
+    \hline
+    {\bfseries Test Method}     & {\bfseries Test Status} \\ 
+    \hline
+    TestToSphericalCoordinate   & {\bfseries \color{OliveGreen} PASS}   \\
+    TestCoordinateInstantiation & {\bfseries \color{OliveGreen} PASS}   \\ 
+    TestToString                & {\bfseries \color{OliveGreen} PASS}   \\
+    TestLatitudeAsRadians       & {\bfseries \color{OliveGreen} PASS}   \\
+    TestLongitudeAsRadians      & {\bfseries \color{OliveGreen} PASS}   \\
+    \hline
+  \end{tabular}
+  \caption[Summary of the Coordinate unit test results]
+          {Summary of the Coordinate unit test results}
+  \label{tab:coordinate_test}
+\end{table}
+
+
+\subsubsection{Centroid Test}
+
+The {\ttfamily CentroidTest} class tests the methods that are found 
+within the Centroid class. This class extends the Coordinate class, and hence 
+some testing will be a repeat of the {\ttfamily CoodinateTest}.
+
+The main objective of this unit test is to ensure that the conversion between 
+decimal degrees to radians (and vice-versa) is performed correctly. It will 
+also ensure the radius value is being correctly used.
+
+Table \ref{tab:centroid_test} highlights the Centroid test results.
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|l|c|}
+    \hline
+    {\bfseries Test Method}     & {\bfseries Test Status} \\ 
+    \hline
+    TestLatitudeAsRadians       & {\bfseries \color{OliveGreen} PASS} \\ 
+    TestToSphericalCoordinate   & {\bfseries \color{OliveGreen} PASS} \\ 
+    TestLongitudeAsRadians      & {\bfseries \color{OliveGreen} PASS} \\ 
+    TestCoordinateInstantiation & {\bfseries \color{OliveGreen} PASS} \\ 
+    TestToString                & {\bfseries \color{OliveGreen} PASS} \\
+    \hline
+  \end{tabular}
+  \caption[Summary of the Centroid unit test results]
+          {Summary of the Centroid unit test results}
+  \label{tab:centroid_test}
+\end{table}
+
+
+\subsubsection{SphericalCoordinate Test}
+
+The {\ttfamily SphericalCoordinateTest} class tests the methods that are 
+found within the SphericalCoordinate class. This class extends the Coordinate 
+class, and hence some testing will be a repeat of the {\ttfamily CoodinateTest}.
+
+The main objective of this unit test is to ensure that a Spherical Coordinate 
+can be formed correctly. This involves converting the various sub-components 
+within a coordinate (longitude, latitude, elevation) into an x-axis, y-axis,
+and a z-axis cartesian coordinate value.
+
+Table \ref{tab:spherical_coordinate_test} highlights the SphericalCoordinate test results.
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|l|c|}
+    \hline
+    {\bfseries Test Method}  & {\bfseries Test Status} \\ 
+    \hline
+    CoordinateConversionTest & {\bfseries \color{OliveGreen} PASS} \\
+    \hline
+  \end{tabular}
+  \caption[Summary of the SphericalCoordinate unit test results]
+          {Summary of the SphericalCoordinate unit test results}
+  \label{tab:spherical_coordinate_test}
+\end{table}
+
+
+\subsubsection{CoordinateCollection Test}
+
+The {\ttfamily CoordinateCollectionTest} class tests the methods that are 
+found within the CoordinateCollection class. This class extends the List 
+class found within the {\ttfamily System.Collections. Generic} namespace.
+
+The class largely overrides some standard features (such as adding and removing 
+elements), however does feature an number of bespoke methods. The class will 
+calculate the centroid of the set of coordinates every time a coordinate has 
+been added or removed.
+
+Additional non-standard methods such as splitting and merging collections will 
+also be tested.
+
+Table \ref{tab:coordinate_collection_test} highlights the CoordinateCollection 
+test results.
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|l|c|}
+    \hline
+    {\bfseries Test Method} & {\bfseries Test Status} \\ 
+    \hline
+    AddCoordinateTest       & {\bfseries \color{OliveGreen} PASS}   \\ 
+    SplitTest               & {\bfseries \color{OliveGreen} PASS}   \\ 
+    AppendTest              & {\bfseries \color{OliveGreen} PASS}   \\ 
+    UpdateCentroidTest      & {\bfseries \color{OliveGreen} PASS}   \\ 
+    AddRangeTest            & {\bfseries \color{OliveGreen} PASS}   \\
+    \hline
+  \end{tabular}
+  \caption[Summary of the CoordinateCollection unit test results]
+          {Summary of the CoordinateCollection unit test results}
+  \label{tab:coordinate_collection_test}
+\end{table}
+
+
+\subsubsection{EventCollection Test}
+
+The {\ttfamily EventCollectionTest} class tests the methods that are found 
+within the EventCollection class. This class extends the List class found
+within the {\ttfamily System.Collections.Generic} namespace.
+
+The class has a similar structure to the {\ttfamily CoordinateCollection} 
+class, providing similar methods. However the main difference is the type of 
+objects the hold.
+
+Additional non-standard methods such as splitting and merging collections will 
+also be tested.
+
+Table \ref{tab:event_collection_test} highlights the EventCollection test 
+results.
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|l|c|}
+    \hline
+    {\bfseries Test Method} & {\bfseries Test Status} \\ 
+    \hline
+    SplitTest               & {\bfseries \color{OliveGreen} PASS}   \\ 
+    UpdateCentroidTest      & {\bfseries \color{OliveGreen} PASS}   \\ 
+    AppendTest              & {\bfseries \color{OliveGreen} PASS}   \\ 
+    AddEventTest            & {\bfseries \color{OliveGreen} PASS}   \\ 
+    AddRangeTest            & {\bfseries \color{OliveGreen} PASS}   \\
+    \hline
+  \end{tabular}
+  \caption[Summary of the EventCollection unit test results]
+          {Summary of the EventCollection unit test results}
+  \label{tab:event_collection_test}
+\end{table}
+
+
+\subsubsection{KMLReader Test}
+
+The {\ttfamily KMLReaderTest} class tests the methods that are found within the
+KMLReader class. This class parses a given KML file, and converts it to an
+EventCollection.
+
+In order to test the read method within this class, a number of KML files were 
+given to the {\ttfamily KMLReader} class to ensure that the correct number of 
+events were returned from each KML file.
+
+Table \ref{tab:kml_reader_test} highlights the KMLReader test results.
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|l|c|}
+    \hline
+    {\bfseries Test Method} & {\bfseries Test Status} \\ 
+    \hline
+    ReadKMLFile\_L32        & {\bfseries \color{OliveGreen} PASS}   \\ 
+    ReadKMLFile\_L33        & {\bfseries \color{OliveGreen} PASS}   \\ 
+    ReadKMLFile\_L34        & {\bfseries \color{OliveGreen} PASS}   \\ 
+    ReadKMLFile\_L35        & {\bfseries \color{OliveGreen} PASS}   \\ 
+    ReadKMLFile\_T32        & {\bfseries \color{OliveGreen} PASS}   \\ 
+    ReadKMLFile\_T33        & {\bfseries \color{OliveGreen} PASS}   \\ 
+    ReadKMLFile\_T34        & {\bfseries \color{OliveGreen} PASS}   \\ 
+    ReadKMLFile\_T35        & {\bfseries \color{OliveGreen} PASS}   \\
+    \hline
+  \end{tabular}
+  \caption[Summary of the KMLReader unit test results]
+          {Summary of the KMLReader unit test results}
+  \label{tab:kml_reader_test}
+\end{table}
+
+
+\subsubsection{KMLWriter Test}
+
+The {\ttfamily KMLWriterTest} class tests the methods that are found within the
+KMLWriter class. This class will write a number of EventCollections and 
+heatmaps to a given ouptut KML file.
+
+The main method has been tested against the DBSCAN output which inducing using 
+the noise event collection and omitting the noise event collection data.
+
+Table \ref{tab:kml_writer_test} highlights the KMLWriter test results.
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|l|c|}
+    \hline
+    {\bfseries Test Method} & {\bfseries Test Status} \\ 
+    \hline
+    TestGenerateKMLNoNoise  & {\bfseries \color{OliveGreen} PASS}   \\ 
+    TestGenerateKMLNoise    & {\bfseries \color{OliveGreen} PASS}   \\
+    \hline
+  \end{tabular}
+  \caption[Summary of the KMLWriter unit test results]
+          {Summary of the KMLWriter unit test results}
+  \label{tab:kml_writer_test}
+\end{table}
+
+
+\subsubsection{JSONWriter Test}
+
+The {\ttfamily JSONWriterTest} class tests the methods that are found within 
+the JSONWriter class. This class will `convert' the various internal data 
+structures to the JavaScript Object Notation (JSON) equivalent.
+
+Many of the methods found within the {\ttfamily JSONWriterTest} class will call
+each other a various stages, and hence multiple tests can occur of a given 
+method.
+
+Table \ref{tab:json_writer_test} highlights the JSONWriter test results.
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|l|c|}
+    \hline
+    {\bfseries Test Method}      & {\bfseries Test Status} \\ 
+    \hline
+    TestPrettifyJSON             & {\bfseries \color{OliveGreen} PASS} \\ 
+    TestCreateJSONObjectElements & {\bfseries \color{OliveGreen} PASS} \\ 
+    TestCreateJSONArrayList      & {\bfseries \color{OliveGreen} PASS} \\ 
+    TestCreateJSONArrayParams    & {\bfseries \color{OliveGreen} PASS} \\ 
+    TestCreateKeyValue           & {\bfseries \color{OliveGreen} PASS} \\ 
+    TestCreateJSONObjectKeyValue & {\bfseries \color{OliveGreen} PASS} \\
+    \hline
+  \end{tabular}
+  \caption[Summary of the JSONWriter unit test results]
+          {Summary of the JSONWriter unit test results}
+  \label{tab:json_writer_test}
+\end{table}
+
+
+\subsubsection{DBSCAN Test}
+
+The {\ttfamily DBSCANTest} class tests the methods that are found within the 
+DBSCAN class. This class will cluster a set of events, and because of this 
+only the main entry point could be tested.
+
+The test strategy will create a number dense clusters based upon random 
+geographical coordinates. The test will succeed if the algorithm manages to 
+`reproduce' these clusters --- i.e. the number of expected clusters is equal to
+the number of actual clusters.
+
+Table \ref{tab:dbscan_test} highlights the DBSCAN test results.
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|l|c|}
+    \hline
+    {\bfseries Test Method} & {\bfseries Test Status} \\ 
+    \hline
+    AnalyseTest             & {\bfseries \color{OliveGreen} PASS} \\
+    \hline
+  \end{tabular}
+  \caption[Summary of the DBSCAN unit test results]
+          {Summary of the DBSCAN unit test results}
+  \label{tab:dbscan_test}
+\end{table}
+
+
+\subsubsection{DropAnalysis Test}
+The {\ttfamily DropAnalysisTest} class tests the {\ttfamily DropAnalysis} 
+class. As previously mentioned, the {\ttfamily DropAnalysis} class extends the
+{\ttfamily Analysis}, and testing of this class will happen at the same time of
+testing the {\ttfamily DropAnalysis} class.
+
+Table \ref{tab:drop_analysis_test} highlights the DropAnalysis test results.
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|l|c|}
+    \hline
+    {\bfseries Test Method}    & {\bfseries Test Status} \\ 
+    \hline
+    GroupByStartRatTest        & {\bfseries \color{OliveGreen} PASS}  \\ 
+    GroupByStartEndMixBandTest & {\bfseries \color{OliveGreen} PASS}  \\ 
+    GroupByStartEndRatTest     & {\bfseries \color{OliveGreen} PASS}  \\ 
+    GroupByStartMixBandTest    & {\bfseries \color{OliveGreen} PASS}  \\ 
+    GroupByStartRRCStateTest   & {\bfseries \color{OliveGreen} PASS}  \\ 
+    TestAnalysisLength         & {\bfseries \color{OliveGreen} PASS}  \\
+    \hline
+  \end{tabular}
+  \caption[Summary of the DropAnalysis unit test results]
+          {Summary of the DropAnalysis unit test results}
+  \label{tab:drop_analysis_test}
+\end{table}
+
+
+\subsubsection{FailAnalysis Test}
+The {\ttfamily FailAnalysisTest} class tests the {\ttfamily FailAnalysis} 
+class. As well as the {\ttfamily DropAnalysis} class the {\ttfamily FailAnalysis} 
+class extends the {\ttfamily Analysis}, and testing of this class will happen 
+at the same time of testing the {\ttfamily FailAnalysis} class.
+
+Table \ref{tab:fail_analysis_test} highlights the FailAnalysis test results.
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|l|c|}
+    \hline
+    {\bfseries Test Method}    & {\bfseries Test Status} \\ 
+    \hline
+    GroupByStartRRCStateTest   & {\bfseries \color{OliveGreen} PASS}  \\ 
+    GroupByStartEndMixBandTest & {\bfseries \color{OliveGreen} PASS}  \\ 
+    GroupByStartMixBandTest    & {\bfseries \color{OliveGreen} PASS}  \\ 
+    TestAnalysisLength         & {\bfseries \color{OliveGreen} PASS}  \\ 
+    GroupByStartRatTest        & {\bfseries \color{OliveGreen} PASS}  \\ 
+    GroupByStartEndRatTest     & {\bfseries \color{OliveGreen} PASS}  \\
+    \hline
+  \end{tabular}
+  \caption[Summary of the FailAnalysis unit test results]
+          {Summary of the FailAnalysis unit test results}
+  \label{tab:fail_analysis_test}
+\end{table}
+
+
+\subsubsection{WeekAnalysis Test}
+
+The {\ttfamily WeekAnalysisTest} class tests the methods that are found within 
+the WeekAnalysis class. This class will analyse the data based upon a week 
+basis.
+
+The majority of these methods return well formed data structures, and hence the 
+test strategy will look an ensuring that the correct results are returned as 
+well as ensuring the data structures are correct.
+
+Table \ref{tab:week_analysis_test} highlights the WeekAnalysis test results.
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|l|c|}
+    \hline
+    {\bfseries Test Method}           & {\bfseries Test Status} \\ 
+    \hline
+    GetFailStartEndRatFiguresTest     & {\bfseries \color{OliveGreen} PASS} \\ 
+    GetDropStartRatFiguresTest        & {\bfseries \color{OliveGreen} PASS} \\ 
+    GetDropStartEndRatFiguresTest     & {\bfseries \color{OliveGreen} PASS} \\ 
+    GetFailStartEndMixBandFiguresTest & {\bfseries \color{OliveGreen} PASS} \\ 
+    GetDropStartMixBandFiguresTest    & {\bfseries \color{OliveGreen} PASS} \\ 
+    GetDropStartEndMixBandFiguresTest & {\bfseries \color{OliveGreen} PASS} \\ 
+    GetFailFiguresTest                & {\bfseries \color{OliveGreen} PASS} \\ 
+    GetFailStartRRCStateFiguresTest   & {\bfseries \color{OliveGreen} PASS} \\ 
+    GetFailStartRatFiguresTest        & {\bfseries \color{OliveGreen} PASS} \\ 
+    GetFailStartMixBandFiguresTest    & {\bfseries \color{OliveGreen} PASS} \\ 
+    GetDropFiguresTest                & {\bfseries \color{OliveGreen} PASS} \\ 
+    GetDropStartRRCStateFiguresTest   & {\bfseries \color{OliveGreen} PASS} \\
+    \hline
+  \end{tabular}
+  \caption[Summary of the WeekAnalysis unit test results]
+          {Summary of the WeekAnalysis unit test results}
+  \label{tab:week_analysis_test}
+\end{table}
+
+
+\subsubsection{ProductAnalysis Test}
+
+The {\ttfamily ProductAnalysisTest} class tests the methods that are found 
+within the ProductAnalysis class. This class will analyse the data based upon a 
+product basis.
+
+As with {\ttfamily ProductAnalysis} class, the {\ttfamily ProductAnalysis} 
+class return well formed data structures. The objective of this test class is 
+to ensure that the correct results are returned as well as ensuring the data 
+structures are correct.
+
+Table \ref{tab:product_analysis_test} highlights the ProductAnalysis test 
+results.
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|l|c|}
+    \hline
+    {\bfseries Test Method}           & {\bfseries Test Status} \\ 
+    \hline
+    GetFailStartRRCStateFiguresTest   & {\bfseries \color{OliveGreen} PASS} \\ 
+    GetDropStartMixBandFiguresTest    & {\bfseries \color{OliveGreen} PASS} \\ 
+    GetFailStartEndRatFiguresTest     & {\bfseries \color{OliveGreen} PASS} \\ 
+    GetDropStartRatFiguresTest        & {\bfseries \color{OliveGreen} PASS} \\ 
+    GetDropFiguresTest                & {\bfseries \color{OliveGreen} PASS} \\ 
+    GetDropStartEndMixBandFiguresTest & {\bfseries \color{OliveGreen} PASS} \\ 
+    GetFailFiguresTest                & {\bfseries \color{OliveGreen} PASS} \\ 
+    GetDropStartRRCStateFiguresTest   & {\bfseries \color{OliveGreen} PASS} \\ 
+    GetFailStartRatFiguresTest        & {\bfseries \color{OliveGreen} PASS} \\ 
+    GetFailStartMixBandFiguresTest    & {\bfseries \color{OliveGreen} PASS} \\ 
+    GetFailStartEndMixBandFiguresTest & {\bfseries \color{OliveGreen} PASS} \\ 
+    GetDropStartEndRatFiguresTest     & {\bfseries \color{OliveGreen} PASS} \\
+    \hline
+  \end{tabular}
+  \caption[Summary of the ProductAnalysis unit test results]
+          {Summary of the ProductAnalysis unit test results}
+  \label{tab:product_analysis_test}
+\end{table}
+
+
+
+\subsubsection{MultiWeekAnalysis Test}
+
+The {\ttfamily MultiWeekAnalysisTest} class tests the methods that are found 
+within the MultiWeekAnalysis class. This class will analyse the data based upon
+a week-by-week basis.
+
+The {\ttfamily MultiWeekAnalysis} class is an extension to the 
+{\ttfamily WeekAnalysis} class. The class is able to support multiple weeks
+(rather than just one). 
+
+Many of the methods are similar to the WeekAnalysis, and to reduce 
+repeatability these methods will not be tested directly. However these methods 
+will be tested indirectly when formulating the results.
+
+Table \ref{tab:multiweek_analysis_test} highlights the MultiWeekAnalysis test 
+results.
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|l|c|}
+    \hline
+    {\bfseries Test Method} & {\bfseries Test Status} \\ 
+    \hline
+    AnalyseWeekTest         & {\bfseries \color{OliveGreen} PASS} \\ 
+    AnalyseWeeksTest        & {\bfseries \color{OliveGreen} PASS} \\
+    \hline
+  \end{tabular}
+  \caption[Summary of the MultiWeekAnalysis unit test results]
+          {Summary of the MultiWeekAnalysis unit test results}
+  \label{tab:multiweek_analysis_test}
+\end{table}
+
+
+\subsubsection{MultiProductAnalysis Test}
+
+The {\ttfamily MultiProductAnalysisTest} class tests the methods that are found 
+within the MultiProductAnalysis class. This class will analyse the data based 
+upon a product basis.
+
+The {\ttfamily MultiProductAnalysis} class is an extension to the 
+{\ttfamily ProductAnalysis} class. The class is able to support multiple 
+products across multiple weeks. 
+
+Many of the methods are similar to the ProductAnalysis, and to reduce 
+repeatability these methods will not be tested directly. However these methods 
+will be tested indirectly when formulating the results.
+
+Table \ref{tab:multiproduct_analysis_test} highlights the MultiProductAnalysis 
+test results.
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|l|c|}
+    \hline
+    {\bfseries Test Method} & {\bfseries Test Status} \\ 
+    \hline
+    AnalyseWeekTest         & {\bfseries \color{OliveGreen} PASS} \\ 
+    AnalyseWeeksTest        & {\bfseries \color{OliveGreen} PASS} \\
+    \hline
+  \end{tabular}
+  \caption[Summary of the MultiProductAnalysis unit test results]
+          {Summary of the MultiProductAnalysis unit test results}
+  \label{tab:multiproduct_analysis_test}
+\end{table}

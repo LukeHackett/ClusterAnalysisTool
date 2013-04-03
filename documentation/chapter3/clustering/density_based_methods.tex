@@ -1,0 +1,100 @@
+\subsection{Density-Based Methods}
+Density-based algorithms try to locate regions that are of high density and 
+separate these regions from the data space \citep{tan05,han06}. Regions that 
+are of a low density are either ignored, or removed completely from the data 
+space \citep{han06}.
+
+Unlike the previous algorithms discussed, clusters can be of any arbitrary 
+size, as a cluster is defined as dense regions of objects (rather than 
+similarity between two objects).
+
+\subsubsection{Density-Based Spatial Clustering of Applications with Noise}
+\label{sec:DBSCAN}
+The DBSCAN algorithm is a centre-based, density-based algorithm. The algorithm
+is able to identify regions of high density into clusters, of any arbitrary 
+shape \citep{han06}.
+
+Density is estimated for a given object by counting the number of objects 
+within the neighbourhood of a radius, {\em Eps} \citep{tan05}. A cluster is 
+defined as a maximal set of density-connected objects. 
+
+In order to fully define the DBSCAN algorithm, additional terms will be 
+required to be defined. These terms are specific to the DBSCAN algorithm, and 
+are listed below.
+
+\begin{itemize}
+  \item A core object is an object that falls within the {\em Eps} of a given 
+        radius and when grouped with other points, the total number of points 
+        exceeds the minimum points \citep{han06}.
+  \item A border object is an object that falls within the neighbourhood of a 
+        core object. A border object can fall in the neighbourhoods of more than 
+        more core object. A border object is not a core object \citep{han06}.
+  \item A noise object is any object that is not classified as either a core 
+        object or as a border object \citep{han06}.
+  \item The neighbourhood within a radius, {\em r}, of a given object is called 
+        the r-neighbourhood of the object \citep{tan05}.
+  \item An object is referred to as a core object if the r-neighbourhood of that 
+        object contains at least a minimum number of objects \citep{tan05}.
+  \item Object x is directly density-reachable from object y if object x is 
+        within the r-neighbourhood of object y and object y is a core object
+        \citep{tan05}.
+\end{itemize}
+
+The DBSCAN algorithm classifies an object as being:
+\begin{enumerate}
+  \item within a dense region (core object); {\bf \em or}
+  \item on the edge of a dense region (border object); {\bf \em or}
+  \item in a sparsely occupied region (noise object).
+\end{enumerate}
+
+Informally, the DBSCAN algorithm could be described as any two core objects 
+that are within a distance, {\emph Eps}, of each other are placed into the same 
+cluster. A border object that is close enough to a core object is placed into 
+that cluster, with all noise objects being discarded. 
+
+\paragraph*{DBSCAN Formal Algorithm}
+\subparagraph*{Input:}
+\begin{itemize}
+  \item {\bf D} - the data set of {\em n} objects
+\end{itemize}
+
+\subparagraph*{Output:}
+\begin{itemize}
+  \item A set of clusters
+\end{itemize}
+
+\subparagraph*{Method:}
+\begin{enumerate}
+  \item Label all objects as core, border or noise objects within D;
+  \item Remove the noise objects from D;
+  \item Calculate the distance between all core objects that are within 
+        {\em Eps} of each other;
+  \item Make each group of connected core objects into their own cluster;
+  \item Assign each border object to the closest core object’s cluster.
+\end{enumerate}
+
+One of the fundamentals of the DBSCAN algorithm is the notion of density 
+reachability. It is because of this that the algorithm is able to automatically
+detect clusters of objects, rather than having to specify the number of 
+clusters --- unlike the partitioning methods --- \citep{han06}. 
+
+If an object is unable to be placed into a cluster, it is classed as noise, thus 
+improving the overall quality of the clusters.
+
+The single-link effect (which is common in partitioning methods) is reduced 
+dramatically \citep{tan05}, due to the inclusion of the minimum points value; 
+this ultimately allows the algorithm to find clusters of any arbitrary shape
+\citep{han06}. 
+
+However the minimum points value is fixed at the start of the clustering 
+process, and can cause problems with datasets that have large differences in 
+densities \citep{han06}.
+
+The algorithm is (generally) insensitive to the ordering of the objects in the
+dataset. However if an object is sitting on the edge of two clusters, the 
+membership to either cluster may change \citep{han06,tan05}.
+
+Finally, the quality of the clusters depends upon the distance measuring 
+method. The Euclidean distance calculation is normally used. This is based upon
+Pythagoras' theorem, and utilises an ``as-the-crow-flies'' approach to finding
+the distance between two points.

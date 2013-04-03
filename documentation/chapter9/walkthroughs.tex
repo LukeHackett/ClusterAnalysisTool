@@ -1,0 +1,216 @@
+\section{Walkthroughs}
+\label{sec:walkthroughs}
+
+The previous section (section \ref{sec:unit_testing}) discussed the automated 
+test strategy. These tests assume that the data being passed around the system 
+has been entered correctly.
+
+In order to ensure that incorrect data can not interfere with the system, and 
+number of `manual' walkthroughs have been proposed.
+
+Each walkthough will ensure that the system rejects data and parameters that 
+are deemed to be correct, and should inform the user of any incorrect data and 
+parameters.
+
+\newgeometry{margin=2.5cm}
+\begin{landscape}
+  \centering
+  \setlength\LTleft{0pt}            % default: \parindent
+  \setlength\LTright{0pt}           % default: \fill
+  \begin{longtable}{|C{1.8cm}|l|L{2.5cm}|L{2.5cm}|L{2.5cm}|L{2.5cm}|L{2.5cm}|}
+    \hline
+    {\bfseries Test Number} & {\bfseries Test Data} & 
+    {\bfseries Reason For Test} & {\bfseries Expected Outcome} &
+    {\bfseries Actual Outcome} & {\bfseries Corrective Action Key} & 
+    {\bfseries Notes} \\ 
+    \hline
+    \multicolumn{7}{|l|}{{\bfseries Input/Ouput File Handling}} \\
+    \hline
+    1                                                             &
+    {\ttfamily --input="..L\_wk32\_drops.kml"}                    &
+    To ensure that the tool informs the user that not enough 
+    parameters have been passed to the tool.                      &
+    The tool outputs the usage instructions.                      &
+    As expected.                                                  &
+    None.                                                         &
+    None.                                                         \\
+    \hline
+    2                                                             &
+    {\ttfamily --output=".."}                                     &
+    To ensure that the tool informs the user that not enough 
+    parameters have been passed to the tool.                      &
+    The tool outputs the usage instructions.                      &
+    As expected.                                                  &
+    None.                                                         &
+    None.                                                         \\
+    \hline
+    3                                                             &
+    {\ttfamily --analysis="all"}                                  &
+    To ensure that the tool informs the user that not enough 
+    parameters have been passed to the tool.                      &
+    The tool outputs the usage instructions.                      &
+    As expected.                                                  &
+    None.                                                         &
+    None.                                                         \\
+    \hline
+    4                                                             &
+    \shortstack[l]{
+      {\ttfamily --input="..L\_wk32\_drops.kml"} \\
+      {\ttfamily --output=".."} 
+    }                                                             &
+    To ensure that the tool informs the user that not enough 
+    parameters have been passed to the tool.                      &
+    The tool outputs the usage instructions.                      &
+    As expected.                                                  &
+    None.                                                         &
+    None.                                                         \\
+    \hline
+    5                                                             &
+    \shortstack[l]{
+      {\ttfamily --input="..L\_wk32\_drops.kml"} \\
+      {\ttfamily --analysis="all"} 
+    }                                                             &
+    To ensure that the tool informs the user that not enough 
+    parameters have been passed to the tool.                      &
+    The tool outputs the usage instructions.                      &
+    As expected.                                                  &
+    None.                                                         &
+    None.                                                         \\
+    \hline
+    6                                                             &
+    \shortstack[l]{
+      {\ttfamily --output=".."} \\
+      {\ttfamily --analysis="all"} 
+    }                                                             &
+    To ensure that the tool informs the user that not enough 
+    parameters have been passed to the tool.                      &
+    The tool outputs the usage instructions.                      &
+    As expected.                                                  &
+    None.                                                         &
+    None.                                                         \\
+    \hline
+    7                                                             &
+    \shortstack[l]{
+      {\ttfamily --input="invalid file"} \\
+      {\ttfamily --output=".."} \\
+      {\ttfamily --analysis="all"} 
+    }                                                             &
+    To ensure that the tool informs the user that an incorrect 
+    file has been passed to the tool.                             &
+    The tool outputs the usage instructions.                      &
+    As expected.                                                  &
+    None.                                                         &
+    None.                                                         \\
+    \hline
+    8                                                             &
+    \shortstack[l]{
+      {\ttfamily --input="..L\_wk32\_drops.kml"} \\
+      {\ttfamily --output="invaild path"} \\
+      {\ttfamily --analysis="all"} 
+    }                                                             &
+    To ensure that the tool informs the user that an incorrect 
+    output directory has been passed to the tool.                 &
+    The tool outputs the usage instructions.                      &
+    As expected.                                                  &
+    None.                                                         &
+    None.                                                         \\
+    \hline
+    \multicolumn{7}{|l|}{{\bfseries Analysis Option Handling}} \\
+    \hline
+    9                                                             &
+    \shortstack[l]{
+      {\ttfamily --input="..L\_wk32\_drops.kml"} \\
+      {\ttfamily --output=".."} \\
+      {\ttfamily --analysis="invalid"} 
+    }                                                             &
+    To ensure that the tool informs the user that an incorrect 
+    analysis option has been used.                                &
+    The tool outputs the usage instructions.                      &
+    As expected.                                                  &
+    None.                                                         &
+    None.                                                         \\
+    \hline
+    10                                                            &
+    \shortstack[l]{
+      {\ttfamily --input="..L\_wk32\_drops.kml"} \\
+      {\ttfamily --output=".."} \\
+      {\ttfamily --analysis="all"} 
+    }                                                             &
+    To ensure that the tool is able to analyse the given KML 
+    file and output all analysis to the output directory.         &
+    The tool performs a full the analysis.                        &
+    As expected.                                                  &
+    None.                                                         &
+    None.                                                         \\
+    \hline
+    11                                                            &
+    \shortstack[l]{
+      {\ttfamily --input="..L\_wk32\_drops.kml"} \\
+      {\ttfamily --output=".."} \\
+      {\ttfamily --analysis="product"} 
+    }                                                             &
+    To ensure that the tool is able to analyse the given KML 
+    file and output product analysis only to the output 
+    directory.                                                    &
+    The tool performs only a product analysis.                    &
+    As expected.                                                  &
+    None.                                                         &
+    None.                                                         \\
+    \hline
+    12                                                            &
+    \shortstack[l]{
+      {\ttfamily --input="..L\_wk32\_drops.kml"} \\
+      {\ttfamily --output=".."} \\
+      {\ttfamily --analysis="week"} 
+    }                                                             &
+    To ensure that the tool is able to analyse the given KML 
+    file and output week analysis only to the output 
+    directory.                                                    &
+    The tool performs only a week analysis.                       &
+    As expected.                                                  &
+    None.                                                         &
+    None.                                                         \\
+    \hline
+    13                                                            &
+    \shortstack[l]{
+      {\ttfamily --input="./kml\_input\_folder"} \\
+      {\ttfamily --output=".."} \\
+      {\ttfamily --analysis="all"} 
+    }                                                             &
+    To ensure that the tool is able to analyse the given input 
+    directory and output all analysis to the output directory.    &
+    The tool performs a full the analysis.                        &
+    As expected.                                                  &
+    None.                                                         &
+    None.                                                         \\
+    \hline
+    14                                                            &
+    \shortstack[l]{
+      {\ttfamily --input="./kml\_input\_folder"} \\
+      {\ttfamily --output=".."} \\
+      {\ttfamily --analysis="product"} 
+    }                                                             &
+    To ensure that the tool is able to analyse the given input 
+    directory and output product analysis only to the output 
+    directory.                                                    &
+    The tool performs only a product analysis.                    &
+    As expected.                                                  &
+    None.                                                         &
+    None.                                                         \\
+    \hline
+    15                                                            &
+    \shortstack[l]{
+      {\ttfamily --input="./kml\_input\_folder"} \\
+      {\ttfamily --output=".."} \\
+      {\ttfamily --analysis="week"} 
+    }                                                             &
+    To ensure that the tool is able to analyse the given input 
+    directory and output week analysis only to the output 
+    directory.                                                    &
+    The tool performs only a week analysis.                       &
+    As expected.                                                  &
+    None.                                                         &
+    None.                                                         \\
+    \hline
+  \end{longtable}
+\end{landscape}

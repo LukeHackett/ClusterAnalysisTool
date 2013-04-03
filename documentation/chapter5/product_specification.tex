@@ -1,0 +1,59 @@
+\section{Product Specification}
+
+Within section \ref{sec:userrequirements} the user requirements as defined by 
+BlackBerry were prioritised using the MoSCoW prioritisation system. In order to 
+ensure that the final product is delivered to the expectation of the client, a
+product specification will be proposed. 
+
+The product specification below follows a similar layout to what was seen in 
+section \ref{sec:userrequirements} (User Requirements). Prioritising the 
+various objectives within the system, can help to ensure that the most 
+important aspects of the system are developed first. It also highlights any 
+potential issues that may occur.
+
+
+\subsection{Must}
+\begin{itemize}
+  \item Parse any number of KML files (one or more) at any one time;
+  \item Convert each Placemark found within each KML file to an Event;
+  \item Cluster all the Events upon a weekly basis;
+  \item Cluster all the Events upon a product basis;
+  \item Highlight the overall differences of RAT usage between weeks and 
+        products;
+  \item Highlight the overall differences of Mix Band usage between weeks and 
+        products;
+  \item Highlight the overall differences of Start RRC State usage between 
+        weeks and products;
+  \item Highlight the inter-cluster differences of RAT usage between weeks and 
+        products;
+  \item Highlight the inter-cluster differences of Mix Band usage between weeks 
+        and products;
+  \item Highlight the inter-cluster differences of Start RRC State usage  
+        between weeks and products.
+\end{itemize}
+
+
+\subsection{Should}
+\begin{itemize}
+  \item Visualise the differences of data to allow for easy comparison when 
+        trying to compare upon a weekly basis;
+  \item Visualise the differences of data to allow for easy comparison when 
+        trying to compare upon a product basis;
+  \item Produce an output KML file highlighting all clusters and events. Each
+        cluster must visually show it's radius;
+  \item Produce a heatmap to highlight the strong areas of event density.
+\end{itemize}
+
+
+\subsection{Could}
+\begin{itemize}
+  \item Allow the use to easily apply filters to the analysed data to help 
+        further ``drill down'' into the analysis;
+  \item Highlight the change in velocity differences along the test route.
+\end{itemize}
+
+
+\subsection{Won't}
+\begin{itemize}
+  \item Directly interact with any internal BlackBerry data sources.
+\end{itemize}

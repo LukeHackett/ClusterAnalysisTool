@@ -1,0 +1,57 @@
+\section{Non-Functional Requirements}
+The non-functional requirements deal with how well the solution will operate 
+\citep{cadle10}. 
+
+\subsection{Performance}
+The performance of the system should be good, however it must be noted that the
+system is intended to run as a service upon a server. The output data and 
+analysis will be used by additional services which are not part of this 
+project.
+
+\subsection{Security}
+All data handled by this project is strictly confidential, and must not be 
+distributed in any form. This project will not handle database storage, as the
+product is intended to interact with BlackBerry's secure network. 
+
+All output data will be stored in files, that will be stored upon a secure 
+revision control system, with access through a secure shell.
+
+\subsection{Legal and Access}
+Access permissions to data (such as being able to delete a particular piece of 
+data from a live database), is not a requirement of this project.
+
+\subsection{Backup and Recovery}
+The project or it's data is not in anyway to be stored upon a portable data 
+storage device, nor should it be stored upon publicly accessible cloud storage.
+
+The project will make use of the git subversion system over a secure shell 
+connection. This will ensure that:
+\begin{enumerate}
+  \item A copy of the project is stored upon a remote, secure server;
+  \item Changes are able to be tracked;
+  \item Issues and comments are able to be raised in a secure environment.
+\end{enumerate}
+
+The above measures will in effect be able to reduce against the loss, damage or 
+theft of sensitive company information.
+
+\subsection{Archiving and Retention}
+The University will temporarily retain the project (software product and the 
+final report) for assessment purposes only. Once the assessment of the project 
+is completed the University will release the project and will no longer hold a 
+copy of the project.
+
+A copy of the project (excluding any input data) will be taken by the student 
+for professional development purposes. 
+
+\subsection{Maintainability}
+All maintenance and related extensions to the project will be handled by 
+BlackBerry as of Friday, 26th April 2013. This deadline has been set by the 
+University as the final hand in date for the project.
+
+\subsection{Capacity}
+The end product should be able to handle data from multiple files, that could be 
+representing multiple weeks worth of data. 
+
+Each file can have any number of clusterable data, however files with limited
+data may not produce results.

@@ -1,0 +1,134 @@
+\section{KML File Handling}
+
+As previously mentioned figure \ref{fig:NSKML} illustrates the namespace that 
+handles the reading of KML files and writing of KML and KMZ files. Within this 
+section the basics of these classes will be discussed.
+
+\subsection{KML Reader}
+The KML Reader class encapsulates an XmlTextReader object for which the class 
+can be found within the {\ttfamily System.Xml} namespace. 
+
+A KML file is a well formed XML file, and hence the reason why the 
+{\ttfamily XMLTextReader} class was able to be used mostly for the parsing 
+procedure.
+
+The main method within the file is the {\ttfamily GetCallLogs()} method, which
+will return an event collection of events from the given KML file. 
+
+If an invalid KML file is found, or no placemarks are able to be fully 
+retrieved from the KML file then the method will simply return an empty Event 
+collection.
+
+~\\
+{\bfseries KMLReader::GetCallLogs()}
+\lstset{style=pseudocode}
+\begin{lstlisting}
+  WHILE not at the end of the file
+    // Obtain the Coordinate information
+    READ the coordinate tag
+
+    // Obtain the additional meta-data
+    READ the device name tag
+    READ the device pin tag
+    READ the timestamp tag
+    READ the reference tag
+    READ the type tag
+    READ the start rat tag
+    READ the end rat tag
+    READ the start mix band tag
+    READ the end mix band tag
+    READ the start rrc state tag
+
+    // Create a new Event based upon the above information
+    CREATE a new Event based upon the coordiante and meta-data
+
+    // Add the parsed event
+    ADD the event to the List of Events
+  END WHILE
+
+  RETURN List of Events
+\end{lstlisting}
+
+
+\subsection{KML Writer}
+The KML Writer class encapsulates an {\ttfamily XmlTextWriter} object, for 
+which the class can be found within the the {\ttfamily System.Xml} namespace. 
+
+As previously mentioned, a KML file is a well formed XML file, and 
+{\ttfamily XmlTextWriter} object can be used to generate a well formed KML 
+file.
+
+The main entry point for the KMLWriter class is the {\ttfamily GenerateKML()} 
+method. This method is able to take a number of parameters in order to generate
+a well formed KML file, and is able to perform multiple options based upon the 
+given parameters.
+
+~\\
+{\bfseries KMLWriter::GenerateKML()}
+\lstset{style=pseudocode}
+\begin{lstlisting}
+  // Create a new KML file at a given location
+  CREATE new kml file
+
+  // Insert the heatmap if given
+  IF heatmap present
+    ADD heatmap reference to the kml file
+  END IF
+
+  // Loop over each cluster
+  FOR each cluster in clusters
+    // Organise events into their clusters
+    WRITE a new cluster folder
+
+    // Loop over each event in the cluster
+    FOR each event in cluster
+      WRITE event to the cluster folder
+    END FOR
+
+  END FOR
+
+  // Write noise data if available
+  IF noise present
+    // Organise noise events into a noise folder
+    WRITE a new cluster folder
+
+    // Loop over each noisy event
+    FOR each event in noise
+      WRITE event to the noise cluster folder
+    END FOR
+
+  END IF
+\end{lstlisting}
+
+
+\subsection{KMZ Writer}
+A KMZ file is a compressed KML file. One the advantages of using a KMZ file 
+over a KML file is that the file is able to store images embedded directly in
+itself. This is unlike a KML file, where by an image must be referenced.
+
+The KMZWriter class has a dependency upon the KMLWriter class. The main entry 
+point to the KMZWriter class is through the {\ttfamily GenerateKMZ()} method.
+
+The method will utilise the KMLWriter class to create the KML file, and will 
+then place all generated files into the compressed KMZ file.
+
+~\\
+{\bfseries KMZWriter::GenerateKMZ()}
+\lstset{style=pseudocode}
+\begin{lstlisting}
+  // Create a new temporary working directory
+  CREATE new temporary directory
+
+  // This will create a new KML file.
+  // A heatmap may also be created
+  CREATE kml file and SAVE into the temporary
+
+  // Create the temporary archive
+  COMPRESS the temporary directory into an archive
+
+  // Forms the KMZ file
+  RENAME the archive extension to .KMZ
+
+  // Remove all working files and folders
+  REMOVE the temporary directory
+\end{lstlisting}

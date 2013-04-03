@@ -1,0 +1,130 @@
+\section{DBSCAN}
+
+The DBSCAN class provides an interface to allow for clustering of a collection 
+of events. The formal description of the DBSCAN methodology and algorithm can 
+be found within section \ref{sec:DBSCAN}.
+
+For reference purposes, the basic DBSCAN algorithm is outlined below:
+\begin{enumerate}
+  \item Label all points as core or noise points;
+  \item Eliminate noise points;
+  \item Put an edge between all core points that are within {\em Eps} of each 
+        other;
+  \item Make each group of connected core points into a separate cluster;
+  \item Assign each border point to one of the clusters of its associated core 
+        points.
+\end{enumerate}
+
+
+\subsection{Analyse Data}
+The main entry point to start the algorithm is through the use of the 
+{\ttfamily Analyse()} method. The algorithm will automatically determine if 
+points are noise, and if noise points are found they are removed from the 
+results.
+
+There is no limit to the number of clusters that can be generated, however 
+there is a minimum number of points that are required to form a cluster. This 
+value is represented by the minPts value.
+
+~\\
+{\bfseries DBSCAN::Analyse()}
+\lstset{style=pseudocode}
+\begin{lstlisting}
+  // The "current working" cluster
+  cluster = null;
+
+  // Loop over all unvisisted events
+  FOR each unvisisted event (E) in the dataset (D)
+    // Prevent a revisit of the current event
+    SET E as visited
+
+    // Obtain all neighbourhood events 
+    NeighbourhoodEvents = all events within the EPS distance of E
+
+    // Ensure that there are sufficent events
+    IF the total amount of NeighbourhoodEvents < MinimumPoints
+      SET E as NOISE
+    else
+      C = next cluster
+      expand all the Neighbourhood events to determine similarity
+    END IF
+
+  END FOR
+\end{lstlisting}
+
+
+\subsection{Neighbourhood Search}
+The {\ttfamily GetRegion()} method will return all events that are within the 
+eps-neighbourhood of a given event.
+
+~\\
+{\bfseries DBSCAN::GetRegion()}
+\lstset{style=pseudocode}
+\begin{lstlisting}
+  // The "central", given event
+  Evt = given event
+  
+  // Loop over all known events
+  FOR each event (E) in dataset (D)
+
+    // Calculate the distance between the events
+    distance = distance from E to Evt
+
+    // Add the event if it's deemed to be a neighbour
+    IF eps >= distance
+      ADD E to neighbours
+
+  END FOR
+\end{lstlisting}
+
+
+\subsection{Expanding a Cluster}
+The {\ttfamily ExpandCluster()} method will expand each of the event 
+neighbours, and all of their neighbours. 
+
+Ultimately, this method will deduce which events are within the given event's 
+EPS neighbourhood, and hence whether or not they belong to a new cluster.
+
+~\\
+{\bfseries DBSCAN::ExpandCluster()}
+\lstset{style=pseudocode}
+\begin{lstlisting}
+  // The given event
+  GivenEvt = given event
+
+  // Add the current event to a new cluster
+  ADD event to cluster (C)
+
+  // Get the all of evt's neighbours.
+  neighbours = get all events within GivenEvts region
+
+  // Loop over each event in GivenEvt's neighbours
+  FOR each event evt in neighbours
+
+    // Visit the evt if it has not been visited
+    if evt has not been visited
+
+      // Mark as visited
+      SET evt as visited
+      
+      // Obtain all the events within the new region
+      evtNeighbours = get all events within evts region
+
+      // Assume all are non-noise if greater than the MinimumPoints value
+      IF the total amount of NeighbourhoodEvents >= MinimumPoints
+
+        // Merge the two neighbours lists together
+        ADD evtNeighbours onto the end of neighbours
+      END IF
+
+    END IF
+
+    // If the event doesn't belong to a cluster add to a new cluster
+    IF evt does not belong to a cluster
+
+      // Add the event to the cluster
+      add evt to C
+    END IF
+
+  END FOR
+\end{lstlisting}

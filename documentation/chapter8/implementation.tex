@@ -1,0 +1,60 @@
+\chapter{Implementation}
+
+This section will focus upon the implementation of the various artefacts in 
+order to successfully create the software product associated with this project.
+
+The coding artefacts will be expressed in pseudocode, with an implementation of 
+the code snippet available in the relevant appendixes. 
+
+% C# Style
+\definecolor{bluekeywords}{rgb}{0.13,0.13,1}
+\definecolor{greencomments}{rgb}{0,0.5,0}
+\definecolor{redstrings}{rgb}{0.9,0,0}
+
+\lstdefinestyle{csharp}{
+  language=[Sharp]C,
+  showspaces=false,
+  showtabs=false,
+  breaklines=true,
+  showstringspaces=false,
+  breakatwhitespace=true,
+  escapeinside={(*@}{@*)},
+  commentstyle=\color{greencomments},
+  keywordstyle=\color{bluekeywords}\bfseries,
+  stringstyle=\color{redstrings},
+  basicstyle=\ttfamily
+}
+
+ 
+\lstdefinestyle{pseudocode}{
+  language=C,
+  showspaces=false,
+  showtabs=false,
+  breaklines=true,
+  showstringspaces=false,
+  breakatwhitespace=true,
+  commentstyle=\color{greencomments},
+  keywordstyle=\color{bluekeywords}\bfseries,
+  stringstyle=\color{redstrings},
+  basicstyle=\footnotesize\ttfamily,
+  morekeywords={WHILE, END, READ, CREATE, IF, NOT, DO, ELSE, FOR, WRITE, ADD,
+                COMPRESS, RENAME, REMOVE, SAVE, REPEAT, UNTIL, SET, RETURN,
+                CONVERT}
+}
+
+
+% KML File Handling
+\newpage
+\input{chapter8/kml_file_handling}
+
+% Clustering - DBSCAN
+\newpage
+\input{chapter8/clustering_dbscan}
+
+% Analysis
+\newpage
+\input{chapter8/analysis}
+
+% Visualisation
+\newpage
+\input{chapter8/visualisation}

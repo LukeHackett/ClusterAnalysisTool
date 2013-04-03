@@ -1,0 +1,83 @@
+\documentclass[12pt]{report}
+\usepackage[round,authoryear]{natbib}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{fullpage}
+\usepackage[parfill]{parskip}
+\usepackage{pgfplots}
+\usepackage{multicol}
+\usepackage{geometry}
+\usepackage{pdflscape}
+\usepackage{afterpage}
+\usepackage{capt-of}
+\usepackage{listings}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage[UKenglish]{datetime}
+
+
+% Global Commands
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\newcommand{\subsubsubsection}[1]{\paragraph{#1}\mbox{}\\}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+
+\begin{document}
+
+% Title Page
+\input{title}
+
+% Abstract
+\input{abstract}
+
+% Table of Contents
+\tableofcontents
+
+% Table of Figures
+\listoffigures
+
+% Chapter 1 - Introduction
+\input{chapter1/introduction}
+
+% Chapter 2 - Problem Analysis
+\input{chapter2/problem_analysis}
+
+% Chapter 3 - Research
+\input{chapter3/research}
+
+% Chapter 4 - Requirements
+\input{chapter4/requirements}
+
+% Chapter 5 - Product Specification
+\input{chapter5/specification}
+
+% Chapter 6 - Development Method
+\input{chapter6/development}
+
+% Chapter 7 - Design
+\input{chapter7/design}
+
+% Chapter 8 - Implementation
+\input{chapter8/implementation}
+
+% Chapter 9 - Testing
+\input{chapter9/testing}
+
+% Chapter 10 - Maintenance
+\input{chapter10/maintenance}
+
+% Chapter 11 - Evaluation
+\input{chapter11/evaluation}
+
+% Chapter 12 - Conclusion
+\input{chapter12/conclusion}
+
+
+
+% Citations
+\bibliographystyle{plainnat}
+\bibliography{references/citations}
+\end{document}

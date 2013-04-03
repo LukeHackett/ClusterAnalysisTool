@@ -1,0 +1,167 @@
+\section{Analysis}
+The Analysis aspect of the project is split up across two libraries --- 
+Analysis and Analysis.Heatmap.
+
+The first library focuses upon providing analysis for clusters on a product 
+level and a week level. The library also supports multi-product and multi-week 
+analysis.
+
+The second library focuses upon providing support for generating a heatmap from
+a given set of events. The library is able to change the colour scheme of the 
+generated heatmap if required to.
+
+
+\subsection{Analysis}
+The EventAnalysis class forms the basis of all types of analysis --- referred 
+to as primary analysis. The primary analysis defines operations such as the 
+number of events that happened within a given cluster.
+
+The analysis also tries to group similar events together to further highlight 
+any similarities (or differences) within an intra-cluster environment, and 
+across multiple weeks.
+
+The {\ttfamily GetRatCount()} and {\ttfamily GetMixBandCount()} methods will 
+return the number of events that started upon the a given RAT or MixBand 
+respectfully.
+
+Only one of the methods have been shown below, to reduce the amount of 
+repeatability, as both methods have a similar implementation.
+
+~\\
+{\bfseries EventAnalysis::GetRatCount()}
+\lstset{style=pseudocode}
+\begin{lstlisting}
+  RETURN the count of all events that started on the given start RAT.
+\end{lstlisting}
+
+~\\
+As an extension to the above methods, events can be grouped by their start and 
+end values. The same methods -- {\ttfamily GetRatCount()} and 
+{\ttfamily GetMixBandCount()} -- support two parameters one for the start value
+and one for the end value. 
+
+Only one of the methods have been shown below, to reduce the amount of 
+repeatability, as both methods have a similar implementation.
+
+~\\
+{\bfseries EventAnalysis::GetMixBandCount()}
+\lstset{style=pseudocode}
+\begin{lstlisting}
+  RETURN the count of all events that started on the given start 
+         MixBand and ended upon the given end MixBand.
+\end{lstlisting}
+
+~\\
+The previous methods returned the count of events based upon the parameters 
+given. In order to retrieve the actual raw events the 
+{\ttfamily GroupByStartRat()} and {\ttfamily GroupByStartMixBand()} can be 
+used. 
+
+These methods require the start RAT or start MixBand respectfully. The 
+pseudocode implementation of the {\ttfamily GroupByStartRat()} method is shown 
+below.
+
+~\\
+{\bfseries EventAnalysis::GroupByStartRat()}
+\lstset{style=pseudocode}
+\begin{lstlisting}
+  RETURN a key/value pair list of all events where:
+            the key is the start RAT 
+            the value is a list of events with the key start RAT.
+\end{lstlisting}
+
+~\\
+As with the previous methods both the {\ttfamily GroupByStartEndRat()} and 
+{\ttfamily GroupByStartEndMixBand()} methods support two parameters to enable
+a more in depth grouping.
+
+The pseudocode implementation of the {\ttfamily GroupByStartEndMixBand()} 
+method is shown below.
+
+~\\
+{\bfseries EventAnalysis::GroupByStartEndMixBand()}
+\lstset{style=pseudocode}
+\begin{lstlisting}
+  RETURN a key/value pair list of all events where:
+            the key is the concatenation of the start MixBand and 
+            end MixBand
+            the value is a list of events with the given start MixBand 
+            and end MixBand.
+\end{lstlisting}
+
+
+\subsection{Heatmap}
+The Heatmap class provides various methods and functionality to be able to 
+create a heat map based upon an input set of events (and their coordinates).
+
+The design of the class is a merge between gHeat \citep{gHeat} and a bespoke 
+guide written by \citeauthor{vester} \citep{vester}. The main reason for 
+merging the two concepts together, was to reduce the amount of code required to
+create an accurate heatmap.
+
+The main problem with the GHeat library is that it was originally designed for 
+integration with a Graphical User Interface, rather than outputting to an image 
+which was the objective in this project.
+
+The guide written by \citeauthor{vester} manages to produce a simple heatmap 
+with varying colour options, however it wasn't as accurate as the gHeat 
+library. By merging these two libraries together, it formed the basis of a 
+powerful, and relatively simple set of heatmap classes.
+
+The main entry point to the Heatmap is through the {\ttfamily GenerateHeatMap()}
+method. This method will initialise a new blank image, and will convert each 
+given event (with a coordinate) to a heatmap.
+
+~\\
+{\bfseries Heatmap::GenerateHeatMap()}
+\lstset{style=pseudocode}
+\begin{lstlisting}
+  // Initialise a new image
+  CREATE blank image
+
+  // Convert the long/lat values to image pixels
+  CREATE an intensity map
+ 
+  // Convert the grayscale intensity map to a coloured map
+  CONVERT the intensity map into a colour heat map
+\end{lstlisting}
+
+~\\
+In order to create a heatmap, the original heat point is plotted onto the 
+image. This forms the centroid of the heatpoint. 
+
+Next each point of the outer circumference is generated. This is based upon the
+centroid location plus a prefixed radius value multiplied by the cosine of the 
+current degree of the circle.
+
+~\\
+{\bfseries Heatmap::CreateIntensityMap()}
+\lstset{style=pseudocode}
+\begin{lstlisting}
+  // Initialise a new image
+  CREATE blank image and set background to white
+
+  // Convert coordinate points to heat points
+  CONVERT Coordinate points to HeatPoints
+
+  // Loop over all HeatPoints
+  FOR each heatpoint (HP) in HeatPoints
+    
+    // This is the radius of the heat point 
+    SET radius equal to a given value
+
+    // This will create a circle around HP of radius.
+    FOR integer (I) 1..360
+      // Determine the X location
+      SET x as HP.X + radius * Cos(value of I in radians)
+
+      // Determine the Y location
+      SET y = HP.Y + radius * Sin(value of I in radians)
+
+      // Write the new heatpoint to the image 
+      CREATE a new heatpoint from x and y
+
+    END FOR
+
+  END FOR
+\end{lstlisting}

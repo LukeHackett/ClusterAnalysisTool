@@ -1,0 +1,70 @@
+\section{Primary Path Analysis}
+
+In order to correctly and fully design a system as large as the one proposed, 
+a sound understanding of the main process is required. The main process will 
+be regarded as the scenario, which is ``a sequence of events or actions'' 
+\citep{lunn03}. The scenario will contain various smaller scenarios which will 
+be analysed separately. The main scenario is outlined below:
+
+\begin{enumerate}
+  \item Input data
+  \item Cluster data
+  \item Analyse the clustered data
+  \item Output analysis
+\end{enumerate}
+
+Typically scenarios could be performed in any order, however the main scenario
+outlined above can only be performed in one order. For example, in order for 
+the analysis of the clustered data to happen, the data must first be clustered.
+
+Another example is that data can only be clustered if data was given to the 
+scenario in the first place, i.e. clustering of non-existent data could not 
+happen. 
+
+Now that the main scenario has been defined, the primary path of the entire 
+system can now be formed. The primary path is a path through a system that is 
+most commonly used, with a few variances \citep{lunn03}. 
+
+The primary path for the Clustering Analysis Tool is outlined below:
+
+\begin{enumerate}
+  \item Import data set
+  \item Cluster the data set
+  \item Analyse clustered data set
+  \item Create analysis charts
+\end{enumerate}
+
+The primary path outlined above is very generic with regards clustering of the 
+the data set. The reason for this is that the clustering upon the data set can 
+be applied in more than one way. 
+
+Firstly the data can be clustered upon a week by week basis. This means that 
+when analysed, the time stamp of the event is taken into consideration. This 
+could result in a cluster that was found during multiple spanning weeks.
+
+Finally, the data can be clustered upon a product basis. This means that when 
+analysed, the device name (product name) is taken into consideration. This 
+could result in multiple week's worth of testing being grouped by the device 
+name rather than by the time stamp. 
+
+Both of these ``in-depth'' paths can be thought of as alternative paths. The 
+alternative path will contain subtle changes to the primary path 
+\citep{lunn03}. The alternative paths for both a week by week analysis and a 
+device based analysis can be seen shown below.
+
+\subsection*{Week-by-Week Analysis}
+\begin{enumerate}
+  \item[2.1.1] Cluster the data set as an entire entity
+  \item[2.1.2] Group the clustered data by the week numbers
+\end{enumerate}
+
+\subsection*{Product-based Analysis}
+\begin{enumerate}
+  \item[2.1.1] Cluster the data set as an entire entity
+  \item[2.1.2] Group the clustered data by the device name
+\end{enumerate}
+~\\
+The primary and alternative paths outlined above are a relatively simple, and 
+yet powerful way of applying the general ideas behind the system. Both of 
+these paths will be actively referred to in both the activity diagrams and use 
+case diagrams found in the following sections.

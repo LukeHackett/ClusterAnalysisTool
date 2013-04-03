@@ -1,0 +1,27 @@
+\section{Defining the Environment}
+
+BlackBerry test multiple devices within an automated test harness upon various 
+weekly global drive routes. These routes are designed to test and stress the
+device to the limits.
+
+When a device encounters an event (good or bad), a call log is generated. A 
+call log that can be deemed as a `Call Drop', `Setup Failure' or 
+`Successful Call'. 
+
+Each device will go on test for a number of hours (usually six hours), and 
+during that time, the device will:
+\begin{itemize}
+  \item Make an automated call that is due to last for ninety seconds;
+  \item Perform email bombs (sending and receiving thousand's of emails during 
+        a short time --- usually thirty seconds);
+  \item Wait for thirty seconds before making the next call (to allow for any 
+        logging process to finish).
+\end{itemize}
+
+On average a call log is generated every one hundred seconds, and to avoid data 
+implosion, only the `Call Drop' and `Setup Failure' logs will be analysed.
+
+Each test device is paired to a reference device. A reference device is a device
+that is currently deemed `stable', and is usually one that can be bought 
+by consumers. Note: a test device is {\em usually} one that is currently in 
+development, however it could be a competitor's device. 

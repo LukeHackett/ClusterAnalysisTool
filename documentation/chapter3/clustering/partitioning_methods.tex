@@ -1,0 +1,135 @@
+\subsection{Partitioning Methods}
+A partitioning algorithm will organise {\emph n} number objects within a 
+dataset, into {\emph k} non-overlapping partitions (clusters) as long as 
+{\emph k} $\leq$ {\emph n} \citep{han06}. 
+
+This means that each object will belong to one cluster and one cluster only. 
+
+The objects in a cluster are more similar with each other, in comparison to 
+objects that belong to other clusters. These are regarded as being dissimilar 
+in terms of the data set attributes \citep{tan05}.
+
+\subsubsection{K-Means}
+The K-Means algorithm will partition a set of objects into {\emph k} number of 
+clusters in such a way that the similarity of the objects that make up a 
+cluster is high, but the similarity of two or more separate clusters (and their 
+objects) is low.
+
+Cluster similarity is measured with regards to the average (mean) value of all 
+objects in a given cluster. This average value is known as the cluster's 
+centroid.
+
+The K-Means algorithm will firstly randomly select {\em k} number of objects 
+from the dataset and put them into their own cluster \citep{han06}. For each of
+the remaining objects in the dataset, an object is assigned to the cluster that
+it is most similar to \citep{tan05}.
+
+The similarity is based upon the distance between the object in question and 
+the centroid object of a given cluster. Once the pass is completed, the 
+centroid of all clusters is recomputed to gain the new mean cluster 
+\citep{tan05}. 
+
+This process will continue to run until there have been no object moves 
+detected \citep{han06}.
+
+\paragraph*{K-Means Formal Algorithm}
+\subparagraph*{Input:}
+\begin{itemize}
+  \item {\bf K} - the number of clusters
+  \item {\bf D} - the data set of {\em n} objects
+\end{itemize}
+
+\subparagraph*{Output:}
+\begin{itemize}
+  \item A set of k clusters {\em K}
+\end{itemize}
+
+\subparagraph*{Method:}
+\begin{enumerate}
+  \item randomly choose k objects from D;
+  \item {\bf repeat}
+  \item \begin{list}{$\square$}{\leftmargin=1em \itemindent=0em}
+          assign each object to the cluster to which it is most similar to the 
+          cluster’s centroid;
+        \end{list}
+  \item \begin{list}{$\square$}{\leftmargin=1em \itemindent=0em}
+          update the cluster centroid for each cluster;
+        \end{list}
+  \item {\bf until} no change;
+\end{enumerate}
+
+Computationally speaking, the K-Means algorithm maybe faster than hierarchical 
+clustering methods, if the number of cluster, {\emph k}, is small \citep*{ios}.
+The reason for this is that the algorithm utilises the centroid as a 
+comparative object. 
+
+The algorithm can also produce more tightly packed clusters in comparison to 
+hierarchical based clustering \citep{ios}.
+
+However comparing the accuracy of the clusters that have been produced can be 
+difficult, especially as the number of clusters, k, affects the outcome. In order 
+to improve the accuracy of the results, it may be required to run the algorithm 
+several times with different k value (\citep{ios}).
+
+\subsubsection{K-Medoids}
+One of the main issues faced with the K-Means algorithm, is that it is highly 
+sensitive to outliers, because the centroid object is the mean of all the 
+objects within that cluster \citep{tan05}. It is possible to modify the K-Means
+algorithms to remove such sensitivity \citep{tan05}. 
+
+Instead of creating a mean centroid object based upon all the objects within 
+that cluster, we could pick an actual object to represent the centroid. Each 
+remaining object would then be clustered with the centroid object that is it 
+most similar to \citep{tan05}.
+
+The algorithm would iterate until each centroid is actually the medoid of its 
+cluster. It is this idea that forms the basis of the K-Medoids algorithm for 
+grouping a set of objects into {\em k} clusters \citep{everitt74}.
+
+The initial centroid objects are chosen at random According to \citep{tan05}. 
+The process of replacing the current centroid with another object continues as 
+long as the resulting clustering is improved \citep{tan05}. 
+
+The quality of the clustering is measured using a cost method, which will 
+measure the average dissimilarity between an object and the centroid of the 
+cluster \citep{tan05}.
+
+\paragraph*{K-Medoids Formal Algorithm}
+\subparagraph*{Input:}
+\begin{itemize}
+  \item {\bf K} - the number of clusters
+  \item {\bf D} - the data set of {\em n} objects
+\end{itemize}
+
+\subparagraph*{Output:}
+\begin{itemize}
+  \item A set of k clusters {\em K}
+\end{itemize}
+
+\subparagraph*{Method:}
+\begin{enumerate}
+  \item 1.  randomly choose {\em k} objects from D as the initial centroids;
+  \item {\bf repeat}
+  \item \begin{list}{$\square$}{\leftmargin=1em \itemindent=0em}
+          assign each remaining object to the cluster to the nearest cluster, 
+          based upon the centroids;
+        \end{list}
+  \item \begin{list}{$\square$}{\leftmargin=1em \itemindent=0em}
+          randomly choose a non-centroid object, {\em o};
+        \end{list}
+  \item \begin{list}{$\square$}{\leftmargin=1em \itemindent=0em}
+          compute the total cost of swapping the centroid object with, {\em o};
+        \end{list}
+  \item \begin{list}{$\square$}{\leftmargin=1em \itemindent=0em}
+          if total cost $<$ 0 then swap the centroid with {\em o};
+        \end{list}
+  \item {\bf until} no change;
+\end{enumerate}
+
+
+The K-Medoids proves to be a robust algorithm in the presence of noise and/or 
+outliers. The reason for this is because the medoid is not influenced by extreme 
+values, as found with the mean value.
+
+The algorithm is efficient for small sets of data, but can be inefficient in 
+terms of time when working with large data sets.

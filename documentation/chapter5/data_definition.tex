@@ -1,0 +1,131 @@
+\section{Data Definition}
+
+Within section~\ref{sec:userrequirements} (page~\pageref{sec:userrequirements}), 
+the various system requirements were highlighted. However the data requirements 
+were not discussed. 
+
+In order to cluster the data, the tool will need to access the associated call 
+logs. Due to legal reasons and a lengthy authorisation processes, connecting 
+directly to a BlackBerry data source was deemed to be out of the scope of this
+project. 
+
+However in order to ensure the tool is correctly working, BlackBerry have 
+agreed to supply some real, anonymous data for testing purposes. The data will 
+be supplied within a set KML format.
+
+The KML file format is ``used to display geographic data in an Earth browser 
+such as Google Earth, Google Maps'' \citep{google:KML}. The KML structure is 
+tag-based which contains various elements and attributes that can be nested, 
+and is an XML extension.
+
+{\bf All} tags are case-sensitive and {\bf must} appear exactly as they are 
+listed in the KML API reference. Within a given element, tags must also appear 
+in the same order that is shown in the API reference. 
+
+An example snippet showing an Event is shown below.
+
+% Define XML Colour Scheme
+\definecolor{gray}{rgb}{0.4,0.4,0.4}
+\definecolor{pink}{HTML}{008080}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.6}
+\lstdefinelanguage{XML}
+{
+  basicstyle=\ttfamily\small,
+  columns=fullflexible,
+  showstringspaces=false,
+  commentstyle=\color{gray}\upshape
+  morestring=[s]{>}{<},
+  morecomment=[s]{<?}{?>},
+  stringstyle=\color{black},
+  identifierstyle=\color{pink},
+  keywordstyle=\color{darkblue},
+  morekeywords={Placemark,Point,coordinates,ExtendedData,SimpleData,
+                Document,name,kml}
+}
+
+% Import the KML Template
+\begin{lstlisting}[language=XML]
+<Placemark>
+  <Point>
+    <coordinates>-0.2341408,51.3653237,0</coordinates>
+  </Point>
+  <ExtendedData>
+    <SimpleData name="device">9800</SimpleData>
+    <SimpleData name="pin">03dcde00</SimpleData>
+    <SimpleData name="timestamp">07/08/2012 00:00:00<SimpleData>
+    <SimpleData name="reference">true</SimpleData>          
+    <SimpleData name="type">drop</SimpleData>
+    <SimpleData name="start_rat">WCDMA</SimpleData>
+    <SimpleData name="end_rat">WCDMA</SimpleData>
+    <SimpleData name="start_mix_band">10812</SimpleData>
+    <SimpleData name="end_mix_band">10787</SimpleData>
+    <SimpleData name="start_rrc_state">IDLE<SimpleData>
+  </ExtendedData>
+</Placemark>
+\end{lstlisting}
+
+
+Each Placemark represents an event, with each Placemark containing data about 
+the location of the event, and additional ``meta-data''. The location of the 
+data is stored within the Point tag, and the additional ``meta-data'' is stored 
+within the ExtendedData tag. 
+
+The coordinates are expressed as decimals, and follow the following template:
+
+\begin{lstlisting}[language=XML]
+  <coordinates>longitude,Latitude,Altitude</coordinates>
+\end{lstlisting}
+
+{\em Note: Data that sits in between the coordinates tag cannot have {\bf any} 
+additional whitespace.}
+
+The additional ``meta-data'' is stored as a list of SimpleData items. The 
+order of the elements is imperative, and {\bf must} be maintained. Each of the 
+SimpleData tags must be present, even if no data is stored. If no data is 
+stored, then an empty tag must be present.
+
+Each of the SimpleData tags are discussed in more detail below:
+\begin{itemize}
+  \item {\bf device} \\
+        The Name of the device.
+  \item {\bf pin} \\
+        The Personal Identification Number (PIN) of the device.
+  \item {\bf timestamp} \\
+        The time stamp of the event in the format `DD/MM/YYYY HH:ii:ss'
+  \item {\bf reference} \\
+        Whether or not the device is a reference device
+  \item {\bf type} \\
+        The type of call, one of `Call Drop', `Setup Failure', `Successful Call'
+  \item {\bf start\_rat} \\
+        The Start RAT of the event
+  \item {\bf end\_rat} \\
+        The End RAT of the event
+  \item {\bf start\_mix\_band} \\
+        The Start MixBand of the event
+  \item {\bf start\_rrc\_state} \\
+        The Start RRC State
+\end{itemize}
+
+~\\
+A single KML file can contain any number of Placemark values, and must be 
+wrapped inside the KML and Document tags, as show below. 
+
+\begin{lstlisting}[language=XML]
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>KML Filename</name>
+    <Placemark>
+      ...
+    </Placemark>
+    <Placemark>
+      ...
+    </Placemark>
+    <Placemark>
+      ...
+    </Placemark>
+    <Placemark>
+      ...
+    </Placemark>
+  </Document>
+</kml>
+\end{lstlisting}
