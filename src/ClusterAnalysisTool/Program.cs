@@ -168,7 +168,6 @@ namespace ClusterAnalysisTool
       try
       {
         // Get the attributes for file or directory
-        String arg = InputArguments["source"];
         FileAttributes fileattr = File.GetAttributes(InputArguments["source"]);
       }
       catch (FileNotFoundException ex)
@@ -182,6 +181,14 @@ namespace ClusterAnalysisTool
       if (!InputArguments.ContainsKey("output"))
       {
         return false;
+      }
+
+      // Ensure the output directory is valid
+      if (InputArguments["output"].IndexOfAny(Path.GetInvalidPathChars()) > 0)
+      {
+        Console.WriteLine("ERROR: The given output directory is not of a legal form.");
+        Console.WriteLine("Ouput: {0}", InputArguments["output"]);
+        Environment.Exit(1);
       }
 
       // Create the output directory if it doesn't exist
