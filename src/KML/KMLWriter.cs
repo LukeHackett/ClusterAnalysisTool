@@ -276,12 +276,15 @@ namespace KML
       collection.AddRange(clusters);
       collection.Add(noise);
 
-      // Obtain all the longitude values
+      // Obtain all the non-noise longitude values
       var longitudes = collection.SelectMany(z => z.GetEvents())
+                                 .Where(evt => evt.Coordinate.Noise == false)
                                  .Select(evt => evt.Coordinate.Longitude);
+                                 
 
-      // Obtain all the latitude values
+      // Obtain all the non-noise latitude values
       var latitudes = collection.SelectMany(z => z.GetEvents())
+                                .Where(evt => evt.Coordinate.Noise == false)
                                 .Select(evt => evt.Coordinate.Latitude);
 
       // Create a new Hashtable to store the min/max values.
