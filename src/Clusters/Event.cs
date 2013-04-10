@@ -102,6 +102,32 @@ namespace Cluster
       return cal.GetWeekOfYear(Timestamp, CalendarWeekRule.FirstFullWeek, StartDay);
     }
 
+    /// <summary>
+    /// This method returns the type of event as a String.
+    /// </summary>
+    /// <returns>Object type as a String</returns>
+    public new String ToString()
+    {
+      // Switch based upon the three types of events
+      switch (GetType().Name)
+      {
+        case "Drop":
+          Drop d = (Drop) this;
+          return d.ToString();
+
+        case "Fail":
+          Fail f = (Fail) this;
+          return f.ToString();
+
+        case "Success":
+          Success s = (Success) this;
+          return s.ToString();
+
+        default:
+          return null;
+      }
+    }
+
     #endregion
 
   }

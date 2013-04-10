@@ -35,5 +35,14 @@ namespace Cluster
   public class Drop : Event
   {
 
+    /// <summary>
+    /// This method returns the type of event as a String.
+    /// </summary>
+    /// <returns>Object type as a String</returns>
+    public new String ToString()
+    {
+      return "Call Drop";
+    }
+
   }
 }

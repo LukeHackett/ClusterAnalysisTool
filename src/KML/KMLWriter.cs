@@ -343,7 +343,7 @@ namespace KML
     {
       // Get the event name based upon the class name
       String eventName = cluster.GetType().Name;
-
+      
       // Create a new Placemark
       Kml.WriteStartElement("Placemark");
       Kml.WriteElementString("name", eventName);
@@ -362,6 +362,20 @@ namespace KML
       // Create a new Point
       Kml.WriteStartElement("Point");
       Kml.WriteElementString("coordinates", cluster.Coordinate.ToString());
+      Kml.WriteEndElement();
+
+      // Create the Extended Data
+      Kml.WriteStartElement("ExtendedData");
+      WriteSimpleData("device", cluster.Device);
+      WriteSimpleData("pin", cluster.Pin);
+      WriteSimpleData("timestamp", cluster.Timestamp.ToString());
+      WriteSimpleData("reference", cluster.Reference.ToString());
+      WriteSimpleData("type", cluster.ToString());
+      WriteSimpleData("start_rat", cluster.StartRat);
+      WriteSimpleData("end_rat", cluster.EndRat);
+      WriteSimpleData("start_mix_band", cluster.StartMixBand);
+      WriteSimpleData("end_mix_band", cluster.EndMixBand);
+      WriteSimpleData("start_rrc_state", cluster.StartRRCState);
       Kml.WriteEndElement();
 
       // Finish the Placemark
@@ -431,6 +445,19 @@ namespace KML
       Kml.WriteEndElement();
       Kml.WriteEndElement();
       Kml.WriteEndElement();
+      Kml.WriteEndElement();
+    }
+
+    /// <summary>
+    /// This method will write a SimpleData element to the KML output.
+    /// </summary>
+    /// <param name="attr">The name of the attribute</param>
+    /// <param name="value">The value of the element</param>
+    private static void WriteSimpleData(String attr, String value)
+    {
+      Kml.WriteStartElement("SimpleData");
+      Kml.WriteAttributeString("name", attr);
+      Kml.WriteString(value);
       Kml.WriteEndElement();
     }
 

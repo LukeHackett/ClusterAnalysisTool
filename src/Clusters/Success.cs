@@ -35,6 +35,14 @@ namespace Cluster
   public class Success : Event
   {
 
+    /// <summary>
+    /// This method returns the type of event as a String.
+    /// </summary>
+    /// <returns>Object type as a String</returns>
+    public new String ToString()
+    {
+      return "Call Success";
+    }
 
   }
 }

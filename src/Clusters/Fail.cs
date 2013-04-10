@@ -35,5 +35,14 @@ namespace Cluster
   public class Fail : Event
   {
 
+    /// <summary>
+    /// This method returns the type of event as a String.
+    /// </summary>
+    /// <returns>Object type as a String</returns>
+    public new String ToString()
+    {
+      return "Setup Failure";
+    }
+
   }
 }
