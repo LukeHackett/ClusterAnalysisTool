@@ -1,3 +1,61 @@
 \section{Product Evaluation}
 \label{sec:product_evaluation}
 
+The Cluster Analysis Tool that was developed as part of this final year project
+could be regarded as a success. Although there are a number of improvements and
+extensions that could be made, it is clear that when comparing the final 
+product to the original user requirements set by BlackBerry (section 
+\ref{sec:userrequirements}), there are little differences.
+
+The Cluster Analysis Tool successfully parses a KML file and converts each of 
+the given placemarks into Call Events. All call events can be clustered into 
+various clusters by utilising an implementation of the DBSCAN algorithm.
+
+Once the clustering process has been completed, the tool is able to provide a 
+number of analysis options, and is ultimately output the analysis in various 
+graphical formats.
+
+As well a producing graphical outputs, the tool is also able to output to a 
+KML file. Once opened in Google Earth, the KML file is able to display the 
+various clusters, along with the radius around the centroid of each cluster. 
+
+Each event is able to be clicked upon for more information, as well as allowing
+the end user to ``overlay'' multiple KML files to view multiple weeks and/or 
+multiple products.
+
+Although a Graphical User Interface could have been developed, it was decided 
+to keep the tool as a command line tool. This allows for a simple integration
+with current internal BlackBerry systems, and it allows for an automated 
+approach to utilising the tool (as well as a manual approach).
+
+As it stands the product does meet all of the original requirements, however 
+there are a number of improvements that could be made to further better the 
+product.
+
+Firstly the test route could shown within the output KML file. This would allow
+for each event to be highlighted upon the route. In order for this to be 
+achieved, the route would have to be added to the original KML file. 
+
+Adding the route would not change the analysis or clustering processes, however
+it would improve the overall link between the route and the call events.
+
+Additionally, an overall area percentage figure could be introduced. This 
+percentage would be the number of drops multiplied by the area coverage for a
+given geographical coordinate. Typically the area coverage is 5m$^2$ (25m). 
+
+This would mean that if there were 20 events within a 1KM radius, then the 
+total area percentage representing events would be calculated as:
+
+\begin{center}
+  $ \large \frac{20 \times 0.25}{\pi \times 1^2} \times 100 = 15.9\% $
+\end{center}
+
+Effectively, this means that 15.9\% of the given cluster (in terms of area) 
+represents call events.
+
+~\\
+
+Overall, the product meets the required specifications of this project. More 
+specifically, the product has managed to ensure that the ``Must'' and 
+``Should'' requirements are completed with some of the ``Could'' requirements
+completed as well.
