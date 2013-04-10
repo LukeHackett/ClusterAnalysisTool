@@ -52,43 +52,34 @@ the clusters whereby the 9800 device dropped calls upon a specific RAT.
 Clicking upon one of the bars again will drill down into the specifics of a 
 cluster.
 
-\afterpage{
-  % Flush earlier floats (otherwise order might not be correct)
-  \clearpage
-  % empty page style (?)
-  %\thispagestyle{empty}
-  % Landscape page
-  \begin{landscape}
-    % Center image
-    \centering 
-      \begin{figure}[H]
-        \centering
-          \includegraphics[scale=0.75]{chapter8/visualisation/bar_chart_1.png}
-          \caption[Example Bar Chart output]
-                  {An Example Bar Chart output from the root node, highlighting all 
-                   the various devices and their performance from a general point of 
-                   view}
-          \label{fig:bar_chart_1}
-      \end{figure}
-      ~\\
-      \begin{figure}[H]
-        \centering
-          \includegraphics[scale=0.75]{chapter8/visualisation/bar_chart_2.png}
-          \caption[Example Bar Chart output one node deep]
-                  {Example Bar Chart output one node deep --- i.e. all data that is
-                   related to the 9800 device only.}
-          \label{fig:bar_chart_2}
-      \end{figure}
-
-  \end{landscape}
-  % Flush page
-  \clearpage
-}
+% Landscape page
+\begin{landscape}
+  % Center image
+  \centering 
+    \begin{figure}[H]
+      \centering
+        \includegraphics[scale=0.75]{chapter8/visualisation/bar_chart_1.png}
+        \caption[Example Bar Chart output]
+                {An Example Bar Chart output from the root node, highlighting all 
+                 the various devices and their performance from a general point of 
+                 view}
+        \label{fig:bar_chart_1}
+    \end{figure}
+    ~\\
+    \begin{figure}[H]
+      \centering
+        \includegraphics[scale=0.75]{chapter8/visualisation/bar_chart_2.png}
+        \caption[Example Bar Chart output one node deep]
+                {Example Bar Chart output one node deep --- i.e. all data that is
+                 related to the 9800 device only.}
+        \label{fig:bar_chart_2}
+    \end{figure}
+\end{landscape}
 
 
 \newpage
 \subsubsection{Circle Pack}
-A Circle Pack diagram represent hierarchy through the use of embedded nodes. 
+A Circle Pack diagram represents hierarchy through the use of embedded nodes. 
 A Circle Pack diagram can be compared to a treemap, as it shares similar 
 features however it is not as space-efficient. 
 
@@ -96,36 +87,49 @@ On the other hand it does reveal the overall size of each element (cluster,
 device, week, usage) more vividly in comparison to a treemap. Figure 
 \ref{fig:circle_pack} illustrates an example output.
 
-\afterpage{
-  % Flush earlier floats (otherwise order might not be correct)
-  \clearpage
-  % empty page style (?)
-  %\thispagestyle{empty}
-  % Landscape page
-  \begin{landscape}
-    % Center image
-    \centering 
-
-      \begin{figure}[H]
-        \centering
-          \includegraphics[scale=0.70]{chapter8/visualisation/circle_pack.png}
-          \caption[Example Circle Pack output]
-                  {Example Circle Pack output, highlighting all the nodes. The 
-                  first node is the week, e.g. week 34.}
-          \label{fig:circle_pack}
-      \end{figure}
-
-  \end{landscape}
-  % Flush page
-  \clearpage
-}
+% Landscape page
+\begin{landscape}
+  % Center image
+  \centering 
+    \begin{figure}[H]
+      \centering
+        \includegraphics[scale=0.65]{chapter8/visualisation/circle_pack.png}
+        \caption[Example Circle Pack output]
+                {Example Circle Pack output, highlighting all the nodes. The 
+               first node is the week, e.g. week 34.}
+        \label{fig:circle_pack}
+    \end{figure}
+\end{landscape}
 
 
 \newpage
 \subsubsection{Dendrogram}
 
-** IMAGE **
+As with the Circle Pack diagram a dendrogram represents hierarchy through 
+embedded nodes. A dendrogram is frequently used to illustrate the cluster 
+arrangement formed by hierarchical clustering algorithms, although can be used 
+in other ways.
 
+Unlike the Circle Pack diagram, a dendrogram is not able to reveal the overall 
+size of each element visually, and this has been shown via the raw value of 
+events shown in brackets.
+
+Figure \ref{fig:dendrogram} illustrates an example output.
+
+
+% Landscape page
+\begin{landscape}
+  % Center image
+  \centering 
+    \begin{figure}[H]
+      \centering
+        \includegraphics[scale=0.65]{chapter8/visualisation/dendrogram.png}
+        \caption[Example Dendrogram output]
+                {Example Dendrogram output, highlighting all the various for 
+                the given week (week 32)}
+        \label{fig:dendrogram}
+    \end{figure}
+\end{landscape}
 
 
 \newpage
@@ -143,7 +147,7 @@ Figure \ref{fig:partition_chart} highlights an example partition chart.
 
 \begin{figure}[H]
   \centering
-    \includegraphics[scale=0.55]{chapter8/visualisation/partition.png}
+    \includegraphics[scale=0.50]{chapter8/visualisation/partition.png}
     \caption[Example Partition output]
             {Example Partition output, highlighting all the nodes for the drop 
              events usage figures.}
@@ -169,7 +173,7 @@ Figure \ref{fig:treemap} highlights an example treemap.
 
 \begin{figure}[H]
   \centering
-    \includegraphics[scale=0.60]{chapter8/visualisation/treemap.png}
+    \includegraphics[scale=0.55]{chapter8/visualisation/treemap.png}
     \caption[Example Treemap output]
             {Example Treemap output, highlighting all the nodes for the drop 
              events usage figures.}
