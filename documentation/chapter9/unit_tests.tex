@@ -9,7 +9,7 @@ test how a user interacts with the system (though a shell). The testing of the
 User Interface will be discussed within section \ref{sec:walkthroughs}.
 
 A listing of the automated unit test classes can be found within the supplied 
-software CD-ROM.
+software CD-ROM within the `tests' folder.
 
 \subsection{Unit Test Implementation}
 
@@ -28,11 +28,10 @@ of JSON file to ensure that the output was syntactically correct. In this
 instance, if a JSON file was not syntactically correct then it would cause the 
 visualisation aspect of the product to fail.
 
-It must be noted that the visualisation aspect of the product has not 
-undertaken any form of visualisation. The reason being is that the 
-visualisation aspect was an add-on to the main project. 
+It must be noted that the visualisation web files (HTML, CSS and JavaScript) 
+have not been tested via unit testing.
 
-The visualisation web files (HTML, CSS and JavaScript) are effectively a 
+The reason for this is that the visualisation web files are effectively a 
 framework that ``wraps around'' the JSON files --- hence why it is imperative 
 that the JSON files are syntactically correct.
 
@@ -77,7 +76,7 @@ and hence will be tested multiple times.
 
 The main objective of this unit test is to ensure that the conversion between 
 decimal degrees to radians (and vice-versa) is performed correctly. It is these 
-carnations that form the basis of many aspects of the tool.
+conversions that form the basis of many aspects of the tool.
 
 Table \ref{tab:coordinate_test} highlights the Coordinate test results.
 
@@ -138,11 +137,14 @@ found within the SphericalCoordinate class. This class extends the Coordinate
 class, and hence some testing will be a repeat of the {\ttfamily CoodinateTest}.
 
 The main objective of this unit test is to ensure that a Spherical Coordinate 
-can be formed correctly. This involves converting the various sub-components 
-within a coordinate (longitude, latitude, elevation) into an x-axis, y-axis,
-and a z-axis cartesian coordinate value.
+can be formed correctly. 
 
-Table \ref{tab:spherical_coordinate_test} highlights the SphericalCoordinate test results.
+This involves converting the various sub-components within a coordinate 
+(longitude, latitude, elevation) into an x-axis, y-axis, and a z-axis cartesian
+coordinate value.
+
+Table \ref{tab:spherical_coordinate_test} highlights the SphericalCoordinate 
+test results.
 
 \begin{table}[h]
   \centering
@@ -163,10 +165,10 @@ Table \ref{tab:spherical_coordinate_test} highlights the SphericalCoordinate tes
 
 The {\ttfamily CoordinateCollectionTest} class tests the methods that are 
 found within the CoordinateCollection class. This class extends the List 
-class found within the {\ttfamily System.Collections. Generic} namespace.
+class found within the {\ttfamily System. Collections.Generic} namespace.
 
 The class largely overrides some standard features (such as adding and removing 
-elements), however does feature an number of bespoke methods. The class will 
+elements), however does feature a number of bespoke methods. The class will 
 calculate the centroid of the set of coordinates every time a coordinate has 
 been added or removed.
 
@@ -199,7 +201,7 @@ test results.
 
 The {\ttfamily EventCollectionTest} class tests the methods that are found 
 within the EventCollection class. This class extends the List class found
-within the {\ttfamily System.Collections.Generic} namespace.
+within the {\ttfamily System.Collections. Generic} namespace.
 
 The class has a similar structure to the {\ttfamily CoordinateCollection} 
 class, providing similar methods. However the main difference is the type of 
@@ -268,7 +270,7 @@ Table \ref{tab:kml_reader_test} highlights the KMLReader test results.
 
 The {\ttfamily KMLWriterTest} class tests the methods that are found within the
 KMLWriter class. This class will write a number of EventCollections and 
-heatmaps to a given ouptut KML file.
+heatmaps to a given output KML file.
 
 The main method has been tested against the DBSCAN output which inducing using 
 the noise event collection and omitting the noise event collection data.
@@ -298,7 +300,7 @@ the JSONWriter class. This class will `convert' the various internal data
 structures to the JavaScript Object Notation (JSON) equivalent.
 
 Many of the methods found within the {\ttfamily JSONWriterTest} class will call
-each other a various stages, and hence multiple tests can occur of a given 
+each other at various stages, and hence multiple tests can occur for a given 
 method.
 
 Table \ref{tab:json_writer_test} highlights the JSONWriter test results.

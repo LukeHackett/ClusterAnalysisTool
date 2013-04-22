@@ -13,25 +13,25 @@ the tool, a simple data structure was required to be implemented.
 
 As the charts were to be developed using web technologies (such as HTML, CSS 
 and JavaScript), it made sense to maintain the data structures in JavaScript 
-Object Notation (JSON), which is what the tool outputs.
+Object Notation (JSON).
 
 \subsection{Charts}
-In order to produce some visualisation charts, a JavaScript charting library is
+In order to produce the visualisation charts, a JavaScript charting library is
 required. The decision to use a well established charting library, rather than 
 developing one from scratch was suggested by BlackBerry.
 
 The requirement to develop visualisation charts was only identified as a 
 `could' requirement (see section \ref{sec:could}). However due to time 
-resourcing being managed well, this requirement could be fulfilled.
+resources being managed well, this requirement could be fulfilled.
 
-The charting library that was selected is call d3js. D3js is a ``JavaScript 
+The charting library that was selected is called d3js. D3js is a ``JavaScript 
 library for manipulating documents based on data'' \citep{d3js}. One of the 
 major advantages for using d3js is that it is based upon open, standard web 
 technologies (HTML, DOM, CSS and JavaScript).
 
 This effectively means that the resulting output will be able to be displayed 
 on almost any computer, without the requirement for additional software to be
-installed --- other than a web standard browser.
+installed --- other than a web browser.
 
 Five charting techniques were selected to output the data, and are described in
 more detail in the following subsections.
@@ -140,8 +140,7 @@ pie chart.
 
 As with the previous charts, the partition chart supports hierarchical data. 
 This allows the user to click upon a given area, and the chart will rearrange 
-itself. This allows for a more bespoke, ``drilled down'' view to viewing the 
-analysis.
+itself. This allows for a more bespoke, ``drilled down'' view to the analysis.
 
 Figure \ref{fig:partition_chart} highlights an example partition chart.
 

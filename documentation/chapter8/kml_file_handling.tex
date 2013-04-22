@@ -2,21 +2,21 @@
 
 As previously mentioned figure \ref{fig:NSKML} illustrates the namespace that 
 handles the reading of KML files and writing of KML and KMZ files. Within this 
-section the basics of these classes will be discussed.
+section the implementation of these classes will be discussed.
 
 \subsection{KML Reader}
-The KML Reader class encapsulates an XmlTextReader object for which the class 
-can be found within the {\ttfamily System.Xml} namespace. 
+The KML Reader class encapsulates an {\ttfamily XmlTextReader} object for 
+which the class can be found within the {\ttfamily System.Xml} namespace. 
 
 A KML file is a well formed XML file, and hence the reason why the 
-{\ttfamily XMLTextReader} class was able to be used mostly for the parsing 
-procedure.
+{\ttfamily XMLTextReader} class was able to be used for the majority of the 
+parsing procedure.
 
 The main method within the file is the {\ttfamily GetCallLogs()} method, which
 will return an event collection of events from the given KML file. 
 
 If an invalid KML file is found, or no placemarks are able to be fully 
-retrieved from the KML file then the method will simply return an empty Event 
+retrieved from the KML file, then the method will simply return an empty Event 
 collection.
 
 ~\\
@@ -48,7 +48,7 @@ collection.
 
   RETURN List of Events
 \end{lstlisting}
-
+{\textsf \footnotesize File Source: src/KML/KMLReader.cs }
 
 \subsection{KML Writer}
 The KML Writer class encapsulates an {\ttfamily XmlTextWriter} object, for 
@@ -99,6 +99,7 @@ given parameters.
 
   END IF
 \end{lstlisting}
+{\textsf \footnotesize File Source: src/KML/KMLWriter.cs }
 
 
 \subsection{KMZ Writer}
@@ -110,7 +111,7 @@ The KMZWriter class has a dependency upon the KMLWriter class. The main entry
 point to the KMZWriter class is through the {\ttfamily GenerateKMZ()} method.
 
 The method will utilise the KMLWriter class to create the KML file, and will 
-then place all generated files into the compressed KMZ file.
+then place all generated files into a compressed KMZ file.
 
 ~\\
 {\bfseries KMZWriter::GenerateKMZ()}
@@ -132,3 +133,4 @@ then place all generated files into the compressed KMZ file.
   // Remove all working files and folders
   REMOVE the temporary directory
 \end{lstlisting}
+{\textsf \footnotesize File Source: src/KML/KMZWriter.cs }
